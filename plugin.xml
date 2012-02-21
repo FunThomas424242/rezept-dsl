@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.github.com/funthomas424242/language/rezept"
+            class="com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage"
+            genModel="src/metamodel/rezept.genmodel"/>
+   </extension>
+
+</plugin>
