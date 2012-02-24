@@ -6,55 +6,57 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.EntityModel;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
-import com.github.funthomas424242.rezeptsammler.rezept.Type;
+import com.github.funthomas424242.rezeptsammler.rezept.Tipp;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Entity Model</b></em>'.
+ * An implementation of the model object '<em><b>Tipp</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.EntityModelImpl#getTypes <em>Types</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.TippImpl#getText <em>Text</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EntityModelImpl extends EObjectImpl implements EntityModel
+public class TippImpl extends EObjectImpl implements Tipp
 {
   /**
-   * The cached value of the '{@link #getTypes() <em>Types</em>}' containment reference list.
+   * The default value of the '{@link #getText() <em>Text</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTypes()
+   * @see #getText()
    * @generated
    * @ordered
    */
-  protected EList<Type> types;
+  protected static final String TEXT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getText()
+   * @generated
+   * @ordered
+   */
+  protected String text = TEXT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EntityModelImpl()
+  protected TippImpl()
   {
     super();
   }
@@ -67,7 +69,7 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.ENTITY_MODEL;
+    return RezeptPackage.Literals.TIPP;
   }
 
   /**
@@ -75,13 +77,9 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Type> getTypes()
+  public String getText()
   {
-    if (types == null)
-    {
-      types = new EObjectContainmentEList<Type>(Type.class, this, RezeptPackage.ENTITY_MODEL__TYPES);
-    }
-    return types;
+    return text;
   }
 
   /**
@@ -89,15 +87,12 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public void setText(String newText)
   {
-    switch (featureID)
-    {
-      case RezeptPackage.ENTITY_MODEL__TYPES:
-        return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    String oldText = text;
+    text = newText;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.TIPP__TEXT, oldText, text));
   }
 
   /**
@@ -110,8 +105,8 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case RezeptPackage.ENTITY_MODEL__TYPES:
-        return getTypes();
+      case RezeptPackage.TIPP__TEXT:
+        return getText();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,15 +116,13 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case RezeptPackage.ENTITY_MODEL__TYPES:
-        getTypes().clear();
-        getTypes().addAll((Collection<? extends Type>)newValue);
+      case RezeptPackage.TIPP__TEXT:
+        setText((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -145,8 +138,8 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case RezeptPackage.ENTITY_MODEL__TYPES:
-        getTypes().clear();
+      case RezeptPackage.TIPP__TEXT:
+        setText(TEXT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -162,10 +155,27 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case RezeptPackage.ENTITY_MODEL__TYPES:
-        return types != null && !types.isEmpty();
+      case RezeptPackage.TIPP__TEXT:
+        return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
     }
     return super.eIsSet(featureID);
   }
 
-} //EntityModelImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (text: ");
+    result.append(text);
+    result.append(')');
+    return result.toString();
+  }
+
+} //TippImpl

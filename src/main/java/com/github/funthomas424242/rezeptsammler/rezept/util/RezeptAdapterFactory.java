@@ -79,34 +79,89 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
     new RezeptSwitch<Adapter>()
     {
       @Override
-      public Adapter caseNamedElement(NamedElement object)
+      public Adapter caseRezept(Rezept object)
       {
-        return createNamedElementAdapter();
+        return createRezeptAdapter();
       }
       @Override
-      public Adapter caseType(Type object)
+      public Adapter caseModelElement(ModelElement object)
       {
-        return createTypeAdapter();
+        return createModelElementAdapter();
       }
       @Override
-      public Adapter caseDataType(DataType object)
+      public Adapter caseProdukt(Produkt object)
       {
-        return createDataTypeAdapter();
+        return createProduktAdapter();
       }
       @Override
-      public Adapter caseEntity(Entity object)
+      public Adapter caseProjektBeschreibung(ProjektBeschreibung object)
       {
-        return createEntityAdapter();
+        return createProjektBeschreibungAdapter();
       }
       @Override
-      public Adapter caseEntityModel(EntityModel object)
+      public Adapter caseQuelle(Quelle object)
       {
-        return createEntityModelAdapter();
+        return createQuelleAdapter();
       }
       @Override
-      public Adapter caseFeature(Feature object)
+      public Adapter caseArbeitsschritt(Arbeitsschritt object)
       {
-        return createFeatureAdapter();
+        return createArbeitsschrittAdapter();
+      }
+      @Override
+      public Adapter caseTipp(Tipp object)
+      {
+        return createTippAdapter();
+      }
+      @Override
+      public Adapter caseRank(Rank object)
+      {
+        return createRankAdapter();
+      }
+      @Override
+      public Adapter caseProduktRef(ProduktRef object)
+      {
+        return createProduktRefAdapter();
+      }
+      @Override
+      public Adapter caseZutat(Zutat object)
+      {
+        return createZutatAdapter();
+      }
+      @Override
+      public Adapter caseImport(Import object)
+      {
+        return createImportAdapter();
+      }
+      @Override
+      public Adapter caseRezeptModel(RezeptModel object)
+      {
+        return createRezeptModelAdapter();
+      }
+      @Override
+      public Adapter caseKategorie(Kategorie object)
+      {
+        return createKategorieAdapter();
+      }
+      @Override
+      public Adapter caseAlergene(Alergene object)
+      {
+        return createAlergeneAdapter();
+      }
+      @Override
+      public Adapter caseMetadaten(Metadaten object)
+      {
+        return createMetadatenAdapter();
+      }
+      @Override
+      public Adapter caseStandardKategorie(StandardKategorie object)
+      {
+        return createStandardKategorieAdapter();
+      }
+      @Override
+      public Adapter caseBenutzerKategorie(BenutzerKategorie object)
+      {
+        return createBenutzerKategorieAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -131,91 +186,256 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.NamedElement <em>Named Element</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept <em>Rezept</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.NamedElement
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Rezept
    * @generated
    */
-  public Adapter createNamedElementAdapter()
+  public Adapter createRezeptAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Type <em>Type</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.ModelElement <em>Model Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Type
+   * @see com.github.funthomas424242.rezeptsammler.rezept.ModelElement
    * @generated
    */
-  public Adapter createTypeAdapter()
+  public Adapter createModelElementAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.DataType <em>Data Type</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt <em>Produkt</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.DataType
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Produkt
    * @generated
    */
-  public Adapter createDataTypeAdapter()
+  public Adapter createProduktAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Entity <em>Entity</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung <em>Projekt Beschreibung</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Entity
+   * @see com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung
    * @generated
    */
-  public Adapter createEntityAdapter()
+  public Adapter createProjektBeschreibungAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.EntityModel <em>Entity Model</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Quelle <em>Quelle</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.EntityModel
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Quelle
    * @generated
    */
-  public Adapter createEntityModelAdapter()
+  public Adapter createQuelleAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Feature <em>Feature</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt <em>Arbeitsschritt</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Feature
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt
    * @generated
    */
-  public Adapter createFeatureAdapter()
+  public Adapter createArbeitsschrittAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Tipp <em>Tipp</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Tipp
+   * @generated
+   */
+  public Adapter createTippAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Rank <em>Rank</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Rank
+   * @generated
+   */
+  public Adapter createRankAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.ProduktRef <em>Produkt Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.ProduktRef
+   * @generated
+   */
+  public Adapter createProduktRefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Zutat <em>Zutat</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Zutat
+   * @generated
+   */
+  public Adapter createZutatAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Import
+   * @generated
+   */
+  public Adapter createImportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.RezeptModel <em>Model</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptModel
+   * @generated
+   */
+  public Adapter createRezeptModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Kategorie <em>Kategorie</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Kategorie
+   * @generated
+   */
+  public Adapter createKategorieAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Alergene <em>Alergene</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Alergene
+   * @generated
+   */
+  public Adapter createAlergeneAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Metadaten <em>Metadaten</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Metadaten
+   * @generated
+   */
+  public Adapter createMetadatenAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.StandardKategorie <em>Standard Kategorie</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.StandardKategorie
+   * @generated
+   */
+  public Adapter createStandardKategorieAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.BenutzerKategorie <em>Benutzer Kategorie</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BenutzerKategorie
+   * @generated
+   */
+  public Adapter createBenutzerKategorieAdapter()
   {
     return null;
   }

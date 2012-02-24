@@ -6,28 +6,30 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.DataType;
+import com.github.funthomas424242.rezeptsammler.rezept.ModelElement;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Data Type</b></em>'.
+ * An implementation of the model object '<em><b>Model Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class DataTypeImpl extends TypeImpl implements DataType
+public abstract class ModelElementImpl extends EObjectImpl implements ModelElement
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DataTypeImpl()
+  protected ModelElementImpl()
   {
     super();
   }
@@ -40,7 +42,7 @@ public class DataTypeImpl extends TypeImpl implements DataType
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.DATA_TYPE;
+    return RezeptPackage.Literals.MODEL_ELEMENT;
   }
 
-} //DataTypeImpl
+} //ModelElementImpl

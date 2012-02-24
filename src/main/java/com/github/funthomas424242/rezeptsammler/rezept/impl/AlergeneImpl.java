@@ -6,8 +6,9 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.NamedElement;
+import com.github.funthomas424242.rezeptsammler.rezept.Alergene;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
+import com.github.funthomas424242.rezeptsammler.rezept.Stoff;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -18,45 +19,45 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Named Element</b></em>'.
+ * An implementation of the model object '<em><b>Alergene</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.NamedElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AlergeneImpl#getStoff <em>Stoff</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class NamedElementImpl extends EObjectImpl implements NamedElement
+public class AlergeneImpl extends EObjectImpl implements Alergene
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getStoff() <em>Stoff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getStoff()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final Stoff STOFF_EDEFAULT = Stoff.LAKTOSE;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getStoff() <em>Stoff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getStoff()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected Stoff stoff = STOFF_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected NamedElementImpl()
+  protected AlergeneImpl()
   {
     super();
   }
@@ -69,7 +70,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.NAMED_ELEMENT;
+    return RezeptPackage.Literals.ALERGENE;
   }
 
   /**
@@ -77,9 +78,9 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public Stoff getStoff()
   {
-    return name;
+    return stoff;
   }
 
   /**
@@ -87,12 +88,12 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setStoff(Stoff newStoff)
   {
-    String oldName = name;
-    name = newName;
+    Stoff oldStoff = stoff;
+    stoff = newStoff == null ? STOFF_EDEFAULT : newStoff;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.NAMED_ELEMENT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.ALERGENE__STOFF, oldStoff, stoff));
   }
 
   /**
@@ -105,8 +106,8 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case RezeptPackage.NAMED_ELEMENT__NAME:
-        return getName();
+      case RezeptPackage.ALERGENE__STOFF:
+        return getStoff();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,8 +122,8 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case RezeptPackage.NAMED_ELEMENT__NAME:
-        setName((String)newValue);
+      case RezeptPackage.ALERGENE__STOFF:
+        setStoff((Stoff)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,8 +139,8 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case RezeptPackage.NAMED_ELEMENT__NAME:
-        setName(NAME_EDEFAULT);
+      case RezeptPackage.ALERGENE__STOFF:
+        setStoff(STOFF_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -155,8 +156,8 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case RezeptPackage.NAMED_ELEMENT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case RezeptPackage.ALERGENE__STOFF:
+        return stoff != STOFF_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -172,10 +173,10 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (stoff: ");
+    result.append(stoff);
     result.append(')');
     return result.toString();
   }
 
-} //NamedElementImpl
+} //AlergeneImpl

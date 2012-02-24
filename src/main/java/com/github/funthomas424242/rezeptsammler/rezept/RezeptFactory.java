@@ -27,40 +27,139 @@ public interface RezeptFactory extends EFactory
   RezeptFactory eINSTANCE = com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Data Type</em>'.
+   * Returns a new object of class '<em>Rezept</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Data Type</em>'.
+   * @return a new object of class '<em>Rezept</em>'.
    * @generated
    */
-  DataType createDataType();
+  Rezept createRezept();
 
   /**
-   * Returns a new object of class '<em>Entity</em>'.
+   * Returns a new object of class '<em>Produkt</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity</em>'.
+   * @return a new object of class '<em>Produkt</em>'.
    * @generated
    */
-  Entity createEntity();
+  Produkt createProdukt();
 
   /**
-   * Returns a new object of class '<em>Entity Model</em>'.
+   * Returns a new object of class '<em>Projekt Beschreibung</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity Model</em>'.
+   * @return a new object of class '<em>Projekt Beschreibung</em>'.
    * @generated
    */
-  EntityModel createEntityModel();
+  ProjektBeschreibung createProjektBeschreibung();
 
   /**
-   * Returns a new object of class '<em>Feature</em>'.
+   * Returns a new object of class '<em>Quelle</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Feature</em>'.
+   * @return a new object of class '<em>Quelle</em>'.
    * @generated
    */
-  Feature createFeature();
+  Quelle createQuelle();
+
+  /**
+   * Returns a new object of class '<em>Arbeitsschritt</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Arbeitsschritt</em>'.
+   * @generated
+   */
+  Arbeitsschritt createArbeitsschritt();
+
+  /**
+   * Returns a new object of class '<em>Tipp</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tipp</em>'.
+   * @generated
+   */
+  Tipp createTipp();
+
+  /**
+   * Returns a new object of class '<em>Rank</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rank</em>'.
+   * @generated
+   */
+  Rank createRank();
+
+  /**
+   * Returns a new object of class '<em>Produkt Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Produkt Ref</em>'.
+   * @generated
+   */
+  ProduktRef createProduktRef();
+
+  /**
+   * Returns a new object of class '<em>Zutat</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Zutat</em>'.
+   * @generated
+   */
+  Zutat createZutat();
+
+  /**
+   * Returns a new object of class '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Import</em>'.
+   * @generated
+   */
+  Import createImport();
+
+  /**
+   * Returns a new object of class '<em>Model</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Model</em>'.
+   * @generated
+   */
+  RezeptModel createRezeptModel();
+
+  /**
+   * Returns a new object of class '<em>Alergene</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Alergene</em>'.
+   * @generated
+   */
+  Alergene createAlergene();
+
+  /**
+   * Returns a new object of class '<em>Metadaten</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Metadaten</em>'.
+   * @generated
+   */
+  Metadaten createMetadaten();
+
+  /**
+   * Returns a new object of class '<em>Standard Kategorie</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Standard Kategorie</em>'.
+   * @generated
+   */
+  StandardKategorie createStandardKategorie();
+
+  /**
+   * Returns a new object of class '<em>Benutzer Kategorie</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Benutzer Kategorie</em>'.
+   * @generated
+   */
+  BenutzerKategorie createBenutzerKategorie();
 
   /**
    * Returns the package supported by this factory.

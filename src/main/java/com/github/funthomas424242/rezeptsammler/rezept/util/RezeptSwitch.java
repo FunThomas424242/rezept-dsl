@@ -76,51 +76,126 @@ public class RezeptSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case RezeptPackage.NAMED_ELEMENT:
+      case RezeptPackage.REZEPT:
       {
-        NamedElement namedElement = (NamedElement)theEObject;
-        T result = caseNamedElement(namedElement);
+        Rezept rezept = (Rezept)theEObject;
+        T result = caseRezept(rezept);
+        if (result == null) result = caseModelElement(rezept);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.TYPE:
+      case RezeptPackage.MODEL_ELEMENT:
       {
-        Type type = (Type)theEObject;
-        T result = caseType(type);
-        if (result == null) result = caseNamedElement(type);
+        ModelElement modelElement = (ModelElement)theEObject;
+        T result = caseModelElement(modelElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.DATA_TYPE:
+      case RezeptPackage.PRODUKT:
       {
-        DataType dataType = (DataType)theEObject;
-        T result = caseDataType(dataType);
-        if (result == null) result = caseType(dataType);
-        if (result == null) result = caseNamedElement(dataType);
+        Produkt produkt = (Produkt)theEObject;
+        T result = caseProdukt(produkt);
+        if (result == null) result = caseModelElement(produkt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.ENTITY:
+      case RezeptPackage.PROJEKT_BESCHREIBUNG:
       {
-        Entity entity = (Entity)theEObject;
-        T result = caseEntity(entity);
-        if (result == null) result = caseType(entity);
-        if (result == null) result = caseNamedElement(entity);
+        ProjektBeschreibung projektBeschreibung = (ProjektBeschreibung)theEObject;
+        T result = caseProjektBeschreibung(projektBeschreibung);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.ENTITY_MODEL:
+      case RezeptPackage.QUELLE:
       {
-        EntityModel entityModel = (EntityModel)theEObject;
-        T result = caseEntityModel(entityModel);
+        Quelle quelle = (Quelle)theEObject;
+        T result = caseQuelle(quelle);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.FEATURE:
+      case RezeptPackage.ARBEITSSCHRITT:
       {
-        Feature feature = (Feature)theEObject;
-        T result = caseFeature(feature);
-        if (result == null) result = caseNamedElement(feature);
+        Arbeitsschritt arbeitsschritt = (Arbeitsschritt)theEObject;
+        T result = caseArbeitsschritt(arbeitsschritt);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.TIPP:
+      {
+        Tipp tipp = (Tipp)theEObject;
+        T result = caseTipp(tipp);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.RANK:
+      {
+        Rank rank = (Rank)theEObject;
+        T result = caseRank(rank);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.PRODUKT_REF:
+      {
+        ProduktRef produktRef = (ProduktRef)theEObject;
+        T result = caseProduktRef(produktRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.ZUTAT:
+      {
+        Zutat zutat = (Zutat)theEObject;
+        T result = caseZutat(zutat);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.IMPORT:
+      {
+        Import import_ = (Import)theEObject;
+        T result = caseImport(import_);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.REZEPT_MODEL:
+      {
+        RezeptModel rezeptModel = (RezeptModel)theEObject;
+        T result = caseRezeptModel(rezeptModel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.KATEGORIE:
+      {
+        Kategorie kategorie = (Kategorie)theEObject;
+        T result = caseKategorie(kategorie);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.ALERGENE:
+      {
+        Alergene alergene = (Alergene)theEObject;
+        T result = caseAlergene(alergene);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.METADATEN:
+      {
+        Metadaten metadaten = (Metadaten)theEObject;
+        T result = caseMetadaten(metadaten);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.STANDARD_KATEGORIE:
+      {
+        StandardKategorie standardKategorie = (StandardKategorie)theEObject;
+        T result = caseStandardKategorie(standardKategorie);
+        if (result == null) result = caseKategorie(standardKategorie);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.BENUTZER_KATEGORIE:
+      {
+        BenutzerKategorie benutzerKategorie = (BenutzerKategorie)theEObject;
+        T result = caseBenutzerKategorie(benutzerKategorie);
+        if (result == null) result = caseKategorie(benutzerKategorie);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -129,97 +204,273 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rezept</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rezept</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNamedElement(NamedElement object)
+  public T caseRezept(Rezept object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Model Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Model Element</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseType(Type object)
+  public T caseModelElement(ModelElement object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Data Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Produkt</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Data Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Produkt</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDataType(DataType object)
+  public T caseProdukt(Produkt object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Projekt Beschreibung</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Projekt Beschreibung</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEntity(Entity object)
+  public T caseProjektBeschreibung(ProjektBeschreibung object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Entity Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Quelle</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Entity Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Quelle</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEntityModel(EntityModel object)
+  public T caseQuelle(Quelle object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Feature</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Arbeitsschritt</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Feature</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Arbeitsschritt</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFeature(Feature object)
+  public T caseArbeitsschritt(Arbeitsschritt object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tipp</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tipp</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTipp(Tipp object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rank</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rank</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRank(Rank object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Produkt Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Produkt Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProduktRef(ProduktRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Zutat</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Zutat</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseZutat(Zutat object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImport(Import object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRezeptModel(RezeptModel object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Kategorie</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Kategorie</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKategorie(Kategorie object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Alergene</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Alergene</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAlergene(Alergene object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Metadaten</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Metadaten</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMetadaten(Metadaten object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Standard Kategorie</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Standard Kategorie</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStandardKategorie(StandardKategorie object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Benutzer Kategorie</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Benutzer Kategorie</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBenutzerKategorie(BenutzerKategorie object)
   {
     return null;
   }

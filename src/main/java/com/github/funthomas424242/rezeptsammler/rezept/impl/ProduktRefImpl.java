@@ -6,10 +6,9 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Feature;
-import com.github.funthomas424242.rezeptsammler.rezept.FeatureKind;
+import com.github.funthomas424242.rezeptsammler.rezept.Produkt;
+import com.github.funthomas424242.rezeptsammler.rezept.ProduktRef;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
-import com.github.funthomas424242.rezeptsammler.rezept.Type;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -17,59 +16,60 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Feature</b></em>'.
+ * An implementation of the model object '<em><b>Produkt Ref</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.FeatureImpl#getKind <em>Kind</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.FeatureImpl#getType <em>Type</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktRefImpl#getMenge <em>Menge</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktRefImpl#getProdukt <em>Produkt</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FeatureImpl extends NamedElementImpl implements Feature
+public class ProduktRefImpl extends EObjectImpl implements ProduktRef
 {
   /**
-   * The default value of the '{@link #getKind() <em>Kind</em>}' attribute.
+   * The default value of the '{@link #getMenge() <em>Menge</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getKind()
+   * @see #getMenge()
    * @generated
    * @ordered
    */
-  protected static final FeatureKind KIND_EDEFAULT = FeatureKind.ATTRIBUTE;
+  protected static final Float MENGE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.
+   * The cached value of the '{@link #getMenge() <em>Menge</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getKind()
+   * @see #getMenge()
    * @generated
    * @ordered
    */
-  protected FeatureKind kind = KIND_EDEFAULT;
+  protected Float menge = MENGE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * The cached value of the '{@link #getProdukt() <em>Produkt</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getProdukt()
    * @generated
    * @ordered
    */
-  protected Type type;
+  protected Produkt produkt;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FeatureImpl()
+  protected ProduktRefImpl()
   {
     super();
   }
@@ -82,7 +82,7 @@ public class FeatureImpl extends NamedElementImpl implements Feature
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.FEATURE;
+    return RezeptPackage.Literals.PRODUKT_REF;
   }
 
   /**
@@ -90,9 +90,9 @@ public class FeatureImpl extends NamedElementImpl implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public FeatureKind getKind()
+  public Float getMenge()
   {
-    return kind;
+    return menge;
   }
 
   /**
@@ -100,12 +100,12 @@ public class FeatureImpl extends NamedElementImpl implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setKind(FeatureKind newKind)
+  public void setMenge(Float newMenge)
   {
-    FeatureKind oldKind = kind;
-    kind = newKind == null ? KIND_EDEFAULT : newKind;
+    Float oldMenge = menge;
+    menge = newMenge;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.FEATURE__KIND, oldKind, kind));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PRODUKT_REF__MENGE, oldMenge, menge));
   }
 
   /**
@@ -113,19 +113,19 @@ public class FeatureImpl extends NamedElementImpl implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public Type getType()
+  public Produkt getProdukt()
   {
-    if (type != null && type.eIsProxy())
+    if (produkt != null && produkt.eIsProxy())
     {
-      InternalEObject oldType = (InternalEObject)type;
-      type = (Type)eResolveProxy(oldType);
-      if (type != oldType)
+      InternalEObject oldProdukt = (InternalEObject)produkt;
+      produkt = (Produkt)eResolveProxy(oldProdukt);
+      if (produkt != oldProdukt)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RezeptPackage.FEATURE__TYPE, oldType, type));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RezeptPackage.PRODUKT_REF__PRODUKT, oldProdukt, produkt));
       }
     }
-    return type;
+    return produkt;
   }
 
   /**
@@ -133,9 +133,9 @@ public class FeatureImpl extends NamedElementImpl implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public Type basicGetType()
+  public Produkt basicGetProdukt()
   {
-    return type;
+    return produkt;
   }
 
   /**
@@ -143,12 +143,12 @@ public class FeatureImpl extends NamedElementImpl implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(Type newType)
+  public void setProdukt(Produkt newProdukt)
   {
-    Type oldType = type;
-    type = newType;
+    Produkt oldProdukt = produkt;
+    produkt = newProdukt;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.FEATURE__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PRODUKT_REF__PRODUKT, oldProdukt, produkt));
   }
 
   /**
@@ -161,11 +161,11 @@ public class FeatureImpl extends NamedElementImpl implements Feature
   {
     switch (featureID)
     {
-      case RezeptPackage.FEATURE__KIND:
-        return getKind();
-      case RezeptPackage.FEATURE__TYPE:
-        if (resolve) return getType();
-        return basicGetType();
+      case RezeptPackage.PRODUKT_REF__MENGE:
+        return getMenge();
+      case RezeptPackage.PRODUKT_REF__PRODUKT:
+        if (resolve) return getProdukt();
+        return basicGetProdukt();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -180,11 +180,11 @@ public class FeatureImpl extends NamedElementImpl implements Feature
   {
     switch (featureID)
     {
-      case RezeptPackage.FEATURE__KIND:
-        setKind((FeatureKind)newValue);
+      case RezeptPackage.PRODUKT_REF__MENGE:
+        setMenge((Float)newValue);
         return;
-      case RezeptPackage.FEATURE__TYPE:
-        setType((Type)newValue);
+      case RezeptPackage.PRODUKT_REF__PRODUKT:
+        setProdukt((Produkt)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -200,11 +200,11 @@ public class FeatureImpl extends NamedElementImpl implements Feature
   {
     switch (featureID)
     {
-      case RezeptPackage.FEATURE__KIND:
-        setKind(KIND_EDEFAULT);
+      case RezeptPackage.PRODUKT_REF__MENGE:
+        setMenge(MENGE_EDEFAULT);
         return;
-      case RezeptPackage.FEATURE__TYPE:
-        setType((Type)null);
+      case RezeptPackage.PRODUKT_REF__PRODUKT:
+        setProdukt((Produkt)null);
         return;
     }
     super.eUnset(featureID);
@@ -220,10 +220,10 @@ public class FeatureImpl extends NamedElementImpl implements Feature
   {
     switch (featureID)
     {
-      case RezeptPackage.FEATURE__KIND:
-        return kind != KIND_EDEFAULT;
-      case RezeptPackage.FEATURE__TYPE:
-        return type != null;
+      case RezeptPackage.PRODUKT_REF__MENGE:
+        return MENGE_EDEFAULT == null ? menge != null : !MENGE_EDEFAULT.equals(menge);
+      case RezeptPackage.PRODUKT_REF__PRODUKT:
+        return produkt != null;
     }
     return super.eIsSet(featureID);
   }
@@ -239,10 +239,10 @@ public class FeatureImpl extends NamedElementImpl implements Feature
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (kind: ");
-    result.append(kind);
+    result.append(" (menge: ");
+    result.append(menge);
     result.append(')');
     return result.toString();
   }
 
-} //FeatureImpl
+} //ProduktRefImpl

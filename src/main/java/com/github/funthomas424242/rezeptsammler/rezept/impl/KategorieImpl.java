@@ -6,28 +6,34 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
+import com.github.funthomas424242.rezeptsammler.rezept.Kategorie;
+import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
-import com.github.funthomas424242.rezeptsammler.rezept.Type;
+
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Type</b></em>'.
+ * An implementation of the model object '<em><b>Kategorie</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public abstract class TypeImpl extends NamedElementImpl implements Type
+public abstract class KategorieImpl extends EObjectImpl implements Kategorie
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TypeImpl()
+  protected KategorieImpl()
   {
     super();
   }
@@ -40,7 +46,7 @@ public abstract class TypeImpl extends NamedElementImpl implements Type
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.TYPE;
+    return RezeptPackage.Literals.KATEGORIE;
   }
 
-} //TypeImpl
+} //KategorieImpl
