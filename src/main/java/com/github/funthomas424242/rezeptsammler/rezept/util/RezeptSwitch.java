@@ -163,17 +163,10 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.KATEGORIE:
+      case RezeptPackage.TAG:
       {
-        Kategorie kategorie = (Kategorie)theEObject;
-        T result = caseKategorie(kategorie);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case RezeptPackage.ALERGENE:
-      {
-        Alergene alergene = (Alergene)theEObject;
-        T result = caseAlergene(alergene);
+        Tag tag = (Tag)theEObject;
+        T result = caseTag(tag);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -184,19 +177,19 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.STANDARD_KATEGORIE:
+      case RezeptPackage.STOFF_TAG:
       {
-        StandardKategorie standardKategorie = (StandardKategorie)theEObject;
-        T result = caseStandardKategorie(standardKategorie);
-        if (result == null) result = caseKategorie(standardKategorie);
+        StoffTag stoffTag = (StoffTag)theEObject;
+        T result = caseStoffTag(stoffTag);
+        if (result == null) result = caseTag(stoffTag);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.BENUTZER_KATEGORIE:
+      case RezeptPackage.BENUTZER_TAG:
       {
-        BenutzerKategorie benutzerKategorie = (BenutzerKategorie)theEObject;
-        T result = caseBenutzerKategorie(benutzerKategorie);
-        if (result == null) result = caseKategorie(benutzerKategorie);
+        BenutzerTag benutzerTag = (BenutzerTag)theEObject;
+        T result = caseBenutzerTag(benutzerTag);
+        if (result == null) result = caseTag(benutzerTag);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -205,6 +198,14 @@ public class RezeptSwitch<T> extends Switch<T>
         ModulBeschreibung modulBeschreibung = (ModulBeschreibung)theEObject;
         T result = caseModulBeschreibung(modulBeschreibung);
         if (result == null) result = caseMetadaten(modulBeschreibung);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.DIAET_TAG:
+      {
+        DiaetTag diaetTag = (DiaetTag)theEObject;
+        T result = caseDiaetTag(diaetTag);
+        if (result == null) result = caseTag(diaetTag);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -405,33 +406,17 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Kategorie</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tag</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Kategorie</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tag</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseKategorie(Kategorie object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Alergene</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Alergene</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAlergene(Alergene object)
+  public T caseTag(Tag object)
   {
     return null;
   }
@@ -453,33 +438,33 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Standard Kategorie</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Stoff Tag</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Standard Kategorie</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Stoff Tag</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStandardKategorie(StandardKategorie object)
+  public T caseStoffTag(StoffTag object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Benutzer Kategorie</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Benutzer Tag</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Benutzer Kategorie</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Benutzer Tag</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBenutzerKategorie(BenutzerKategorie object)
+  public T caseBenutzerTag(BenutzerTag object)
   {
     return null;
   }
@@ -496,6 +481,22 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseModulBeschreibung(ModulBeschreibung object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Diaet Tag</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Diaet Tag</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDiaetTag(DiaetTag object)
   {
     return null;
   }

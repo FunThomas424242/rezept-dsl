@@ -6,25 +6,24 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Alergene</b></em>'.
+ * A representation of the model object '<em><b>Stoff Tag</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Alergene#getStoff <em>Stoff</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.StoffTag#getStoff <em>Stoff</em>}</li>
  * </ul>
  * </p>
  *
- * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getAlergene()
+ * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getStoffTag()
  * @model
  * @generated
  */
-public interface Alergene extends EObject
+public interface StoffTag extends Tag
 {
   /**
    * Returns the value of the '<em><b>Stoff</b></em>' attribute.
@@ -38,14 +37,14 @@ public interface Alergene extends EObject
    * @return the value of the '<em>Stoff</em>' attribute.
    * @see com.github.funthomas424242.rezeptsammler.rezept.Stoff
    * @see #setStoff(Stoff)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getAlergene_Stoff()
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getStoffTag_Stoff()
    * @model required="true"
    * @generated
    */
   Stoff getStoff();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Alergene#getStoff <em>Stoff</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.StoffTag#getStoff <em>Stoff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Stoff</em>' attribute.
@@ -55,4 +54,4 @@ public interface Alergene extends EObject
    */
   void setStoff(Stoff value);
 
-} // Alergene
+} // StoffTag

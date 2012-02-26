@@ -42,7 +42,7 @@ public class ProduktRefImpl extends EObjectImpl implements ProduktRef
    * @generated
    * @ordered
    */
-  protected static final Float MENGE_EDEFAULT = null;
+  protected static final Float MENGE_EDEFAULT = new Float(1.5F);
 
   /**
    * The cached value of the '{@link #getMenge() <em>Menge</em>}' attribute.

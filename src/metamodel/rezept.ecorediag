@@ -15,6 +15,10 @@
         <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Rezept/untertitel"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_qyBEAV8mEeGA3cC5IRmMSg"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_FKLDgF8nEeGA3cC5IRmMSg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Rezept/kategorie"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_FKLDgV8nEeGA3cC5IRmMSg"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_a4xogF8oEeGA3cC5IRmMSg" type="2001">
         <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Rezept/letzteAenderung"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_a4xogV8oEeGA3cC5IRmMSg"/>
@@ -80,7 +84,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_YzdGcV2WEeGqYtVkHPgHSw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_QqiJcGAFEeGynbzcHxptKQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Produkt/letzteAenderung"/>
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Produkt/datumLetzteAenderung"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_QqiJcWAFEeGynbzcHxptKQ"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_L_xx4V2REeGqYtVkHPgHSw"/>
@@ -185,7 +189,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_FsmRsV2TEeGqYtVkHPgHSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="rezept.ecore#//Arbeitsschritt"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FsmRsl2TEeGqYtVkHPgHSw" x="-85" y="560"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FsmRsl2TEeGqYtVkHPgHSw" y="480"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_K7WOgF2TEeGqYtVkHPgHSw" type="1005">
     <children xmi:type="notation:Node" xmi:id="_K7W1kF2TEeGqYtVkHPgHSw" type="4010"/>
@@ -208,7 +212,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_K7WOgV2TEeGqYtVkHPgHSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="rezept.ecore#//KategorieArt"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K7WOgl2TEeGqYtVkHPgHSw" x="-220" y="10"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K7WOgl2TEeGqYtVkHPgHSw" x="70" y="335"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_6ZBPMF2TEeGqYtVkHPgHSw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_6ZCdUF2TEeGqYtVkHPgHSw" type="4001"/>
@@ -228,7 +232,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_6ZBPMV2TEeGqYtVkHPgHSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="rezept.ecore#//Tipp"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6ZBPMl2TEeGqYtVkHPgHSw" x="-350" y="445"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6ZBPMl2TEeGqYtVkHPgHSw" x="-265" y="470"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_LVCrcF2UEeGqYtVkHPgHSw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_LVDSgF2UEeGqYtVkHPgHSw" type="4001"/>
@@ -293,6 +297,14 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Stueck"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_P8Dn8V2WEeGqYtVkHPgHSw"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_cYfAQGCzEeG5QO3eMfWSSw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Glas"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cYfAQWCzEeG5QO3eMfWSSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_yxqW0GC1EeG5QO3eMfWSSw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Flasche"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yxqW0WC1EeG5QO3eMfWSSw"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_EFFZ8l2WEeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_EFFZ812WEeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_EFFZ9F2WEeGqYtVkHPgHSw"/>
@@ -350,7 +362,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_W0kF8V2YEeGqYtVkHPgHSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="rezept.ecore#//Stoff"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W0kF8l2YEeGqYtVkHPgHSw" x="250" y="495"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W0kF8l2YEeGqYtVkHPgHSw" x="-655" y="380"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_o2P30F2aEeGqYtVkHPgHSw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_o2Qe4F2aEeGqYtVkHPgHSw" type="4001"/>
@@ -397,28 +409,8 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_lZdOc18nEeGA3cC5IRmMSg"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_lZcAUV8nEeGA3cC5IRmMSg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="rezept.ecore#//Kategorie"/>
+    <element xmi:type="ecore:EClass" href="rezept.ecore#//Tag"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lZcAUl8nEeGA3cC5IRmMSg" x="-385" y="215"/>
-  </children>
-  <children xmi:type="notation:Node" xmi:id="_9cWmwF8nEeGA3cC5IRmMSg" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_9cXN0F8nEeGA3cC5IRmMSg" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_9cXN0V8nEeGA3cC5IRmMSg" type="5001">
-      <children xmi:type="notation:Node" xmi:id="__WA3EF8nEeGA3cC5IRmMSg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Alergene/stoff"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="__WA3EV8nEeGA3cC5IRmMSg"/>
-      </children>
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_9cXN0l8nEeGA3cC5IRmMSg"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_9cXN018nEeGA3cC5IRmMSg"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_9cXN1F8nEeGA3cC5IRmMSg"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_9cX04F8nEeGA3cC5IRmMSg" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_9cX04V8nEeGA3cC5IRmMSg"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_9cX04l8nEeGA3cC5IRmMSg"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_9cX0418nEeGA3cC5IRmMSg"/>
-    </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_9cWmwV8nEeGA3cC5IRmMSg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="rezept.ecore#//Alergene"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9cWmwl8nEeGA3cC5IRmMSg" x="60" y="430"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_WspssF8wEeGA3cC5IRmMSg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_WsqTwF8wEeGA3cC5IRmMSg" type="4001"/>
@@ -439,9 +431,9 @@
   <children xmi:type="notation:Node" xmi:id="_KUOy8F86EeGA3cC5IRmMSg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_KUPaAF86EeGA3cC5IRmMSg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_KUPaAV86EeGA3cC5IRmMSg" type="5001">
-      <children xmi:type="notation:Node" xmi:id="_FKLDgF8nEeGA3cC5IRmMSg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//StandardKategorie/bezeichnung"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_FKLDgV8nEeGA3cC5IRmMSg"/>
+      <children xmi:type="notation:Node" xmi:id="_SCCtsWCvEeG5QO3eMfWSSw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//StoffTag/stoff"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_SCCtsmCvEeG5QO3eMfWSSw"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_KUPaAl86EeGA3cC5IRmMSg"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_KUPaA186EeGA3cC5IRmMSg"/>
@@ -453,14 +445,14 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_KUQBE186EeGA3cC5IRmMSg"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_KUOy8V86EeGA3cC5IRmMSg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="rezept.ecore#//StandardKategorie"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KUOy8l86EeGA3cC5IRmMSg" x="-495" y="310"/>
+    <element xmi:type="ecore:EClass" href="rezept.ecore#//StoffTag"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KUOy8l86EeGA3cC5IRmMSg" x="-650" y="310"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_L2qPAF86EeGA3cC5IRmMSg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_L2q2EF86EeGA3cC5IRmMSg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_L2q2EV86EeGA3cC5IRmMSg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_-uLowF8sEeGA3cC5IRmMSg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//BenutzerKategorie/bezeichnung"/>
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//BenutzerTag/bezeichnung"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_-uLowV8sEeGA3cC5IRmMSg"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_L2q2El86EeGA3cC5IRmMSg"/>
@@ -473,8 +465,8 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_L2rdI186EeGA3cC5IRmMSg"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_L2qPAV86EeGA3cC5IRmMSg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="rezept.ecore#//BenutzerKategorie"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L2qPAl86EeGA3cC5IRmMSg" x="-305" y="310"/>
+    <element xmi:type="ecore:EClass" href="rezept.ecore#//BenutzerTag"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L2qPAl86EeGA3cC5IRmMSg" x="-240" y="310"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_qpi0sF_7EeGynbzcHxptKQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_qpkp4F_7EeGynbzcHxptKQ" type="4001"/>
@@ -495,6 +487,45 @@
     <styles xmi:type="notation:ShapeStyle" xmi:id="_qpi0sV_7EeGynbzcHxptKQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="rezept.ecore#//ModulBeschreibung"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qpi0sl_7EeGynbzcHxptKQ" x="252" y="83"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_tx0K8GCwEeG5QO3eMfWSSw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_tx1ZEGCwEeG5QO3eMfWSSw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_tx2nMGCwEeG5QO3eMfWSSw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_zDVH4GCwEeG5QO3eMfWSSw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//DiaetTag/diaet"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zDVH4WCwEeG5QO3eMfWSSw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_tx2nMWCwEeG5QO3eMfWSSw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_tx2nMmCwEeG5QO3eMfWSSw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_tx2nM2CwEeG5QO3eMfWSSw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_tx3OQGCwEeG5QO3eMfWSSw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_tx3OQWCwEeG5QO3eMfWSSw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_tx3OQmCwEeG5QO3eMfWSSw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_tx3OQ2CwEeG5QO3eMfWSSw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_tx0K8WCwEeG5QO3eMfWSSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="rezept.ecore#//DiaetTag"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tx0K8mCwEeG5QO3eMfWSSw" x="-438" y="320"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_w9D-8GCwEeG5QO3eMfWSSw" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_w9F0IGCwEeG5QO3eMfWSSw" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_w9GbMGCwEeG5QO3eMfWSSw" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_38vG0GCwEeG5QO3eMfWSSw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//DiaetArt/Laktosefrei"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_38vG0WCwEeG5QO3eMfWSSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_6sLvoGCwEeG5QO3eMfWSSw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//DiaetArt/Fruchtzuckerarm"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6sLvoWCwEeG5QO3eMfWSSw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_w9GbMWCwEeG5QO3eMfWSSw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_w9GbMmCwEeG5QO3eMfWSSw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_w9GbM2CwEeG5QO3eMfWSSw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_w9D-8WCwEeG5QO3eMfWSSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="rezept.ecore#//DiaetArt"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w9D-8mCwEeG5QO3eMfWSSw" x="-448" y="394"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_qnGLcFzLEeG9prrKESB43Q"/>
   <element xmi:type="ecore:EPackage" href="rezept.ecore#/"/>
@@ -528,7 +559,7 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_OPGBwF2UEeGqYtVkHPgHSw" type="3002" source="_rK3m4FzLEeG9prrKESB43Q" target="_LVCrcF2UEeGqYtVkHPgHSw">
     <children xmi:type="notation:Node" xmi:id="_OPGo0F2UEeGqYtVkHPgHSw" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_OPGo0V2UEeGqYtVkHPgHSw" x="-25" y="-19"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OPGo0V2UEeGqYtVkHPgHSw" x="-2" y="-40"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_OPGo0l2UEeGqYtVkHPgHSw" type="4012">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_OPGo012UEeGqYtVkHPgHSw" x="-97" y="-16"/>
@@ -542,7 +573,7 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_vHuEoF2UEeGqYtVkHPgHSw" type="3002" source="_rK3m4FzLEeG9prrKESB43Q" target="_FsmRsF2TEeGqYtVkHPgHSw">
     <children xmi:type="notation:Node" xmi:id="_vHursF2UEeGqYtVkHPgHSw" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_vHursV2UEeGqYtVkHPgHSw" x="-28" y="-27"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vHursV2UEeGqYtVkHPgHSw" x="-36" y="23"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_vHursl2UEeGqYtVkHPgHSw" type="4012">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_vHurs12UEeGqYtVkHPgHSw" x="1" y="9"/>
@@ -550,7 +581,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_vHuEoV2UEeGqYtVkHPgHSw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_vHuEol2UEeGqYtVkHPgHSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="rezept.ecore#//Rezept/schritte"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vHuEo12UEeGqYtVkHPgHSw" points="[0, 22, -93, -126]$[0, 140, -93, -8]$[84, 140, -9, -8]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vHuEo12UEeGqYtVkHPgHSw" points="[-5, 22, 44, -201]$[-43, 195, 6, -28]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vHy9IF2UEeGqYtVkHPgHSw" id="(0.22424242424242424,0.8151260504201681)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vHy9IV2UEeGqYtVkHPgHSw" id="(0.09803921568627451,0.5882352941176471)"/>
   </edges>
@@ -652,44 +683,16 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3sBMoF5zEeG_kbQbKMwosQ" id="(0.19101123595505617,0.026143790849673203)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3sBMoV5zEeG_kbQbKMwosQ" id="(0.8333333333333334,0.9069767441860465)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_g-lwMF8oEeGA3cC5IRmMSg" type="3002" source="_rK3m4FzLEeG9prrKESB43Q" target="_9cWmwF8nEeGA3cC5IRmMSg">
-    <children xmi:type="notation:Node" xmi:id="_g-m-UF8oEeGA3cC5IRmMSg" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_g-m-UV8oEeGA3cC5IRmMSg" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_g-m-Ul8oEeGA3cC5IRmMSg" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_g-m-U18oEeGA3cC5IRmMSg" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_g-mXQF8oEeGA3cC5IRmMSg" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_g-mXQV8oEeGA3cC5IRmMSg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="rezept.ecore#//Rezept/armAn"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g-mXQl8oEeGA3cC5IRmMSg" points="[-1, 24, 1, -149]$[-1, 164, 1, -9]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g-qosF8oEeGA3cC5IRmMSg" id="(0.3146067415730337,0.7647058823529411)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g-qosV8oEeGA3cC5IRmMSg" id="(0.18627450980392157,0.19607843137254902)"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_knqvsF8oEeGA3cC5IRmMSg" type="3002" source="_rK3m4FzLEeG9prrKESB43Q" target="_9cWmwF8nEeGA3cC5IRmMSg">
-    <children xmi:type="notation:Node" xmi:id="_knqvtF8oEeGA3cC5IRmMSg" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_knqvtV8oEeGA3cC5IRmMSg" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_knrWwF8oEeGA3cC5IRmMSg" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_knrWwV8oEeGA3cC5IRmMSg" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_knqvsV8oEeGA3cC5IRmMSg" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_knqvsl8oEeGA3cC5IRmMSg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="rezept.ecore#//Rezept/freiVon"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knqvs18oEeGA3cC5IRmMSg" points="[0, 12, 2, -143]$[0, 152, 2, -3]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kntzAF8oEeGA3cC5IRmMSg" id="(0.6179775280898876,0.8823529411764706)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knuaEF8oEeGA3cC5IRmMSg" id="(0.7156862745098039,0.0784313725490196)"/>
-  </edges>
   <edges xmi:type="notation:Edge" xmi:id="_X0PHMF8tEeGA3cC5IRmMSg" type="3002" source="_rK3m4FzLEeG9prrKESB43Q" target="_lZcAUF8nEeGA3cC5IRmMSg">
     <children xmi:type="notation:Node" xmi:id="_X0PuQF8tEeGA3cC5IRmMSg" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_X0PuQV8tEeGA3cC5IRmMSg" x="-10" y="-10"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_X0PuQV8tEeGA3cC5IRmMSg" x="-51" y="14"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_X0PuQl8tEeGA3cC5IRmMSg" type="4012">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_X0PuQ18tEeGA3cC5IRmMSg" x="10" y="10"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_X0PHMV8tEeGA3cC5IRmMSg" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_X0PHMl8tEeGA3cC5IRmMSg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="rezept.ecore#//Rezept/kategorien"/>
+    <element xmi:type="ecore:EReference" href="rezept.ecore#//Rezept/tags"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_X0PHM18tEeGA3cC5IRmMSg" points="[-12, 0, 249, -14]$[-259, 44, 2, 30]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X0T_sF8tEeGA3cC5IRmMSg" id="(0.07303370786516854,0.47058823529411764)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X0T_sV8tEeGA3cC5IRmMSg" id="(0.815,0.5588235294117647)"/>
@@ -733,5 +736,12 @@
     <element xsi:nil="true"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_swqSM1_7EeGynbzcHxptKQ" points="[-6, -9, 35, 58]$[-36, -46, 5, 21]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_swtVgF_7EeGynbzcHxptKQ" id="(0.25547445255474455,0.23255813953488372)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9aYbQGCwEeG5QO3eMfWSSw" type="3003" source="_tx0K8GCwEeG5QO3eMfWSSw" target="_lZcAUF8nEeGA3cC5IRmMSg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9aYbQWCwEeG5QO3eMfWSSw" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9aYbQmCwEeG5QO3eMfWSSw" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9aYbQ2CwEeG5QO3eMfWSSw" points="[2, -3, -48, 85]$[0, -86, -50, 2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9acFoGCwEeG5QO3eMfWSSw" id="(0.5238095238095238,0.0784313725490196)"/>
   </edges>
 </notation:Diagram>

@@ -6,8 +6,8 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Kategorie;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
+import com.github.funthomas424242.rezeptsammler.rezept.Tag;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -15,21 +15,21 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Kategorie</b></em>'.
+ * An implementation of the model object '<em><b>Tag</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public abstract class KategorieImpl extends EObjectImpl implements Kategorie
+public abstract class TagImpl extends EObjectImpl implements Tag
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected KategorieImpl()
+  protected TagImpl()
   {
     super();
   }
@@ -42,7 +42,7 @@ public abstract class KategorieImpl extends EObjectImpl implements Kategorie
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.KATEGORIE;
+    return RezeptPackage.Literals.TAG;
   }
 
-} //KategorieImpl
+} //TagImpl

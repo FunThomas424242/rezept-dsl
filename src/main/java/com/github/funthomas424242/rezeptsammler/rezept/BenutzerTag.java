@@ -9,21 +9,21 @@ package com.github.funthomas424242.rezeptsammler.rezept;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Benutzer Kategorie</b></em>'.
+ * A representation of the model object '<em><b>Benutzer Tag</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BenutzerKategorie#getBezeichnung <em>Bezeichnung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BenutzerTag#getBezeichnung <em>Bezeichnung</em>}</li>
  * </ul>
  * </p>
  *
- * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBenutzerKategorie()
+ * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBenutzerTag()
  * @model
  * @generated
  */
-public interface BenutzerKategorie extends Kategorie
+public interface BenutzerTag extends Tag
 {
   /**
    * Returns the value of the '<em><b>Bezeichnung</b></em>' attribute.
@@ -36,14 +36,14 @@ public interface BenutzerKategorie extends Kategorie
    * <!-- end-user-doc -->
    * @return the value of the '<em>Bezeichnung</em>' attribute.
    * @see #setBezeichnung(String)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBenutzerKategorie_Bezeichnung()
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBenutzerTag_Bezeichnung()
    * @model default="defaultKategorie" required="true"
    * @generated
    */
   String getBezeichnung();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.BenutzerKategorie#getBezeichnung <em>Bezeichnung</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.BenutzerTag#getBezeichnung <em>Bezeichnung</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Bezeichnung</em>' attribute.
@@ -52,4 +52,4 @@ public interface BenutzerKategorie extends Kategorie
    */
   void setBezeichnung(String value);
 
-} // BenutzerKategorie
+} // BenutzerTag

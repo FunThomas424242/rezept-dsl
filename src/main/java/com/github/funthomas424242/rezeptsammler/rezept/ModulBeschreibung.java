@@ -25,7 +25,6 @@ package com.github.funthomas424242.rezeptsammler.rezept;
  */
 public interface ModulBeschreibung extends Metadaten
 {
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -51,4 +50,5 @@ public interface ModulBeschreibung extends Metadaten
    * @generated
    */
   void setName(String value);
+
 } // ModulBeschreibung

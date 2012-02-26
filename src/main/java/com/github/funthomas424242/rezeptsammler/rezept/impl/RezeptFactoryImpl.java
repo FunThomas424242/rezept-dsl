@@ -80,10 +80,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.ZUTAT: return createZutat();
       case RezeptPackage.IMPORT: return createImport();
       case RezeptPackage.REZEPT_MODEL: return createRezeptModel();
-      case RezeptPackage.ALERGENE: return createAlergene();
-      case RezeptPackage.STANDARD_KATEGORIE: return createStandardKategorie();
-      case RezeptPackage.BENUTZER_KATEGORIE: return createBenutzerKategorie();
+      case RezeptPackage.STOFF_TAG: return createStoffTag();
+      case RezeptPackage.BENUTZER_TAG: return createBenutzerTag();
       case RezeptPackage.MODUL_BESCHREIBUNG: return createModulBeschreibung();
+      case RezeptPackage.DIAET_TAG: return createDiaetTag();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -107,8 +107,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return createVerpackungFromString(eDataType, initialValue);
       case RezeptPackage.STOFF:
         return createStoffFromString(eDataType, initialValue);
-      case RezeptPackage.DATUM:
-        return createDatumFromString(eDataType, initialValue);
+      case RezeptPackage.DIAET_ART:
+        return createDiaetArtFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -132,8 +132,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return convertVerpackungToString(eDataType, instanceValue);
       case RezeptPackage.STOFF:
         return convertStoffToString(eDataType, instanceValue);
-      case RezeptPackage.DATUM:
-        return convertDatumToString(eDataType, instanceValue);
+      case RezeptPackage.DIAET_ART:
+        return convertDiaetArtToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -265,10 +265,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Alergene createAlergene()
+  public StoffTag createStoffTag()
   {
-    AlergeneImpl alergene = new AlergeneImpl();
-    return alergene;
+    StoffTagImpl stoffTag = new StoffTagImpl();
+    return stoffTag;
   }
 
   /**
@@ -276,21 +276,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public StandardKategorie createStandardKategorie()
+  public BenutzerTag createBenutzerTag()
   {
-    StandardKategorieImpl standardKategorie = new StandardKategorieImpl();
-    return standardKategorie;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BenutzerKategorie createBenutzerKategorie()
-  {
-    BenutzerKategorieImpl benutzerKategorie = new BenutzerKategorieImpl();
-    return benutzerKategorie;
+    BenutzerTagImpl benutzerTag = new BenutzerTagImpl();
+    return benutzerTag;
   }
 
   /**
@@ -302,6 +291,17 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     ModulBeschreibungImpl modulBeschreibung = new ModulBeschreibungImpl();
     return modulBeschreibung;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DiaetTag createDiaetTag()
+  {
+    DiaetTagImpl diaetTag = new DiaetTagImpl();
+    return diaetTag;
   }
 
   /**
@@ -397,9 +397,11 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String createDatumFromString(EDataType eDataType, String initialValue)
+  public DiaetArt createDiaetArtFromString(EDataType eDataType, String initialValue)
   {
-    return (String)super.createFromString(eDataType, initialValue);
+    DiaetArt result = DiaetArt.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
   }
 
   /**
@@ -407,9 +409,9 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertDatumToString(EDataType eDataType, Object instanceValue)
+  public String convertDiaetArtToString(EDataType eDataType, Object instanceValue)
   {
-    return super.convertToString(eDataType, instanceValue);
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

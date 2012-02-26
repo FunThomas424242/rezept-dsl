@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImpl#getPreis <em>Preis</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImpl#getHandler <em>Handler</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImpl#getHersteller <em>Hersteller</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImpl#getLetzteAenderung <em>Letzte Aenderung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImpl#getDatumLetzteAenderung <em>Datum Letzte Aenderung</em>}</li>
  * </ul>
  * </p>
  *
@@ -179,24 +179,24 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
   protected String hersteller = HERSTELLER_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getLetzteAenderung() <em>Letzte Aenderung</em>}' attribute.
+   * The default value of the '{@link #getDatumLetzteAenderung() <em>Datum Letzte Aenderung</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLetzteAenderung()
+   * @see #getDatumLetzteAenderung()
    * @generated
    * @ordered
    */
-  protected static final String LETZTE_AENDERUNG_EDEFAULT = "\'01.01.2012\'";
+  protected static final String DATUM_LETZTE_AENDERUNG_EDEFAULT = "\'01.01.2012\'";
 
   /**
-   * The cached value of the '{@link #getLetzteAenderung() <em>Letzte Aenderung</em>}' attribute.
+   * The cached value of the '{@link #getDatumLetzteAenderung() <em>Datum Letzte Aenderung</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLetzteAenderung()
+   * @see #getDatumLetzteAenderung()
    * @generated
    * @ordered
    */
-  protected String letzteAenderung = LETZTE_AENDERUNG_EDEFAULT;
+  protected String datumLetzteAenderung = DATUM_LETZTE_AENDERUNG_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -385,9 +385,9 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getLetzteAenderung()
+  public String getDatumLetzteAenderung()
   {
-    return letzteAenderung;
+    return datumLetzteAenderung;
   }
 
   /**
@@ -395,12 +395,12 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLetzteAenderung(String newLetzteAenderung)
+  public void setDatumLetzteAenderung(String newDatumLetzteAenderung)
   {
-    String oldLetzteAenderung = letzteAenderung;
-    letzteAenderung = newLetzteAenderung;
+    String oldDatumLetzteAenderung = datumLetzteAenderung;
+    datumLetzteAenderung = newDatumLetzteAenderung;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PRODUKT__LETZTE_AENDERUNG, oldLetzteAenderung, letzteAenderung));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PRODUKT__DATUM_LETZTE_AENDERUNG, oldDatumLetzteAenderung, datumLetzteAenderung));
   }
 
   /**
@@ -427,8 +427,8 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
         return getHandler();
       case RezeptPackage.PRODUKT__HERSTELLER:
         return getHersteller();
-      case RezeptPackage.PRODUKT__LETZTE_AENDERUNG:
-        return getLetzteAenderung();
+      case RezeptPackage.PRODUKT__DATUM_LETZTE_AENDERUNG:
+        return getDatumLetzteAenderung();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -464,8 +464,8 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
       case RezeptPackage.PRODUKT__HERSTELLER:
         setHersteller((String)newValue);
         return;
-      case RezeptPackage.PRODUKT__LETZTE_AENDERUNG:
-        setLetzteAenderung((String)newValue);
+      case RezeptPackage.PRODUKT__DATUM_LETZTE_AENDERUNG:
+        setDatumLetzteAenderung((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -502,8 +502,8 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
       case RezeptPackage.PRODUKT__HERSTELLER:
         setHersteller(HERSTELLER_EDEFAULT);
         return;
-      case RezeptPackage.PRODUKT__LETZTE_AENDERUNG:
-        setLetzteAenderung(LETZTE_AENDERUNG_EDEFAULT);
+      case RezeptPackage.PRODUKT__DATUM_LETZTE_AENDERUNG:
+        setDatumLetzteAenderung(DATUM_LETZTE_AENDERUNG_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -533,8 +533,8 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
         return HANDLER_EDEFAULT == null ? handler != null : !HANDLER_EDEFAULT.equals(handler);
       case RezeptPackage.PRODUKT__HERSTELLER:
         return HERSTELLER_EDEFAULT == null ? hersteller != null : !HERSTELLER_EDEFAULT.equals(hersteller);
-      case RezeptPackage.PRODUKT__LETZTE_AENDERUNG:
-        return LETZTE_AENDERUNG_EDEFAULT == null ? letzteAenderung != null : !LETZTE_AENDERUNG_EDEFAULT.equals(letzteAenderung);
+      case RezeptPackage.PRODUKT__DATUM_LETZTE_AENDERUNG:
+        return DATUM_LETZTE_AENDERUNG_EDEFAULT == null ? datumLetzteAenderung != null : !DATUM_LETZTE_AENDERUNG_EDEFAULT.equals(datumLetzteAenderung);
     }
     return super.eIsSet(featureID);
   }
@@ -564,8 +564,8 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
     result.append(handler);
     result.append(", hersteller: ");
     result.append(hersteller);
-    result.append(", letzteAenderung: ");
-    result.append(letzteAenderung);
+    result.append(", datumLetzteAenderung: ");
+    result.append(datumLetzteAenderung);
     result.append(')');
     return result.toString();
   }

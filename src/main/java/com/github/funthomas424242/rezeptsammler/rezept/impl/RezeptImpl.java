@@ -6,14 +6,14 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Alergene;
 import com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt;
-import com.github.funthomas424242.rezeptsammler.rezept.Kategorie;
+import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.ProduktRef;
 import com.github.funthomas424242.rezeptsammler.rezept.Quelle;
 import com.github.funthomas424242.rezeptsammler.rezept.Rank;
 import com.github.funthomas424242.rezeptsammler.rezept.Rezept;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
+import com.github.funthomas424242.rezeptsammler.rezept.Tag;
 import com.github.funthomas424242.rezeptsammler.rezept.Tipp;
 import com.github.funthomas424242.rezeptsammler.rezept.Zutat;
 
@@ -48,10 +48,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getZutaten <em>Zutaten</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getTitel <em>Titel</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getUntertitel <em>Untertitel</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getKategorie <em>Kategorie</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getLetzteAenderung <em>Letzte Aenderung</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getArmAn <em>Arm An</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getFreiVon <em>Frei Von</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getKategorien <em>Kategorien</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -180,6 +179,26 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
   protected String untertitel = UNTERTITEL_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getKategorie() <em>Kategorie</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKategorie()
+   * @generated
+   * @ordered
+   */
+  protected static final KategorieArt KATEGORIE_EDEFAULT = KategorieArt.SALAT;
+
+  /**
+   * The cached value of the '{@link #getKategorie() <em>Kategorie</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKategorie()
+   * @generated
+   * @ordered
+   */
+  protected KategorieArt kategorie = KATEGORIE_EDEFAULT;
+
+  /**
    * The default value of the '{@link #getLetzteAenderung() <em>Letzte Aenderung</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -200,34 +219,14 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
   protected String letzteAenderung = LETZTE_AENDERUNG_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getArmAn() <em>Arm An</em>}' containment reference list.
+   * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getArmAn()
+   * @see #getTags()
    * @generated
    * @ordered
    */
-  protected EList<Alergene> armAn;
-
-  /**
-   * The cached value of the '{@link #getFreiVon() <em>Frei Von</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFreiVon()
-   * @generated
-   * @ordered
-   */
-  protected EList<Alergene> freiVon;
-
-  /**
-   * The cached value of the '{@link #getKategorien() <em>Kategorien</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKategorien()
-   * @generated
-   * @ordered
-   */
-  protected EList<Kategorie> kategorien;
+  protected EList<Tag> tags;
 
   /**
    * <!-- begin-user-doc -->
@@ -476,6 +475,29 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * <!-- end-user-doc -->
    * @generated
    */
+  public KategorieArt getKategorie()
+  {
+    return kategorie;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setKategorie(KategorieArt newKategorie)
+  {
+    KategorieArt oldKategorie = kategorie;
+    kategorie = newKategorie == null ? KATEGORIE_EDEFAULT : newKategorie;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.REZEPT__KATEGORIE, oldKategorie, kategorie));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getLetzteAenderung()
   {
     return letzteAenderung;
@@ -499,41 +521,13 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Alergene> getArmAn()
+  public EList<Tag> getTags()
   {
-    if (armAn == null)
+    if (tags == null)
     {
-      armAn = new EObjectContainmentEList<Alergene>(Alergene.class, this, RezeptPackage.REZEPT__ARM_AN);
+      tags = new EObjectContainmentEList<Tag>(Tag.class, this, RezeptPackage.REZEPT__TAGS);
     }
-    return armAn;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Alergene> getFreiVon()
-  {
-    if (freiVon == null)
-    {
-      freiVon = new EObjectContainmentEList<Alergene>(Alergene.class, this, RezeptPackage.REZEPT__FREI_VON);
-    }
-    return freiVon;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Kategorie> getKategorien()
-  {
-    if (kategorien == null)
-    {
-      kategorien = new EObjectContainmentEList<Kategorie>(Kategorie.class, this, RezeptPackage.REZEPT__KATEGORIEN);
-    }
-    return kategorien;
+    return tags;
   }
 
   /**
@@ -558,12 +552,8 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return ((InternalEList<?>)getProdukte()).basicRemove(otherEnd, msgs);
       case RezeptPackage.REZEPT__ZUTATEN:
         return ((InternalEList<?>)getZutaten()).basicRemove(otherEnd, msgs);
-      case RezeptPackage.REZEPT__ARM_AN:
-        return ((InternalEList<?>)getArmAn()).basicRemove(otherEnd, msgs);
-      case RezeptPackage.REZEPT__FREI_VON:
-        return ((InternalEList<?>)getFreiVon()).basicRemove(otherEnd, msgs);
-      case RezeptPackage.REZEPT__KATEGORIEN:
-        return ((InternalEList<?>)getKategorien()).basicRemove(otherEnd, msgs);
+      case RezeptPackage.REZEPT__TAGS:
+        return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -596,14 +586,12 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return getTitel();
       case RezeptPackage.REZEPT__UNTERTITEL:
         return getUntertitel();
+      case RezeptPackage.REZEPT__KATEGORIE:
+        return getKategorie();
       case RezeptPackage.REZEPT__LETZTE_AENDERUNG:
         return getLetzteAenderung();
-      case RezeptPackage.REZEPT__ARM_AN:
-        return getArmAn();
-      case RezeptPackage.REZEPT__FREI_VON:
-        return getFreiVon();
-      case RezeptPackage.REZEPT__KATEGORIEN:
-        return getKategorien();
+      case RezeptPackage.REZEPT__TAGS:
+        return getTags();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -650,20 +638,15 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
       case RezeptPackage.REZEPT__UNTERTITEL:
         setUntertitel((String)newValue);
         return;
+      case RezeptPackage.REZEPT__KATEGORIE:
+        setKategorie((KategorieArt)newValue);
+        return;
       case RezeptPackage.REZEPT__LETZTE_AENDERUNG:
         setLetzteAenderung((String)newValue);
         return;
-      case RezeptPackage.REZEPT__ARM_AN:
-        getArmAn().clear();
-        getArmAn().addAll((Collection<? extends Alergene>)newValue);
-        return;
-      case RezeptPackage.REZEPT__FREI_VON:
-        getFreiVon().clear();
-        getFreiVon().addAll((Collection<? extends Alergene>)newValue);
-        return;
-      case RezeptPackage.REZEPT__KATEGORIEN:
-        getKategorien().clear();
-        getKategorien().addAll((Collection<? extends Kategorie>)newValue);
+      case RezeptPackage.REZEPT__TAGS:
+        getTags().clear();
+        getTags().addAll((Collection<? extends Tag>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -706,17 +689,14 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
       case RezeptPackage.REZEPT__UNTERTITEL:
         setUntertitel(UNTERTITEL_EDEFAULT);
         return;
+      case RezeptPackage.REZEPT__KATEGORIE:
+        setKategorie(KATEGORIE_EDEFAULT);
+        return;
       case RezeptPackage.REZEPT__LETZTE_AENDERUNG:
         setLetzteAenderung(LETZTE_AENDERUNG_EDEFAULT);
         return;
-      case RezeptPackage.REZEPT__ARM_AN:
-        getArmAn().clear();
-        return;
-      case RezeptPackage.REZEPT__FREI_VON:
-        getFreiVon().clear();
-        return;
-      case RezeptPackage.REZEPT__KATEGORIEN:
-        getKategorien().clear();
+      case RezeptPackage.REZEPT__TAGS:
+        getTags().clear();
         return;
     }
     super.eUnset(featureID);
@@ -750,14 +730,12 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return TITEL_EDEFAULT == null ? titel != null : !TITEL_EDEFAULT.equals(titel);
       case RezeptPackage.REZEPT__UNTERTITEL:
         return UNTERTITEL_EDEFAULT == null ? untertitel != null : !UNTERTITEL_EDEFAULT.equals(untertitel);
+      case RezeptPackage.REZEPT__KATEGORIE:
+        return kategorie != KATEGORIE_EDEFAULT;
       case RezeptPackage.REZEPT__LETZTE_AENDERUNG:
         return LETZTE_AENDERUNG_EDEFAULT == null ? letzteAenderung != null : !LETZTE_AENDERUNG_EDEFAULT.equals(letzteAenderung);
-      case RezeptPackage.REZEPT__ARM_AN:
-        return armAn != null && !armAn.isEmpty();
-      case RezeptPackage.REZEPT__FREI_VON:
-        return freiVon != null && !freiVon.isEmpty();
-      case RezeptPackage.REZEPT__KATEGORIEN:
-        return kategorien != null && !kategorien.isEmpty();
+      case RezeptPackage.REZEPT__TAGS:
+        return tags != null && !tags.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -779,6 +757,8 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
     result.append(titel);
     result.append(", untertitel: ");
     result.append(untertitel);
+    result.append(", kategorie: ");
+    result.append(kategorie);
     result.append(", letzteAenderung: ");
     result.append(letzteAenderung);
     result.append(')');

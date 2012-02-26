@@ -14,123 +14,97 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Kategorie Art</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Diaet Art</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getKategorieArt()
+ * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getDiaetArt()
  * @model
  * @generated
  */
-public enum KategorieArt implements Enumerator
+public enum DiaetArt implements Enumerator
 {
   /**
-   * The '<em><b>Salat</b></em>' literal object.
+   * The '<em><b>Laktosefrei</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #SALAT_VALUE
+   * @see #LAKTOSEFREI_VALUE
    * @generated
    * @ordered
    */
-  SALAT(0, "Salat", "Salat"),
+  LAKTOSEFREI(0, "Laktosefrei", "Laktosefrei"),
 
   /**
-   * The '<em><b>Kochen</b></em>' literal object.
+   * The '<em><b>Fruchtzuckerarm</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #KOCHEN_VALUE
+   * @see #FRUCHTZUCKERARM_VALUE
    * @generated
    * @ordered
    */
-  KOCHEN(1, "Kochen", "Kochen"),
+  FRUCHTZUCKERARM(1, "Fruchtzuckerarm", "Fruchtzuckerarm");
 
   /**
-   * The '<em><b>Backen</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #BACKEN_VALUE
-   * @generated
-   * @ordered
-   */
-  BACKEN(2, "Backen", "Backen");
-
-  /**
-   * The '<em><b>Salat</b></em>' literal value.
+   * The '<em><b>Laktosefrei</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Salat</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Laktosefrei</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #SALAT
-   * @model name="Salat"
+   * @see #LAKTOSEFREI
+   * @model name="Laktosefrei"
    * @generated
    * @ordered
    */
-  public static final int SALAT_VALUE = 0;
+  public static final int LAKTOSEFREI_VALUE = 0;
 
   /**
-   * The '<em><b>Kochen</b></em>' literal value.
+   * The '<em><b>Fruchtzuckerarm</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Kochen</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Fruchtzuckerarm</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #KOCHEN
-   * @model name="Kochen"
+   * @see #FRUCHTZUCKERARM
+   * @model name="Fruchtzuckerarm"
    * @generated
    * @ordered
    */
-  public static final int KOCHEN_VALUE = 1;
+  public static final int FRUCHTZUCKERARM_VALUE = 1;
 
   /**
-   * The '<em><b>Backen</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Backen</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #BACKEN
-   * @model name="Backen"
-   * @generated
-   * @ordered
-   */
-  public static final int BACKEN_VALUE = 2;
-
-  /**
-   * An array of all the '<em><b>Kategorie Art</b></em>' enumerators.
+   * An array of all the '<em><b>Diaet Art</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final KategorieArt[] VALUES_ARRAY =
-    new KategorieArt[]
+  private static final DiaetArt[] VALUES_ARRAY =
+    new DiaetArt[]
     {
-      SALAT,
-      KOCHEN,
-      BACKEN,
+      LAKTOSEFREI,
+      FRUCHTZUCKERARM,
     };
 
   /**
-   * A public read-only list of all the '<em><b>Kategorie Art</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>Diaet Art</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<KategorieArt> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<DiaetArt> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Kategorie Art</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>Diaet Art</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static KategorieArt get(String literal)
+  public static DiaetArt get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      KategorieArt result = VALUES_ARRAY[i];
+      DiaetArt result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -140,16 +114,16 @@ public enum KategorieArt implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Kategorie Art</b></em>' literal with the specified name.
+   * Returns the '<em><b>Diaet Art</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static KategorieArt getByName(String name)
+  public static DiaetArt getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      KategorieArt result = VALUES_ARRAY[i];
+      DiaetArt result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -159,18 +133,17 @@ public enum KategorieArt implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Kategorie Art</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>Diaet Art</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static KategorieArt get(int value)
+  public static DiaetArt get(int value)
   {
     switch (value)
     {
-      case SALAT_VALUE: return SALAT;
-      case KOCHEN_VALUE: return KOCHEN;
-      case BACKEN_VALUE: return BACKEN;
+      case LAKTOSEFREI_VALUE: return LAKTOSEFREI;
+      case FRUCHTZUCKERARM_VALUE: return FRUCHTZUCKERARM;
     }
     return null;
   }
@@ -202,7 +175,7 @@ public enum KategorieArt implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private KategorieArt(int value, String name, String literal)
+  private DiaetArt(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -251,4 +224,4 @@ public enum KategorieArt implements Enumerator
     return literal;
   }
   
-} //KategorieArt
+} //DiaetArt

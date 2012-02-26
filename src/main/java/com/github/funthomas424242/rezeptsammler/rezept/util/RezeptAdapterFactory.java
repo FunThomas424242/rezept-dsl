@@ -139,14 +139,9 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createRezeptModelAdapter();
       }
       @Override
-      public Adapter caseKategorie(Kategorie object)
+      public Adapter caseTag(Tag object)
       {
-        return createKategorieAdapter();
-      }
-      @Override
-      public Adapter caseAlergene(Alergene object)
-      {
-        return createAlergeneAdapter();
+        return createTagAdapter();
       }
       @Override
       public Adapter caseMetadaten(Metadaten object)
@@ -154,19 +149,24 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createMetadatenAdapter();
       }
       @Override
-      public Adapter caseStandardKategorie(StandardKategorie object)
+      public Adapter caseStoffTag(StoffTag object)
       {
-        return createStandardKategorieAdapter();
+        return createStoffTagAdapter();
       }
       @Override
-      public Adapter caseBenutzerKategorie(BenutzerKategorie object)
+      public Adapter caseBenutzerTag(BenutzerTag object)
       {
-        return createBenutzerKategorieAdapter();
+        return createBenutzerTagAdapter();
       }
       @Override
       public Adapter caseModulBeschreibung(ModulBeschreibung object)
       {
         return createModulBeschreibungAdapter();
+      }
+      @Override
+      public Adapter caseDiaetTag(DiaetTag object)
+      {
+        return createDiaetTagAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -371,31 +371,16 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Kategorie <em>Kategorie</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Tag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Kategorie
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Tag
    * @generated
    */
-  public Adapter createKategorieAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Alergene <em>Alergene</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Alergene
-   * @generated
-   */
-  public Adapter createAlergeneAdapter()
+  public Adapter createTagAdapter()
   {
     return null;
   }
@@ -416,31 +401,31 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.StandardKategorie <em>Standard Kategorie</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.StoffTag <em>Stoff Tag</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.StandardKategorie
+   * @see com.github.funthomas424242.rezeptsammler.rezept.StoffTag
    * @generated
    */
-  public Adapter createStandardKategorieAdapter()
+  public Adapter createStoffTagAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.BenutzerKategorie <em>Benutzer Kategorie</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.BenutzerTag <em>Benutzer Tag</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.BenutzerKategorie
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BenutzerTag
    * @generated
    */
-  public Adapter createBenutzerKategorieAdapter()
+  public Adapter createBenutzerTagAdapter()
   {
     return null;
   }
@@ -456,6 +441,21 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModulBeschreibungAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.DiaetTag <em>Diaet Tag</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.DiaetTag
+   * @generated
+   */
+  public Adapter createDiaetTagAdapter()
   {
     return null;
   }

@@ -8,8 +8,6 @@ package com.github.funthomas424242.rezeptsammler.rezept;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Projekt Beschreibung</b></em>'.

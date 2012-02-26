@@ -6,7 +6,6 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept;
 
-import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -26,10 +25,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getZutaten <em>Zutaten</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getTitel <em>Titel</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getUntertitel <em>Untertitel</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getKategorie <em>Kategorie</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getLetzteAenderung <em>Letzte Aenderung</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getArmAn <em>Arm An</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getFreiVon <em>Frei Von</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getKategorien <em>Kategorien</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -235,6 +233,35 @@ public interface Rezept extends ModelElement
   void setUntertitel(String value);
 
   /**
+   * Returns the value of the '<em><b>Kategorie</b></em>' attribute.
+   * The literals are from the enumeration {@link com.github.funthomas424242.rezeptsammler.rezept.KategorieArt}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kategorie</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kategorie</em>' attribute.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.KategorieArt
+   * @see #setKategorie(KategorieArt)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_Kategorie()
+   * @model required="true"
+   * @generated
+   */
+  KategorieArt getKategorie();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getKategorie <em>Kategorie</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Kategorie</em>' attribute.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.KategorieArt
+   * @see #getKategorie()
+   * @generated
+   */
+  void setKategorie(KategorieArt value);
+
+  /**
    * Returns the value of the '<em><b>Letzte Aenderung</b></em>' attribute.
    * The default value is <code>"\'01.01.2012\'"</code>.
    * <!-- begin-user-doc -->
@@ -262,51 +289,19 @@ public interface Rezept extends ModelElement
   void setLetzteAenderung(String value);
 
   /**
-   * Returns the value of the '<em><b>Arm An</b></em>' containment reference list.
-   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.Alergene}.
+   * Returns the value of the '<em><b>Tags</b></em>' containment reference list.
+   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.Tag}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Arm An</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Tags</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Arm An</em>' containment reference list.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_ArmAn()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Alergene> getArmAn();
-
-  /**
-   * Returns the value of the '<em><b>Frei Von</b></em>' containment reference list.
-   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.Alergene}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Frei Von</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Frei Von</em>' containment reference list.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_FreiVon()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Alergene> getFreiVon();
-
-  /**
-   * Returns the value of the '<em><b>Kategorien</b></em>' containment reference list.
-   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.Kategorie}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Kategorien</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Kategorien</em>' containment reference list.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_Kategorien()
+   * @return the value of the '<em>Tags</em>' containment reference list.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_Tags()
    * @model containment="true" required="true"
    * @generated
    */
-  EList<Kategorie> getKategorien();
+  EList<Tag> getTags();
 
 } // Rezept

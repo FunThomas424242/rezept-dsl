@@ -20,14 +20,12 @@
         upperBound="-1" eType="#//Zutat" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titel" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="untertitel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" lowerBound="1"
+        eType="#//KategorieArt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="letzteAenderung" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="'01.01.2012'"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="armAn" upperBound="-1"
-        eType="#//Alergene" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="freiVon" upperBound="-1"
-        eType="#//Alergene" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kategorien" lowerBound="1"
-        upperBound="-1" eType="#//Kategorie" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tags" lowerBound="1" upperBound="-1"
+        eType="#//Tag" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Produkt" eSuperTypes="#//ModelElement">
@@ -38,7 +36,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="preis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handler" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hersteller" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="letzteAenderung" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datumLetzteAenderung" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="'01.01.2012'"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjektBeschreibung" eSuperTypes="#//Metadaten">
@@ -78,7 +76,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProduktRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="menge" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="menge" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
+        defaultValueLiteral="1.5"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="produkt" lowerBound="1"
         eType="#//Produkt"/>
   </eClassifiers>
@@ -88,6 +87,8 @@
     <eLiterals name="Buechse" value="2"/>
     <eLiterals name="Beutel" value="3"/>
     <eLiterals name="Stueck" value="4"/>
+    <eLiterals name="Glas" value="5"/>
+    <eLiterals name="Flasche" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Zutat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -111,21 +112,23 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="metadaten" lowerBound="1"
         eType="#//Metadaten" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Kategorie" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Alergene">
+  <eClassifiers xsi:type="ecore:EClass" name="Tag" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Metadaten" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StoffTag" eSuperTypes="#//Tag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stoff" lowerBound="1" eType="#//Stoff"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Metadaten" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StandardKategorie" eSuperTypes="#//Kategorie">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bezeichnung" lowerBound="1"
-        eType="#//KategorieArt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BenutzerKategorie" eSuperTypes="#//Kategorie">
+  <eClassifiers xsi:type="ecore:EClass" name="BenutzerTag" eSuperTypes="#//Tag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bezeichnung" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="defaultKategorie"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModulBeschreibung" eSuperTypes="#//Metadaten">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="Datum" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiaetTag" eSuperTypes="#//Tag">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diaet" lowerBound="1" eType="#//DiaetArt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DiaetArt">
+    <eLiterals name="Laktosefrei"/>
+    <eLiterals name="Fruchtzuckerarm" value="1"/>
+  </eClassifiers>
 </ecore:EPackage>

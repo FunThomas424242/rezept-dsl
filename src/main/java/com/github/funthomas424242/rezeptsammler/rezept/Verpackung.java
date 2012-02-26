@@ -71,7 +71,23 @@ public enum Verpackung implements Enumerator
    * @generated
    * @ordered
    */
-  STUECK(4, "Stueck", "Stueck");
+  STUECK(4, "Stueck", "Stueck"), /**
+   * The '<em><b>Glas</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #GLAS_VALUE
+   * @generated
+   * @ordered
+   */
+  GLAS(5, "Glas", "Glas"), /**
+   * The '<em><b>Flasche</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FLASCHE_VALUE
+   * @generated
+   * @ordered
+   */
+  FLASCHE(6, "Flasche", "Flasche");
 
   /**
    * The '<em><b>Packung</b></em>' literal value.
@@ -149,6 +165,36 @@ public enum Verpackung implements Enumerator
   public static final int STUECK_VALUE = 4;
 
   /**
+   * The '<em><b>Glas</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Glas</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #GLAS
+   * @model name="Glas"
+   * @generated
+   * @ordered
+   */
+  public static final int GLAS_VALUE = 5;
+
+  /**
+   * The '<em><b>Flasche</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Flasche</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FLASCHE
+   * @model name="Flasche"
+   * @generated
+   * @ordered
+   */
+  public static final int FLASCHE_VALUE = 6;
+
+  /**
    * An array of all the '<em><b>Verpackung</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -162,6 +208,8 @@ public enum Verpackung implements Enumerator
       BUECHSE,
       BEUTEL,
       STUECK,
+      GLAS,
+      FLASCHE,
     };
 
   /**
@@ -225,6 +273,8 @@ public enum Verpackung implements Enumerator
       case BUECHSE_VALUE: return BUECHSE;
       case BEUTEL_VALUE: return BEUTEL;
       case STUECK_VALUE: return STUECK;
+      case GLAS_VALUE: return GLAS;
+      case FLASCHE_VALUE: return FLASCHE;
     }
     return null;
   }

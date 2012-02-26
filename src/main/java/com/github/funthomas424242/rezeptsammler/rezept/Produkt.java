@@ -6,8 +6,6 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept;
 
-import java.util.Date;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +22,7 @@ import java.util.Date;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getPreis <em>Preis</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getHandler <em>Handler</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getHersteller <em>Hersteller</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getLetzteAenderung <em>Letzte Aenderung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getDatumLetzteAenderung <em>Datum Letzte Aenderung</em>}</li>
  * </ul>
  * </p>
  *
@@ -220,30 +218,30 @@ public interface Produkt extends ModelElement
   void setHersteller(String value);
 
   /**
-   * Returns the value of the '<em><b>Letzte Aenderung</b></em>' attribute.
+   * Returns the value of the '<em><b>Datum Letzte Aenderung</b></em>' attribute.
    * The default value is <code>"\'01.01.2012\'"</code>.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Letzte Aenderung</em>' attribute isn't clear,
+   * If the meaning of the '<em>Datum Letzte Aenderung</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Letzte Aenderung</em>' attribute.
-   * @see #setLetzteAenderung(String)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_LetzteAenderung()
+   * @return the value of the '<em>Datum Letzte Aenderung</em>' attribute.
+   * @see #setDatumLetzteAenderung(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_DatumLetzteAenderung()
    * @model default="\'01.01.2012\'" required="true"
    * @generated
    */
-  String getLetzteAenderung();
+  String getDatumLetzteAenderung();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getLetzteAenderung <em>Letzte Aenderung</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getDatumLetzteAenderung <em>Datum Letzte Aenderung</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Letzte Aenderung</em>' attribute.
-   * @see #getLetzteAenderung()
+   * @param value the new value of the '<em>Datum Letzte Aenderung</em>' attribute.
+   * @see #getDatumLetzteAenderung()
    * @generated
    */
-  void setLetzteAenderung(String value);
+  void setDatumLetzteAenderung(String value);
 
 } // Produkt

@@ -6,58 +6,56 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Alergene;
+import com.github.funthomas424242.rezeptsammler.rezept.BenutzerTag;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
-import com.github.funthomas424242.rezeptsammler.rezept.Stoff;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Alergene</b></em>'.
+ * An implementation of the model object '<em><b>Benutzer Tag</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AlergeneImpl#getStoff <em>Stoff</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BenutzerTagImpl#getBezeichnung <em>Bezeichnung</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AlergeneImpl extends EObjectImpl implements Alergene
+public class BenutzerTagImpl extends TagImpl implements BenutzerTag
 {
   /**
-   * The default value of the '{@link #getStoff() <em>Stoff</em>}' attribute.
+   * The default value of the '{@link #getBezeichnung() <em>Bezeichnung</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStoff()
+   * @see #getBezeichnung()
    * @generated
    * @ordered
    */
-  protected static final Stoff STOFF_EDEFAULT = Stoff.LAKTOSE;
+  protected static final String BEZEICHNUNG_EDEFAULT = "defaultKategorie";
 
   /**
-   * The cached value of the '{@link #getStoff() <em>Stoff</em>}' attribute.
+   * The cached value of the '{@link #getBezeichnung() <em>Bezeichnung</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStoff()
+   * @see #getBezeichnung()
    * @generated
    * @ordered
    */
-  protected Stoff stoff = STOFF_EDEFAULT;
+  protected String bezeichnung = BEZEICHNUNG_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AlergeneImpl()
+  protected BenutzerTagImpl()
   {
     super();
   }
@@ -70,7 +68,7 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.ALERGENE;
+    return RezeptPackage.Literals.BENUTZER_TAG;
   }
 
   /**
@@ -78,9 +76,9 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
    * <!-- end-user-doc -->
    * @generated
    */
-  public Stoff getStoff()
+  public String getBezeichnung()
   {
-    return stoff;
+    return bezeichnung;
   }
 
   /**
@@ -88,12 +86,12 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStoff(Stoff newStoff)
+  public void setBezeichnung(String newBezeichnung)
   {
-    Stoff oldStoff = stoff;
-    stoff = newStoff == null ? STOFF_EDEFAULT : newStoff;
+    String oldBezeichnung = bezeichnung;
+    bezeichnung = newBezeichnung;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.ALERGENE__STOFF, oldStoff, stoff));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.BENUTZER_TAG__BEZEICHNUNG, oldBezeichnung, bezeichnung));
   }
 
   /**
@@ -106,8 +104,8 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
   {
     switch (featureID)
     {
-      case RezeptPackage.ALERGENE__STOFF:
-        return getStoff();
+      case RezeptPackage.BENUTZER_TAG__BEZEICHNUNG:
+        return getBezeichnung();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -122,8 +120,8 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
   {
     switch (featureID)
     {
-      case RezeptPackage.ALERGENE__STOFF:
-        setStoff((Stoff)newValue);
+      case RezeptPackage.BENUTZER_TAG__BEZEICHNUNG:
+        setBezeichnung((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,8 +137,8 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
   {
     switch (featureID)
     {
-      case RezeptPackage.ALERGENE__STOFF:
-        setStoff(STOFF_EDEFAULT);
+      case RezeptPackage.BENUTZER_TAG__BEZEICHNUNG:
+        setBezeichnung(BEZEICHNUNG_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -156,8 +154,8 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
   {
     switch (featureID)
     {
-      case RezeptPackage.ALERGENE__STOFF:
-        return stoff != STOFF_EDEFAULT;
+      case RezeptPackage.BENUTZER_TAG__BEZEICHNUNG:
+        return BEZEICHNUNG_EDEFAULT == null ? bezeichnung != null : !BEZEICHNUNG_EDEFAULT.equals(bezeichnung);
     }
     return super.eIsSet(featureID);
   }
@@ -173,10 +171,10 @@ public class AlergeneImpl extends EObjectImpl implements Alergene
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (stoff: ");
-    result.append(stoff);
+    result.append(" (bezeichnung: ");
+    result.append(bezeichnung);
     result.append(')');
     return result.toString();
   }
 
-} //AlergeneImpl
+} //BenutzerTagImpl

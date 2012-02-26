@@ -6,7 +6,8 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.BenutzerKategorie;
+import com.github.funthomas424242.rezeptsammler.rezept.DiaetArt;
+import com.github.funthomas424242.rezeptsammler.rezept.DiaetTag;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,45 +18,45 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Benutzer Kategorie</b></em>'.
+ * An implementation of the model object '<em><b>Diaet Tag</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BenutzerKategorieImpl#getBezeichnung <em>Bezeichnung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.DiaetTagImpl#getDiaet <em>Diaet</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKategorie
+public class DiaetTagImpl extends TagImpl implements DiaetTag
 {
   /**
-   * The default value of the '{@link #getBezeichnung() <em>Bezeichnung</em>}' attribute.
+   * The default value of the '{@link #getDiaet() <em>Diaet</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBezeichnung()
+   * @see #getDiaet()
    * @generated
    * @ordered
    */
-  protected static final String BEZEICHNUNG_EDEFAULT = "defaultKategorie";
+  protected static final DiaetArt DIAET_EDEFAULT = DiaetArt.LAKTOSEFREI;
 
   /**
-   * The cached value of the '{@link #getBezeichnung() <em>Bezeichnung</em>}' attribute.
+   * The cached value of the '{@link #getDiaet() <em>Diaet</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBezeichnung()
+   * @see #getDiaet()
    * @generated
    * @ordered
    */
-  protected String bezeichnung = BEZEICHNUNG_EDEFAULT;
+  protected DiaetArt diaet = DIAET_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected BenutzerKategorieImpl()
+  protected DiaetTagImpl()
   {
     super();
   }
@@ -68,7 +69,7 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.BENUTZER_KATEGORIE;
+    return RezeptPackage.Literals.DIAET_TAG;
   }
 
   /**
@@ -76,9 +77,9 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getBezeichnung()
+  public DiaetArt getDiaet()
   {
-    return bezeichnung;
+    return diaet;
   }
 
   /**
@@ -86,12 +87,12 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBezeichnung(String newBezeichnung)
+  public void setDiaet(DiaetArt newDiaet)
   {
-    String oldBezeichnung = bezeichnung;
-    bezeichnung = newBezeichnung;
+    DiaetArt oldDiaet = diaet;
+    diaet = newDiaet == null ? DIAET_EDEFAULT : newDiaet;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.BENUTZER_KATEGORIE__BEZEICHNUNG, oldBezeichnung, bezeichnung));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.DIAET_TAG__DIAET, oldDiaet, diaet));
   }
 
   /**
@@ -104,8 +105,8 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
   {
     switch (featureID)
     {
-      case RezeptPackage.BENUTZER_KATEGORIE__BEZEICHNUNG:
-        return getBezeichnung();
+      case RezeptPackage.DIAET_TAG__DIAET:
+        return getDiaet();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +121,8 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
   {
     switch (featureID)
     {
-      case RezeptPackage.BENUTZER_KATEGORIE__BEZEICHNUNG:
-        setBezeichnung((String)newValue);
+      case RezeptPackage.DIAET_TAG__DIAET:
+        setDiaet((DiaetArt)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +138,8 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
   {
     switch (featureID)
     {
-      case RezeptPackage.BENUTZER_KATEGORIE__BEZEICHNUNG:
-        setBezeichnung(BEZEICHNUNG_EDEFAULT);
+      case RezeptPackage.DIAET_TAG__DIAET:
+        setDiaet(DIAET_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +155,8 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
   {
     switch (featureID)
     {
-      case RezeptPackage.BENUTZER_KATEGORIE__BEZEICHNUNG:
-        return BEZEICHNUNG_EDEFAULT == null ? bezeichnung != null : !BEZEICHNUNG_EDEFAULT.equals(bezeichnung);
+      case RezeptPackage.DIAET_TAG__DIAET:
+        return diaet != DIAET_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -171,10 +172,10 @@ public class BenutzerKategorieImpl extends KategorieImpl implements BenutzerKate
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (bezeichnung: ");
-    result.append(bezeichnung);
+    result.append(" (diaet: ");
+    result.append(diaet);
     result.append(')');
     return result.toString();
   }
 
-} //BenutzerKategorieImpl
+} //DiaetTagImpl

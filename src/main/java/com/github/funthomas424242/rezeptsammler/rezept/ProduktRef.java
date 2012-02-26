@@ -29,6 +29,7 @@ public interface ProduktRef extends EObject
 {
   /**
    * Returns the value of the '<em><b>Menge</b></em>' attribute.
+   * The default value is <code>"1.5"</code>.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Menge</em>' attribute isn't clear,
@@ -38,7 +39,7 @@ public interface ProduktRef extends EObject
    * @return the value of the '<em>Menge</em>' attribute.
    * @see #setMenge(Float)
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProduktRef_Menge()
-   * @model required="true"
+   * @model default="1.5" required="true"
    * @generated
    */
   Float getMenge();

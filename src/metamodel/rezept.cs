@@ -28,7 +28,7 @@ TOKENS {
 DEFINE COMMENT $'//'(~('\n'|'\r'|'\uffff'))*$;
 //DEFINE INTEGER $('-')?('1'..'9')('0'..'9')*|'0'$;
 DEFINE ID $('\'')('#')$ + TEXT + $('\'') $;
-DEFINE DATUM $('\'')('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9')('0'..'9') ('0'..'9')('\'')$;
+DEFINE DATUM $('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9')('0'..'9') ('0'..'9')$;
 }
 
 
@@ -39,42 +39,28 @@ TOKENSTYLES {
 	"Rezept" COLOR #7F0055, BOLD;
 	"Titel:" COLOR #7F0055, BOLD;
 	"Untertitel:" COLOR #7F0055, BOLD;
-	"Kategorie" COLOR #7F0055, BOLD;
-	
-	"tipps" COLOR #7F0055, BOLD;
-	"bewertung" COLOR #7F0055, BOLD;
-	"schritte" COLOR #7F0055, BOLD;
-	"produkte" COLOR #7F0055, BOLD;
-	"letzteAenderung" COLOR #7F0055, BOLD;
-	"zutaten" COLOR #7F0055, BOLD;
-	"freiVon" COLOR #7F0055, BOLD;
-	"armAn" COLOR #7F0055, BOLD;
-	"RezeptSammlung" COLOR #7F0055, BOLD;
-	"rezepte" COLOR #7F0055, BOLD;
-	"programVersion" COLOR #7F0055, BOLD;
-	"name" COLOR #7F0055, BOLD;
-	"Modul" COLOR #7F0055, BOLD;
+	"Kategorie:" COLOR #7F0055, BOLD;
+	"Tag:" COLOR #7F0055, BOLD;
+	"Diät:" COLOR #7F0055, BOLD;
+	"Stoff:" COLOR #7F0055, BOLD;
+	"ProduktRef:" COLOR #7F0055, BOLD;
 	"Produkt" COLOR #7F0055, BOLD;
-	"Verpackung" COLOR #7F0055, BOLD;
-	"ean" COLOR #7F0055, BOLD;
-	"uba" COLOR #7F0055, BOLD;
-	"preis" COLOR #7F0055, BOLD;
-	"handler" COLOR #7F0055, BOLD;
-	"hersteller" COLOR #7F0055, BOLD;
-	"Quelle" COLOR #7F0055, BOLD;
-	"Beschreibung" COLOR #7F0055, BOLD;
-	"modifikationsArt" COLOR #7F0055, BOLD;
-	"Arbeitsschritt" COLOR #7F0055, BOLD;
-	"Tipp" COLOR #7F0055, BOLD;
-	"text" COLOR #7F0055, BOLD;
-	"Rank" COLOR #7F0055, BOLD;
-	"ProduktRef" COLOR #7F0055, BOLD;
-	"menge" COLOR #7F0055, BOLD;
-	"produkt" COLOR #7F0055, BOLD;
-	"Datum" COLOR #7F0055, BOLD;
-	"datum" COLOR #7F0055, BOLD;
-	"Zutat" COLOR #7F0055, BOLD;
-	"einheit" COLOR #7F0055, BOLD;
+	"RezeptSammlung" COLOR #7F0055, BOLD;
+	"groupId","artifactId","version" COLOR #7F0055, BOLD;
+	"Letzte Änderung:" COLOR #7F0055, BOLD;
+	"Modul" COLOR #7F0055, BOLD;
+	"Verpackung:" COLOR #7F0055, BOLD;
+	"EAN:" COLOR #7F0055, BOLD;
+	"UBA:" COLOR #7F0055, BOLD;
+	"Preis:" COLOR #7F0055, BOLD;
+	"Händler:" COLOR #7F0055, BOLD;
+	"Hersteller:" COLOR #7F0055, BOLD;
+	"Quelle:" COLOR #7F0055, BOLD;
+	"Aktion:" COLOR #7F0055, BOLD;
+	"Tipp:" COLOR #7F0055, BOLD;
+	"Rank:" COLOR #7F0055, BOLD;
+	"Menge:" COLOR #7F0055, BOLD;
+	"Zutat:" COLOR #7F0055, BOLD;
 }
 
 
@@ -87,20 +73,23 @@ RULES {
 	             imports* "}";
 	Import ::=  "import"  importedResource['"','"'] "." ;
 	Produkt ::= "Produkt" name['"','"']  "{" 
-				("Verpackung" ":" verpackung[])?
-				("ean" ":" ean['"','"'])? ("uba" ":" uba['"','"'])? ("preis" ":" preis[])? ("handler" ":" handler['"','"'] )?
-				("hersteller" ":" hersteller['"','"'])? "letzteAenderung" ":" letzteAenderung[DATUM] "}" ;
-	Rezept ::= "Rezept" id['"','"'] "{" "Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? 
-				( quelle ) ? "letzte Änderung:" letzteAenderung[DATUM] "."
-			    kategorien+ tipps* bewertung? produkte* zutaten+ schritte+ armAn* freiVon*
+				("Verpackung:" verpackung['"','"'] ".")?
+				("EAN:" ean['"','"'] ".")? ("UBA:" uba['"','"'] ".")? ("Preis:" preis['"','"'] ".")? 
+				("Händler:" handler['"','"'] ".")?
+				("Hersteller:" hersteller['"','"'] ".")? "Letzte Änderung:" datumLetzteAenderung[DATUM] "." "}" ;
+	Rezept ::= "Rezept" id['"','"'] "{" 
+				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
+				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
+				produkte* zutaten+ schritte+
+				quelle? bewertung? tipps*    
 			    "}";
-	StandardKategorie ::=  "Kategorie:" bezeichnung['"','"'] "." ; 
-	BenutzerKategorie ::=  "Benutzerkategorie:" bezeichnung['"','"'] ".";
-	ProduktRef ::= "produkt" ":" produkt[] "menge" ":" menge[] ".";
-	Zutat ::= "Zutat" name['"','"'] "menge" ":" menge['"','"']  einheit['"','"'] ".";
-	Arbeitsschritt ::= "Aktion" ":" beschreibung['"','"'] ".";
-	Tipp ::= "Tipp" "{"  text['"','"'] "}";
-	Rank ::= "Rank" "{" bewertung['"','"'] "}";
-	Quelle ::= "Quelle:" "übernommen" ":" modifikationsArt[] "aus" beschreibung['"','"'] "." ;
-	Alergene ::= stoff['"','"'];
+	StoffTag ::=  "Stoff:" stoff['"','"'] "." ; 
+	BenutzerTag ::=  "Tag:" bezeichnung['"','"'] ".";
+	DiaetTag ::= "Diät:" diaet['"','"'] "." ;
+	ProduktRef ::= "ProduktRef:" produkt['"','"'] "Menge:" menge['"','"'] "mal.";
+	Zutat ::= "Zutat:" name['"','"'] "Menge:" menge['"','"']  einheit['"','"'] ".";
+	Arbeitsschritt ::= "Aktion:" beschreibung['"','"'] ".";
+	Tipp ::= "Tipp:" "{"  text['"','"'] "}";
+	Rank ::= "Rank:" "{" bewertung['"','"'] "}";
+	Quelle ::= "Quelle:" "übernommen" ":" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
 }

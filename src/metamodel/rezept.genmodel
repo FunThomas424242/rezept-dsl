@@ -22,13 +22,18 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Buechse"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Beutel"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Stueck"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Glas"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Flasche"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Stoff">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Laktose"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Fruchtzucker"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Nuessen"/>
     </genEnums>
-    <genDataTypes ecoreDataType="rezept.ecore#//Datum"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//DiaetArt">
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//DiaetArt/Laktosefrei"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//DiaetArt/Fruchtzuckerarm"/>
+    </genEnums>
     <genClasses ecoreClass="rezept.ecore#//Rezept">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/quelle"/>
@@ -39,10 +44,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/zutaten"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/titel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/untertitel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/kategorie"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/letzteAenderung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/armAn"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/freiVon"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/kategorien"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/tags"/>
     </genClasses>
     <genClasses image="false" ecoreClass="rezept.ecore#//ModelElement"/>
     <genClasses ecoreClass="rezept.ecore#//Produkt">
@@ -53,7 +57,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Produkt/preis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Produkt/handler"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Produkt/hersteller"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute rezept.ecore#//Produkt/letzteAenderung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Produkt/datumLetzteAenderung"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//ProjektBeschreibung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/groupId"/>
@@ -90,19 +94,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//RezeptModel/elemente"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//RezeptModel/metadaten"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//Kategorie"/>
-    <genClasses ecoreClass="rezept.ecore#//Alergene">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Alergene/stoff"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="rezept.ecore#//Tag"/>
     <genClasses ecoreClass="rezept.ecore#//Metadaten"/>
-    <genClasses ecoreClass="rezept.ecore#//StandardKategorie">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//StandardKategorie/bezeichnung"/>
+    <genClasses ecoreClass="rezept.ecore#//StoffTag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//StoffTag/stoff"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//BenutzerKategorie">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BenutzerKategorie/bezeichnung"/>
+    <genClasses ecoreClass="rezept.ecore#//BenutzerTag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BenutzerTag/bezeichnung"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//ModulBeschreibung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ModulBeschreibung/name"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//DiaetTag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//DiaetTag/diaet"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

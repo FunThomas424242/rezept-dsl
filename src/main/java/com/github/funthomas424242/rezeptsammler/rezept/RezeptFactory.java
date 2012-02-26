@@ -126,31 +126,22 @@ public interface RezeptFactory extends EFactory
   RezeptModel createRezeptModel();
 
   /**
-   * Returns a new object of class '<em>Alergene</em>'.
+   * Returns a new object of class '<em>Stoff Tag</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Alergene</em>'.
+   * @return a new object of class '<em>Stoff Tag</em>'.
    * @generated
    */
-  Alergene createAlergene();
+  StoffTag createStoffTag();
 
   /**
-   * Returns a new object of class '<em>Standard Kategorie</em>'.
+   * Returns a new object of class '<em>Benutzer Tag</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Standard Kategorie</em>'.
+   * @return a new object of class '<em>Benutzer Tag</em>'.
    * @generated
    */
-  StandardKategorie createStandardKategorie();
-
-  /**
-   * Returns a new object of class '<em>Benutzer Kategorie</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Benutzer Kategorie</em>'.
-   * @generated
-   */
-  BenutzerKategorie createBenutzerKategorie();
+  BenutzerTag createBenutzerTag();
 
   /**
    * Returns a new object of class '<em>Modul Beschreibung</em>'.
@@ -160,6 +151,15 @@ public interface RezeptFactory extends EFactory
    * @generated
    */
   ModulBeschreibung createModulBeschreibung();
+
+  /**
+   * Returns a new object of class '<em>Diaet Tag</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Diaet Tag</em>'.
+   * @generated
+   */
+  DiaetTag createDiaetTag();
 
   /**
    * Returns the package supported by this factory.

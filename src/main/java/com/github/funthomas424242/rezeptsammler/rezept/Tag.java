@@ -10,15 +10,14 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Kategorie</b></em>'.
+ * A representation of the model object '<em><b>Tag</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getKategorie()
+ * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getTag()
  * @model abstract="true"
  * @generated
  */
-public interface Kategorie extends EObject
+public interface Tag extends EObject
 {
-
-} // Kategorie
+} // Tag

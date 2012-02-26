@@ -6,9 +6,9 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
-import com.github.funthomas424242.rezeptsammler.rezept.StandardKategorie;
+import com.github.funthomas424242.rezeptsammler.rezept.Stoff;
+import com.github.funthomas424242.rezeptsammler.rezept.StoffTag;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -18,45 +18,45 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Standard Kategorie</b></em>'.
+ * An implementation of the model object '<em><b>Stoff Tag</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.StandardKategorieImpl#getBezeichnung <em>Bezeichnung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.StoffTagImpl#getStoff <em>Stoff</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class StandardKategorieImpl extends KategorieImpl implements StandardKategorie
+public class StoffTagImpl extends TagImpl implements StoffTag
 {
   /**
-   * The default value of the '{@link #getBezeichnung() <em>Bezeichnung</em>}' attribute.
+   * The default value of the '{@link #getStoff() <em>Stoff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBezeichnung()
+   * @see #getStoff()
    * @generated
    * @ordered
    */
-  protected static final KategorieArt BEZEICHNUNG_EDEFAULT = KategorieArt.SALAT;
+  protected static final Stoff STOFF_EDEFAULT = Stoff.LAKTOSE;
 
   /**
-   * The cached value of the '{@link #getBezeichnung() <em>Bezeichnung</em>}' attribute.
+   * The cached value of the '{@link #getStoff() <em>Stoff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBezeichnung()
+   * @see #getStoff()
    * @generated
    * @ordered
    */
-  protected KategorieArt bezeichnung = BEZEICHNUNG_EDEFAULT;
+  protected Stoff stoff = STOFF_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StandardKategorieImpl()
+  protected StoffTagImpl()
   {
     super();
   }
@@ -69,7 +69,7 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.STANDARD_KATEGORIE;
+    return RezeptPackage.Literals.STOFF_TAG;
   }
 
   /**
@@ -77,9 +77,9 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
    * <!-- end-user-doc -->
    * @generated
    */
-  public KategorieArt getBezeichnung()
+  public Stoff getStoff()
   {
-    return bezeichnung;
+    return stoff;
   }
 
   /**
@@ -87,12 +87,12 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBezeichnung(KategorieArt newBezeichnung)
+  public void setStoff(Stoff newStoff)
   {
-    KategorieArt oldBezeichnung = bezeichnung;
-    bezeichnung = newBezeichnung == null ? BEZEICHNUNG_EDEFAULT : newBezeichnung;
+    Stoff oldStoff = stoff;
+    stoff = newStoff == null ? STOFF_EDEFAULT : newStoff;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.STANDARD_KATEGORIE__BEZEICHNUNG, oldBezeichnung, bezeichnung));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.STOFF_TAG__STOFF, oldStoff, stoff));
   }
 
   /**
@@ -105,8 +105,8 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
   {
     switch (featureID)
     {
-      case RezeptPackage.STANDARD_KATEGORIE__BEZEICHNUNG:
-        return getBezeichnung();
+      case RezeptPackage.STOFF_TAG__STOFF:
+        return getStoff();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,8 +121,8 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
   {
     switch (featureID)
     {
-      case RezeptPackage.STANDARD_KATEGORIE__BEZEICHNUNG:
-        setBezeichnung((KategorieArt)newValue);
+      case RezeptPackage.STOFF_TAG__STOFF:
+        setStoff((Stoff)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,8 +138,8 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
   {
     switch (featureID)
     {
-      case RezeptPackage.STANDARD_KATEGORIE__BEZEICHNUNG:
-        setBezeichnung(BEZEICHNUNG_EDEFAULT);
+      case RezeptPackage.STOFF_TAG__STOFF:
+        setStoff(STOFF_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -155,8 +155,8 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
   {
     switch (featureID)
     {
-      case RezeptPackage.STANDARD_KATEGORIE__BEZEICHNUNG:
-        return bezeichnung != BEZEICHNUNG_EDEFAULT;
+      case RezeptPackage.STOFF_TAG__STOFF:
+        return stoff != STOFF_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -172,10 +172,10 @@ public class StandardKategorieImpl extends KategorieImpl implements StandardKate
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (bezeichnung: ");
-    result.append(bezeichnung);
+    result.append(" (stoff: ");
+    result.append(stoff);
     result.append(')');
     return result.toString();
   }
 
-} //StandardKategorieImpl
+} //StoffTagImpl
