@@ -67,7 +67,7 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * @generated
    * @ordered
    */
-  protected static final Long ID_EDEFAULT = new Long(1L);
+  protected static final String ID_EDEFAULT = "1";
 
   /**
    * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -77,7 +77,7 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * @generated
    * @ordered
    */
-  protected Long id = ID_EDEFAULT;
+  protected String id = ID_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getQuelle() <em>Quelle</em>}' containment reference.
@@ -187,7 +187,7 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * @generated
    * @ordered
    */
-  protected static final String LETZTE_AENDERUNG_EDEFAULT = "01.01.2012";
+  protected static final String LETZTE_AENDERUNG_EDEFAULT = "\'01.01.2012\'";
 
   /**
    * The cached value of the '{@link #getLetzteAenderung() <em>Letzte Aenderung</em>}' attribute.
@@ -255,7 +255,7 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * <!-- end-user-doc -->
    * @generated
    */
-  public Long getId()
+  public String getId()
   {
     return id;
   }
@@ -265,9 +265,9 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(Long newId)
+  public void setId(String newId)
   {
-    Long oldId = id;
+    String oldId = id;
     id = newId;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.REZEPT__ID, oldId, id));
@@ -620,7 +620,7 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
     switch (featureID)
     {
       case RezeptPackage.REZEPT__ID:
-        setId((Long)newValue);
+        setId((String)newValue);
         return;
       case RezeptPackage.REZEPT__QUELLE:
         setQuelle((Quelle)newValue);

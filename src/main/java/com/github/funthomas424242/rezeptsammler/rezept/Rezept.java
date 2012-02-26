@@ -6,6 +6,7 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept;
 
+import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -48,12 +49,12 @@ public interface Rezept extends ModelElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id</em>' attribute.
-   * @see #setId(Long)
+   * @see #setId(String)
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_Id()
    * @model default="1" id="true" required="true"
    * @generated
    */
-  Long getId();
+  String getId();
 
   /**
    * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getId <em>Id</em>}' attribute.
@@ -63,7 +64,7 @@ public interface Rezept extends ModelElement
    * @see #getId()
    * @generated
    */
-  void setId(Long value);
+  void setId(String value);
 
   /**
    * Returns the value of the '<em><b>Quelle</b></em>' containment reference.
@@ -235,7 +236,7 @@ public interface Rezept extends ModelElement
 
   /**
    * Returns the value of the '<em><b>Letzte Aenderung</b></em>' attribute.
-   * The default value is <code>"01.01.2012"</code>.
+   * The default value is <code>"\'01.01.2012\'"</code>.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Letzte Aenderung</em>' attribute isn't clear,
@@ -245,7 +246,7 @@ public interface Rezept extends ModelElement
    * @return the value of the '<em>Letzte Aenderung</em>' attribute.
    * @see #setLetzteAenderung(String)
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_LetzteAenderung()
-   * @model default="01.01.2012" required="true"
+   * @model default="\'01.01.2012\'" required="true"
    * @generated
    */
   String getLetzteAenderung();

@@ -103,6 +103,7 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         ProjektBeschreibung projektBeschreibung = (ProjektBeschreibung)theEObject;
         T result = caseProjektBeschreibung(projektBeschreibung);
+        if (result == null) result = caseMetadaten(projektBeschreibung);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -196,6 +197,14 @@ public class RezeptSwitch<T> extends Switch<T>
         BenutzerKategorie benutzerKategorie = (BenutzerKategorie)theEObject;
         T result = caseBenutzerKategorie(benutzerKategorie);
         if (result == null) result = caseKategorie(benutzerKategorie);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.MODUL_BESCHREIBUNG:
+      {
+        ModulBeschreibung modulBeschreibung = (ModulBeschreibung)theEObject;
+        T result = caseModulBeschreibung(modulBeschreibung);
+        if (result == null) result = caseMetadaten(modulBeschreibung);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -471,6 +480,22 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBenutzerKategorie(BenutzerKategorie object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Modul Beschreibung</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Modul Beschreibung</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseModulBeschreibung(ModulBeschreibung object)
   {
     return null;
   }

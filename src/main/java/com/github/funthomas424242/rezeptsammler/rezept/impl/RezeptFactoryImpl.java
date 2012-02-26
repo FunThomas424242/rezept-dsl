@@ -81,9 +81,9 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.IMPORT: return createImport();
       case RezeptPackage.REZEPT_MODEL: return createRezeptModel();
       case RezeptPackage.ALERGENE: return createAlergene();
-      case RezeptPackage.METADATEN: return createMetadaten();
       case RezeptPackage.STANDARD_KATEGORIE: return createStandardKategorie();
       case RezeptPackage.BENUTZER_KATEGORIE: return createBenutzerKategorie();
+      case RezeptPackage.MODUL_BESCHREIBUNG: return createModulBeschreibung();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -107,6 +107,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return createVerpackungFromString(eDataType, initialValue);
       case RezeptPackage.STOFF:
         return createStoffFromString(eDataType, initialValue);
+      case RezeptPackage.DATUM:
+        return createDatumFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -130,6 +132,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return convertVerpackungToString(eDataType, instanceValue);
       case RezeptPackage.STOFF:
         return convertStoffToString(eDataType, instanceValue);
+      case RezeptPackage.DATUM:
+        return convertDatumToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -272,17 +276,6 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Metadaten createMetadaten()
-  {
-    MetadatenImpl metadaten = new MetadatenImpl();
-    return metadaten;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public StandardKategorie createStandardKategorie()
   {
     StandardKategorieImpl standardKategorie = new StandardKategorieImpl();
@@ -298,6 +291,17 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     BenutzerKategorieImpl benutzerKategorie = new BenutzerKategorieImpl();
     return benutzerKategorie;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ModulBeschreibung createModulBeschreibung()
+  {
+    ModulBeschreibungImpl modulBeschreibung = new ModulBeschreibungImpl();
+    return modulBeschreibung;
   }
 
   /**
@@ -386,6 +390,26 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   public String convertStoffToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String createDatumFromString(EDataType eDataType, String initialValue)
+  {
+    return (String)super.createFromString(eDataType, initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertDatumToString(EDataType eDataType, Object instanceValue)
+  {
+    return super.convertToString(eDataType, instanceValue);
   }
 
   /**

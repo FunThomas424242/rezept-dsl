@@ -6,6 +6,8 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept;
 
+import java.util.Date;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -219,6 +221,7 @@ public interface Produkt extends ModelElement
 
   /**
    * Returns the value of the '<em><b>Letzte Aenderung</b></em>' attribute.
+   * The default value is <code>"\'01.01.2012\'"</code>.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Letzte Aenderung</em>' attribute isn't clear,
@@ -228,7 +231,7 @@ public interface Produkt extends ModelElement
    * @return the value of the '<em>Letzte Aenderung</em>' attribute.
    * @see #setLetzteAenderung(String)
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_LetzteAenderung()
-   * @model required="true"
+   * @model default="\'01.01.2012\'" required="true"
    * @generated
    */
   String getLetzteAenderung();

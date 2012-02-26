@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getProgramVersion <em>Program Version</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getName <em>Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getGroupId <em>Group Id</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getArtifactId <em>Artifact Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getImports <em>Imports</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getVersion <em>Version</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,59 +29,59 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ProjektBeschreibung extends EObject
+public interface ProjektBeschreibung extends Metadaten
 {
   /**
-   * Returns the value of the '<em><b>Program Version</b></em>' attribute.
+   * Returns the value of the '<em><b>Group Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Program Version</em>' attribute isn't clear,
+   * If the meaning of the '<em>Group Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Program Version</em>' attribute.
-   * @see #setProgramVersion(String)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_ProgramVersion()
+   * @return the value of the '<em>Group Id</em>' attribute.
+   * @see #setGroupId(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_GroupId()
    * @model required="true"
    * @generated
    */
-  String getProgramVersion();
+  String getGroupId();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getProgramVersion <em>Program Version</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getGroupId <em>Group Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Program Version</em>' attribute.
-   * @see #getProgramVersion()
+   * @param value the new value of the '<em>Group Id</em>' attribute.
+   * @see #getGroupId()
    * @generated
    */
-  void setProgramVersion(String value);
+  void setGroupId(String value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Artifact Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Artifact Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_Name()
+   * @return the value of the '<em>Artifact Id</em>' attribute.
+   * @see #setArtifactId(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_ArtifactId()
    * @model required="true"
    * @generated
    */
-  String getName();
+  String getArtifactId();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getArtifactId <em>Artifact Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Artifact Id</em>' attribute.
+   * @see #getArtifactId()
    * @generated
    */
-  void setName(String value);
+  void setArtifactId(String value);
 
   /**
    * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
@@ -97,5 +98,31 @@ public interface ProjektBeschreibung extends EObject
    * @generated
    */
   EList<Import> getImports();
+
+  /**
+   * Returns the value of the '<em><b>Version</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Version</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Version</em>' attribute.
+   * @see #setVersion(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_Version()
+   * @model required="true"
+   * @generated
+   */
+  String getVersion();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getVersion <em>Version</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Version</em>' attribute.
+   * @see #getVersion()
+   * @generated
+   */
+  void setVersion(String value);
 
 } // ProjektBeschreibung

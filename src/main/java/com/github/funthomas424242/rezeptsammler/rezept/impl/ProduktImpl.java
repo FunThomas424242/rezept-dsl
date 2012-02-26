@@ -186,7 +186,7 @@ public class ProduktImpl extends ModelElementImpl implements Produkt
    * @generated
    * @ordered
    */
-  protected static final String LETZTE_AENDERUNG_EDEFAULT = null;
+  protected static final String LETZTE_AENDERUNG_EDEFAULT = "\'01.01.2012\'";
 
   /**
    * The cached value of the '{@link #getLetzteAenderung() <em>Letzte Aenderung</em>}' attribute.

@@ -15,6 +15,7 @@ import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.Metadaten;
 import com.github.funthomas424242.rezeptsammler.rezept.ModelElement;
 import com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt;
+import com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung;
 import com.github.funthomas424242.rezeptsammler.rezept.Produkt;
 import com.github.funthomas424242.rezeptsammler.rezept.ProduktRef;
 import com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung;
@@ -32,6 +33,7 @@ import com.github.funthomas424242.rezeptsammler.rezept.Zutat;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -170,6 +172,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass modulBeschreibungEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum modifikationsArtEEnum = null;
 
   /**
@@ -192,6 +201,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EEnum stoffEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EDataType datumEDataType = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -511,7 +527,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProjektBeschreibung_ProgramVersion()
+  public EAttribute getProjektBeschreibung_GroupId()
   {
     return (EAttribute)projektBeschreibungEClass.getEStructuralFeatures().get(0);
   }
@@ -521,7 +537,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProjektBeschreibung_Name()
+  public EAttribute getProjektBeschreibung_ArtifactId()
   {
     return (EAttribute)projektBeschreibungEClass.getEStructuralFeatures().get(1);
   }
@@ -534,6 +550,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EReference getProjektBeschreibung_Imports()
   {
     return (EReference)projektBeschreibungEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjektBeschreibung_Version()
+  {
+    return (EAttribute)projektBeschreibungEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -791,16 +817,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMetadaten_Projektdaten()
-  {
-    return (EReference)metadatenEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getStandardKategorie()
   {
     return standardKategorieEClass;
@@ -841,6 +857,26 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getModulBeschreibung()
+  {
+    return modulBeschreibungEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getModulBeschreibung_Name()
+  {
+    return (EAttribute)modulBeschreibungEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getModifikationsArt()
   {
     return modifikationsArtEEnum;
@@ -874,6 +910,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EEnum getStoff()
   {
     return stoffEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EDataType getDatum()
+  {
+    return datumEDataType;
   }
 
   /**
@@ -934,9 +980,10 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEAttribute(produktEClass, PRODUKT__LETZTE_AENDERUNG);
 
     projektBeschreibungEClass = createEClass(PROJEKT_BESCHREIBUNG);
-    createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__PROGRAM_VERSION);
-    createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__NAME);
+    createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__GROUP_ID);
+    createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__ARTIFACT_ID);
     createEReference(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__IMPORTS);
+    createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__VERSION);
 
     quelleEClass = createEClass(QUELLE);
     createEAttribute(quelleEClass, QUELLE__BESCHREIBUNG);
@@ -973,7 +1020,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEAttribute(alergeneEClass, ALERGENE__STOFF);
 
     metadatenEClass = createEClass(METADATEN);
-    createEReference(metadatenEClass, METADATEN__PROJEKTDATEN);
 
     standardKategorieEClass = createEClass(STANDARD_KATEGORIE);
     createEAttribute(standardKategorieEClass, STANDARD_KATEGORIE__BEZEICHNUNG);
@@ -981,11 +1027,17 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     benutzerKategorieEClass = createEClass(BENUTZER_KATEGORIE);
     createEAttribute(benutzerKategorieEClass, BENUTZER_KATEGORIE__BEZEICHNUNG);
 
+    modulBeschreibungEClass = createEClass(MODUL_BESCHREIBUNG);
+    createEAttribute(modulBeschreibungEClass, MODUL_BESCHREIBUNG__NAME);
+
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
     kategorieArtEEnum = createEEnum(KATEGORIE_ART);
     verpackungEEnum = createEEnum(VERPACKUNG);
     stoffEEnum = createEEnum(STOFF);
+
+    // Create data types
+    datumEDataType = createEDataType(DATUM);
   }
 
   /**
@@ -1019,12 +1071,14 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     // Add supertypes to classes
     rezeptEClass.getESuperTypes().add(this.getModelElement());
     produktEClass.getESuperTypes().add(this.getModelElement());
+    projektBeschreibungEClass.getESuperTypes().add(this.getMetadaten());
     standardKategorieEClass.getESuperTypes().add(this.getKategorie());
     benutzerKategorieEClass.getESuperTypes().add(this.getKategorie());
+    modulBeschreibungEClass.getESuperTypes().add(this.getMetadaten());
 
     // Initialize classes and features; add operations and parameters
     initEClass(rezeptEClass, Rezept.class, "Rezept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRezept_Id(), ecorePackage.getELongObject(), "id", "1", 1, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRezept_Id(), ecorePackage.getEString(), "id", "1", 1, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezept_Quelle(), this.getQuelle(), null, "quelle", null, 0, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezept_Tipps(), this.getTipp(), null, "tipps", null, 0, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezept_Bewertung(), this.getRank(), null, "bewertung", null, 0, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1033,7 +1087,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEReference(getRezept_Zutaten(), this.getZutat(), null, "zutaten", null, 1, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRezept_Titel(), ecorePackage.getEString(), "titel", null, 1, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRezept_Untertitel(), ecorePackage.getEString(), "untertitel", null, 0, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRezept_LetzteAenderung(), ecorePackage.getEString(), "letzteAenderung", "01.01.2012", 1, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRezept_LetzteAenderung(), ecorePackage.getEString(), "letzteAenderung", "\'01.01.2012\'", 1, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezept_ArmAn(), this.getAlergene(), null, "armAn", null, 0, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezept_FreiVon(), this.getAlergene(), null, "freiVon", null, 0, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezept_Kategorien(), this.getKategorie(), null, "kategorien", null, 1, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1048,12 +1102,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getProdukt_Preis(), ecorePackage.getEFloatObject(), "preis", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProdukt_Handler(), ecorePackage.getEString(), "handler", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProdukt_Hersteller(), ecorePackage.getEString(), "hersteller", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProdukt_LetzteAenderung(), ecorePackage.getEString(), "letzteAenderung", null, 1, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProdukt_LetzteAenderung(), ecorePackage.getEString(), "letzteAenderung", "\'01.01.2012\'", 1, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(projektBeschreibungEClass, ProjektBeschreibung.class, "ProjektBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getProjektBeschreibung_ProgramVersion(), ecorePackage.getEString(), "programVersion", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProjektBeschreibung_Name(), ecorePackage.getEString(), "name", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjektBeschreibung_GroupId(), ecorePackage.getEString(), "groupId", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjektBeschreibung_ArtifactId(), ecorePackage.getEString(), "artifactId", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProjektBeschreibung_Imports(), this.getImport(), null, "imports", null, 0, -1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjektBeschreibung_Version(), ecorePackage.getEString(), "version", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(quelleEClass, Quelle.class, "Quelle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQuelle_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 1, 1, Quelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1074,7 +1129,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     initEClass(zutatEClass, Zutat.class, "Zutat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getZutat_Name(), ecorePackage.getEString(), "name", null, 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getZutat_Menge(), ecorePackage.getEFloatObject(), "menge", null, 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getZutat_Menge(), ecorePackage.getEFloatObject(), "menge", "1.5", 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getZutat_Einheit(), ecorePackage.getEString(), "einheit", null, 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1089,14 +1144,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEClass(alergeneEClass, Alergene.class, "Alergene", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAlergene_Stoff(), this.getStoff(), "stoff", null, 1, 1, Alergene.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(metadatenEClass, Metadaten.class, "Metadaten", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMetadaten_Projektdaten(), this.getProjektBeschreibung(), null, "projektdaten", null, 0, 1, Metadaten.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(metadatenEClass, Metadaten.class, "Metadaten", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(standardKategorieEClass, StandardKategorie.class, "StandardKategorie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStandardKategorie_Bezeichnung(), this.getKategorieArt(), "bezeichnung", null, 1, 1, StandardKategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(benutzerKategorieEClass, BenutzerKategorie.class, "BenutzerKategorie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBenutzerKategorie_Bezeichnung(), ecorePackage.getEString(), "bezeichnung", "defaultKategorie", 1, 1, BenutzerKategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(modulBeschreibungEClass, ModulBeschreibung.class, "ModulBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getModulBeschreibung_Name(), ecorePackage.getEString(), "name", null, 1, 1, ModulBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");
@@ -1119,6 +1176,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(stoffEEnum, Stoff.LAKTOSE);
     addEEnumLiteral(stoffEEnum, Stoff.FRUCHTZUCKER);
     addEEnumLiteral(stoffEEnum, Stoff.NUESSEN);
+
+    // Initialize data types
+    initEDataType(datumEDataType, String.class, "Datum", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

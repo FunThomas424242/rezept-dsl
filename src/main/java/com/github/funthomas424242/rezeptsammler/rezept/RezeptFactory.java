@@ -135,15 +135,6 @@ public interface RezeptFactory extends EFactory
   Alergene createAlergene();
 
   /**
-   * Returns a new object of class '<em>Metadaten</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Metadaten</em>'.
-   * @generated
-   */
-  Metadaten createMetadaten();
-
-  /**
    * Returns a new object of class '<em>Standard Kategorie</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -160,6 +151,15 @@ public interface RezeptFactory extends EFactory
    * @generated
    */
   BenutzerKategorie createBenutzerKategorie();
+
+  /**
+   * Returns a new object of class '<em>Modul Beschreibung</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Modul Beschreibung</em>'.
+   * @generated
+   */
+  ModulBeschreibung createModulBeschreibung();
 
   /**
    * Returns the package supported by this factory.

@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -33,55 +32,56 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getProgramVersion <em>Program Version</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getGroupId <em>Group Id</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getArtifactId <em>Artifact Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getVersion <em>Version</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBeschreibung
+public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBeschreibung
 {
   /**
-   * The default value of the '{@link #getProgramVersion() <em>Program Version</em>}' attribute.
+   * The default value of the '{@link #getGroupId() <em>Group Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getProgramVersion()
+   * @see #getGroupId()
    * @generated
    * @ordered
    */
-  protected static final String PROGRAM_VERSION_EDEFAULT = null;
+  protected static final String GROUP_ID_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getProgramVersion() <em>Program Version</em>}' attribute.
+   * The cached value of the '{@link #getGroupId() <em>Group Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getProgramVersion()
+   * @see #getGroupId()
    * @generated
    * @ordered
    */
-  protected String programVersion = PROGRAM_VERSION_EDEFAULT;
+  protected String groupId = GROUP_ID_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getArtifactId() <em>Artifact Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getArtifactId()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String ARTIFACT_ID_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getArtifactId() <em>Artifact Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getArtifactId()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String artifactId = ARTIFACT_ID_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
@@ -92,6 +92,26 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * @ordered
    */
   protected EList<Import> imports;
+
+  /**
+   * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVersion()
+   * @generated
+   * @ordered
+   */
+  protected static final String VERSION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVersion()
+   * @generated
+   * @ordered
+   */
+  protected String version = VERSION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -119,9 +139,9 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getProgramVersion()
+  public String getGroupId()
   {
-    return programVersion;
+    return groupId;
   }
 
   /**
@@ -129,12 +149,12 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setProgramVersion(String newProgramVersion)
+  public void setGroupId(String newGroupId)
   {
-    String oldProgramVersion = programVersion;
-    programVersion = newProgramVersion;
+    String oldGroupId = groupId;
+    groupId = newGroupId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__PROGRAM_VERSION, oldProgramVersion, programVersion));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__GROUP_ID, oldGroupId, groupId));
   }
 
   /**
@@ -142,9 +162,9 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getArtifactId()
   {
-    return name;
+    return artifactId;
   }
 
   /**
@@ -152,12 +172,12 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setArtifactId(String newArtifactId)
   {
-    String oldName = name;
-    name = newName;
+    String oldArtifactId = artifactId;
+    artifactId = newArtifactId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID, oldArtifactId, artifactId));
   }
 
   /**
@@ -172,6 +192,29 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
       imports = new EObjectContainmentEList<Import>(Import.class, this, RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS);
     }
     return imports;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getVersion()
+  {
+    return version;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVersion(String newVersion)
+  {
+    String oldVersion = version;
+    version = newVersion;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION, oldVersion, version));
   }
 
   /**
@@ -200,12 +243,14 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
   {
     switch (featureID)
     {
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__PROGRAM_VERSION:
-        return getProgramVersion();
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__NAME:
-        return getName();
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__GROUP_ID:
+        return getGroupId();
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
+        return getArtifactId();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
         return getImports();
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
+        return getVersion();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -221,15 +266,18 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
   {
     switch (featureID)
     {
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__PROGRAM_VERSION:
-        setProgramVersion((String)newValue);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__GROUP_ID:
+        setGroupId((String)newValue);
         return;
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__NAME:
-        setName((String)newValue);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
+        setArtifactId((String)newValue);
         return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
         getImports().clear();
         getImports().addAll((Collection<? extends Import>)newValue);
+        return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
+        setVersion((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -245,14 +293,17 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
   {
     switch (featureID)
     {
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__PROGRAM_VERSION:
-        setProgramVersion(PROGRAM_VERSION_EDEFAULT);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__GROUP_ID:
+        setGroupId(GROUP_ID_EDEFAULT);
         return;
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__NAME:
-        setName(NAME_EDEFAULT);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
+        setArtifactId(ARTIFACT_ID_EDEFAULT);
         return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
         getImports().clear();
+        return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
+        setVersion(VERSION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -268,12 +319,14 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
   {
     switch (featureID)
     {
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__PROGRAM_VERSION:
-        return PROGRAM_VERSION_EDEFAULT == null ? programVersion != null : !PROGRAM_VERSION_EDEFAULT.equals(programVersion);
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__GROUP_ID:
+        return GROUP_ID_EDEFAULT == null ? groupId != null : !GROUP_ID_EDEFAULT.equals(groupId);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
+        return ARTIFACT_ID_EDEFAULT == null ? artifactId != null : !ARTIFACT_ID_EDEFAULT.equals(artifactId);
       case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
         return imports != null && !imports.isEmpty();
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
+        return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
     }
     return super.eIsSet(featureID);
   }
@@ -289,10 +342,12 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (programVersion: ");
-    result.append(programVersion);
-    result.append(", name: ");
-    result.append(name);
+    result.append(" (groupId: ");
+    result.append(groupId);
+    result.append(", artifactId: ");
+    result.append(artifactId);
+    result.append(", version: ");
+    result.append(version);
     result.append(')');
     return result.toString();
   }
