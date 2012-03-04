@@ -71,7 +71,9 @@ public enum Verpackung implements Enumerator
    * @generated
    * @ordered
    */
-  STUECK(4, "Stueck", "Stueck"), /**
+  STUECK(4, "Stueck", "Stueck"),
+
+  /**
    * The '<em><b>Glas</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -79,7 +81,9 @@ public enum Verpackung implements Enumerator
    * @generated
    * @ordered
    */
-  GLAS(5, "Glas", "Glas"), /**
+  GLAS(5, "Glas", "Glas"),
+
+  /**
    * The '<em><b>Flasche</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

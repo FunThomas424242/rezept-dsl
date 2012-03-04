@@ -134,19 +134,9 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createImportAdapter();
       }
       @Override
-      public Adapter caseRezeptModel(RezeptModel object)
-      {
-        return createRezeptModelAdapter();
-      }
-      @Override
       public Adapter caseTag(Tag object)
       {
         return createTagAdapter();
-      }
-      @Override
-      public Adapter caseMetadaten(Metadaten object)
-      {
-        return createMetadatenAdapter();
       }
       @Override
       public Adapter caseStoffTag(StoffTag object)
@@ -371,21 +361,6 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.RezeptModel <em>Model</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptModel
-   * @generated
-   */
-  public Adapter createRezeptModelAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Tag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -396,21 +371,6 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTagAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Metadaten <em>Metadaten</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Metadaten
-   * @generated
-   */
-  public Adapter createMetadatenAdapter()
   {
     return null;
   }

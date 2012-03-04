@@ -51,7 +51,9 @@ public enum KategorieArt implements Enumerator
    * @generated
    * @ordered
    */
-  BACKEN(2, "Backen", "Backen"), /**
+  BACKEN(2, "Backen", "Backen"),
+
+  /**
    * The '<em><b>Auflauf</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -57,7 +57,7 @@ public interface Zutat extends EObject
    * Returns the value of the '<em><b>Menge</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Menge</em>' attribute isn't clear,
+   * If the meaning of the '<em>Menge</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->

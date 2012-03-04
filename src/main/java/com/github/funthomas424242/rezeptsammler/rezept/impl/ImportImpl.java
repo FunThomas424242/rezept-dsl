@@ -7,7 +7,7 @@
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
 import com.github.funthomas424242.rezeptsammler.rezept.Import;
-import com.github.funthomas424242.rezeptsammler.rezept.RezeptModel;
+import com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -41,7 +41,7 @@ public class ImportImpl extends EObjectImpl implements Import
    * @generated
    * @ordered
    */
-  protected RezeptModel importedResource;
+  protected ModulBeschreibung importedResource;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,12 +69,12 @@ public class ImportImpl extends EObjectImpl implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public RezeptModel getImportedResource()
+  public ModulBeschreibung getImportedResource()
   {
     if (importedResource != null && importedResource.eIsProxy())
     {
       InternalEObject oldImportedResource = (InternalEObject)importedResource;
-      importedResource = (RezeptModel)eResolveProxy(oldImportedResource);
+      importedResource = (ModulBeschreibung)eResolveProxy(oldImportedResource);
       if (importedResource != oldImportedResource)
       {
         if (eNotificationRequired())
@@ -89,7 +89,7 @@ public class ImportImpl extends EObjectImpl implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public RezeptModel basicGetImportedResource()
+  public ModulBeschreibung basicGetImportedResource()
   {
     return importedResource;
   }
@@ -99,9 +99,9 @@ public class ImportImpl extends EObjectImpl implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImportedResource(RezeptModel newImportedResource)
+  public void setImportedResource(ModulBeschreibung newImportedResource)
   {
-    RezeptModel oldImportedResource = importedResource;
+    ModulBeschreibung oldImportedResource = importedResource;
     importedResource = newImportedResource;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.IMPORT__IMPORTED_RESOURCE, oldImportedResource, importedResource));
@@ -135,7 +135,7 @@ public class ImportImpl extends EObjectImpl implements Import
     switch (featureID)
     {
       case RezeptPackage.IMPORT__IMPORTED_RESOURCE:
-        setImportedResource((RezeptModel)newValue);
+        setImportedResource((ModulBeschreibung)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -152,7 +152,7 @@ public class ImportImpl extends EObjectImpl implements Import
     switch (featureID)
     {
       case RezeptPackage.IMPORT__IMPORTED_RESOURCE:
-        setImportedResource((RezeptModel)null);
+        setImportedResource((ModulBeschreibung)null);
         return;
     }
     super.eUnset(featureID);

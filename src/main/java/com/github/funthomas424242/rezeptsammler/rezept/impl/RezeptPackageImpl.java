@@ -15,7 +15,6 @@ import com.github.funthomas424242.rezeptsammler.rezept.Import;
 import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.Masseinheit;
 import com.github.funthomas424242.rezeptsammler.rezept.Menge;
-import com.github.funthomas424242.rezeptsammler.rezept.Metadaten;
 import com.github.funthomas424242.rezeptsammler.rezept.ModelElement;
 import com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt;
 import com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung;
@@ -27,7 +26,6 @@ import com.github.funthomas424242.rezeptsammler.rezept.Quelle;
 import com.github.funthomas424242.rezeptsammler.rezept.Rank;
 import com.github.funthomas424242.rezeptsammler.rezept.Rezept;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptFactory;
-import com.github.funthomas424242.rezeptsammler.rezept.RezeptModel;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 import com.github.funthomas424242.rezeptsammler.rezept.Stoff;
 import com.github.funthomas424242.rezeptsammler.rezept.StoffTag;
@@ -135,21 +133,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass rezeptModelEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass tagEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass metadatenEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -787,39 +771,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getRezeptModel()
-  {
-    return rezeptModelEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRezeptModel_Metadaten()
-  {
-    return (EReference)rezeptModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getTag()
   {
     return tagEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getMetadaten()
-  {
-    return metadatenEClass;
   }
 
   /**
@@ -1170,12 +1124,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     importEClass = createEClass(IMPORT);
     createEReference(importEClass, IMPORT__IMPORTED_RESOURCE);
 
-    rezeptModelEClass = createEClass(REZEPT_MODEL);
-    createEReference(rezeptModelEClass, REZEPT_MODEL__METADATEN);
-
     tagEClass = createEClass(TAG);
-
-    metadatenEClass = createEClass(METADATEN);
 
     stoffTagEClass = createEClass(STOFF_TAG);
     createEAttribute(stoffTagEClass, STOFF_TAG__STOFF);
@@ -1244,10 +1193,8 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     // Add supertypes to classes
     rezeptEClass.getESuperTypes().add(this.getModelElement());
     produktEClass.getESuperTypes().add(this.getModelElement());
-    projektBeschreibungEClass.getESuperTypes().add(this.getMetadaten());
     stoffTagEClass.getESuperTypes().add(this.getTag());
     benutzerTagEClass.getESuperTypes().add(this.getTag());
-    modulBeschreibungEClass.getESuperTypes().add(this.getMetadaten());
     diaetTagEClass.getESuperTypes().add(this.getTag());
 
     // Initialize classes and features; add operations and parameters
@@ -1307,14 +1254,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEReference(getZutat_Menge(), this.getMenge(), null, "menge", null, 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getImport_ImportedResource(), this.getRezeptModel(), null, "importedResource", null, 1, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(rezeptModelEClass, RezeptModel.class, "RezeptModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRezeptModel_Metadaten(), this.getMetadaten(), null, "metadaten", null, 1, 1, RezeptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getImport_ImportedResource(), this.getModulBeschreibung(), null, "importedResource", null, 1, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tagEClass, Tag.class, "Tag", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(metadatenEClass, Metadaten.class, "Metadaten", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(stoffTagEClass, StoffTag.class, "StoffTag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStoffTag_Stoff(), this.getStoff(), "stoff", null, 1, 1, StoffTag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

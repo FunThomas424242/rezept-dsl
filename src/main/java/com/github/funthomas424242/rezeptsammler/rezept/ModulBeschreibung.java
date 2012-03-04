@@ -8,6 +8,7 @@ package com.github.funthomas424242.rezeptsammler.rezept;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ModulBeschreibung extends Metadaten
+public interface ModulBeschreibung extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

@@ -103,7 +103,6 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         ProjektBeschreibung projektBeschreibung = (ProjektBeschreibung)theEObject;
         T result = caseProjektBeschreibung(projektBeschreibung);
-        if (result == null) result = caseMetadaten(projektBeschreibung);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -156,24 +155,10 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.REZEPT_MODEL:
-      {
-        RezeptModel rezeptModel = (RezeptModel)theEObject;
-        T result = caseRezeptModel(rezeptModel);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case RezeptPackage.TAG:
       {
         Tag tag = (Tag)theEObject;
         T result = caseTag(tag);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case RezeptPackage.METADATEN:
-      {
-        Metadaten metadaten = (Metadaten)theEObject;
-        T result = caseMetadaten(metadaten);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -197,7 +182,6 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         ModulBeschreibung modulBeschreibung = (ModulBeschreibung)theEObject;
         T result = caseModulBeschreibung(modulBeschreibung);
-        if (result == null) result = caseMetadaten(modulBeschreibung);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -411,22 +395,6 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRezeptModel(RezeptModel object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Tag</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -438,22 +406,6 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTag(Tag object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Metadaten</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Metadaten</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMetadaten(Metadaten object)
   {
     return null;
   }

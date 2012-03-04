@@ -91,7 +91,9 @@ public enum Masseinheit implements Enumerator
    * @generated
    * @ordered
    */
-  KG(6, "kg", "kg"), /**
+  KG(6, "kg", "kg"),
+
+  /**
    * The '<em><b>Stueck</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

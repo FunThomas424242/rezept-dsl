@@ -117,15 +117,6 @@ public interface RezeptFactory extends EFactory
   Import createImport();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
-   * @generated
-   */
-  RezeptModel createRezeptModel();
-
-  /**
    * Returns a new object of class '<em>Stoff Tag</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

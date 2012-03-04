@@ -79,7 +79,6 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.PRODUKT_REF: return createProduktRef();
       case RezeptPackage.ZUTAT: return createZutat();
       case RezeptPackage.IMPORT: return createImport();
-      case RezeptPackage.REZEPT_MODEL: return createRezeptModel();
       case RezeptPackage.STOFF_TAG: return createStoffTag();
       case RezeptPackage.BENUTZER_TAG: return createBenutzerTag();
       case RezeptPackage.MODUL_BESCHREIBUNG: return createModulBeschreibung();
@@ -258,17 +257,6 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     ImportImpl import_ = new ImportImpl();
     return import_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RezeptModel createRezeptModel()
-  {
-    RezeptModelImpl rezeptModel = new RezeptModelImpl();
-    return rezeptModel;
   }
 
   /**

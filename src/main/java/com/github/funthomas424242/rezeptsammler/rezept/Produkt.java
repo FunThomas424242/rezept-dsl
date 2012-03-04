@@ -141,58 +141,6 @@ public interface Produkt extends ModelElement
   void setUba(String value);
 
   /**
-   * Returns the value of the '<em><b>Preis</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Preis</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Preis</em>' containment reference.
-   * @see #setPreis(Preis)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_Preis()
-   * @model containment="true"
-   * @generated
-   */
-  Preis getPreis();
-
-  /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getPreis <em>Preis</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Preis</em>' containment reference.
-   * @see #getPreis()
-   * @generated
-   */
-  void setPreis(Preis value);
-
-  /**
-   * Returns the value of the '<em><b>Menge</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Menge</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Menge</em>' containment reference.
-   * @see #setMenge(Menge)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_Menge()
-   * @model containment="true" required="true"
-   * @generated
-   */
-  Menge getMenge();
-
-  /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getMenge <em>Menge</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Menge</em>' containment reference.
-   * @see #getMenge()
-   * @generated
-   */
-  void setMenge(Menge value);
-
-  /**
    * Returns the value of the '<em><b>Handler</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -270,5 +218,57 @@ public interface Produkt extends ModelElement
    * @generated
    */
   void setDatumLetzteAenderung(String value);
+
+  /**
+   * Returns the value of the '<em><b>Preis</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Preis</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Preis</em>' containment reference.
+   * @see #setPreis(Preis)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_Preis()
+   * @model containment="true"
+   * @generated
+   */
+  Preis getPreis();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getPreis <em>Preis</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Preis</em>' containment reference.
+   * @see #getPreis()
+   * @generated
+   */
+  void setPreis(Preis value);
+
+  /**
+   * Returns the value of the '<em><b>Menge</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Menge</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Menge</em>' containment reference.
+   * @see #setMenge(Menge)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_Menge()
+   * @model containment="true" required="true"
+   * @generated
+   */
+  Menge getMenge();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getMenge <em>Menge</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Menge</em>' containment reference.
+   * @see #getMenge()
+   * @generated
+   */
+  void setMenge(Menge value);
 
 } // Produkt

@@ -42,7 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="menge" lowerBound="1" eType="#//Menge"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProjektBeschreibung" eSuperTypes="#//Metadaten">
+  <eClassifiers xsi:type="ecore:EClass" name="ProjektBeschreibung">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactId" lowerBound="1"
@@ -108,14 +108,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Import">
     <eStructuralFeatures xsi:type="ecore:EReference" name="importedResource" lowerBound="1"
-        eType="#//RezeptModel"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RezeptModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="metadaten" lowerBound="1"
-        eType="#//Metadaten" containment="true"/>
+        eType="#//ModulBeschreibung"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tag" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Metadaten" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="StoffTag" eSuperTypes="#//Tag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stoff" lowerBound="1" eType="#//Stoff"/>
   </eClassifiers>
@@ -123,7 +118,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bezeichnung" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="defaultKategorie"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModulBeschreibung" eSuperTypes="#//Metadaten">
+  <eClassifiers xsi:type="ecore:EClass" name="ModulBeschreibung">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//Import" containment="true"/>

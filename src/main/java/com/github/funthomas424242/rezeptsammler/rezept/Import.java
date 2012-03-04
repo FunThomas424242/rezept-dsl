@@ -35,12 +35,12 @@ public interface Import extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Imported Resource</em>' reference.
-   * @see #setImportedResource(RezeptModel)
+   * @see #setImportedResource(ModulBeschreibung)
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getImport_ImportedResource()
    * @model required="true"
    * @generated
    */
-  RezeptModel getImportedResource();
+  ModulBeschreibung getImportedResource();
 
   /**
    * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Import#getImportedResource <em>Imported Resource</em>}' reference.
@@ -50,6 +50,6 @@ public interface Import extends EObject
    * @see #getImportedResource()
    * @generated
    */
-  void setImportedResource(RezeptModel value);
+  void setImportedResource(ModulBeschreibung value);
 
 } // Import

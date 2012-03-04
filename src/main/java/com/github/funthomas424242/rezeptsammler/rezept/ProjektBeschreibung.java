@@ -8,6 +8,8 @@ package com.github.funthomas424242.rezeptsammler.rezept;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Projekt Beschreibung</b></em>'.
@@ -28,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ProjektBeschreibung extends Metadaten
+public interface ProjektBeschreibung extends EObject
 {
   /**
    * Returns the value of the '<em><b>Group Id</b></em>' attribute.

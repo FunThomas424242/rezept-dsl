@@ -107,11 +107,7 @@
     <genClasses ecoreClass="rezept.ecore#//Import">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rezept.ecore#//Import/importedResource"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//RezeptModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//RezeptModel/metadaten"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="rezept.ecore#//Tag"/>
-    <genClasses ecoreClass="rezept.ecore#//Metadaten"/>
     <genClasses ecoreClass="rezept.ecore#//StoffTag">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//StoffTag/stoff"/>
     </genClasses>
