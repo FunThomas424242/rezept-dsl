@@ -12,10 +12,13 @@ import com.github.funthomas424242.rezeptsammler.rezept.DiaetArt;
 import com.github.funthomas424242.rezeptsammler.rezept.DiaetTag;
 import com.github.funthomas424242.rezeptsammler.rezept.Import;
 import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
+import com.github.funthomas424242.rezeptsammler.rezept.Masseinheit;
+import com.github.funthomas424242.rezeptsammler.rezept.Menge;
 import com.github.funthomas424242.rezeptsammler.rezept.Metadaten;
 import com.github.funthomas424242.rezeptsammler.rezept.ModelElement;
 import com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt;
 import com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung;
+import com.github.funthomas424242.rezeptsammler.rezept.Preis;
 import com.github.funthomas424242.rezeptsammler.rezept.Produkt;
 import com.github.funthomas424242.rezeptsammler.rezept.ProduktRef;
 import com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung;
@@ -30,6 +33,7 @@ import com.github.funthomas424242.rezeptsammler.rezept.StoffTag;
 import com.github.funthomas424242.rezeptsammler.rezept.Tag;
 import com.github.funthomas424242.rezeptsammler.rezept.Tipp;
 import com.github.funthomas424242.rezeptsammler.rezept.Verpackung;
+import com.github.funthomas424242.rezeptsammler.rezept.Waehrung;
 import com.github.funthomas424242.rezeptsammler.rezept.Zutat;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -179,6 +183,20 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass preisEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mengeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum modifikationsArtEEnum = null;
 
   /**
@@ -208,6 +226,20 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EEnum diaetArtEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum waehrungEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum masseinheitEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -467,7 +499,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProdukt_Preis()
+  public EAttribute getProdukt_Handler()
   {
     return (EAttribute)produktEClass.getEStructuralFeatures().get(4);
   }
@@ -477,7 +509,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProdukt_Handler()
+  public EAttribute getProdukt_Hersteller()
   {
     return (EAttribute)produktEClass.getEStructuralFeatures().get(5);
   }
@@ -487,7 +519,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProdukt_Hersteller()
+  public EAttribute getProdukt_DatumLetzteAenderung()
   {
     return (EAttribute)produktEClass.getEStructuralFeatures().get(6);
   }
@@ -497,9 +529,19 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProdukt_DatumLetzteAenderung()
+  public EReference getProdukt_Preis()
   {
-    return (EAttribute)produktEClass.getEStructuralFeatures().get(7);
+    return (EReference)produktEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProdukt_Menge()
+  {
+    return (EReference)produktEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -697,19 +739,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getZutat_Menge()
+  public EReference getZutat_Menge()
   {
-    return (EAttribute)zutatEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getZutat_Einheit()
-  {
-    return (EAttribute)zutatEClass.getEStructuralFeatures().get(2);
+    return (EReference)zutatEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -747,19 +779,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRezeptModel_Elemente()
-  {
-    return (EReference)rezeptModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getRezeptModel_Metadaten()
   {
-    return (EReference)rezeptModelEClass.getEStructuralFeatures().get(1);
+    return (EReference)rezeptModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -847,6 +869,26 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getModulBeschreibung_Imports()
+  {
+    return (EReference)modulBeschreibungEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModulBeschreibung_Elemente()
+  {
+    return (EReference)modulBeschreibungEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDiaetTag()
   {
     return diaetTagEClass;
@@ -860,6 +902,66 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EAttribute getDiaetTag_Diaet()
   {
     return (EAttribute)diaetTagEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPreis()
+  {
+    return preisEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPreis_Betrag()
+  {
+    return (EAttribute)preisEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPreis_Waehrung()
+  {
+    return (EAttribute)preisEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMenge()
+  {
+    return mengeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMenge_Betrag()
+  {
+    return (EAttribute)mengeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMenge_Einheit()
+  {
+    return (EAttribute)mengeEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -917,6 +1019,26 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getWaehrung()
+  {
+    return waehrungEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getMasseinheit()
+  {
+    return masseinheitEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public RezeptFactory getRezeptFactory()
   {
     return (RezeptFactory)getEFactoryInstance();
@@ -963,10 +1085,11 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEAttribute(produktEClass, PRODUKT__VERPACKUNG);
     createEAttribute(produktEClass, PRODUKT__EAN);
     createEAttribute(produktEClass, PRODUKT__UBA);
-    createEAttribute(produktEClass, PRODUKT__PREIS);
     createEAttribute(produktEClass, PRODUKT__HANDLER);
     createEAttribute(produktEClass, PRODUKT__HERSTELLER);
     createEAttribute(produktEClass, PRODUKT__DATUM_LETZTE_AENDERUNG);
+    createEReference(produktEClass, PRODUKT__PREIS);
+    createEReference(produktEClass, PRODUKT__MENGE);
 
     projektBeschreibungEClass = createEClass(PROJEKT_BESCHREIBUNG);
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__GROUP_ID);
@@ -993,14 +1116,12 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     zutatEClass = createEClass(ZUTAT);
     createEAttribute(zutatEClass, ZUTAT__NAME);
-    createEAttribute(zutatEClass, ZUTAT__MENGE);
-    createEAttribute(zutatEClass, ZUTAT__EINHEIT);
+    createEReference(zutatEClass, ZUTAT__MENGE);
 
     importEClass = createEClass(IMPORT);
     createEReference(importEClass, IMPORT__IMPORTED_RESOURCE);
 
     rezeptModelEClass = createEClass(REZEPT_MODEL);
-    createEReference(rezeptModelEClass, REZEPT_MODEL__ELEMENTE);
     createEReference(rezeptModelEClass, REZEPT_MODEL__METADATEN);
 
     tagEClass = createEClass(TAG);
@@ -1015,9 +1136,19 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     modulBeschreibungEClass = createEClass(MODUL_BESCHREIBUNG);
     createEAttribute(modulBeschreibungEClass, MODUL_BESCHREIBUNG__NAME);
+    createEReference(modulBeschreibungEClass, MODUL_BESCHREIBUNG__IMPORTS);
+    createEReference(modulBeschreibungEClass, MODUL_BESCHREIBUNG__ELEMENTE);
 
     diaetTagEClass = createEClass(DIAET_TAG);
     createEAttribute(diaetTagEClass, DIAET_TAG__DIAET);
+
+    preisEClass = createEClass(PREIS);
+    createEAttribute(preisEClass, PREIS__BETRAG);
+    createEAttribute(preisEClass, PREIS__WAEHRUNG);
+
+    mengeEClass = createEClass(MENGE);
+    createEAttribute(mengeEClass, MENGE__BETRAG);
+    createEAttribute(mengeEClass, MENGE__EINHEIT);
 
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
@@ -1025,6 +1156,8 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     verpackungEEnum = createEEnum(VERPACKUNG);
     stoffEEnum = createEEnum(STOFF);
     diaetArtEEnum = createEEnum(DIAET_ART);
+    waehrungEEnum = createEEnum(WAEHRUNG);
+    masseinheitEEnum = createEEnum(MASSEINHEIT);
   }
 
   /**
@@ -1086,10 +1219,11 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getProdukt_Verpackung(), this.getVerpackung(), "verpackung", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProdukt_Ean(), ecorePackage.getEString(), "ean", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProdukt_Uba(), ecorePackage.getEString(), "uba", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProdukt_Preis(), ecorePackage.getEFloatObject(), "preis", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProdukt_Handler(), ecorePackage.getEString(), "handler", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProdukt_Hersteller(), ecorePackage.getEString(), "hersteller", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProdukt_DatumLetzteAenderung(), ecorePackage.getEString(), "datumLetzteAenderung", "\'01.01.2012\'", 1, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProdukt_Preis(), this.getPreis(), null, "preis", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProdukt_Menge(), this.getMenge(), null, "menge", null, 1, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(projektBeschreibungEClass, ProjektBeschreibung.class, "ProjektBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProjektBeschreibung_GroupId(), ecorePackage.getEString(), "groupId", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1116,14 +1250,12 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     initEClass(zutatEClass, Zutat.class, "Zutat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getZutat_Name(), ecorePackage.getEString(), "name", null, 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getZutat_Menge(), ecorePackage.getEFloatObject(), "menge", "1.5", 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getZutat_Einheit(), ecorePackage.getEString(), "einheit", null, 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getZutat_Menge(), this.getMenge(), null, "menge", null, 1, 1, Zutat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getImport_ImportedResource(), this.getRezeptModel(), null, "importedResource", null, 1, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rezeptModelEClass, RezeptModel.class, "RezeptModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRezeptModel_Elemente(), this.getModelElement(), null, "elemente", null, 1, -1, RezeptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezeptModel_Metadaten(), this.getMetadaten(), null, "metadaten", null, 1, 1, RezeptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tagEClass, Tag.class, "Tag", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1138,9 +1270,19 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     initEClass(modulBeschreibungEClass, ModulBeschreibung.class, "ModulBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getModulBeschreibung_Name(), ecorePackage.getEString(), "name", null, 1, 1, ModulBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModulBeschreibung_Imports(), this.getImport(), null, "imports", null, 0, -1, ModulBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModulBeschreibung_Elemente(), this.getModelElement(), null, "elemente", null, 1, -1, ModulBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(diaetTagEClass, DiaetTag.class, "DiaetTag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDiaetTag_Diaet(), this.getDiaetArt(), "diaet", null, 1, 1, DiaetTag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(preisEClass, Preis.class, "Preis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPreis_Betrag(), ecorePackage.getEFloatObject(), "betrag", null, 1, 1, Preis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPreis_Waehrung(), this.getWaehrung(), "waehrung", null, 1, 1, Preis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mengeEClass, Menge.class, "Menge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMenge_Betrag(), ecorePackage.getEFloatObject(), "betrag", "1.5", 1, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMenge_Einheit(), this.getMasseinheit(), "einheit", null, 1, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");
@@ -1151,6 +1293,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.SALAT);
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.KOCHEN);
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.BACKEN);
+    addEEnumLiteral(kategorieArtEEnum, KategorieArt.AUFLAUF);
 
     initEEnum(verpackungEEnum, Verpackung.class, "Verpackung");
     addEEnumLiteral(verpackungEEnum, Verpackung.PACKUNG);
@@ -1169,6 +1312,21 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEEnum(diaetArtEEnum, DiaetArt.class, "DiaetArt");
     addEEnumLiteral(diaetArtEEnum, DiaetArt.LAKTOSEFREI);
     addEEnumLiteral(diaetArtEEnum, DiaetArt.FRUCHTZUCKERARM);
+
+    initEEnum(waehrungEEnum, Waehrung.class, "Waehrung");
+    addEEnumLiteral(waehrungEEnum, Waehrung.EURO);
+    addEEnumLiteral(waehrungEEnum, Waehrung.MARK);
+    addEEnumLiteral(waehrungEEnum, Waehrung.DM);
+
+    initEEnum(masseinheitEEnum, Masseinheit.class, "Masseinheit");
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.PRISE);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.MESSERSPITZE);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.TEELOEFFEL);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.GEHAEUFTER_ESSLOEFFEL);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.L);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.G);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.KG);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.STUECK);
 
     // Create resource
     createResource(eNS_URI);

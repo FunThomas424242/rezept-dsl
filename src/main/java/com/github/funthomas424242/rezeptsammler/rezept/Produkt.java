@@ -19,10 +19,11 @@ package com.github.funthomas424242.rezeptsammler.rezept;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getVerpackung <em>Verpackung</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getEan <em>Ean</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getUba <em>Uba</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getPreis <em>Preis</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getHandler <em>Handler</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getHersteller <em>Hersteller</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getDatumLetzteAenderung <em>Datum Letzte Aenderung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getPreis <em>Preis</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getMenge <em>Menge</em>}</li>
  * </ul>
  * </p>
  *
@@ -140,30 +141,56 @@ public interface Produkt extends ModelElement
   void setUba(String value);
 
   /**
-   * Returns the value of the '<em><b>Preis</b></em>' attribute.
+   * Returns the value of the '<em><b>Preis</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Preis</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Preis</em>' attribute.
-   * @see #setPreis(Float)
+   * @return the value of the '<em>Preis</em>' containment reference.
+   * @see #setPreis(Preis)
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_Preis()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  Float getPreis();
+  Preis getPreis();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getPreis <em>Preis</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getPreis <em>Preis</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Preis</em>' attribute.
+   * @param value the new value of the '<em>Preis</em>' containment reference.
    * @see #getPreis()
    * @generated
    */
-  void setPreis(Float value);
+  void setPreis(Preis value);
+
+  /**
+   * Returns the value of the '<em><b>Menge</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Menge</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Menge</em>' containment reference.
+   * @see #setMenge(Menge)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProdukt_Menge()
+   * @model containment="true" required="true"
+   * @generated
+   */
+  Menge getMenge();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Produkt#getMenge <em>Menge</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Menge</em>' containment reference.
+   * @see #getMenge()
+   * @generated
+   */
+  void setMenge(Menge value);
 
   /**
    * Returns the value of the '<em><b>Handler</b></em>' attribute.

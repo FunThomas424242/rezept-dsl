@@ -6,12 +6,15 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
+import com.github.funthomas424242.rezeptsammler.rezept.Menge;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 import com.github.funthomas424242.rezeptsammler.rezept.Zutat;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
@@ -25,7 +28,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ZutatImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ZutatImpl#getMenge <em>Menge</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ZutatImpl#getEinheit <em>Einheit</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,44 +56,14 @@ public class ZutatImpl extends EObjectImpl implements Zutat
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getMenge() <em>Menge</em>}' attribute.
+   * The cached value of the '{@link #getMenge() <em>Menge</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getMenge()
    * @generated
    * @ordered
    */
-  protected static final Float MENGE_EDEFAULT = new Float(1.5F);
-
-  /**
-   * The cached value of the '{@link #getMenge() <em>Menge</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMenge()
-   * @generated
-   * @ordered
-   */
-  protected Float menge = MENGE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getEinheit() <em>Einheit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEinheit()
-   * @generated
-   * @ordered
-   */
-  protected static final String EINHEIT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEinheit() <em>Einheit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEinheit()
-   * @generated
-   * @ordered
-   */
-  protected String einheit = EINHEIT_EDEFAULT;
+  protected Menge menge;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,7 +114,7 @@ public class ZutatImpl extends EObjectImpl implements Zutat
    * <!-- end-user-doc -->
    * @generated
    */
-  public Float getMenge()
+  public Menge getMenge()
   {
     return menge;
   }
@@ -152,12 +124,16 @@ public class ZutatImpl extends EObjectImpl implements Zutat
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMenge(Float newMenge)
+  public NotificationChain basicSetMenge(Menge newMenge, NotificationChain msgs)
   {
-    Float oldMenge = menge;
+    Menge oldMenge = menge;
     menge = newMenge;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.ZUTAT__MENGE, oldMenge, menge));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RezeptPackage.ZUTAT__MENGE, oldMenge, newMenge);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -165,9 +141,20 @@ public class ZutatImpl extends EObjectImpl implements Zutat
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getEinheit()
+  public void setMenge(Menge newMenge)
   {
-    return einheit;
+    if (newMenge != menge)
+    {
+      NotificationChain msgs = null;
+      if (menge != null)
+        msgs = ((InternalEObject)menge).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RezeptPackage.ZUTAT__MENGE, null, msgs);
+      if (newMenge != null)
+        msgs = ((InternalEObject)newMenge).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RezeptPackage.ZUTAT__MENGE, null, msgs);
+      msgs = basicSetMenge(newMenge, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.ZUTAT__MENGE, newMenge, newMenge));
   }
 
   /**
@@ -175,12 +162,15 @@ public class ZutatImpl extends EObjectImpl implements Zutat
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEinheit(String newEinheit)
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldEinheit = einheit;
-    einheit = newEinheit;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.ZUTAT__EINHEIT, oldEinheit, einheit));
+    switch (featureID)
+    {
+      case RezeptPackage.ZUTAT__MENGE:
+        return basicSetMenge(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -197,8 +187,6 @@ public class ZutatImpl extends EObjectImpl implements Zutat
         return getName();
       case RezeptPackage.ZUTAT__MENGE:
         return getMenge();
-      case RezeptPackage.ZUTAT__EINHEIT:
-        return getEinheit();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,10 +205,7 @@ public class ZutatImpl extends EObjectImpl implements Zutat
         setName((String)newValue);
         return;
       case RezeptPackage.ZUTAT__MENGE:
-        setMenge((Float)newValue);
-        return;
-      case RezeptPackage.ZUTAT__EINHEIT:
-        setEinheit((String)newValue);
+        setMenge((Menge)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -240,10 +225,7 @@ public class ZutatImpl extends EObjectImpl implements Zutat
         setName(NAME_EDEFAULT);
         return;
       case RezeptPackage.ZUTAT__MENGE:
-        setMenge(MENGE_EDEFAULT);
-        return;
-      case RezeptPackage.ZUTAT__EINHEIT:
-        setEinheit(EINHEIT_EDEFAULT);
+        setMenge((Menge)null);
         return;
     }
     super.eUnset(featureID);
@@ -262,9 +244,7 @@ public class ZutatImpl extends EObjectImpl implements Zutat
       case RezeptPackage.ZUTAT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RezeptPackage.ZUTAT__MENGE:
-        return MENGE_EDEFAULT == null ? menge != null : !MENGE_EDEFAULT.equals(menge);
-      case RezeptPackage.ZUTAT__EINHEIT:
-        return EINHEIT_EDEFAULT == null ? einheit != null : !EINHEIT_EDEFAULT.equals(einheit);
+        return menge != null;
     }
     return super.eIsSet(featureID);
   }
@@ -282,10 +262,6 @@ public class ZutatImpl extends EObjectImpl implements Zutat
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", menge: ");
-    result.append(menge);
-    result.append(", einheit: ");
-    result.append(einheit);
     result.append(')');
     return result.toString();
   }

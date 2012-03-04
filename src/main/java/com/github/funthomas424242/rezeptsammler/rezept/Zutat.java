@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Zutat#getName <em>Name</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Zutat#getMenge <em>Menge</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Zutat#getEinheit <em>Einheit</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,56 +54,29 @@ public interface Zutat extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Menge</b></em>' attribute.
-   * The default value is <code>"1.5"</code>.
+   * Returns the value of the '<em><b>Menge</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Menge</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Menge</em>' attribute.
-   * @see #setMenge(Float)
+   * @return the value of the '<em>Menge</em>' containment reference.
+   * @see #setMenge(Menge)
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getZutat_Menge()
-   * @model default="1.5" required="true"
+   * @model containment="true" required="true"
    * @generated
    */
-  Float getMenge();
+  Menge getMenge();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Zutat#getMenge <em>Menge</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Zutat#getMenge <em>Menge</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Menge</em>' attribute.
+   * @param value the new value of the '<em>Menge</em>' containment reference.
    * @see #getMenge()
    * @generated
    */
-  void setMenge(Float value);
-
-  /**
-   * Returns the value of the '<em><b>Einheit</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Einheit</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Einheit</em>' attribute.
-   * @see #setEinheit(String)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getZutat_Einheit()
-   * @model required="true"
-   * @generated
-   */
-  String getEinheit();
-
-  /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Zutat#getEinheit <em>Einheit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Einheit</em>' attribute.
-   * @see #getEinheit()
-   * @generated
-   */
-  void setEinheit(String value);
+  void setMenge(Menge value);
 
 } // Zutat

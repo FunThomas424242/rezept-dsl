@@ -162,6 +162,24 @@ public interface RezeptFactory extends EFactory
   DiaetTag createDiaetTag();
 
   /**
+   * Returns a new object of class '<em>Preis</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Preis</em>'.
+   * @generated
+   */
+  Preis createPreis();
+
+  /**
+   * Returns a new object of class '<em>Menge</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Menge</em>'.
+   * @generated
+   */
+  Menge createMenge();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -33,11 +33,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verpackung" eType="#//Verpackung"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uba" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="preis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handler" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hersteller" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="datumLetzteAenderung" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="'01.01.2012'"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preis" eType="#//Preis"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="menge" lowerBound="1" eType="#//Menge"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjektBeschreibung" eSuperTypes="#//Metadaten">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupId" lowerBound="1"
@@ -67,6 +70,7 @@
     <eLiterals name="Salat" literal="Salat"/>
     <eLiterals name="Kochen" value="1"/>
     <eLiterals name="Backen" value="2"/>
+    <eLiterals name="Auflauf" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tipp">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -92,10 +96,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Zutat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="menge" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
-        defaultValueLiteral="1.5"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einheit" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="menge" lowerBound="1" eType="#//Menge"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Stoff">
     <eLiterals name="Laktose"/>
@@ -107,8 +109,6 @@
         eType="#//RezeptModel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RezeptModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elemente" lowerBound="1"
-        upperBound="-1" eType="#//ModelElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metadaten" lowerBound="1"
         eType="#//Metadaten" containment="true"/>
   </eClassifiers>
@@ -123,6 +123,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModulBeschreibung" eSuperTypes="#//Metadaten">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
+        eType="#//Import" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elemente" lowerBound="1"
+        upperBound="-1" eType="#//ModelElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DiaetTag" eSuperTypes="#//Tag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="diaet" lowerBound="1" eType="#//DiaetArt"/>
@@ -130,5 +134,33 @@
   <eClassifiers xsi:type="ecore:EEnum" name="DiaetArt">
     <eLiterals name="Laktosefrei"/>
     <eLiterals name="Fruchtzuckerarm" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Preis">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="betrag" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="waehrung" lowerBound="1"
+        eType="#//Waehrung"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Waehrung">
+    <eLiterals name="Euro"/>
+    <eLiterals name="Mark" value="1"/>
+    <eLiterals name="DM" value="2" literal="DM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Menge">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="betrag" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
+        defaultValueLiteral="1.5"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einheit" lowerBound="1"
+        eType="#//Masseinheit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Masseinheit">
+    <eLiterals name="Prise"/>
+    <eLiterals name="Messerspitze" value="1"/>
+    <eLiterals name="Teeloeffel" value="2"/>
+    <eLiterals name="gehaeufterEssloeffel" value="3"/>
+    <eLiterals name="L" value="4"/>
+    <eLiterals name="g" value="5"/>
+    <eLiterals name="kg" value="6"/>
+    <eLiterals name="stueck" value="7" literal="Stück"/>
   </eClassifiers>
 </ecore:EPackage>

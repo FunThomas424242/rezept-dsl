@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptModelImpl#getElemente <em>Elemente</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptModelImpl#getMetadaten <em>Metadaten</em>}</li>
  * </ul>
  * </p>
@@ -43,16 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class RezeptModelImpl extends EObjectImpl implements RezeptModel
 {
-  /**
-   * The cached value of the '{@link #getElemente() <em>Elemente</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getElemente()
-   * @generated
-   * @ordered
-   */
-  protected EList<ModelElement> elemente;
-
   /**
    * The cached value of the '{@link #getMetadaten() <em>Metadaten</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -82,20 +71,6 @@ public class RezeptModelImpl extends EObjectImpl implements RezeptModel
   protected EClass eStaticClass()
   {
     return RezeptPackage.Literals.REZEPT_MODEL;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<ModelElement> getElemente()
-  {
-    if (elemente == null)
-    {
-      elemente = new EObjectContainmentEList<ModelElement>(ModelElement.class, this, RezeptPackage.REZEPT_MODEL__ELEMENTE);
-    }
-    return elemente;
   }
 
   /**
@@ -156,8 +131,6 @@ public class RezeptModelImpl extends EObjectImpl implements RezeptModel
   {
     switch (featureID)
     {
-      case RezeptPackage.REZEPT_MODEL__ELEMENTE:
-        return ((InternalEList<?>)getElemente()).basicRemove(otherEnd, msgs);
       case RezeptPackage.REZEPT_MODEL__METADATEN:
         return basicSetMetadaten(null, msgs);
     }
@@ -174,8 +147,6 @@ public class RezeptModelImpl extends EObjectImpl implements RezeptModel
   {
     switch (featureID)
     {
-      case RezeptPackage.REZEPT_MODEL__ELEMENTE:
-        return getElemente();
       case RezeptPackage.REZEPT_MODEL__METADATEN:
         return getMetadaten();
     }
@@ -193,10 +164,6 @@ public class RezeptModelImpl extends EObjectImpl implements RezeptModel
   {
     switch (featureID)
     {
-      case RezeptPackage.REZEPT_MODEL__ELEMENTE:
-        getElemente().clear();
-        getElemente().addAll((Collection<? extends ModelElement>)newValue);
-        return;
       case RezeptPackage.REZEPT_MODEL__METADATEN:
         setMetadaten((Metadaten)newValue);
         return;
@@ -214,9 +181,6 @@ public class RezeptModelImpl extends EObjectImpl implements RezeptModel
   {
     switch (featureID)
     {
-      case RezeptPackage.REZEPT_MODEL__ELEMENTE:
-        getElemente().clear();
-        return;
       case RezeptPackage.REZEPT_MODEL__METADATEN:
         setMetadaten((Metadaten)null);
         return;
@@ -234,8 +198,6 @@ public class RezeptModelImpl extends EObjectImpl implements RezeptModel
   {
     switch (featureID)
     {
-      case RezeptPackage.REZEPT_MODEL__ELEMENTE:
-        return elemente != null && !elemente.isEmpty();
       case RezeptPackage.REZEPT_MODEL__METADATEN:
         return metadaten != null;
     }

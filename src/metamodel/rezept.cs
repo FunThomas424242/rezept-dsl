@@ -59,24 +59,27 @@ TOKENSTYLES {
 	"Aktion:" COLOR #7F0055, BOLD;
 	"Tipp:" COLOR #7F0055, BOLD;
 	"Rank:" COLOR #7F0055, BOLD;
-	"Menge:" COLOR #7F0055, BOLD;
+	"Menge:", "mal."COLOR #7F0055, BOLD;
 	"Zutat:" COLOR #7F0055, BOLD;
 }
 
 
 RULES {
-	RezeptModel ::= metadaten !0 elemente+ ;
-	ModulBeschreibung ::= "Modul" name['"','"']  ";";
+	RezeptModel ::= metadaten ;
+	ModulBeschreibung ::= "Modul" name['"','"']   ";" imports* elemente+;
 	ProjektBeschreibung ::=  "RezeptSammlung" "{" 
 	             "groupId" "=" groupId['"','"'] ";" "artifactId" "=" artifactId['"','"'] ";"
 	             "version" "=" version['"','"'] ";"
 	             imports* "}";
-	Import ::=  "import"  importedResource['"','"'] "." ;
+	Import ::=  "import"  importedResource['"','"'] ";" ;
 	Produkt ::= "Produkt" name['"','"']  "{" 
 				("Verpackung:" verpackung['"','"'] ".")?
-				("EAN:" ean['"','"'] ".")? ("UBA:" uba['"','"'] ".")? ("Preis:" preis['"','"'] ".")? 
+				menge
+				("EAN:" ean['"','"'] ".")? ("UBA:" uba['"','"'] ".")? 
+				preis? 
 				("Händler:" handler['"','"'] ".")?
 				("Hersteller:" hersteller['"','"'] ".")? "Letzte Änderung:" datumLetzteAenderung[DATUM] "." "}" ;
+	Preis ::= "Preis:" betrag['"','"'] waehrung['"','"'] ".";
 	Rezept ::= "Rezept" id['"','"'] "{" 
 				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
 				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
@@ -87,9 +90,10 @@ RULES {
 	BenutzerTag ::=  "Tag:" bezeichnung['"','"'] ".";
 	DiaetTag ::= "Diät:" diaet['"','"'] "." ;
 	ProduktRef ::= "ProduktRef:" produkt['"','"'] "Menge:" menge['"','"'] "mal.";
-	Zutat ::= "Zutat:" name['"','"'] "Menge:" menge['"','"']  einheit['"','"'] ".";
-	Arbeitsschritt ::= "Aktion:" beschreibung['"','"'] ".";
-	Tipp ::= "Tipp:" "{"  text['"','"'] "}";
-	Rank ::= "Rank:" "{" bewertung['"','"'] "}";
+	Zutat ::= "Zutat:" name['"','"'] menge    ;
+	Menge ::= "Menge:" betrag['"','"'] einheit['"','"'] ".";
+	Arbeitsschritt ::= "Aktion:" beschreibung['"','"'];
+	Tipp ::= "Tipp:"  text['"','"'] ;
+	Rank ::= "Rank:" bewertung['"','"'] ;
 	Quelle ::= "Quelle:" "übernommen" ":" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
 }

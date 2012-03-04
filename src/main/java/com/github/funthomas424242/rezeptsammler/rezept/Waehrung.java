@@ -14,147 +14,123 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Kategorie Art</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Waehrung</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getKategorieArt()
+ * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getWaehrung()
  * @model
  * @generated
  */
-public enum KategorieArt implements Enumerator
+public enum Waehrung implements Enumerator
 {
   /**
-   * The '<em><b>Salat</b></em>' literal object.
+   * The '<em><b>Euro</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #SALAT_VALUE
+   * @see #EURO_VALUE
    * @generated
    * @ordered
    */
-  SALAT(0, "Salat", "Salat"),
+  EURO(0, "Euro", "Euro"),
 
   /**
-   * The '<em><b>Kochen</b></em>' literal object.
+   * The '<em><b>Mark</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #KOCHEN_VALUE
+   * @see #MARK_VALUE
    * @generated
    * @ordered
    */
-  KOCHEN(1, "Kochen", "Kochen"),
+  MARK(1, "Mark", "Mark"),
 
   /**
-   * The '<em><b>Backen</b></em>' literal object.
+   * The '<em><b>DM</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #BACKEN_VALUE
+   * @see #DM_VALUE
    * @generated
    * @ordered
    */
-  BACKEN(2, "Backen", "Backen"), /**
-   * The '<em><b>Auflauf</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #AUFLAUF_VALUE
-   * @generated
-   * @ordered
-   */
-  AUFLAUF(3, "Auflauf", "Auflauf");
+  DM(2, "DM", "DM");
 
   /**
-   * The '<em><b>Salat</b></em>' literal value.
+   * The '<em><b>Euro</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Salat</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Euro</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #SALAT
-   * @model name="Salat"
+   * @see #EURO
+   * @model name="Euro"
    * @generated
    * @ordered
    */
-  public static final int SALAT_VALUE = 0;
+  public static final int EURO_VALUE = 0;
 
   /**
-   * The '<em><b>Kochen</b></em>' literal value.
+   * The '<em><b>Mark</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Kochen</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Mark</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #KOCHEN
-   * @model name="Kochen"
+   * @see #MARK
+   * @model name="Mark"
    * @generated
    * @ordered
    */
-  public static final int KOCHEN_VALUE = 1;
+  public static final int MARK_VALUE = 1;
 
   /**
-   * The '<em><b>Backen</b></em>' literal value.
+   * The '<em><b>DM</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Backen</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>DM</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #BACKEN
-   * @model name="Backen"
+   * @see #DM
+   * @model
    * @generated
    * @ordered
    */
-  public static final int BACKEN_VALUE = 2;
+  public static final int DM_VALUE = 2;
 
   /**
-   * The '<em><b>Auflauf</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Auflauf</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #AUFLAUF
-   * @model name="Auflauf"
-   * @generated
-   * @ordered
-   */
-  public static final int AUFLAUF_VALUE = 3;
-
-  /**
-   * An array of all the '<em><b>Kategorie Art</b></em>' enumerators.
+   * An array of all the '<em><b>Waehrung</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final KategorieArt[] VALUES_ARRAY =
-    new KategorieArt[]
+  private static final Waehrung[] VALUES_ARRAY =
+    new Waehrung[]
     {
-      SALAT,
-      KOCHEN,
-      BACKEN,
-      AUFLAUF,
+      EURO,
+      MARK,
+      DM,
     };
 
   /**
-   * A public read-only list of all the '<em><b>Kategorie Art</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>Waehrung</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<KategorieArt> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<Waehrung> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Kategorie Art</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>Waehrung</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static KategorieArt get(String literal)
+  public static Waehrung get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      KategorieArt result = VALUES_ARRAY[i];
+      Waehrung result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -164,16 +140,16 @@ public enum KategorieArt implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Kategorie Art</b></em>' literal with the specified name.
+   * Returns the '<em><b>Waehrung</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static KategorieArt getByName(String name)
+  public static Waehrung getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      KategorieArt result = VALUES_ARRAY[i];
+      Waehrung result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -183,19 +159,18 @@ public enum KategorieArt implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Kategorie Art</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>Waehrung</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static KategorieArt get(int value)
+  public static Waehrung get(int value)
   {
     switch (value)
     {
-      case SALAT_VALUE: return SALAT;
-      case KOCHEN_VALUE: return KOCHEN;
-      case BACKEN_VALUE: return BACKEN;
-      case AUFLAUF_VALUE: return AUFLAUF;
+      case EURO_VALUE: return EURO;
+      case MARK_VALUE: return MARK;
+      case DM_VALUE: return DM;
     }
     return null;
   }
@@ -227,7 +202,7 @@ public enum KategorieArt implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private KategorieArt(int value, String name, String literal)
+  private Waehrung(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -276,4 +251,4 @@ public enum KategorieArt implements Enumerator
     return literal;
   }
   
-} //KategorieArt
+} //Waehrung

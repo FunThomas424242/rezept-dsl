@@ -84,6 +84,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.BENUTZER_TAG: return createBenutzerTag();
       case RezeptPackage.MODUL_BESCHREIBUNG: return createModulBeschreibung();
       case RezeptPackage.DIAET_TAG: return createDiaetTag();
+      case RezeptPackage.PREIS: return createPreis();
+      case RezeptPackage.MENGE: return createMenge();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -109,6 +111,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return createStoffFromString(eDataType, initialValue);
       case RezeptPackage.DIAET_ART:
         return createDiaetArtFromString(eDataType, initialValue);
+      case RezeptPackage.WAEHRUNG:
+        return createWaehrungFromString(eDataType, initialValue);
+      case RezeptPackage.MASSEINHEIT:
+        return createMasseinheitFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -134,6 +140,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return convertStoffToString(eDataType, instanceValue);
       case RezeptPackage.DIAET_ART:
         return convertDiaetArtToString(eDataType, instanceValue);
+      case RezeptPackage.WAEHRUNG:
+        return convertWaehrungToString(eDataType, instanceValue);
+      case RezeptPackage.MASSEINHEIT:
+        return convertMasseinheitToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -309,6 +319,28 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Preis createPreis()
+  {
+    PreisImpl preis = new PreisImpl();
+    return preis;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Menge createMenge()
+  {
+    MengeImpl menge = new MengeImpl();
+    return menge;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ModifikationsArt createModifikationsArtFromString(EDataType eDataType, String initialValue)
   {
     ModifikationsArt result = ModifikationsArt.get(initialValue);
@@ -410,6 +442,50 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * @generated
    */
   public String convertDiaetArtToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Waehrung createWaehrungFromString(EDataType eDataType, String initialValue)
+  {
+    Waehrung result = Waehrung.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertWaehrungToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Masseinheit createMasseinheitFromString(EDataType eDataType, String initialValue)
+  {
+    Masseinheit result = Masseinheit.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertMasseinheitToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }
