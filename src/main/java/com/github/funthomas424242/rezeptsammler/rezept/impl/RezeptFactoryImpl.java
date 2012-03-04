@@ -86,6 +86,7 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.DIAET_TAG: return createDiaetTag();
       case RezeptPackage.PREIS: return createPreis();
       case RezeptPackage.MENGE: return createMenge();
+      case RezeptPackage.BUCH_BESCHREIBUNG: return createBuchBeschreibung();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -334,6 +335,17 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     MengeImpl menge = new MengeImpl();
     return menge;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BuchBeschreibung createBuchBeschreibung()
+  {
+    BuchBeschreibungImpl buchBeschreibung = new BuchBeschreibungImpl();
+    return buchBeschreibung;
   }
 
   /**

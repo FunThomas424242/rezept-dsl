@@ -74,7 +74,8 @@ RULES {
 	ProjektBeschreibung ::=  "RezeptSammlung" "{" 
 	             "groupId" "=" groupId['"','"'] ";" "artifactId" "=" artifactId['"','"'] ";"
 	             "version" "=" version['"','"'] ";"
-	             imports* "}";
+	             imports* "}" buch;
+	BuchBeschreibung ::= "Buch" "{" titel['"','"'] resourcesDir['"','"']"}";
 	Import ::=  "import"  importedResource['"','"'] ";" ;
 	Produkt ::= "Produkt" name['"','"']  "{" 
 				("Verpackung:" verpackung['"','"'] ".")?

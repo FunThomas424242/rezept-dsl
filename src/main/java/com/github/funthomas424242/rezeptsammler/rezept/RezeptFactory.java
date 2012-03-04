@@ -180,6 +180,15 @@ public interface RezeptFactory extends EFactory
   Menge createMenge();
 
   /**
+   * Returns a new object of class '<em>Buch Beschreibung</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Buch Beschreibung</em>'.
+   * @generated
+   */
+  BuchBeschreibung createBuchBeschreibung();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

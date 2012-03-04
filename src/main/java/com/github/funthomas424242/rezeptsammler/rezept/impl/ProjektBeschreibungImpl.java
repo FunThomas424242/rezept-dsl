@@ -6,6 +6,7 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
+import com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung;
 import com.github.funthomas424242.rezeptsammler.rezept.Import;
 import com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getArtifactId <em>Artifact Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getVersion <em>Version</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getBuch <em>Buch</em>}</li>
  * </ul>
  * </p>
  *
@@ -112,6 +114,16 @@ public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBes
    * @ordered
    */
   protected String version = VERSION_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getBuch() <em>Buch</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBuch()
+   * @generated
+   * @ordered
+   */
+  protected BuchBeschreibung buch;
 
   /**
    * <!-- begin-user-doc -->
@@ -222,6 +234,54 @@ public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBes
    * <!-- end-user-doc -->
    * @generated
    */
+  public BuchBeschreibung getBuch()
+  {
+    return buch;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBuch(BuchBeschreibung newBuch, NotificationChain msgs)
+  {
+    BuchBeschreibung oldBuch = buch;
+    buch = newBuch;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH, oldBuch, newBuch);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBuch(BuchBeschreibung newBuch)
+  {
+    if (newBuch != buch)
+    {
+      NotificationChain msgs = null;
+      if (buch != null)
+        msgs = ((InternalEObject)buch).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH, null, msgs);
+      if (newBuch != null)
+        msgs = ((InternalEObject)newBuch).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH, null, msgs);
+      msgs = basicSetBuch(newBuch, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH, newBuch, newBuch));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -229,6 +289,8 @@ public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBes
     {
       case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
+        return basicSetBuch(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -251,6 +313,8 @@ public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBes
         return getImports();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         return getVersion();
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
+        return getBuch();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -279,6 +343,9 @@ public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBes
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         setVersion((String)newValue);
         return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
+        setBuch((BuchBeschreibung)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -305,6 +372,9 @@ public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBes
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         setVersion(VERSION_EDEFAULT);
         return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
+        setBuch((BuchBeschreibung)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -327,6 +397,8 @@ public class ProjektBeschreibungImpl extends MetadatenImpl implements ProjektBes
         return imports != null && !imports.isEmpty();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
+        return buch != null;
     }
     return super.eIsSet(featureID);
   }

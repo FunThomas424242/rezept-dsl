@@ -373,13 +373,22 @@ public interface RezeptPackage extends EPackage
   int PROJEKT_BESCHREIBUNG__VERSION = METADATEN_FEATURE_COUNT + 3;
 
   /**
+   * The feature id for the '<em><b>Buch</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJEKT_BESCHREIBUNG__BUCH = METADATEN_FEATURE_COUNT + 4;
+
+  /**
    * The number of structural features of the '<em>Projekt Beschreibung</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJEKT_BESCHREIBUNG_FEATURE_COUNT = METADATEN_FEATURE_COUNT + 4;
+  int PROJEKT_BESCHREIBUNG_FEATURE_COUNT = METADATEN_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.QuelleImpl <em>Quelle</em>}' class.
@@ -856,6 +865,43 @@ public interface RezeptPackage extends EPackage
   int MENGE_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl <em>Buch Beschreibung</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBuchBeschreibung()
+   * @generated
+   */
+  int BUCH_BESCHREIBUNG = 20;
+
+  /**
+   * The feature id for the '<em><b>Titel</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__TITEL = 0;
+
+  /**
+   * The feature id for the '<em><b>Resources Dir</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__RESOURCES_DIR = 1;
+
+  /**
+   * The number of structural features of the '<em>Buch Beschreibung</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -863,7 +909,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getModifikationsArt()
    * @generated
    */
-  int MODIFIKATIONS_ART = 20;
+  int MODIFIKATIONS_ART = 21;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.KategorieArt <em>Kategorie Art</em>}' enum.
@@ -873,7 +919,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getKategorieArt()
    * @generated
    */
-  int KATEGORIE_ART = 21;
+  int KATEGORIE_ART = 22;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Verpackung <em>Verpackung</em>}' enum.
@@ -883,7 +929,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getVerpackung()
    * @generated
    */
-  int VERPACKUNG = 22;
+  int VERPACKUNG = 23;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Stoff <em>Stoff</em>}' enum.
@@ -893,7 +939,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getStoff()
    * @generated
    */
-  int STOFF = 23;
+  int STOFF = 24;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.DiaetArt <em>Diaet Art</em>}' enum.
@@ -903,7 +949,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getDiaetArt()
    * @generated
    */
-  int DIAET_ART = 24;
+  int DIAET_ART = 25;
 
 
   /**
@@ -914,7 +960,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getWaehrung()
    * @generated
    */
-  int WAEHRUNG = 25;
+  int WAEHRUNG = 26;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Masseinheit <em>Masseinheit</em>}' enum.
@@ -924,7 +970,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMasseinheit()
    * @generated
    */
-  int MASSEINHEIT = 26;
+  int MASSEINHEIT = 27;
 
 
   /**
@@ -1241,6 +1287,17 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EAttribute getProjektBeschreibung_Version();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getBuch <em>Buch</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Buch</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getBuch()
+   * @see #getProjektBeschreibung()
+   * @generated
+   */
+  EReference getProjektBeschreibung_Buch();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Quelle <em>Quelle</em>}'.
@@ -1634,6 +1691,38 @@ public interface RezeptPackage extends EPackage
   EAttribute getMenge_Einheit();
 
   /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung <em>Buch Beschreibung</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Buch Beschreibung</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung
+   * @generated
+   */
+  EClass getBuchBeschreibung();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getTitel <em>Titel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Titel</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getTitel()
+   * @see #getBuchBeschreibung()
+   * @generated
+   */
+  EAttribute getBuchBeschreibung_Titel();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getResourcesDir <em>Resources Dir</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Resources Dir</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getResourcesDir()
+   * @see #getBuchBeschreibung()
+   * @generated
+   */
+  EAttribute getBuchBeschreibung_ResourcesDir();
+
+  /**
    * Returns the meta object for enum '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1967,6 +2056,14 @@ public interface RezeptPackage extends EPackage
     EAttribute PROJEKT_BESCHREIBUNG__VERSION = eINSTANCE.getProjektBeschreibung_Version();
 
     /**
+     * The meta object literal for the '<em><b>Buch</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROJEKT_BESCHREIBUNG__BUCH = eINSTANCE.getProjektBeschreibung_Buch();
+
+    /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.QuelleImpl <em>Quelle</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2293,6 +2390,32 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EAttribute MENGE__EINHEIT = eINSTANCE.getMenge_Einheit();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl <em>Buch Beschreibung</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBuchBeschreibung()
+     * @generated
+     */
+    EClass BUCH_BESCHREIBUNG = eINSTANCE.getBuchBeschreibung();
+
+    /**
+     * The meta object literal for the '<em><b>Titel</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUCH_BESCHREIBUNG__TITEL = eINSTANCE.getBuchBeschreibung_Titel();
+
+    /**
+     * The meta object literal for the '<em><b>Resources Dir</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUCH_BESCHREIBUNG__RESOURCES_DIR = eINSTANCE.getBuchBeschreibung_ResourcesDir();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.

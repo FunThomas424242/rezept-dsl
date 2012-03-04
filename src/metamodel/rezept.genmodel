@@ -81,6 +81,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/artifactId"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//ProjektBeschreibung/imports"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//ProjektBeschreibung/buch"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Quelle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Quelle/beschreibung"/>
@@ -132,6 +133,10 @@
     <genClasses ecoreClass="rezept.ecore#//Menge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Menge/betrag"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Menge/einheit"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//BuchBeschreibung">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BuchBeschreibung/titel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BuchBeschreibung/resourcesDir"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

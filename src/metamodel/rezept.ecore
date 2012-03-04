@@ -51,6 +51,8 @@
         eType="#//Import" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buch" lowerBound="1" eType="#//BuchBeschreibung"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quelle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" lowerBound="1"
@@ -162,5 +164,10 @@
     <eLiterals name="g" value="5"/>
     <eLiterals name="kg" value="6"/>
     <eLiterals name="stueck" value="7" literal="Stück"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BuchBeschreibung">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titel" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourcesDir" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
