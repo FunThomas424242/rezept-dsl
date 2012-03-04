@@ -2,6 +2,10 @@ SYNTAXDEF rezept
 FOR <http://www.github.com/funthomas424242/language/rezept>
 START RezeptModel
  
+//TODO extract product definitions IMPORTS{
+//erDSL :  <http://www.emftext.org/language/erDSL> <../../../org.emftext.language.erDSL/metamodel/erDSL.ecore> 
+//WITH SYNTAX erDSL  <../../../org.emftext.language.erDSL/metamodel/erDSL.cs>
+//}
 
 OPTIONS{
  reloadGeneratorModel="true";
