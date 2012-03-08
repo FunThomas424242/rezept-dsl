@@ -114,9 +114,9 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createTippAdapter();
       }
       @Override
-      public Adapter caseRank(Rank object)
+      public Adapter caseKommentar(Kommentar object)
       {
-        return createRankAdapter();
+        return createKommentarAdapter();
       }
       @Override
       public Adapter caseProduktRef(ProduktRef object)
@@ -172,6 +172,26 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBuchBeschreibung(BuchBeschreibung object)
       {
         return createBuchBeschreibungAdapter();
+      }
+      @Override
+      public Adapter caseAnmerkung(Anmerkung object)
+      {
+        return createAnmerkungAdapter();
+      }
+      @Override
+      public Adapter caseNotiz(Notiz object)
+      {
+        return createNotizAdapter();
+      }
+      @Override
+      public Adapter caseBestimmteMenge(BestimmteMenge object)
+      {
+        return createBestimmteMengeAdapter();
+      }
+      @Override
+      public Adapter caseUnbestimmteMenge(UnbestimmteMenge object)
+      {
+        return createUnbestimmteMengeAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -301,16 +321,16 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Rank <em>Rank</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Kommentar <em>Kommentar</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Rank
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Kommentar
    * @generated
    */
-  public Adapter createRankAdapter()
+  public Adapter createKommentarAdapter()
   {
     return null;
   }
@@ -476,6 +496,66 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBuchBeschreibungAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Anmerkung <em>Anmerkung</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Anmerkung
+   * @generated
+   */
+  public Adapter createAnmerkungAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Notiz <em>Notiz</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Notiz
+   * @generated
+   */
+  public Adapter createNotizAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge <em>Bestimmte Menge</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge
+   * @generated
+   */
+  public Adapter createBestimmteMengeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.UnbestimmteMenge <em>Unbestimmte Menge</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.UnbestimmteMenge
+   * @generated
+   */
+  public Adapter createUnbestimmteMengeAdapter()
   {
     return null;
   }

@@ -33,6 +33,7 @@ DEFINE COMMENT $'//'(~('\n'|'\r'|'\uffff'))*$;
 //DEFINE INTEGER $('-')?('1'..'9')('0'..'9')*|'0'$;
 DEFINE ID $('\'')('#')$ + TEXT + $('\'') $;
 DEFINE DATUM $('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9')('0'..'9') ('0'..'9')$;
+DEFINE NUMBER  $('0'..'9')+$;
 }
 
 
@@ -40,9 +41,10 @@ DEFINE DATUM $('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0
 TOKENSTYLES {
 	"DATUM" COLOR #00FF00 , BOLD;
 	"ID" COLOR #404040 , BOLD;
+	"NUMBER" COLOR #00FF00, BOLD;
 	"Rezept" COLOR #7F0055, BOLD;
 	"Titel:", "Untertitel:", "Media Folder:" COLOR #7F0055, BOLD;
-	"Kategorie:" COLOR #7F0055, BOLD;
+	"Kategorie:", "Ausreichend für","Personen." COLOR #7F0055, BOLD;
 	"Tag:" COLOR #7F0055, BOLD;
 	"Diät:" COLOR #7F0055, BOLD;
 	"Stoff:" COLOR #7F0055, BOLD;
@@ -58,12 +60,10 @@ TOKENSTYLES {
 	"Preis:" COLOR #7F0055, BOLD;
 	"Händler:" COLOR #7F0055, BOLD;
 	"Hersteller:" COLOR #7F0055, BOLD;
-	"Quelle:" COLOR #7F0055, BOLD;
+	"Quelle:", "übernommen", "aus"  COLOR #7F0055, BOLD;
 	"Aktion:" COLOR #7F0055, BOLD;
-	"Tipp:" COLOR #7F0055, BOLD;
-	"Rank:" COLOR #7F0055, BOLD;
-	"Menge:", "mal."COLOR #7F0055, BOLD;
-	"Zutat:" COLOR #7F0055, BOLD;
+	"Tipp:", "Anmerkung:", "Kommentar:" COLOR #7F0055, BOLD;
+	"Zutat:", "Menge:", "mal." COLOR #7F0055, BOLD;
 }
 
 
@@ -85,18 +85,20 @@ RULES {
 	Preis ::= "Preis:" betrag['"','"'] waehrung['"','"'] ".";
 	Rezept ::= "Rezept" id['"','"'] "{" 
 				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
+				quelle? ("Ausreichend für" personen[NUMBER] "Personen.")?
 				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
-				produkte* zutaten+ schritte+
-				quelle? bewertung? tipps*    
+				produkte* zutaten+ schritte+ notizen*				    
 			    "}";
 	StoffTag ::=  "Stoff:" stoff['"','"'] "." ; 
 	BenutzerTag ::=  "Tag:" bezeichnung['"','"'] ".";
 	DiaetTag ::= "Diät:" diaet['"','"'] "." ;
 	ProduktRef ::= "ProduktRef:" produkt['"','"'] "Menge:" menge['"','"'] "mal.";
 	Zutat ::= "Zutat:" name['"','"'] menge    ;
-	Menge ::= "Menge:" betrag['"','"'] einheit['"','"'] ".";
+	BestimmteMenge ::= "Menge:" betrag['"','"'] einheit['"','"'] ".";
+	UnbestimmteMenge ::= menge['"','"'] ".";
 	Arbeitsschritt ::= "Aktion:" beschreibung['"','"'];
 	Tipp ::= "Tipp:"  text['"','"'] ;
-	Rank ::= "Rank:" bewertung['"','"'] ;
-	Quelle ::= "Quelle:" "übernommen" ":" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
+	Kommentar ::= "Kommentar:" text['"','"'] ;
+	Anmerkung ::= "Anmerkung:" text['"','"'] ;
+	Quelle ::= "Quelle:" "übernommen" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
 }

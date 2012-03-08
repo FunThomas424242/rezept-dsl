@@ -8,13 +8,12 @@ package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
 import com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt;
 import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
+import com.github.funthomas424242.rezeptsammler.rezept.Notiz;
 import com.github.funthomas424242.rezeptsammler.rezept.ProduktRef;
 import com.github.funthomas424242.rezeptsammler.rezept.Quelle;
-import com.github.funthomas424242.rezeptsammler.rezept.Rank;
 import com.github.funthomas424242.rezeptsammler.rezept.Rezept;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 import com.github.funthomas424242.rezeptsammler.rezept.Tag;
-import com.github.funthomas424242.rezeptsammler.rezept.Tipp;
 import com.github.funthomas424242.rezeptsammler.rezept.Zutat;
 
 import java.util.Collection;
@@ -41,8 +40,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getId <em>Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getQuelle <em>Quelle</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getTipps <em>Tipps</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getBewertung <em>Bewertung</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getSchritte <em>Schritte</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getProdukte <em>Produkte</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getZutaten <em>Zutaten</em>}</li>
@@ -51,6 +48,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getKategorie <em>Kategorie</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getLetzteAenderung <em>Letzte Aenderung</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getNotizen <em>Notizen</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getPersonen <em>Personen</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,26 +86,6 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * @ordered
    */
   protected Quelle quelle;
-
-  /**
-   * The cached value of the '{@link #getTipps() <em>Tipps</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTipps()
-   * @generated
-   * @ordered
-   */
-  protected EList<Tipp> tipps;
-
-  /**
-   * The cached value of the '{@link #getBewertung() <em>Bewertung</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getBewertung()
-   * @generated
-   * @ordered
-   */
-  protected Rank bewertung;
 
   /**
    * The cached value of the '{@link #getSchritte() <em>Schritte</em>}' containment reference list.
@@ -229,6 +208,36 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
   protected EList<Tag> tags;
 
   /**
+   * The cached value of the '{@link #getNotizen() <em>Notizen</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNotizen()
+   * @generated
+   * @ordered
+   */
+  protected EList<Notiz> notizen;
+
+  /**
+   * The default value of the '{@link #getPersonen() <em>Personen</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPersonen()
+   * @generated
+   * @ordered
+   */
+  protected static final Long PERSONEN_EDEFAULT = new Long(0L);
+
+  /**
+   * The cached value of the '{@link #getPersonen() <em>Personen</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPersonen()
+   * @generated
+   * @ordered
+   */
+  protected Long personen = PERSONEN_EDEFAULT;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -318,68 +327,6 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.REZEPT__QUELLE, newQuelle, newQuelle));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Tipp> getTipps()
-  {
-    if (tipps == null)
-    {
-      tipps = new EObjectContainmentEList<Tipp>(Tipp.class, this, RezeptPackage.REZEPT__TIPPS);
-    }
-    return tipps;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Rank getBewertung()
-  {
-    return bewertung;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetBewertung(Rank newBewertung, NotificationChain msgs)
-  {
-    Rank oldBewertung = bewertung;
-    bewertung = newBewertung;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RezeptPackage.REZEPT__BEWERTUNG, oldBewertung, newBewertung);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setBewertung(Rank newBewertung)
-  {
-    if (newBewertung != bewertung)
-    {
-      NotificationChain msgs = null;
-      if (bewertung != null)
-        msgs = ((InternalEObject)bewertung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RezeptPackage.REZEPT__BEWERTUNG, null, msgs);
-      if (newBewertung != null)
-        msgs = ((InternalEObject)newBewertung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RezeptPackage.REZEPT__BEWERTUNG, null, msgs);
-      msgs = basicSetBewertung(newBewertung, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.REZEPT__BEWERTUNG, newBewertung, newBewertung));
   }
 
   /**
@@ -535,6 +482,43 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Notiz> getNotizen()
+  {
+    if (notizen == null)
+    {
+      notizen = new EObjectContainmentEList<Notiz>(Notiz.class, this, RezeptPackage.REZEPT__NOTIZEN);
+    }
+    return notizen;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Long getPersonen()
+  {
+    return personen;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPersonen(Long newPersonen)
+  {
+    Long oldPersonen = personen;
+    personen = newPersonen;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.REZEPT__PERSONEN, oldPersonen, personen));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -542,10 +526,6 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
     {
       case RezeptPackage.REZEPT__QUELLE:
         return basicSetQuelle(null, msgs);
-      case RezeptPackage.REZEPT__TIPPS:
-        return ((InternalEList<?>)getTipps()).basicRemove(otherEnd, msgs);
-      case RezeptPackage.REZEPT__BEWERTUNG:
-        return basicSetBewertung(null, msgs);
       case RezeptPackage.REZEPT__SCHRITTE:
         return ((InternalEList<?>)getSchritte()).basicRemove(otherEnd, msgs);
       case RezeptPackage.REZEPT__PRODUKTE:
@@ -554,6 +534,8 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return ((InternalEList<?>)getZutaten()).basicRemove(otherEnd, msgs);
       case RezeptPackage.REZEPT__TAGS:
         return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
+      case RezeptPackage.REZEPT__NOTIZEN:
+        return ((InternalEList<?>)getNotizen()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -572,10 +554,6 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return getId();
       case RezeptPackage.REZEPT__QUELLE:
         return getQuelle();
-      case RezeptPackage.REZEPT__TIPPS:
-        return getTipps();
-      case RezeptPackage.REZEPT__BEWERTUNG:
-        return getBewertung();
       case RezeptPackage.REZEPT__SCHRITTE:
         return getSchritte();
       case RezeptPackage.REZEPT__PRODUKTE:
@@ -592,6 +570,10 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return getLetzteAenderung();
       case RezeptPackage.REZEPT__TAGS:
         return getTags();
+      case RezeptPackage.REZEPT__NOTIZEN:
+        return getNotizen();
+      case RezeptPackage.REZEPT__PERSONEN:
+        return getPersonen();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -612,13 +594,6 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return;
       case RezeptPackage.REZEPT__QUELLE:
         setQuelle((Quelle)newValue);
-        return;
-      case RezeptPackage.REZEPT__TIPPS:
-        getTipps().clear();
-        getTipps().addAll((Collection<? extends Tipp>)newValue);
-        return;
-      case RezeptPackage.REZEPT__BEWERTUNG:
-        setBewertung((Rank)newValue);
         return;
       case RezeptPackage.REZEPT__SCHRITTE:
         getSchritte().clear();
@@ -648,6 +623,13 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         getTags().clear();
         getTags().addAll((Collection<? extends Tag>)newValue);
         return;
+      case RezeptPackage.REZEPT__NOTIZEN:
+        getNotizen().clear();
+        getNotizen().addAll((Collection<? extends Notiz>)newValue);
+        return;
+      case RezeptPackage.REZEPT__PERSONEN:
+        setPersonen((Long)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -667,12 +649,6 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return;
       case RezeptPackage.REZEPT__QUELLE:
         setQuelle((Quelle)null);
-        return;
-      case RezeptPackage.REZEPT__TIPPS:
-        getTipps().clear();
-        return;
-      case RezeptPackage.REZEPT__BEWERTUNG:
-        setBewertung((Rank)null);
         return;
       case RezeptPackage.REZEPT__SCHRITTE:
         getSchritte().clear();
@@ -698,6 +674,12 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
       case RezeptPackage.REZEPT__TAGS:
         getTags().clear();
         return;
+      case RezeptPackage.REZEPT__NOTIZEN:
+        getNotizen().clear();
+        return;
+      case RezeptPackage.REZEPT__PERSONEN:
+        setPersonen(PERSONEN_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -716,10 +698,6 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
       case RezeptPackage.REZEPT__QUELLE:
         return quelle != null;
-      case RezeptPackage.REZEPT__TIPPS:
-        return tipps != null && !tipps.isEmpty();
-      case RezeptPackage.REZEPT__BEWERTUNG:
-        return bewertung != null;
       case RezeptPackage.REZEPT__SCHRITTE:
         return schritte != null && !schritte.isEmpty();
       case RezeptPackage.REZEPT__PRODUKTE:
@@ -736,6 +714,10 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
         return LETZTE_AENDERUNG_EDEFAULT == null ? letzteAenderung != null : !LETZTE_AENDERUNG_EDEFAULT.equals(letzteAenderung);
       case RezeptPackage.REZEPT__TAGS:
         return tags != null && !tags.isEmpty();
+      case RezeptPackage.REZEPT__NOTIZEN:
+        return notizen != null && !notizen.isEmpty();
+      case RezeptPackage.REZEPT__PERSONEN:
+        return PERSONEN_EDEFAULT == null ? personen != null : !PERSONEN_EDEFAULT.equals(personen);
     }
     return super.eIsSet(featureID);
   }
@@ -761,6 +743,8 @@ public class RezeptImpl extends ModelElementImpl implements Rezept
     result.append(kategorie);
     result.append(", letzteAenderung: ");
     result.append(letzteAenderung);
+    result.append(", personen: ");
+    result.append(personen);
     result.append(')');
     return result.toString();
   }

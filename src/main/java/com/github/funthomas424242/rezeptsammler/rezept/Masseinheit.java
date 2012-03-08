@@ -54,6 +54,14 @@ public enum Masseinheit implements Enumerator
   TEELOEFFEL(2, "Teeloeffel", "Teeloeffel"),
 
   /**
+   * The '<em><b>Essloeffel</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ESSLOEFFEL_VALUE
+   * @generated
+   * @ordered
+   */
+  ESSLOEFFEL(8, "Essloeffel", "Essl\u00f6ffel"), /**
    * The '<em><b>Gehaeufter Essloeffel</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -101,7 +109,23 @@ public enum Masseinheit implements Enumerator
    * @generated
    * @ordered
    */
-  STUECK(7, "stueck", "St\u00fcck");
+  STUECK(7, "stueck", "St\u00fcck"), /**
+   * The '<em><b>Tasse</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #TASSE_VALUE
+   * @generated
+   * @ordered
+   */
+  TASSE(9, "Tasse", "Tasse"), /**
+   * The '<em><b>Becher</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #BECHER_VALUE
+   * @generated
+   * @ordered
+   */
+  BECHER(10, "Becher", "Becher");
 
   /**
    * The '<em><b>Prise</b></em>' literal value.
@@ -147,6 +171,21 @@ public enum Masseinheit implements Enumerator
    * @ordered
    */
   public static final int TEELOEFFEL_VALUE = 2;
+
+  /**
+   * The '<em><b>Essloeffel</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Essloeffel</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ESSLOEFFEL
+   * @model name="Essloeffel" literal="Essl\366ffel"
+   * @generated
+   * @ordered
+   */
+  public static final int ESSLOEFFEL_VALUE = 8;
 
   /**
    * The '<em><b>Gehaeufter Essloeffel</b></em>' literal value.
@@ -224,6 +263,36 @@ public enum Masseinheit implements Enumerator
   public static final int STUECK_VALUE = 7;
 
   /**
+   * The '<em><b>Tasse</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Tasse</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #TASSE
+   * @model name="Tasse"
+   * @generated
+   * @ordered
+   */
+  public static final int TASSE_VALUE = 9;
+
+  /**
+   * The '<em><b>Becher</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Becher</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #BECHER
+   * @model name="Becher"
+   * @generated
+   * @ordered
+   */
+  public static final int BECHER_VALUE = 10;
+
+  /**
    * An array of all the '<em><b>Masseinheit</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -235,11 +304,14 @@ public enum Masseinheit implements Enumerator
       PRISE,
       MESSERSPITZE,
       TEELOEFFEL,
+      ESSLOEFFEL,
       GEHAEUFTER_ESSLOEFFEL,
       L,
       G,
       KG,
       STUECK,
+      TASSE,
+      BECHER,
     };
 
   /**
@@ -301,11 +373,14 @@ public enum Masseinheit implements Enumerator
       case PRISE_VALUE: return PRISE;
       case MESSERSPITZE_VALUE: return MESSERSPITZE;
       case TEELOEFFEL_VALUE: return TEELOEFFEL;
+      case ESSLOEFFEL_VALUE: return ESSLOEFFEL;
       case GEHAEUFTER_ESSLOEFFEL_VALUE: return GEHAEUFTER_ESSLOEFFEL;
       case L_VALUE: return L;
       case G_VALUE: return G;
       case KG_VALUE: return KG;
       case STUECK_VALUE: return STUECK;
+      case TASSE_VALUE: return TASSE;
+      case BECHER_VALUE: return BECHER;
     }
     return null;
   }

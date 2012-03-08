@@ -124,13 +124,15 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         Tipp tipp = (Tipp)theEObject;
         T result = caseTipp(tipp);
+        if (result == null) result = caseNotiz(tipp);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.RANK:
+      case RezeptPackage.KOMMENTAR:
       {
-        Rank rank = (Rank)theEObject;
-        T result = caseRank(rank);
+        Kommentar kommentar = (Kommentar)theEObject;
+        T result = caseKommentar(kommentar);
+        if (result == null) result = caseNotiz(kommentar);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -211,6 +213,37 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         BuchBeschreibung buchBeschreibung = (BuchBeschreibung)theEObject;
         T result = caseBuchBeschreibung(buchBeschreibung);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.ANMERKUNG:
+      {
+        Anmerkung anmerkung = (Anmerkung)theEObject;
+        T result = caseAnmerkung(anmerkung);
+        if (result == null) result = caseNotiz(anmerkung);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.NOTIZ:
+      {
+        Notiz notiz = (Notiz)theEObject;
+        T result = caseNotiz(notiz);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.BESTIMMTE_MENGE:
+      {
+        BestimmteMenge bestimmteMenge = (BestimmteMenge)theEObject;
+        T result = caseBestimmteMenge(bestimmteMenge);
+        if (result == null) result = caseMenge(bestimmteMenge);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.UNBESTIMMTE_MENGE:
+      {
+        UnbestimmteMenge unbestimmteMenge = (UnbestimmteMenge)theEObject;
+        T result = caseUnbestimmteMenge(unbestimmteMenge);
+        if (result == null) result = caseMenge(unbestimmteMenge);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -331,17 +364,17 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Rank</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Kommentar</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Rank</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Kommentar</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseRank(Rank object)
+  public T caseKommentar(Kommentar object)
   {
     return null;
   }
@@ -518,6 +551,70 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBuchBeschreibung(BuchBeschreibung object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Anmerkung</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Anmerkung</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAnmerkung(Anmerkung object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Notiz</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Notiz</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNotiz(Notiz object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bestimmte Menge</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bestimmte Menge</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBestimmteMenge(BestimmteMenge object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Unbestimmte Menge</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Unbestimmte Menge</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUnbestimmteMenge(UnbestimmteMenge object)
   {
     return null;
   }

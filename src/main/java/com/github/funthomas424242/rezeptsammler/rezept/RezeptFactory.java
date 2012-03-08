@@ -81,13 +81,13 @@ public interface RezeptFactory extends EFactory
   Tipp createTipp();
 
   /**
-   * Returns a new object of class '<em>Rank</em>'.
+   * Returns a new object of class '<em>Kommentar</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Rank</em>'.
+   * @return a new object of class '<em>Kommentar</em>'.
    * @generated
    */
-  Rank createRank();
+  Kommentar createKommentar();
 
   /**
    * Returns a new object of class '<em>Produkt Ref</em>'.
@@ -162,15 +162,6 @@ public interface RezeptFactory extends EFactory
   Preis createPreis();
 
   /**
-   * Returns a new object of class '<em>Menge</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Menge</em>'.
-   * @generated
-   */
-  Menge createMenge();
-
-  /**
    * Returns a new object of class '<em>Buch Beschreibung</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -178,6 +169,33 @@ public interface RezeptFactory extends EFactory
    * @generated
    */
   BuchBeschreibung createBuchBeschreibung();
+
+  /**
+   * Returns a new object of class '<em>Anmerkung</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Anmerkung</em>'.
+   * @generated
+   */
+  Anmerkung createAnmerkung();
+
+  /**
+   * Returns a new object of class '<em>Bestimmte Menge</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bestimmte Menge</em>'.
+   * @generated
+   */
+  BestimmteMenge createBestimmteMenge();
+
+  /**
+   * Returns a new object of class '<em>Unbestimmte Menge</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Unbestimmte Menge</em>'.
+   * @generated
+   */
+  UnbestimmteMenge createUnbestimmteMenge();
 
   /**
    * Returns the package supported by this factory.

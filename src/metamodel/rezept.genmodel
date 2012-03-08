@@ -25,6 +25,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Stueck"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Glas"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Flasche"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Becher"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Stoff">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Laktose"/>
@@ -44,17 +45,25 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Prise"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Messerspitze"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Teeloeffel"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Essloeffel"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/gehaeufterEssloeffel"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/L"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/g"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/kg"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/stueck"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tasse"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Becher"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/etwas"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/wenig"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/einige"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/reichlich"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/nachBedarf"/>
     </genEnums>
     <genClasses ecoreClass="rezept.ecore#//Rezept">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/quelle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/tipps"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/bewertung"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/schritte"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/produkte"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/zutaten"/>
@@ -63,6 +72,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/kategorie"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/letzteAenderung"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/tags"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/notizen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/personen"/>
     </genClasses>
     <genClasses image="false" ecoreClass="rezept.ecore#//ModelElement"/>
     <genClasses ecoreClass="rezept.ecore#//Produkt">
@@ -90,12 +101,8 @@
     <genClasses ecoreClass="rezept.ecore#//Arbeitsschritt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Arbeitsschritt/beschreibung"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//Tipp">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Tipp/text"/>
-    </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//Rank">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rank/bewertung"/>
-    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//Tipp"/>
+    <genClasses ecoreClass="rezept.ecore#//Kommentar"/>
     <genClasses ecoreClass="rezept.ecore#//ProduktRef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProduktRef/menge"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rezept.ecore#//ProduktRef/produkt"/>
@@ -126,13 +133,21 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Preis/betrag"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Preis/waehrung"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//Menge">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Menge/betrag"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Menge/einheit"/>
-    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//Menge"/>
     <genClasses ecoreClass="rezept.ecore#//BuchBeschreibung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BuchBeschreibung/titel"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BuchBeschreibung/resourcesDir"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//Anmerkung"/>
+    <genClasses image="false" ecoreClass="rezept.ecore#//Notiz">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Notiz/text"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//BestimmteMenge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BestimmteMenge/betrag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BestimmteMenge/einheit"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//UnbestimmteMenge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//UnbestimmteMenge/menge"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -75,7 +75,7 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.QUELLE: return createQuelle();
       case RezeptPackage.ARBEITSSCHRITT: return createArbeitsschritt();
       case RezeptPackage.TIPP: return createTipp();
-      case RezeptPackage.RANK: return createRank();
+      case RezeptPackage.KOMMENTAR: return createKommentar();
       case RezeptPackage.PRODUKT_REF: return createProduktRef();
       case RezeptPackage.ZUTAT: return createZutat();
       case RezeptPackage.IMPORT: return createImport();
@@ -84,8 +84,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.MODUL_BESCHREIBUNG: return createModulBeschreibung();
       case RezeptPackage.DIAET_TAG: return createDiaetTag();
       case RezeptPackage.PREIS: return createPreis();
-      case RezeptPackage.MENGE: return createMenge();
       case RezeptPackage.BUCH_BESCHREIBUNG: return createBuchBeschreibung();
+      case RezeptPackage.ANMERKUNG: return createAnmerkung();
+      case RezeptPackage.BESTIMMTE_MENGE: return createBestimmteMenge();
+      case RezeptPackage.UNBESTIMMTE_MENGE: return createUnbestimmteMenge();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -115,6 +117,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return createWaehrungFromString(eDataType, initialValue);
       case RezeptPackage.MASSEINHEIT:
         return createMasseinheitFromString(eDataType, initialValue);
+      case RezeptPackage.MENGEN_ANGABE:
+        return createMengenAngabeFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -144,6 +148,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
         return convertWaehrungToString(eDataType, instanceValue);
       case RezeptPackage.MASSEINHEIT:
         return convertMasseinheitToString(eDataType, instanceValue);
+      case RezeptPackage.MENGEN_ANGABE:
+        return convertMengenAngabeToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -220,10 +226,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Rank createRank()
+  public Kommentar createKommentar()
   {
-    RankImpl rank = new RankImpl();
-    return rank;
+    KommentarImpl kommentar = new KommentarImpl();
+    return kommentar;
   }
 
   /**
@@ -319,10 +325,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Menge createMenge()
+  public BuchBeschreibung createBuchBeschreibung()
   {
-    MengeImpl menge = new MengeImpl();
-    return menge;
+    BuchBeschreibungImpl buchBeschreibung = new BuchBeschreibungImpl();
+    return buchBeschreibung;
   }
 
   /**
@@ -330,10 +336,32 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BuchBeschreibung createBuchBeschreibung()
+  public Anmerkung createAnmerkung()
   {
-    BuchBeschreibungImpl buchBeschreibung = new BuchBeschreibungImpl();
-    return buchBeschreibung;
+    AnmerkungImpl anmerkung = new AnmerkungImpl();
+    return anmerkung;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BestimmteMenge createBestimmteMenge()
+  {
+    BestimmteMengeImpl bestimmteMenge = new BestimmteMengeImpl();
+    return bestimmteMenge;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnbestimmteMenge createUnbestimmteMenge()
+  {
+    UnbestimmteMengeImpl unbestimmteMenge = new UnbestimmteMengeImpl();
+    return unbestimmteMenge;
   }
 
   /**
@@ -486,6 +514,28 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * @generated
    */
   public String convertMasseinheitToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MengenAngabe createMengenAngabeFromString(EDataType eDataType, String initialValue)
+  {
+    MengenAngabe result = MengenAngabe.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertMengenAngabeToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

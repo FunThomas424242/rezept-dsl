@@ -6,7 +6,7 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Rank;
+import com.github.funthomas424242.rezeptsammler.rezept.Notiz;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,45 +18,45 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rank</b></em>'.
+ * An implementation of the model object '<em><b>Notiz</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RankImpl#getBewertung <em>Bewertung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.NotizImpl#getText <em>Text</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class RankImpl extends EObjectImpl implements Rank
+public abstract class NotizImpl extends EObjectImpl implements Notiz
 {
   /**
-   * The default value of the '{@link #getBewertung() <em>Bewertung</em>}' attribute.
+   * The default value of the '{@link #getText() <em>Text</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBewertung()
+   * @see #getText()
    * @generated
    * @ordered
    */
-  protected static final String BEWERTUNG_EDEFAULT = null;
+  protected static final String TEXT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getBewertung() <em>Bewertung</em>}' attribute.
+   * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBewertung()
+   * @see #getText()
    * @generated
    * @ordered
    */
-  protected String bewertung = BEWERTUNG_EDEFAULT;
+  protected String text = TEXT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected RankImpl()
+  protected NotizImpl()
   {
     super();
   }
@@ -69,7 +69,7 @@ public class RankImpl extends EObjectImpl implements Rank
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.RANK;
+    return RezeptPackage.Literals.NOTIZ;
   }
 
   /**
@@ -77,9 +77,9 @@ public class RankImpl extends EObjectImpl implements Rank
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getBewertung()
+  public String getText()
   {
-    return bewertung;
+    return text;
   }
 
   /**
@@ -87,12 +87,12 @@ public class RankImpl extends EObjectImpl implements Rank
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBewertung(String newBewertung)
+  public void setText(String newText)
   {
-    String oldBewertung = bewertung;
-    bewertung = newBewertung;
+    String oldText = text;
+    text = newText;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.RANK__BEWERTUNG, oldBewertung, bewertung));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.NOTIZ__TEXT, oldText, text));
   }
 
   /**
@@ -105,8 +105,8 @@ public class RankImpl extends EObjectImpl implements Rank
   {
     switch (featureID)
     {
-      case RezeptPackage.RANK__BEWERTUNG:
-        return getBewertung();
+      case RezeptPackage.NOTIZ__TEXT:
+        return getText();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,8 +121,8 @@ public class RankImpl extends EObjectImpl implements Rank
   {
     switch (featureID)
     {
-      case RezeptPackage.RANK__BEWERTUNG:
-        setBewertung((String)newValue);
+      case RezeptPackage.NOTIZ__TEXT:
+        setText((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,8 +138,8 @@ public class RankImpl extends EObjectImpl implements Rank
   {
     switch (featureID)
     {
-      case RezeptPackage.RANK__BEWERTUNG:
-        setBewertung(BEWERTUNG_EDEFAULT);
+      case RezeptPackage.NOTIZ__TEXT:
+        setText(TEXT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -155,8 +155,8 @@ public class RankImpl extends EObjectImpl implements Rank
   {
     switch (featureID)
     {
-      case RezeptPackage.RANK__BEWERTUNG:
-        return BEWERTUNG_EDEFAULT == null ? bewertung != null : !BEWERTUNG_EDEFAULT.equals(bewertung);
+      case RezeptPackage.NOTIZ__TEXT:
+        return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
     }
     return super.eIsSet(featureID);
   }
@@ -172,10 +172,10 @@ public class RankImpl extends EObjectImpl implements Rank
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (bewertung: ");
-    result.append(bewertung);
+    result.append(" (text: ");
+    result.append(text);
     result.append(')');
     return result.toString();
   }
 
-} //RankImpl
+} //NotizImpl

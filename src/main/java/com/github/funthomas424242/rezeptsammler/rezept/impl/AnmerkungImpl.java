@@ -6,34 +6,28 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Masseinheit;
-import com.github.funthomas424242.rezeptsammler.rezept.Menge;
+import com.github.funthomas424242.rezeptsammler.rezept.Anmerkung;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
-
-import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Menge</b></em>'.
+ * An implementation of the model object '<em><b>Anmerkung</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public abstract class MengeImpl extends EObjectImpl implements Menge
+public class AnmerkungImpl extends NotizImpl implements Anmerkung
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected MengeImpl()
+  protected AnmerkungImpl()
   {
     super();
   }
@@ -46,7 +40,7 @@ public abstract class MengeImpl extends EObjectImpl implements Menge
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.MENGE;
+    return RezeptPackage.Literals.ANMERKUNG;
   }
 
-} //MengeImpl
+} //AnmerkungImpl
