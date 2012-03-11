@@ -7,8 +7,8 @@
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
 import com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung;
-import com.github.funthomas424242.rezeptsammler.rezept.Import;
 import com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung;
+import com.github.funthomas424242.rezeptsammler.rezept.RezeptImport;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
 import java.util.Collection;
@@ -94,7 +94,7 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * @generated
    * @ordered
    */
-  protected EList<Import> imports;
+  protected EList<RezeptImport> imports;
 
   /**
    * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -198,11 +198,11 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Import> getImports()
+  public EList<RezeptImport> getImports()
   {
     if (imports == null)
     {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS);
+      imports = new EObjectContainmentEList<RezeptImport>(RezeptImport.class, this, RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS);
     }
     return imports;
   }
@@ -339,7 +339,7 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
         return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
         getImports().clear();
-        getImports().addAll((Collection<? extends Import>)newValue);
+        getImports().addAll((Collection<? extends RezeptImport>)newValue);
         return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         setVersion((String)newValue);

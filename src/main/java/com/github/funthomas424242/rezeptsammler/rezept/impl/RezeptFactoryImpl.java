@@ -70,24 +70,26 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
     switch (eClass.getClassifierID())
     {
       case RezeptPackage.REZEPT: return createRezept();
+      case RezeptPackage.PRODUKT_IMPORT: return createProduktImport();
       case RezeptPackage.PRODUKT: return createProdukt();
       case RezeptPackage.PROJEKT_BESCHREIBUNG: return createProjektBeschreibung();
       case RezeptPackage.QUELLE: return createQuelle();
       case RezeptPackage.ARBEITSSCHRITT: return createArbeitsschritt();
-      case RezeptPackage.TIPP: return createTipp();
       case RezeptPackage.KOMMENTAR: return createKommentar();
       case RezeptPackage.PRODUKT_REF: return createProduktRef();
       case RezeptPackage.ZUTAT: return createZutat();
-      case RezeptPackage.IMPORT: return createImport();
+      case RezeptPackage.TIPP: return createTipp();
+      case RezeptPackage.REZEPT_IMPORT: return createRezeptImport();
       case RezeptPackage.STOFF_TAG: return createStoffTag();
       case RezeptPackage.BENUTZER_TAG: return createBenutzerTag();
-      case RezeptPackage.MODUL_BESCHREIBUNG: return createModulBeschreibung();
+      case RezeptPackage.REZEPTLISTE: return createRezeptliste();
       case RezeptPackage.DIAET_TAG: return createDiaetTag();
       case RezeptPackage.PREIS: return createPreis();
       case RezeptPackage.BUCH_BESCHREIBUNG: return createBuchBeschreibung();
       case RezeptPackage.ANMERKUNG: return createAnmerkung();
       case RezeptPackage.BESTIMMTE_MENGE: return createBestimmteMenge();
       case RezeptPackage.UNBESTIMMTE_MENGE: return createUnbestimmteMenge();
+      case RezeptPackage.PRODUKTLISTE: return createProduktliste();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -171,6 +173,17 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ProduktImport createProduktImport()
+  {
+    ProduktImportImpl produktImport = new ProduktImportImpl();
+    return produktImport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Produkt createProdukt()
   {
     ProduktImpl produkt = new ProduktImpl();
@@ -215,17 +228,6 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Tipp createTipp()
-  {
-    TippImpl tipp = new TippImpl();
-    return tipp;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Kommentar createKommentar()
   {
     KommentarImpl kommentar = new KommentarImpl();
@@ -259,10 +261,21 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Import createImport()
+  public Tipp createTipp()
   {
-    ImportImpl import_ = new ImportImpl();
-    return import_;
+    TippImpl tipp = new TippImpl();
+    return tipp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RezeptImport createRezeptImport()
+  {
+    RezeptImportImpl rezeptImport = new RezeptImportImpl();
+    return rezeptImport;
   }
 
   /**
@@ -292,10 +305,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ModulBeschreibung createModulBeschreibung()
+  public Rezeptliste createRezeptliste()
   {
-    ModulBeschreibungImpl modulBeschreibung = new ModulBeschreibungImpl();
-    return modulBeschreibung;
+    RezeptlisteImpl rezeptliste = new RezeptlisteImpl();
+    return rezeptliste;
   }
 
   /**
@@ -362,6 +375,17 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     UnbestimmteMengeImpl unbestimmteMenge = new UnbestimmteMengeImpl();
     return unbestimmteMenge;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Produktliste createProduktliste()
+  {
+    ProduktlisteImpl produktliste = new ProduktlisteImpl();
+    return produktliste;
   }
 
   /**

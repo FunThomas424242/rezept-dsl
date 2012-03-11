@@ -1,6 +1,6 @@
 SYNTAXDEF rezept
 FOR <http://www.github.com/funthomas424242/language/rezept>
-START  ProjektBeschreibung, ModulBeschreibung 
+START  ProjektBeschreibung, Rezeptliste, Produktliste 
  
 //TODO extract product definitions IMPORTS{
 //erDSL :  <http://www.emftext.org/language/erDSL> <../../../org.emftext.language.erDSL/metamodel/erDSL.ecore> 
@@ -53,7 +53,7 @@ TOKENSTYLES {
 	"RezeptSammlung" COLOR #7F0055, BOLD;
 	"groupId","artifactId","version" COLOR #7F0055, BOLD;
 	"Letzte Änderung:" COLOR #7F0055, BOLD;
-	"Modul" COLOR #7F0055, BOLD;
+	"Rezeptliste", "Produktliste" COLOR #7F0055, BOLD;
 	"Verpackung:" COLOR #7F0055, BOLD;
 	"EAN:" COLOR #7F0055, BOLD;
 	"UBA:" COLOR #7F0055, BOLD;
@@ -72,9 +72,11 @@ RULES {
 	             "groupId" "=" groupId['"','"'] ";" "artifactId" "=" artifactId['"','"'] ";"
 	             "version" "=" version['"','"'] ";"
 	             imports* "}" buch;
-	ModulBeschreibung ::= "Modul" name['"','"']   ";" imports* elemente+;	             
 	BuchBeschreibung ::= "Buch" "{" "Titel:" titel['"','"'] "Media Folder:" resourcesDir['"','"']"}";
-	Import ::=  "import"  importedResource['"','"'] ";" ;
+	RezeptImport ::=  "import"  importedResource['"','"'] ";" ;
+	Rezeptliste ::= "Rezeptliste" name['"','"']   ";" imports* rezepte+ ;	
+	ProduktImport ::=  "import"  importedResource['"','"'] ";" ;
+	Produktliste ::= "Produktliste" name['"','"']   ";"  produkte+ ;	             
 	Produkt ::= "Produkt" name['"','"']  "{" 
 				("Verpackung:" verpackung['"','"'] ".")?
 				menge

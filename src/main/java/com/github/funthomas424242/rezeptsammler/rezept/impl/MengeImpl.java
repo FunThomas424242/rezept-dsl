@@ -6,15 +6,11 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Masseinheit;
 import com.github.funthomas424242.rezeptsammler.rezept.Menge;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**

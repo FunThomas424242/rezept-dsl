@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -55,7 +56,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class RezeptImpl extends ModelElementImpl implements Rezept
+public class RezeptImpl extends EObjectImpl implements Rezept
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

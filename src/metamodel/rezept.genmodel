@@ -75,7 +75,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/notizen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/personen"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="rezept.ecore#//ModelElement"/>
+    <genClasses ecoreClass="rezept.ecore#//ProduktImport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rezept.ecore#//ProduktImport/importedResource"/>
+    </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Produkt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Produkt/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Produkt/verpackung"/>
@@ -101,7 +103,6 @@
     <genClasses ecoreClass="rezept.ecore#//Arbeitsschritt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Arbeitsschritt/beschreibung"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//Tipp"/>
     <genClasses ecoreClass="rezept.ecore#//Kommentar"/>
     <genClasses ecoreClass="rezept.ecore#//ProduktRef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProduktRef/menge"/>
@@ -111,8 +112,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Zutat/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EReference rezept.ecore#//Zutat/menge"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//Import">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rezept.ecore#//Import/importedResource"/>
+    <genClasses ecoreClass="rezept.ecore#//Tipp"/>
+    <genClasses ecoreClass="rezept.ecore#//RezeptImport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rezept.ecore#//RezeptImport/importedResource"/>
     </genClasses>
     <genClasses image="false" ecoreClass="rezept.ecore#//Tag"/>
     <genClasses ecoreClass="rezept.ecore#//StoffTag">
@@ -121,10 +123,10 @@
     <genClasses ecoreClass="rezept.ecore#//BenutzerTag">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BenutzerTag/bezeichnung"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//ModulBeschreibung">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ModulBeschreibung/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//ModulBeschreibung/imports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//ModulBeschreibung/elemente"/>
+    <genClasses ecoreClass="rezept.ecore#//Rezeptliste">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezeptliste/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezeptliste/rezepte"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezeptliste/imports"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//DiaetTag">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//DiaetTag/diaet"/>
@@ -148,6 +150,10 @@
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//UnbestimmteMenge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//UnbestimmteMenge/menge"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//Produktliste">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Produktliste/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Produktliste/produkte"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

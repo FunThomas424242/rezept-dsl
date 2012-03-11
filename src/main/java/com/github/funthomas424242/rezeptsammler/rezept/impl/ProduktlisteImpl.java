@@ -6,9 +6,8 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Import;
-import com.github.funthomas424242.rezeptsammler.rezept.ModelElement;
-import com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung;
+import com.github.funthomas424242.rezeptsammler.rezept.Produkt;
+import com.github.funthomas424242.rezeptsammler.rezept.Produktliste;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
 import java.util.Collection;
@@ -29,20 +28,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Modul Beschreibung</b></em>'.
+ * An implementation of the model object '<em><b>Produktliste</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ModulBeschreibungImpl#getName <em>Name</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ModulBeschreibungImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ModulBeschreibungImpl#getElemente <em>Elemente</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktlisteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktlisteImpl#getProdukte <em>Produkte</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreibung
+public class ProduktlisteImpl extends EObjectImpl implements Produktliste
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -65,31 +63,21 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
+   * The cached value of the '{@link #getProdukte() <em>Produkte</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImports()
+   * @see #getProdukte()
    * @generated
    * @ordered
    */
-  protected EList<Import> imports;
-
-  /**
-   * The cached value of the '{@link #getElemente() <em>Elemente</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getElemente()
-   * @generated
-   * @ordered
-   */
-  protected EList<ModelElement> elemente;
+  protected EList<Produkt> produkte;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModulBeschreibungImpl()
+  protected ProduktlisteImpl()
   {
     super();
   }
@@ -102,7 +90,7 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.MODUL_BESCHREIBUNG;
+    return RezeptPackage.Literals.PRODUKTLISTE;
   }
 
   /**
@@ -125,7 +113,7 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.MODUL_BESCHREIBUNG__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PRODUKTLISTE__NAME, oldName, name));
   }
 
   /**
@@ -133,27 +121,13 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Import> getImports()
+  public EList<Produkt> getProdukte()
   {
-    if (imports == null)
+    if (produkte == null)
     {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, RezeptPackage.MODUL_BESCHREIBUNG__IMPORTS);
+      produkte = new EObjectContainmentEList<Produkt>(Produkt.class, this, RezeptPackage.PRODUKTLISTE__PRODUKTE);
     }
-    return imports;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<ModelElement> getElemente()
-  {
-    if (elemente == null)
-    {
-      elemente = new EObjectContainmentEList<ModelElement>(ModelElement.class, this, RezeptPackage.MODUL_BESCHREIBUNG__ELEMENTE);
-    }
-    return elemente;
+    return produkte;
   }
 
   /**
@@ -166,10 +140,8 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
   {
     switch (featureID)
     {
-      case RezeptPackage.MODUL_BESCHREIBUNG__IMPORTS:
-        return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case RezeptPackage.MODUL_BESCHREIBUNG__ELEMENTE:
-        return ((InternalEList<?>)getElemente()).basicRemove(otherEnd, msgs);
+      case RezeptPackage.PRODUKTLISTE__PRODUKTE:
+        return ((InternalEList<?>)getProdukte()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -184,12 +156,10 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
   {
     switch (featureID)
     {
-      case RezeptPackage.MODUL_BESCHREIBUNG__NAME:
+      case RezeptPackage.PRODUKTLISTE__NAME:
         return getName();
-      case RezeptPackage.MODUL_BESCHREIBUNG__IMPORTS:
-        return getImports();
-      case RezeptPackage.MODUL_BESCHREIBUNG__ELEMENTE:
-        return getElemente();
+      case RezeptPackage.PRODUKTLISTE__PRODUKTE:
+        return getProdukte();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -205,16 +175,12 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
   {
     switch (featureID)
     {
-      case RezeptPackage.MODUL_BESCHREIBUNG__NAME:
+      case RezeptPackage.PRODUKTLISTE__NAME:
         setName((String)newValue);
         return;
-      case RezeptPackage.MODUL_BESCHREIBUNG__IMPORTS:
-        getImports().clear();
-        getImports().addAll((Collection<? extends Import>)newValue);
-        return;
-      case RezeptPackage.MODUL_BESCHREIBUNG__ELEMENTE:
-        getElemente().clear();
-        getElemente().addAll((Collection<? extends ModelElement>)newValue);
+      case RezeptPackage.PRODUKTLISTE__PRODUKTE:
+        getProdukte().clear();
+        getProdukte().addAll((Collection<? extends Produkt>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -230,14 +196,11 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
   {
     switch (featureID)
     {
-      case RezeptPackage.MODUL_BESCHREIBUNG__NAME:
+      case RezeptPackage.PRODUKTLISTE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case RezeptPackage.MODUL_BESCHREIBUNG__IMPORTS:
-        getImports().clear();
-        return;
-      case RezeptPackage.MODUL_BESCHREIBUNG__ELEMENTE:
-        getElemente().clear();
+      case RezeptPackage.PRODUKTLISTE__PRODUKTE:
+        getProdukte().clear();
         return;
     }
     super.eUnset(featureID);
@@ -253,12 +216,10 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
   {
     switch (featureID)
     {
-      case RezeptPackage.MODUL_BESCHREIBUNG__NAME:
+      case RezeptPackage.PRODUKTLISTE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case RezeptPackage.MODUL_BESCHREIBUNG__IMPORTS:
-        return imports != null && !imports.isEmpty();
-      case RezeptPackage.MODUL_BESCHREIBUNG__ELEMENTE:
-        return elemente != null && !elemente.isEmpty();
+      case RezeptPackage.PRODUKTLISTE__PRODUKTE:
+        return produkte != null && !produkte.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -280,4 +241,4 @@ public class ModulBeschreibungImpl extends EObjectImpl implements ModulBeschreib
     return result.toString();
   }
 
-} //ModulBeschreibungImpl
+} //ProduktlisteImpl

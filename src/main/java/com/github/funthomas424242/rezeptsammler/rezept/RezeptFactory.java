@@ -36,6 +36,15 @@ public interface RezeptFactory extends EFactory
   Rezept createRezept();
 
   /**
+   * Returns a new object of class '<em>Produkt Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Produkt Import</em>'.
+   * @generated
+   */
+  ProduktImport createProduktImport();
+
+  /**
    * Returns a new object of class '<em>Produkt</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -81,6 +90,15 @@ public interface RezeptFactory extends EFactory
   Tipp createTipp();
 
   /**
+   * Returns a new object of class '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Import</em>'.
+   * @generated
+   */
+  RezeptImport createRezeptImport();
+
+  /**
    * Returns a new object of class '<em>Kommentar</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -108,15 +126,6 @@ public interface RezeptFactory extends EFactory
   Zutat createZutat();
 
   /**
-   * Returns a new object of class '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Import</em>'.
-   * @generated
-   */
-  Import createImport();
-
-  /**
    * Returns a new object of class '<em>Stoff Tag</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -135,13 +144,13 @@ public interface RezeptFactory extends EFactory
   BenutzerTag createBenutzerTag();
 
   /**
-   * Returns a new object of class '<em>Modul Beschreibung</em>'.
+   * Returns a new object of class '<em>Rezeptliste</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Modul Beschreibung</em>'.
+   * @return a new object of class '<em>Rezeptliste</em>'.
    * @generated
    */
-  ModulBeschreibung createModulBeschreibung();
+  Rezeptliste createRezeptliste();
 
   /**
    * Returns a new object of class '<em>Diaet Tag</em>'.
@@ -196,6 +205,15 @@ public interface RezeptFactory extends EFactory
    * @generated
    */
   UnbestimmteMenge createUnbestimmteMenge();
+
+  /**
+   * Returns a new object of class '<em>Produktliste</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Produktliste</em>'.
+   * @generated
+   */
+  Produktliste createProduktliste();
 
   /**
    * Returns the package supported by this factory.

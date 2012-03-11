@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +42,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ProduktImpl extends ModelElementImpl implements Produkt
+public class ProduktImpl extends EObjectImpl implements Produkt
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

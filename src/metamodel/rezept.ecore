@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rezept"
     nsURI="http://www.github.com/funthomas424242/language/rezept" nsPrefix="rezept">
-  <eClassifiers xsi:type="ecore:EClass" name="Rezept" eSuperTypes="#//ModelElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Rezept">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="1" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quelle" eType="#//Quelle"
@@ -27,8 +27,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="personen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         defaultValueLiteral="0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Produkt" eSuperTypes="#//ModelElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ProduktImport">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="importedResource" lowerBound="1"
+        eType="#//Produktliste"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Produkt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verpackung" eType="#//Verpackung"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -48,7 +51,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//Import" containment="true"/>
+        eType="#//RezeptImport" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="buch" lowerBound="1" eType="#//BuchBeschreibung"
@@ -74,7 +77,6 @@
     <eLiterals name="Backen" value="2"/>
     <eLiterals name="Auflauf" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tipp" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Kommentar" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="ProduktRef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="menge" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
@@ -97,14 +99,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="menge" lowerBound="1" eType="#//Menge"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tipp" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Stoff">
     <eLiterals name="Laktose"/>
     <eLiterals name="Fruchtzucker" value="1"/>
     <eLiterals name="Nuessen" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Import">
+  <eClassifiers xsi:type="ecore:EClass" name="RezeptImport">
     <eStructuralFeatures xsi:type="ecore:EReference" name="importedResource" lowerBound="1"
-        eType="#//ModulBeschreibung"/>
+        eType="#//Rezeptliste"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tag" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="StoffTag" eSuperTypes="#//Tag">
@@ -114,12 +117,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bezeichnung" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="defaultKategorie"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModulBeschreibung">
+  <eClassifiers xsi:type="ecore:EClass" name="Rezeptliste">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rezepte" lowerBound="1"
+        upperBound="-1" eType="#//Rezept" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//Import" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elemente" lowerBound="1"
-        upperBound="-1" eType="#//ModelElement" containment="true"/>
+        eType="#//ProduktImport" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DiaetTag" eSuperTypes="#//Tag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="diaet" lowerBound="1" eType="#//DiaetArt"/>
@@ -178,5 +181,10 @@
     <eLiterals name="einige" value="2"/>
     <eLiterals name="reichlich" value="3"/>
     <eLiterals name="nachBedarf" value="4" literal="nach Bedarf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Produktliste">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="produkte" lowerBound="1"
+        upperBound="-1" eType="#//Produkt" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

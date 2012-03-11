@@ -84,9 +84,9 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createRezeptAdapter();
       }
       @Override
-      public Adapter caseModelElement(ModelElement object)
+      public Adapter caseProduktImport(ProduktImport object)
       {
-        return createModelElementAdapter();
+        return createProduktImportAdapter();
       }
       @Override
       public Adapter caseProdukt(Produkt object)
@@ -109,11 +109,6 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createArbeitsschrittAdapter();
       }
       @Override
-      public Adapter caseTipp(Tipp object)
-      {
-        return createTippAdapter();
-      }
-      @Override
       public Adapter caseKommentar(Kommentar object)
       {
         return createKommentarAdapter();
@@ -129,9 +124,14 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createZutatAdapter();
       }
       @Override
-      public Adapter caseImport(Import object)
+      public Adapter caseTipp(Tipp object)
       {
-        return createImportAdapter();
+        return createTippAdapter();
+      }
+      @Override
+      public Adapter caseRezeptImport(RezeptImport object)
+      {
+        return createRezeptImportAdapter();
       }
       @Override
       public Adapter caseTag(Tag object)
@@ -149,9 +149,9 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createBenutzerTagAdapter();
       }
       @Override
-      public Adapter caseModulBeschreibung(ModulBeschreibung object)
+      public Adapter caseRezeptliste(Rezeptliste object)
       {
-        return createModulBeschreibungAdapter();
+        return createRezeptlisteAdapter();
       }
       @Override
       public Adapter caseDiaetTag(DiaetTag object)
@@ -194,6 +194,11 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createUnbestimmteMengeAdapter();
       }
       @Override
+      public Adapter caseProduktliste(Produktliste object)
+      {
+        return createProduktlisteAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -231,16 +236,16 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.ModelElement <em>Model Element</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.ProduktImport <em>Produkt Import</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.ModelElement
+   * @see com.github.funthomas424242.rezeptsammler.rezept.ProduktImport
    * @generated
    */
-  public Adapter createModelElementAdapter()
+  public Adapter createProduktImportAdapter()
   {
     return null;
   }
@@ -321,6 +326,21 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.RezeptImport <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptImport
+   * @generated
+   */
+  public Adapter createRezeptImportAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Kommentar <em>Kommentar</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -361,21 +381,6 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createZutatAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Import <em>Import</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Import
-   * @generated
-   */
-  public Adapter createImportAdapter()
   {
     return null;
   }
@@ -426,16 +431,16 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung <em>Modul Beschreibung</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Rezeptliste <em>Rezeptliste</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Rezeptliste
    * @generated
    */
-  public Adapter createModulBeschreibungAdapter()
+  public Adapter createRezeptlisteAdapter()
   {
     return null;
   }
@@ -556,6 +561,21 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUnbestimmteMengeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Produktliste <em>Produktliste</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Produktliste
+   * @generated
+   */
+  public Adapter createProduktlisteAdapter()
   {
     return null;
   }

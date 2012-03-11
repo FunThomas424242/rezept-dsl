@@ -86,7 +86,7 @@ public interface ProjektBeschreibung extends EObject
 
   /**
    * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
-   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.Import}.
+   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.RezeptImport}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
@@ -98,7 +98,7 @@ public interface ProjektBeschreibung extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Import> getImports();
+  EList<RezeptImport> getImports();
 
   /**
    * Returns the value of the '<em><b>Version</b></em>' attribute.

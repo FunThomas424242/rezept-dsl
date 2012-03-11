@@ -6,8 +6,8 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
-import com.github.funthomas424242.rezeptsammler.rezept.Import;
-import com.github.funthomas424242.rezeptsammler.rezept.ModulBeschreibung;
+import com.github.funthomas424242.rezeptsammler.rezept.ProduktImport;
+import com.github.funthomas424242.rezeptsammler.rezept.Produktliste;
 import com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -20,18 +20,18 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Import</b></em>'.
+ * An implementation of the model object '<em><b>Produkt Import</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ImportImpl#getImportedResource <em>Imported Resource</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImportImpl#getImportedResource <em>Imported Resource</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ImportImpl extends EObjectImpl implements Import
+public class ProduktImportImpl extends EObjectImpl implements ProduktImport
 {
   /**
    * The cached value of the '{@link #getImportedResource() <em>Imported Resource</em>}' reference.
@@ -41,14 +41,14 @@ public class ImportImpl extends EObjectImpl implements Import
    * @generated
    * @ordered
    */
-  protected ModulBeschreibung importedResource;
+  protected Produktliste importedResource;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ImportImpl()
+  protected ProduktImportImpl()
   {
     super();
   }
@@ -61,7 +61,7 @@ public class ImportImpl extends EObjectImpl implements Import
   @Override
   protected EClass eStaticClass()
   {
-    return RezeptPackage.Literals.IMPORT;
+    return RezeptPackage.Literals.PRODUKT_IMPORT;
   }
 
   /**
@@ -69,16 +69,16 @@ public class ImportImpl extends EObjectImpl implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public ModulBeschreibung getImportedResource()
+  public Produktliste getImportedResource()
   {
     if (importedResource != null && importedResource.eIsProxy())
     {
       InternalEObject oldImportedResource = (InternalEObject)importedResource;
-      importedResource = (ModulBeschreibung)eResolveProxy(oldImportedResource);
+      importedResource = (Produktliste)eResolveProxy(oldImportedResource);
       if (importedResource != oldImportedResource)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RezeptPackage.IMPORT__IMPORTED_RESOURCE, oldImportedResource, importedResource));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RezeptPackage.PRODUKT_IMPORT__IMPORTED_RESOURCE, oldImportedResource, importedResource));
       }
     }
     return importedResource;
@@ -89,7 +89,7 @@ public class ImportImpl extends EObjectImpl implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public ModulBeschreibung basicGetImportedResource()
+  public Produktliste basicGetImportedResource()
   {
     return importedResource;
   }
@@ -99,12 +99,12 @@ public class ImportImpl extends EObjectImpl implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImportedResource(ModulBeschreibung newImportedResource)
+  public void setImportedResource(Produktliste newImportedResource)
   {
-    ModulBeschreibung oldImportedResource = importedResource;
+    Produktliste oldImportedResource = importedResource;
     importedResource = newImportedResource;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.IMPORT__IMPORTED_RESOURCE, oldImportedResource, importedResource));
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PRODUKT_IMPORT__IMPORTED_RESOURCE, oldImportedResource, importedResource));
   }
 
   /**
@@ -117,7 +117,7 @@ public class ImportImpl extends EObjectImpl implements Import
   {
     switch (featureID)
     {
-      case RezeptPackage.IMPORT__IMPORTED_RESOURCE:
+      case RezeptPackage.PRODUKT_IMPORT__IMPORTED_RESOURCE:
         if (resolve) return getImportedResource();
         return basicGetImportedResource();
     }
@@ -134,8 +134,8 @@ public class ImportImpl extends EObjectImpl implements Import
   {
     switch (featureID)
     {
-      case RezeptPackage.IMPORT__IMPORTED_RESOURCE:
-        setImportedResource((ModulBeschreibung)newValue);
+      case RezeptPackage.PRODUKT_IMPORT__IMPORTED_RESOURCE:
+        setImportedResource((Produktliste)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -151,8 +151,8 @@ public class ImportImpl extends EObjectImpl implements Import
   {
     switch (featureID)
     {
-      case RezeptPackage.IMPORT__IMPORTED_RESOURCE:
-        setImportedResource((ModulBeschreibung)null);
+      case RezeptPackage.PRODUKT_IMPORT__IMPORTED_RESOURCE:
+        setImportedResource((Produktliste)null);
         return;
     }
     super.eUnset(featureID);
@@ -168,10 +168,10 @@ public class ImportImpl extends EObjectImpl implements Import
   {
     switch (featureID)
     {
-      case RezeptPackage.IMPORT__IMPORTED_RESOURCE:
+      case RezeptPackage.PRODUKT_IMPORT__IMPORTED_RESOURCE:
         return importedResource != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ImportImpl
+} //ProduktImportImpl

@@ -80,14 +80,13 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         Rezept rezept = (Rezept)theEObject;
         T result = caseRezept(rezept);
-        if (result == null) result = caseModelElement(rezept);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.MODEL_ELEMENT:
+      case RezeptPackage.PRODUKT_IMPORT:
       {
-        ModelElement modelElement = (ModelElement)theEObject;
-        T result = caseModelElement(modelElement);
+        ProduktImport produktImport = (ProduktImport)theEObject;
+        T result = caseProduktImport(produktImport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -95,7 +94,6 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         Produkt produkt = (Produkt)theEObject;
         T result = caseProdukt(produkt);
-        if (result == null) result = caseModelElement(produkt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -117,14 +115,6 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         Arbeitsschritt arbeitsschritt = (Arbeitsschritt)theEObject;
         T result = caseArbeitsschritt(arbeitsschritt);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case RezeptPackage.TIPP:
-      {
-        Tipp tipp = (Tipp)theEObject;
-        T result = caseTipp(tipp);
-        if (result == null) result = caseNotiz(tipp);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -150,10 +140,18 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.IMPORT:
+      case RezeptPackage.TIPP:
       {
-        Import import_ = (Import)theEObject;
-        T result = caseImport(import_);
+        Tipp tipp = (Tipp)theEObject;
+        T result = caseTipp(tipp);
+        if (result == null) result = caseNotiz(tipp);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.REZEPT_IMPORT:
+      {
+        RezeptImport rezeptImport = (RezeptImport)theEObject;
+        T result = caseRezeptImport(rezeptImport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -180,10 +178,10 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.MODUL_BESCHREIBUNG:
+      case RezeptPackage.REZEPTLISTE:
       {
-        ModulBeschreibung modulBeschreibung = (ModulBeschreibung)theEObject;
-        T result = caseModulBeschreibung(modulBeschreibung);
+        Rezeptliste rezeptliste = (Rezeptliste)theEObject;
+        T result = caseRezeptliste(rezeptliste);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -247,6 +245,13 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RezeptPackage.PRODUKTLISTE:
+      {
+        Produktliste produktliste = (Produktliste)theEObject;
+        T result = caseProduktliste(produktliste);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -268,17 +273,17 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Model Element</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Produkt Import</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Model Element</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Produkt Import</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModelElement(ModelElement object)
+  public T caseProduktImport(ProduktImport object)
   {
     return null;
   }
@@ -364,6 +369,22 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRezeptImport(RezeptImport object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Kommentar</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -407,22 +428,6 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseZutat(Zutat object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImport(Import object)
   {
     return null;
   }
@@ -476,17 +481,17 @@ public class RezeptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Modul Beschreibung</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rezeptliste</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Modul Beschreibung</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rezeptliste</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModulBeschreibung(ModulBeschreibung object)
+  public T caseRezeptliste(Rezeptliste object)
   {
     return null;
   }
@@ -615,6 +620,22 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseUnbestimmteMenge(UnbestimmteMenge object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Produktliste</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Produktliste</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProduktliste(Produktliste object)
   {
     return null;
   }

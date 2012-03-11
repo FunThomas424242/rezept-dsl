@@ -6,6 +6,8 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +33,7 @@ package com.github.funthomas424242.rezeptsammler.rezept;
  * @model
  * @generated
  */
-public interface Produkt extends ModelElement
+public interface Produkt extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
