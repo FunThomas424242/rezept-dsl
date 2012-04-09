@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getGroupId <em>Group Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getArtifactId <em>Artifact Id</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getImports <em>Imports</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getVersion <em>Version</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getBuch <em>Buch</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getResourcesDir <em>Resources Dir</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,22 +85,6 @@ public interface ProjektBeschreibung extends EObject
   void setArtifactId(String value);
 
   /**
-   * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
-   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.RezeptImport}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Imports</em>' containment reference list.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_Imports()
-   * @model containment="true"
-   * @generated
-   */
-  EList<RezeptImport> getImports();
-
-  /**
    * Returns the value of the '<em><b>Version</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -151,5 +135,31 @@ public interface ProjektBeschreibung extends EObject
    * @generated
    */
   void setBuch(BuchBeschreibung value);
+
+  /**
+   * Returns the value of the '<em><b>Resources Dir</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Resources Dir</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Resources Dir</em>' attribute.
+   * @see #setResourcesDir(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_ResourcesDir()
+   * @model required="true"
+   * @generated
+   */
+  String getResourcesDir();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getResourcesDir <em>Resources Dir</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Resources Dir</em>' attribute.
+   * @see #getResourcesDir()
+   * @generated
+   */
+  void setResourcesDir(String value);
 
 } // ProjektBeschreibung

@@ -94,6 +94,11 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createProduktAdapter();
       }
       @Override
+      public Adapter caseBuchBeschreibung(BuchBeschreibung object)
+      {
+        return createBuchBeschreibungAdapter();
+      }
+      @Override
       public Adapter caseProjektBeschreibung(ProjektBeschreibung object)
       {
         return createProjektBeschreibungAdapter();
@@ -169,11 +174,6 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createMengeAdapter();
       }
       @Override
-      public Adapter caseBuchBeschreibung(BuchBeschreibung object)
-      {
-        return createBuchBeschreibungAdapter();
-      }
-      @Override
       public Adapter caseAnmerkung(Anmerkung object)
       {
         return createAnmerkungAdapter();
@@ -197,6 +197,16 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
       public Adapter caseProduktliste(Produktliste object)
       {
         return createProduktlisteAdapter();
+      }
+      @Override
+      public Adapter caseLizenz(Lizenz object)
+      {
+        return createLizenzAdapter();
+      }
+      @Override
+      public Adapter caseAutor(Autor object)
+      {
+        return createAutorAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -576,6 +586,36 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createProduktlisteAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Lizenz <em>Lizenz</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Lizenz
+   * @generated
+   */
+  public Adapter createLizenzAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Autor <em>Autor</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Autor
+   * @generated
+   */
+  public Adapter createAutorAdapter()
   {
     return null;
   }

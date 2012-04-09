@@ -42,9 +42,9 @@ TOKENSTYLES {
 	"DATUM" COLOR #00FF00 , BOLD;
 	"ID" COLOR #404040 , BOLD;
 	"NUMBER" COLOR #00FF00, BOLD;
-	"Rezept" COLOR #7F0055, BOLD;
+	"Rezept", "import rezepte", "import produkte" COLOR #7F0055, BOLD;
 	"Titel:", "Untertitel:", "Media Folder:" COLOR #7F0055, BOLD;
-	"Kategorie:", "Ausreichend für","Personen." COLOR #7F0055, BOLD;
+	"Kategorie:", "Ausreichend für","Personen.", "Veröffentlicht am:" COLOR #7F0055, BOLD;
 	"Tag:" COLOR #7F0055, BOLD;
 	"Diät:" COLOR #7F0055, BOLD;
 	"Stoff:" COLOR #7F0055, BOLD;
@@ -70,12 +70,16 @@ TOKENSTYLES {
 RULES {
 	ProjektBeschreibung ::=  "RezeptSammlung" "{" 
 	             "groupId" "=" groupId['"','"'] ";" "artifactId" "=" artifactId['"','"'] ";"
-	             "version" "=" version['"','"'] ";"
-	             imports* "}" buch;
-	BuchBeschreibung ::= "Buch" "{" "Titel:" titel['"','"'] "Media Folder:" resourcesDir['"','"']"}";
-	RezeptImport ::=  "import"  importedResource['"','"'] ";" ;
+	             "version" "=" version['"','"'] ";" "Media Folder:" resourcesDir['"','"'] ";"
+	              "}" buch;
+	BuchBeschreibung ::= "Buch" "{" imports* "Titel:" titel['"','"'] ";" autoren+ 
+	            ("Vorwort:" vorwort['"','"'])?  lizenz? ("Veröffentlicht am:" datumPublished[DATUM] ".")?  "}";
+	Autor ::= "Autor:" "{" "Vorname:" vorname['"','"'] "Nachname:" nachname['"','"'] 
+			   "Organisation:" organisationsName['"','"']? "}";
+	Lizenz ::= "Lizenshinweis:" hinweis['"','"'] ("Lizenstext:" text[])? ;
+	RezeptImport ::=  "import rezepte"  importedResource['"','"'] ";" ;
 	Rezeptliste ::= "Rezeptliste" name['"','"']   ";" imports* rezepte+ ;	
-	ProduktImport ::=  "import"  importedResource['"','"'] ";" ;
+	ProduktImport ::=  "import produkte"  importedResource['"','"'] ";" ;
 	Produktliste ::= "Produktliste" name['"','"']   ";"  produkte+ ;	             
 	Produkt ::= "Produkt" name['"','"']  "{" 
 				("Verpackung:" verpackung['"','"'] ".")?

@@ -72,6 +72,7 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.REZEPT: return createRezept();
       case RezeptPackage.PRODUKT_IMPORT: return createProduktImport();
       case RezeptPackage.PRODUKT: return createProdukt();
+      case RezeptPackage.BUCH_BESCHREIBUNG: return createBuchBeschreibung();
       case RezeptPackage.PROJEKT_BESCHREIBUNG: return createProjektBeschreibung();
       case RezeptPackage.QUELLE: return createQuelle();
       case RezeptPackage.ARBEITSSCHRITT: return createArbeitsschritt();
@@ -85,11 +86,12 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.REZEPTLISTE: return createRezeptliste();
       case RezeptPackage.DIAET_TAG: return createDiaetTag();
       case RezeptPackage.PREIS: return createPreis();
-      case RezeptPackage.BUCH_BESCHREIBUNG: return createBuchBeschreibung();
       case RezeptPackage.ANMERKUNG: return createAnmerkung();
       case RezeptPackage.BESTIMMTE_MENGE: return createBestimmteMenge();
       case RezeptPackage.UNBESTIMMTE_MENGE: return createUnbestimmteMenge();
       case RezeptPackage.PRODUKTLISTE: return createProduktliste();
+      case RezeptPackage.LIZENZ: return createLizenz();
+      case RezeptPackage.AUTOR: return createAutor();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -386,6 +388,28 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     ProduktlisteImpl produktliste = new ProduktlisteImpl();
     return produktliste;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Lizenz createLizenz()
+  {
+    LizenzImpl lizenz = new LizenzImpl();
+    return lizenz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Autor createAutor()
+  {
+    AutorImpl autor = new AutorImpl();
+    return autor;
   }
 
   /**

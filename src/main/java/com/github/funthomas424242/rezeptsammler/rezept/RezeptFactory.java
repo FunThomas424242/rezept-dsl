@@ -216,6 +216,24 @@ public interface RezeptFactory extends EFactory
   Produktliste createProduktliste();
 
   /**
+   * Returns a new object of class '<em>Lizenz</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Lizenz</em>'.
+   * @generated
+   */
+  Lizenz createLizenz();
+
+  /**
+   * Returns a new object of class '<em>Autor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Autor</em>'.
+   * @generated
+   */
+  Autor createAutor();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

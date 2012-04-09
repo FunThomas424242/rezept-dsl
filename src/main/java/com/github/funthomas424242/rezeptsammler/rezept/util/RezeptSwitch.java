@@ -97,6 +97,13 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RezeptPackage.BUCH_BESCHREIBUNG:
+      {
+        BuchBeschreibung buchBeschreibung = (BuchBeschreibung)theEObject;
+        T result = caseBuchBeschreibung(buchBeschreibung);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case RezeptPackage.PROJEKT_BESCHREIBUNG:
       {
         ProjektBeschreibung projektBeschreibung = (ProjektBeschreibung)theEObject;
@@ -207,13 +214,6 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.BUCH_BESCHREIBUNG:
-      {
-        BuchBeschreibung buchBeschreibung = (BuchBeschreibung)theEObject;
-        T result = caseBuchBeschreibung(buchBeschreibung);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case RezeptPackage.ANMERKUNG:
       {
         Anmerkung anmerkung = (Anmerkung)theEObject;
@@ -249,6 +249,20 @@ public class RezeptSwitch<T> extends Switch<T>
       {
         Produktliste produktliste = (Produktliste)theEObject;
         T result = caseProduktliste(produktliste);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.LIZENZ:
+      {
+        Lizenz lizenz = (Lizenz)theEObject;
+        T result = caseLizenz(lizenz);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.AUTOR:
+      {
+        Autor autor = (Autor)theEObject;
+        T result = caseAutor(autor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -636,6 +650,38 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseProduktliste(Produktliste object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Lizenz</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Lizenz</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLizenz(Lizenz object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Autor</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Autor</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAutor(Autor object)
   {
     return null;
   }

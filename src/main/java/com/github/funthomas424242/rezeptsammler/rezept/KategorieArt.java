@@ -61,7 +61,15 @@ public enum KategorieArt implements Enumerator
    * @generated
    * @ordered
    */
-  AUFLAUF(3, "Auflauf", "Auflauf");
+  AUFLAUF(3, "Auflauf", "Auflauf"), /**
+   * The '<em><b>Pizza</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #PIZZA_VALUE
+   * @generated
+   * @ordered
+   */
+  PIZZA(4, "Pizza", "Pizza");
 
   /**
    * The '<em><b>Salat</b></em>' literal value.
@@ -124,6 +132,21 @@ public enum KategorieArt implements Enumerator
   public static final int AUFLAUF_VALUE = 3;
 
   /**
+   * The '<em><b>Pizza</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Pizza</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #PIZZA
+   * @model name="Pizza"
+   * @generated
+   * @ordered
+   */
+  public static final int PIZZA_VALUE = 4;
+
+  /**
    * An array of all the '<em><b>Kategorie Art</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -136,6 +159,7 @@ public enum KategorieArt implements Enumerator
       KOCHEN,
       BACKEN,
       AUFLAUF,
+      PIZZA,
     };
 
   /**
@@ -198,6 +222,7 @@ public enum KategorieArt implements Enumerator
       case KOCHEN_VALUE: return KOCHEN;
       case BACKEN_VALUE: return BACKEN;
       case AUFLAUF_VALUE: return AUFLAUF;
+      case PIZZA_VALUE: return PIZZA;
     }
     return null;
   }

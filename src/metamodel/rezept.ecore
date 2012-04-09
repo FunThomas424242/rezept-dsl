@@ -45,17 +45,28 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="menge" lowerBound="1" eType="#//Menge"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BuchBeschreibung">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titel" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vorwort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datumPublished" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lizenz" eType="#//Lizenz"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="autoren" lowerBound="1"
+        upperBound="-1" eType="#//Autor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
+        eType="#//RezeptImport" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjektBeschreibung">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//RezeptImport" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="buch" lowerBound="1" eType="#//BuchBeschreibung"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourcesDir" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quelle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" lowerBound="1"
@@ -76,6 +87,7 @@
     <eLiterals name="Kochen" value="1"/>
     <eLiterals name="Backen" value="2"/>
     <eLiterals name="Auflauf" value="3"/>
+    <eLiterals name="Pizza" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Kommentar" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="ProduktRef">
@@ -155,11 +167,7 @@
     <eLiterals name="stueck" value="7" literal="Stück"/>
     <eLiterals name="Tasse" value="9" literal="Tasse"/>
     <eLiterals name="Becher" value="10"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BuchBeschreibung">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titel" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourcesDir" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eLiterals name="ml" value="11"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anmerkung" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Notiz" abstract="true">
@@ -186,5 +194,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="produkte" lowerBound="1"
         upperBound="-1" eType="#//Produkt" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lizenz">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hinweis" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Autor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vorname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nachname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="organisationsName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

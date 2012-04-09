@@ -125,7 +125,15 @@ public enum Masseinheit implements Enumerator
    * @generated
    * @ordered
    */
-  BECHER(10, "Becher", "Becher");
+  BECHER(10, "Becher", "Becher"), /**
+   * The '<em><b>Ml</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ML_VALUE
+   * @generated
+   * @ordered
+   */
+  ML(11, "ml", "ml");
 
   /**
    * The '<em><b>Prise</b></em>' literal value.
@@ -293,6 +301,21 @@ public enum Masseinheit implements Enumerator
   public static final int BECHER_VALUE = 10;
 
   /**
+   * The '<em><b>Ml</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Ml</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ML
+   * @model name="ml"
+   * @generated
+   * @ordered
+   */
+  public static final int ML_VALUE = 11;
+
+  /**
    * An array of all the '<em><b>Masseinheit</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -312,6 +335,7 @@ public enum Masseinheit implements Enumerator
       STUECK,
       TASSE,
       BECHER,
+      ML,
     };
 
   /**
@@ -381,6 +405,7 @@ public enum Masseinheit implements Enumerator
       case STUECK_VALUE: return STUECK;
       case TASSE_VALUE: return TASSE;
       case BECHER_VALUE: return BECHER;
+      case ML_VALUE: return ML;
     }
     return null;
   }

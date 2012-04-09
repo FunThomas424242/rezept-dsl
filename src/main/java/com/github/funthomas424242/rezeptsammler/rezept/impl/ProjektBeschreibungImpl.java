@@ -36,9 +36,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getGroupId <em>Group Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getArtifactId <em>Artifact Id</em>}</li>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getBuch <em>Buch</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getResourcesDir <em>Resources Dir</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,16 +87,6 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
   protected String artifactId = ARTIFACT_ID_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getImports()
-   * @generated
-   * @ordered
-   */
-  protected EList<RezeptImport> imports;
-
-  /**
    * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -125,6 +115,26 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * @ordered
    */
   protected BuchBeschreibung buch;
+
+  /**
+   * The default value of the '{@link #getResourcesDir() <em>Resources Dir</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getResourcesDir()
+   * @generated
+   * @ordered
+   */
+  protected static final String RESOURCES_DIR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getResourcesDir() <em>Resources Dir</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getResourcesDir()
+   * @generated
+   * @ordered
+   */
+  protected String resourcesDir = RESOURCES_DIR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -191,20 +201,6 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
     artifactId = newArtifactId;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID, oldArtifactId, artifactId));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<RezeptImport> getImports()
-  {
-    if (imports == null)
-    {
-      imports = new EObjectContainmentEList<RezeptImport>(RezeptImport.class, this, RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS);
-    }
-    return imports;
   }
 
   /**
@@ -283,13 +279,34 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getResourcesDir()
+  {
+    return resourcesDir;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setResourcesDir(String newResourcesDir)
+  {
+    String oldResourcesDir = resourcesDir;
+    resourcesDir = newResourcesDir;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR, oldResourcesDir, resourcesDir));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
-        return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
       case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
         return basicSetBuch(null, msgs);
     }
@@ -310,12 +327,12 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
         return getGroupId();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
         return getArtifactId();
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
-        return getImports();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         return getVersion();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
         return getBuch();
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
+        return getResourcesDir();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -337,15 +354,14 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
       case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
         setArtifactId((String)newValue);
         return;
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
-        getImports().clear();
-        getImports().addAll((Collection<? extends RezeptImport>)newValue);
-        return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         setVersion((String)newValue);
         return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
         setBuch((BuchBeschreibung)newValue);
+        return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
+        setResourcesDir((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -367,14 +383,14 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
       case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
         setArtifactId(ARTIFACT_ID_EDEFAULT);
         return;
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
-        getImports().clear();
-        return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         setVersion(VERSION_EDEFAULT);
         return;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
         setBuch((BuchBeschreibung)null);
+        return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
+        setResourcesDir(RESOURCES_DIR_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -394,12 +410,12 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
         return GROUP_ID_EDEFAULT == null ? groupId != null : !GROUP_ID_EDEFAULT.equals(groupId);
       case RezeptPackage.PROJEKT_BESCHREIBUNG__ARTIFACT_ID:
         return ARTIFACT_ID_EDEFAULT == null ? artifactId != null : !ARTIFACT_ID_EDEFAULT.equals(artifactId);
-      case RezeptPackage.PROJEKT_BESCHREIBUNG__IMPORTS:
-        return imports != null && !imports.isEmpty();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__VERSION:
         return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
       case RezeptPackage.PROJEKT_BESCHREIBUNG__BUCH:
         return buch != null;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
+        return RESOURCES_DIR_EDEFAULT == null ? resourcesDir != null : !RESOURCES_DIR_EDEFAULT.equals(resourcesDir);
     }
     return super.eIsSet(featureID);
   }
@@ -421,6 +437,8 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
     result.append(artifactId);
     result.append(", version: ");
     result.append(version);
+    result.append(", resourcesDir: ");
+    result.append(resourcesDir);
     result.append(')');
     return result.toString();
   }

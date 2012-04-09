@@ -324,7 +324,230 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getProjektBeschreibung()
    * @generated
    */
-  int PROJEKT_BESCHREIBUNG = 3;
+  int PROJEKT_BESCHREIBUNG = 4;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.QuelleImpl <em>Quelle</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.QuelleImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getQuelle()
+   * @generated
+   */
+  int QUELLE = 5;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl <em>Arbeitsschritt</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getArbeitsschritt()
+   * @generated
+   */
+  int ARBEITSSCHRITT = 6;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.NotizImpl <em>Notiz</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.NotizImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getNotiz()
+   * @generated
+   */
+  int NOTIZ = 20;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.TippImpl <em>Tipp</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.TippImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getTipp()
+   * @generated
+   */
+  int TIPP = 10;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImportImpl <em>Import</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImportImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getRezeptImport()
+   * @generated
+   */
+  int REZEPT_IMPORT = 11;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.KommentarImpl <em>Kommentar</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.KommentarImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getKommentar()
+   * @generated
+   */
+  int KOMMENTAR = 7;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktRefImpl <em>Produkt Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktRefImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getProduktRef()
+   * @generated
+   */
+  int PRODUKT_REF = 8;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ZutatImpl <em>Zutat</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.ZutatImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getZutat()
+   * @generated
+   */
+  int ZUTAT = 9;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.TagImpl <em>Tag</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.TagImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getTag()
+   * @generated
+   */
+  int TAG = 12;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.StoffTagImpl <em>Stoff Tag</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.StoffTagImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getStoffTag()
+   * @generated
+   */
+  int STOFF_TAG = 13;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BenutzerTagImpl <em>Benutzer Tag</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BenutzerTagImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBenutzerTag()
+   * @generated
+   */
+  int BENUTZER_TAG = 14;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptlisteImpl <em>Rezeptliste</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptlisteImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getRezeptliste()
+   * @generated
+   */
+  int REZEPTLISTE = 15;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.DiaetTagImpl <em>Diaet Tag</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.DiaetTagImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getDiaetTag()
+   * @generated
+   */
+  int DIAET_TAG = 16;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.PreisImpl <em>Preis</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.PreisImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getPreis()
+   * @generated
+   */
+  int PREIS = 17;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.MengeImpl <em>Menge</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.MengeImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMenge()
+   * @generated
+   */
+  int MENGE = 18;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl <em>Buch Beschreibung</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBuchBeschreibung()
+   * @generated
+   */
+  int BUCH_BESCHREIBUNG = 3;
+
+  /**
+   * The feature id for the '<em><b>Titel</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__TITEL = 0;
+
+  /**
+   * The feature id for the '<em><b>Vorwort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__VORWORT = 1;
+
+  /**
+   * The feature id for the '<em><b>Datum Published</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__DATUM_PUBLISHED = 2;
+
+  /**
+   * The feature id for the '<em><b>Lizenz</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__LIZENZ = 3;
+
+  /**
+   * The feature id for the '<em><b>Autoren</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__AUTOREN = 4;
+
+  /**
+   * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__IMPORTS = 5;
+
+  /**
+   * The number of structural features of the '<em>Buch Beschreibung</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG_FEATURE_COUNT = 6;
 
   /**
    * The feature id for the '<em><b>Group Id</b></em>' attribute.
@@ -345,22 +568,13 @@ public interface RezeptPackage extends EPackage
   int PROJEKT_BESCHREIBUNG__ARTIFACT_ID = 1;
 
   /**
-   * The feature id for the '<em><b>Imports</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROJEKT_BESCHREIBUNG__IMPORTS = 2;
-
-  /**
    * The feature id for the '<em><b>Version</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJEKT_BESCHREIBUNG__VERSION = 3;
+  int PROJEKT_BESCHREIBUNG__VERSION = 2;
 
   /**
    * The feature id for the '<em><b>Buch</b></em>' containment reference.
@@ -369,7 +583,16 @@ public interface RezeptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROJEKT_BESCHREIBUNG__BUCH = 4;
+  int PROJEKT_BESCHREIBUNG__BUCH = 3;
+
+  /**
+   * The feature id for the '<em><b>Resources Dir</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJEKT_BESCHREIBUNG__RESOURCES_DIR = 4;
 
   /**
    * The number of structural features of the '<em>Projekt Beschreibung</em>' class.
@@ -379,16 +602,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int PROJEKT_BESCHREIBUNG_FEATURE_COUNT = 5;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.QuelleImpl <em>Quelle</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.QuelleImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getQuelle()
-   * @generated
-   */
-  int QUELLE = 4;
 
   /**
    * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -418,16 +631,6 @@ public interface RezeptPackage extends EPackage
   int QUELLE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl <em>Arbeitsschritt</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getArbeitsschritt()
-   * @generated
-   */
-  int ARBEITSSCHRITT = 5;
-
-  /**
    * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -444,16 +647,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int ARBEITSSCHRITT_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.NotizImpl <em>Notiz</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.NotizImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getNotiz()
-   * @generated
-   */
-  int NOTIZ = 20;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -474,36 +667,6 @@ public interface RezeptPackage extends EPackage
   int NOTIZ_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.TippImpl <em>Tipp</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.TippImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getTipp()
-   * @generated
-   */
-  int TIPP = 9;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImportImpl <em>Import</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImportImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getRezeptImport()
-   * @generated
-   */
-  int REZEPT_IMPORT = 10;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.KommentarImpl <em>Kommentar</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.KommentarImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getKommentar()
-   * @generated
-   */
-  int KOMMENTAR = 6;
-
-  /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -520,16 +683,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int KOMMENTAR_FEATURE_COUNT = NOTIZ_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktRefImpl <em>Produkt Ref</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktRefImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getProduktRef()
-   * @generated
-   */
-  int PRODUKT_REF = 7;
 
   /**
    * The feature id for the '<em><b>Menge</b></em>' attribute.
@@ -557,16 +710,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int PRODUKT_REF_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ZutatImpl <em>Zutat</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.ZutatImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getZutat()
-   * @generated
-   */
-  int ZUTAT = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -632,16 +775,6 @@ public interface RezeptPackage extends EPackage
   int REZEPT_IMPORT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.TagImpl <em>Tag</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.TagImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getTag()
-   * @generated
-   */
-  int TAG = 11;
-
-  /**
    * The number of structural features of the '<em>Tag</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -649,16 +782,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int TAG_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.StoffTagImpl <em>Stoff Tag</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.StoffTagImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getStoffTag()
-   * @generated
-   */
-  int STOFF_TAG = 12;
 
   /**
    * The feature id for the '<em><b>Stoff</b></em>' attribute.
@@ -679,16 +802,6 @@ public interface RezeptPackage extends EPackage
   int STOFF_TAG_FEATURE_COUNT = TAG_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BenutzerTagImpl <em>Benutzer Tag</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BenutzerTagImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBenutzerTag()
-   * @generated
-   */
-  int BENUTZER_TAG = 13;
-
-  /**
    * The feature id for the '<em><b>Bezeichnung</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -705,16 +818,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int BENUTZER_TAG_FEATURE_COUNT = TAG_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptlisteImpl <em>Rezeptliste</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptlisteImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getRezeptliste()
-   * @generated
-   */
-  int REZEPTLISTE = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -753,16 +856,6 @@ public interface RezeptPackage extends EPackage
   int REZEPTLISTE_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.DiaetTagImpl <em>Diaet Tag</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.DiaetTagImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getDiaetTag()
-   * @generated
-   */
-  int DIAET_TAG = 15;
-
-  /**
    * The feature id for the '<em><b>Diaet</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -779,16 +872,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int DIAET_TAG_FEATURE_COUNT = TAG_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.PreisImpl <em>Preis</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.PreisImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getPreis()
-   * @generated
-   */
-  int PREIS = 16;
 
   /**
    * The feature id for the '<em><b>Betrag</b></em>' attribute.
@@ -818,16 +901,6 @@ public interface RezeptPackage extends EPackage
   int PREIS_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.MengeImpl <em>Menge</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.MengeImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMenge()
-   * @generated
-   */
-  int MENGE = 17;
-
-  /**
    * The number of structural features of the '<em>Menge</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -835,43 +908,6 @@ public interface RezeptPackage extends EPackage
    * @ordered
    */
   int MENGE_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl <em>Buch Beschreibung</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl
-   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBuchBeschreibung()
-   * @generated
-   */
-  int BUCH_BESCHREIBUNG = 18;
-
-  /**
-   * The feature id for the '<em><b>Titel</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUCH_BESCHREIBUNG__TITEL = 0;
-
-  /**
-   * The feature id for the '<em><b>Resources Dir</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUCH_BESCHREIBUNG__RESOURCES_DIR = 1;
-
-  /**
-   * The number of structural features of the '<em>Buch Beschreibung</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUCH_BESCHREIBUNG_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AnmerkungImpl <em>Anmerkung</em>}' class.
@@ -1004,6 +1040,89 @@ public interface RezeptPackage extends EPackage
   int PRODUKTLISTE_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.LizenzImpl <em>Lizenz</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.LizenzImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getLizenz()
+   * @generated
+   */
+  int LIZENZ = 24;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIZENZ__TEXT = 0;
+
+  /**
+   * The feature id for the '<em><b>Hinweis</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIZENZ__HINWEIS = 1;
+
+  /**
+   * The number of structural features of the '<em>Lizenz</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIZENZ_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl <em>Autor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getAutor()
+   * @generated
+   */
+  int AUTOR = 25;
+
+  /**
+   * The feature id for the '<em><b>Vorname</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTOR__VORNAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Nachname</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTOR__NACHNAME = 1;
+
+  /**
+   * The feature id for the '<em><b>Organisations Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTOR__ORGANISATIONS_NAME = 2;
+
+  /**
+   * The number of structural features of the '<em>Autor</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTOR_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1011,7 +1130,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getModifikationsArt()
    * @generated
    */
-  int MODIFIKATIONS_ART = 24;
+  int MODIFIKATIONS_ART = 26;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.KategorieArt <em>Kategorie Art</em>}' enum.
@@ -1021,7 +1140,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getKategorieArt()
    * @generated
    */
-  int KATEGORIE_ART = 25;
+  int KATEGORIE_ART = 27;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Verpackung <em>Verpackung</em>}' enum.
@@ -1031,7 +1150,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getVerpackung()
    * @generated
    */
-  int VERPACKUNG = 26;
+  int VERPACKUNG = 28;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Stoff <em>Stoff</em>}' enum.
@@ -1041,7 +1160,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getStoff()
    * @generated
    */
-  int STOFF = 27;
+  int STOFF = 29;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.DiaetArt <em>Diaet Art</em>}' enum.
@@ -1051,7 +1170,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getDiaetArt()
    * @generated
    */
-  int DIAET_ART = 28;
+  int DIAET_ART = 30;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Waehrung <em>Waehrung</em>}' enum.
@@ -1061,7 +1180,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getWaehrung()
    * @generated
    */
-  int WAEHRUNG = 29;
+  int WAEHRUNG = 31;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Masseinheit <em>Masseinheit</em>}' enum.
@@ -1071,7 +1190,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMasseinheit()
    * @generated
    */
-  int MASSEINHEIT = 30;
+  int MASSEINHEIT = 32;
 
 
   /**
@@ -1082,7 +1201,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMengenAngabe()
    * @generated
    */
-  int MENGEN_ANGABE = 31;
+  int MENGEN_ANGABE = 33;
 
 
   /**
@@ -1390,17 +1509,6 @@ public interface RezeptPackage extends EPackage
   EAttribute getProjektBeschreibung_ArtifactId();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getImports <em>Imports</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Imports</em>'.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getImports()
-   * @see #getProjektBeschreibung()
-   * @generated
-   */
-  EReference getProjektBeschreibung_Imports();
-
-  /**
    * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getVersion <em>Version</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1421,6 +1529,17 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EReference getProjektBeschreibung_Buch();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getResourcesDir <em>Resources Dir</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Resources Dir</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getResourcesDir()
+   * @see #getProjektBeschreibung()
+   * @generated
+   */
+  EAttribute getProjektBeschreibung_ResourcesDir();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Quelle <em>Quelle</em>}'.
@@ -1760,15 +1879,59 @@ public interface RezeptPackage extends EPackage
   EAttribute getBuchBeschreibung_Titel();
 
   /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getResourcesDir <em>Resources Dir</em>}'.
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getVorwort <em>Vorwort</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Resources Dir</em>'.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getResourcesDir()
+   * @return the meta object for the attribute '<em>Vorwort</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getVorwort()
    * @see #getBuchBeschreibung()
    * @generated
    */
-  EAttribute getBuchBeschreibung_ResourcesDir();
+  EAttribute getBuchBeschreibung_Vorwort();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getDatumPublished <em>Datum Published</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Datum Published</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getDatumPublished()
+   * @see #getBuchBeschreibung()
+   * @generated
+   */
+  EAttribute getBuchBeschreibung_DatumPublished();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getLizenz <em>Lizenz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Lizenz</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getLizenz()
+   * @see #getBuchBeschreibung()
+   * @generated
+   */
+  EReference getBuchBeschreibung_Lizenz();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getAutoren <em>Autoren</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Autoren</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getAutoren()
+   * @see #getBuchBeschreibung()
+   * @generated
+   */
+  EReference getBuchBeschreibung_Autoren();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getImports <em>Imports</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Imports</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getImports()
+   * @see #getBuchBeschreibung()
+   * @generated
+   */
+  EReference getBuchBeschreibung_Imports();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Anmerkung <em>Anmerkung</em>}'.
@@ -1885,6 +2048,81 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EReference getProduktliste_Produkte();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Lizenz <em>Lizenz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Lizenz</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Lizenz
+   * @generated
+   */
+  EClass getLizenz();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Lizenz#getText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Text</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Lizenz#getText()
+   * @see #getLizenz()
+   * @generated
+   */
+  EAttribute getLizenz_Text();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Lizenz#getHinweis <em>Hinweis</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hinweis</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Lizenz#getHinweis()
+   * @see #getLizenz()
+   * @generated
+   */
+  EAttribute getLizenz_Hinweis();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Autor <em>Autor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Autor</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Autor
+   * @generated
+   */
+  EClass getAutor();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getVorname <em>Vorname</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Vorname</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Autor#getVorname()
+   * @see #getAutor()
+   * @generated
+   */
+  EAttribute getAutor_Vorname();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getNachname <em>Nachname</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Nachname</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Autor#getNachname()
+   * @see #getAutor()
+   * @generated
+   */
+  EAttribute getAutor_Nachname();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getOrganisationsName <em>Organisations Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Organisations Name</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Autor#getOrganisationsName()
+   * @see #getAutor()
+   * @generated
+   */
+  EAttribute getAutor_OrganisationsName();
 
   /**
    * Returns the meta object for enum '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}'.
@@ -2222,14 +2460,6 @@ public interface RezeptPackage extends EPackage
     EAttribute PROJEKT_BESCHREIBUNG__ARTIFACT_ID = eINSTANCE.getProjektBeschreibung_ArtifactId();
 
     /**
-     * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROJEKT_BESCHREIBUNG__IMPORTS = eINSTANCE.getProjektBeschreibung_Imports();
-
-    /**
      * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2244,6 +2474,14 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EReference PROJEKT_BESCHREIBUNG__BUCH = eINSTANCE.getProjektBeschreibung_Buch();
+
+    /**
+     * The meta object literal for the '<em><b>Resources Dir</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJEKT_BESCHREIBUNG__RESOURCES_DIR = eINSTANCE.getProjektBeschreibung_ResourcesDir();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.QuelleImpl <em>Quelle</em>}' class.
@@ -2532,12 +2770,44 @@ public interface RezeptPackage extends EPackage
     EAttribute BUCH_BESCHREIBUNG__TITEL = eINSTANCE.getBuchBeschreibung_Titel();
 
     /**
-     * The meta object literal for the '<em><b>Resources Dir</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Vorwort</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BUCH_BESCHREIBUNG__RESOURCES_DIR = eINSTANCE.getBuchBeschreibung_ResourcesDir();
+    EAttribute BUCH_BESCHREIBUNG__VORWORT = eINSTANCE.getBuchBeschreibung_Vorwort();
+
+    /**
+     * The meta object literal for the '<em><b>Datum Published</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUCH_BESCHREIBUNG__DATUM_PUBLISHED = eINSTANCE.getBuchBeschreibung_DatumPublished();
+
+    /**
+     * The meta object literal for the '<em><b>Lizenz</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUCH_BESCHREIBUNG__LIZENZ = eINSTANCE.getBuchBeschreibung_Lizenz();
+
+    /**
+     * The meta object literal for the '<em><b>Autoren</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUCH_BESCHREIBUNG__AUTOREN = eINSTANCE.getBuchBeschreibung_Autoren();
+
+    /**
+     * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUCH_BESCHREIBUNG__IMPORTS = eINSTANCE.getBuchBeschreibung_Imports();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AnmerkungImpl <em>Anmerkung</em>}' class.
@@ -2636,6 +2906,66 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EReference PRODUKTLISTE__PRODUKTE = eINSTANCE.getProduktliste_Produkte();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.LizenzImpl <em>Lizenz</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.LizenzImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getLizenz()
+     * @generated
+     */
+    EClass LIZENZ = eINSTANCE.getLizenz();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIZENZ__TEXT = eINSTANCE.getLizenz_Text();
+
+    /**
+     * The meta object literal for the '<em><b>Hinweis</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIZENZ__HINWEIS = eINSTANCE.getLizenz_Hinweis();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl <em>Autor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getAutor()
+     * @generated
+     */
+    EClass AUTOR = eINSTANCE.getAutor();
+
+    /**
+     * The meta object literal for the '<em><b>Vorname</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AUTOR__VORNAME = eINSTANCE.getAutor_Vorname();
+
+    /**
+     * The meta object literal for the '<em><b>Nachname</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AUTOR__NACHNAME = eINSTANCE.getAutor_Nachname();
+
+    /**
+     * The meta object literal for the '<em><b>Organisations Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AUTOR__ORGANISATIONS_NAME = eINSTANCE.getAutor_OrganisationsName();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.

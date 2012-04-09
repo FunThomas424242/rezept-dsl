@@ -8,6 +8,7 @@ package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
 import com.github.funthomas424242.rezeptsammler.rezept.Anmerkung;
 import com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt;
+import com.github.funthomas424242.rezeptsammler.rezept.Autor;
 import com.github.funthomas424242.rezeptsammler.rezept.BenutzerTag;
 import com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge;
 import com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung;
@@ -15,6 +16,7 @@ import com.github.funthomas424242.rezeptsammler.rezept.DiaetArt;
 import com.github.funthomas424242.rezeptsammler.rezept.DiaetTag;
 import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.Kommentar;
+import com.github.funthomas424242.rezeptsammler.rezept.Lizenz;
 import com.github.funthomas424242.rezeptsammler.rezept.Masseinheit;
 import com.github.funthomas424242.rezeptsammler.rezept.Menge;
 import com.github.funthomas424242.rezeptsammler.rezept.MengenAngabe;
@@ -224,6 +226,20 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass produktlisteEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lizenzEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass autorEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -629,19 +645,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProjektBeschreibung_Imports()
-  {
-    return (EReference)projektBeschreibungEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getProjektBeschreibung_Version()
   {
-    return (EAttribute)projektBeschreibungEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)projektBeschreibungEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -651,7 +657,17 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    */
   public EReference getProjektBeschreibung_Buch()
   {
-    return (EReference)projektBeschreibungEClass.getEStructuralFeatures().get(4);
+    return (EReference)projektBeschreibungEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjektBeschreibung_ResourcesDir()
+  {
+    return (EAttribute)projektBeschreibungEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -979,9 +995,49 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBuchBeschreibung_ResourcesDir()
+  public EAttribute getBuchBeschreibung_Vorwort()
   {
     return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBuchBeschreibung_DatumPublished()
+  {
+    return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Lizenz()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Autoren()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Imports()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1092,6 +1148,76 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EReference getProduktliste_Produkte()
   {
     return (EReference)produktlisteEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLizenz()
+  {
+    return lizenzEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLizenz_Text()
+  {
+    return (EAttribute)lizenzEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLizenz_Hinweis()
+  {
+    return (EAttribute)lizenzEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAutor()
+  {
+    return autorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAutor_Vorname()
+  {
+    return (EAttribute)autorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAutor_Nachname()
+  {
+    return (EAttribute)autorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAutor_OrganisationsName()
+  {
+    return (EAttribute)autorEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1232,12 +1358,20 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEReference(produktEClass, PRODUKT__PREIS);
     createEReference(produktEClass, PRODUKT__MENGE);
 
+    buchBeschreibungEClass = createEClass(BUCH_BESCHREIBUNG);
+    createEAttribute(buchBeschreibungEClass, BUCH_BESCHREIBUNG__TITEL);
+    createEAttribute(buchBeschreibungEClass, BUCH_BESCHREIBUNG__VORWORT);
+    createEAttribute(buchBeschreibungEClass, BUCH_BESCHREIBUNG__DATUM_PUBLISHED);
+    createEReference(buchBeschreibungEClass, BUCH_BESCHREIBUNG__LIZENZ);
+    createEReference(buchBeschreibungEClass, BUCH_BESCHREIBUNG__AUTOREN);
+    createEReference(buchBeschreibungEClass, BUCH_BESCHREIBUNG__IMPORTS);
+
     projektBeschreibungEClass = createEClass(PROJEKT_BESCHREIBUNG);
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__GROUP_ID);
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__ARTIFACT_ID);
-    createEReference(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__IMPORTS);
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__VERSION);
     createEReference(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__BUCH);
+    createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__RESOURCES_DIR);
 
     quelleEClass = createEClass(QUELLE);
     createEAttribute(quelleEClass, QUELLE__BESCHREIBUNG);
@@ -1283,10 +1417,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     mengeEClass = createEClass(MENGE);
 
-    buchBeschreibungEClass = createEClass(BUCH_BESCHREIBUNG);
-    createEAttribute(buchBeschreibungEClass, BUCH_BESCHREIBUNG__TITEL);
-    createEAttribute(buchBeschreibungEClass, BUCH_BESCHREIBUNG__RESOURCES_DIR);
-
     anmerkungEClass = createEClass(ANMERKUNG);
 
     notizEClass = createEClass(NOTIZ);
@@ -1302,6 +1432,15 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     produktlisteEClass = createEClass(PRODUKTLISTE);
     createEAttribute(produktlisteEClass, PRODUKTLISTE__NAME);
     createEReference(produktlisteEClass, PRODUKTLISTE__PRODUKTE);
+
+    lizenzEClass = createEClass(LIZENZ);
+    createEAttribute(lizenzEClass, LIZENZ__TEXT);
+    createEAttribute(lizenzEClass, LIZENZ__HINWEIS);
+
+    autorEClass = createEClass(AUTOR);
+    createEAttribute(autorEClass, AUTOR__VORNAME);
+    createEAttribute(autorEClass, AUTOR__NACHNAME);
+    createEAttribute(autorEClass, AUTOR__ORGANISATIONS_NAME);
 
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
@@ -1381,12 +1520,20 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEReference(getProdukt_Preis(), this.getPreis(), null, "preis", null, 0, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProdukt_Menge(), this.getMenge(), null, "menge", null, 1, 1, Produkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(buchBeschreibungEClass, BuchBeschreibung.class, "BuchBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBuchBeschreibung_Titel(), ecorePackage.getEString(), "titel", null, 1, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBuchBeschreibung_Vorwort(), ecorePackage.getEString(), "vorwort", null, 0, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBuchBeschreibung_DatumPublished(), ecorePackage.getEString(), "datumPublished", null, 0, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchBeschreibung_Lizenz(), this.getLizenz(), null, "lizenz", null, 0, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchBeschreibung_Autoren(), this.getAutor(), null, "autoren", null, 1, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchBeschreibung_Imports(), this.getRezeptImport(), null, "imports", null, 0, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(projektBeschreibungEClass, ProjektBeschreibung.class, "ProjektBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProjektBeschreibung_GroupId(), ecorePackage.getEString(), "groupId", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProjektBeschreibung_ArtifactId(), ecorePackage.getEString(), "artifactId", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProjektBeschreibung_Imports(), this.getRezeptImport(), null, "imports", null, 0, -1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProjektBeschreibung_Version(), ecorePackage.getEString(), "version", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProjektBeschreibung_Buch(), this.getBuchBeschreibung(), null, "buch", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjektBeschreibung_ResourcesDir(), ecorePackage.getEString(), "resourcesDir", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(quelleEClass, Quelle.class, "Quelle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQuelle_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 1, 1, Quelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1432,10 +1579,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     initEClass(mengeEClass, Menge.class, "Menge", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(buchBeschreibungEClass, BuchBeschreibung.class, "BuchBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBuchBeschreibung_Titel(), ecorePackage.getEString(), "titel", null, 1, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBuchBeschreibung_ResourcesDir(), ecorePackage.getEString(), "resourcesDir", null, 1, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(anmerkungEClass, Anmerkung.class, "Anmerkung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(notizEClass, Notiz.class, "Notiz", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1452,6 +1595,15 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getProduktliste_Name(), ecorePackage.getEString(), "name", null, 1, 1, Produktliste.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProduktliste_Produkte(), this.getProdukt(), null, "produkte", null, 1, -1, Produktliste.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(lizenzEClass, Lizenz.class, "Lizenz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLizenz_Text(), ecorePackage.getEString(), "text", null, 0, 1, Lizenz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLizenz_Hinweis(), ecorePackage.getEString(), "hinweis", null, 1, 1, Lizenz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(autorEClass, Autor.class, "Autor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAutor_Vorname(), ecorePackage.getEString(), "vorname", null, 1, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAutor_Nachname(), ecorePackage.getEString(), "nachname", null, 1, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAutor_OrganisationsName(), ecorePackage.getEString(), "organisationsName", null, 0, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");
     addEEnumLiteral(modifikationsArtEEnum, ModifikationsArt.ORIGINAL);
@@ -1462,6 +1614,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.KOCHEN);
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.BACKEN);
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.AUFLAUF);
+    addEEnumLiteral(kategorieArtEEnum, KategorieArt.PIZZA);
 
     initEEnum(verpackungEEnum, Verpackung.class, "Verpackung");
     addEEnumLiteral(verpackungEEnum, Verpackung.PACKUNG);
@@ -1499,6 +1652,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(masseinheitEEnum, Masseinheit.STUECK);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.TASSE);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.BECHER);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.ML);
 
     initEEnum(mengenAngabeEEnum, MengenAngabe.class, "MengenAngabe");
     addEEnumLiteral(mengenAngabeEEnum, MengenAngabe.ETWAS);
