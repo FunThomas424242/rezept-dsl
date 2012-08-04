@@ -104,9 +104,9 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createProjektBeschreibungAdapter();
       }
       @Override
-      public Adapter caseQuelle(Quelle object)
+      public Adapter caseLiteraturquelle(Literaturquelle object)
       {
-        return createQuelleAdapter();
+        return createLiteraturquelleAdapter();
       }
       @Override
       public Adapter caseArbeitsschritt(Arbeitsschritt object)
@@ -209,6 +209,16 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createAutorAdapter();
       }
       @Override
+      public Adapter casePersonenquelle(Personenquelle object)
+      {
+        return createPersonenquelleAdapter();
+      }
+      @Override
+      public Adapter caseQuelle(Quelle object)
+      {
+        return createQuelleAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -286,6 +296,21 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createProjektBeschreibungAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Literaturquelle <em>Literaturquelle</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Literaturquelle
+   * @generated
+   */
+  public Adapter createLiteraturquelleAdapter()
   {
     return null;
   }
@@ -616,6 +641,21 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAutorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.Personenquelle <em>Personenquelle</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Personenquelle
+   * @generated
+   */
+  public Adapter createPersonenquelleAdapter()
   {
     return null;
   }

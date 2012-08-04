@@ -63,13 +63,13 @@ public interface RezeptFactory extends EFactory
   ProjektBeschreibung createProjektBeschreibung();
 
   /**
-   * Returns a new object of class '<em>Quelle</em>'.
+   * Returns a new object of class '<em>Literaturquelle</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Quelle</em>'.
+   * @return a new object of class '<em>Literaturquelle</em>'.
    * @generated
    */
-  Quelle createQuelle();
+  Literaturquelle createLiteraturquelle();
 
   /**
    * Returns a new object of class '<em>Arbeitsschritt</em>'.
@@ -232,6 +232,15 @@ public interface RezeptFactory extends EFactory
    * @generated
    */
   Autor createAutor();
+
+  /**
+   * Returns a new object of class '<em>Personenquelle</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Personenquelle</em>'.
+   * @generated
+   */
+  Personenquelle createPersonenquelle();
 
   /**
    * Returns the package supported by this factory.

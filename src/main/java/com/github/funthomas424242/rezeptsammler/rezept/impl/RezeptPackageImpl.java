@@ -16,12 +16,14 @@ import com.github.funthomas424242.rezeptsammler.rezept.DiaetArt;
 import com.github.funthomas424242.rezeptsammler.rezept.DiaetTag;
 import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.Kommentar;
+import com.github.funthomas424242.rezeptsammler.rezept.Literaturquelle;
 import com.github.funthomas424242.rezeptsammler.rezept.Lizenz;
 import com.github.funthomas424242.rezeptsammler.rezept.Masseinheit;
 import com.github.funthomas424242.rezeptsammler.rezept.Menge;
 import com.github.funthomas424242.rezeptsammler.rezept.MengenAngabe;
 import com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt;
 import com.github.funthomas424242.rezeptsammler.rezept.Notiz;
+import com.github.funthomas424242.rezeptsammler.rezept.Personenquelle;
 import com.github.funthomas424242.rezeptsammler.rezept.Preis;
 import com.github.funthomas424242.rezeptsammler.rezept.Produkt;
 import com.github.funthomas424242.rezeptsammler.rezept.ProduktImport;
@@ -86,6 +88,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass projektBeschreibungEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literaturquelleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -240,6 +249,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass autorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass personenquelleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -675,29 +691,39 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLiteraturquelle()
+  {
+    return literaturquelleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLiteraturquelle_Beschreibung()
+  {
+    return (EAttribute)literaturquelleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLiteraturquelle_ModifikationsArt()
+  {
+    return (EAttribute)literaturquelleEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getQuelle()
   {
     return quelleEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getQuelle_Beschreibung()
-  {
-    return (EAttribute)quelleEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getQuelle_ModifikationsArt()
-  {
-    return (EAttribute)quelleEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1225,6 +1251,26 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getPersonenquelle()
+  {
+    return personenquelleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPersonenquelle_PersonenBeschreibung()
+  {
+    return (EAttribute)personenquelleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getModifikationsArt()
   {
     return modifikationsArtEEnum;
@@ -1373,9 +1419,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEReference(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__BUCH);
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__RESOURCES_DIR);
 
-    quelleEClass = createEClass(QUELLE);
-    createEAttribute(quelleEClass, QUELLE__BESCHREIBUNG);
-    createEAttribute(quelleEClass, QUELLE__MODIFIKATIONS_ART);
+    literaturquelleEClass = createEClass(LITERATURQUELLE);
+    createEAttribute(literaturquelleEClass, LITERATURQUELLE__BESCHREIBUNG);
+    createEAttribute(literaturquelleEClass, LITERATURQUELLE__MODIFIKATIONS_ART);
 
     arbeitsschrittEClass = createEClass(ARBEITSSCHRITT);
     createEAttribute(arbeitsschrittEClass, ARBEITSSCHRITT__BESCHREIBUNG);
@@ -1442,6 +1488,11 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEAttribute(autorEClass, AUTOR__NACHNAME);
     createEAttribute(autorEClass, AUTOR__ORGANISATIONS_NAME);
 
+    personenquelleEClass = createEClass(PERSONENQUELLE);
+    createEAttribute(personenquelleEClass, PERSONENQUELLE__PERSONEN_BESCHREIBUNG);
+
+    quelleEClass = createEClass(QUELLE);
+
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
     kategorieArtEEnum = createEEnum(KATEGORIE_ART);
@@ -1482,6 +1533,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    literaturquelleEClass.getESuperTypes().add(this.getQuelle());
     kommentarEClass.getESuperTypes().add(this.getNotiz());
     tippEClass.getESuperTypes().add(this.getNotiz());
     stoffTagEClass.getESuperTypes().add(this.getTag());
@@ -1490,6 +1542,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     anmerkungEClass.getESuperTypes().add(this.getNotiz());
     bestimmteMengeEClass.getESuperTypes().add(this.getMenge());
     unbestimmteMengeEClass.getESuperTypes().add(this.getMenge());
+    personenquelleEClass.getESuperTypes().add(this.getQuelle());
 
     // Initialize classes and features; add operations and parameters
     initEClass(rezeptEClass, Rezept.class, "Rezept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1535,9 +1588,9 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEReference(getProjektBeschreibung_Buch(), this.getBuchBeschreibung(), null, "buch", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProjektBeschreibung_ResourcesDir(), ecorePackage.getEString(), "resourcesDir", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(quelleEClass, Quelle.class, "Quelle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getQuelle_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 1, 1, Quelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQuelle_ModifikationsArt(), this.getModifikationsArt(), "modifikationsArt", null, 1, 1, Quelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(literaturquelleEClass, Literaturquelle.class, "Literaturquelle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLiteraturquelle_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 1, 1, Literaturquelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLiteraturquelle_ModifikationsArt(), this.getModifikationsArt(), "modifikationsArt", null, 1, 1, Literaturquelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(arbeitsschrittEClass, Arbeitsschritt.class, "Arbeitsschritt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getArbeitsschritt_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 1, 1, Arbeitsschritt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1603,6 +1656,11 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getAutor_Vorname(), ecorePackage.getEString(), "vorname", null, 1, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAutor_Nachname(), ecorePackage.getEString(), "nachname", null, 1, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAutor_OrganisationsName(), ecorePackage.getEString(), "organisationsName", null, 0, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(personenquelleEClass, Personenquelle.class, "Personenquelle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPersonenquelle_PersonenBeschreibung(), ecorePackage.getEString(), "personenBeschreibung", null, 1, 1, Personenquelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(quelleEClass, Quelle.class, "Quelle", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");

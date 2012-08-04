@@ -60,7 +60,7 @@ TOKENSTYLES {
 	"Preis:" COLOR #7F0055, BOLD;
 	"Händler:" COLOR #7F0055, BOLD;
 	"Hersteller:" COLOR #7F0055, BOLD;
-	"Quelle:", "übernommen", "aus"  COLOR #7F0055, BOLD;
+	"Quelle:", "übernommen", "überliefert", "aus"  COLOR #7F0055, BOLD;
 	"Aktion:" COLOR #7F0055, BOLD;
 	"Tipp:", "Anmerkung:", "Kommentar:" COLOR #7F0055, BOLD;
 	"Zutat:", "Menge:", "mal." COLOR #7F0055, BOLD;
@@ -91,7 +91,7 @@ RULES {
 	Preis ::= "Preis:" betrag['"','"'] waehrung['"','"'] ".";
 	Rezept ::= "Rezept" id['"','"'] "{" 
 				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
-				quelle? ("Ausreichend für" personen[NUMBER] "Personen.")?
+				("Quelle:" quelle)? ("Ausreichend für" personen[NUMBER] "Personen.")?
 				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
 				produkte* zutaten+ schritte+ notizen*				    
 			    "}";
@@ -106,5 +106,7 @@ RULES {
 	Tipp ::= "Tipp:"  text['"','"'] ;
 	Kommentar ::= "Kommentar:" text['"','"'] ;
 	Anmerkung ::= "Anmerkung:" text['"','"'] ;
-	Quelle ::= "Quelle:" "übernommen" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
+	Literaturquelle ::=  "übernommen" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
+	Personenquelle  ::=	 "überliefert" "von"  personenBeschreibung['"','"'] "." ;
+	
 }

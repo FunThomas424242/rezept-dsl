@@ -74,7 +74,7 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.PRODUKT: return createProdukt();
       case RezeptPackage.BUCH_BESCHREIBUNG: return createBuchBeschreibung();
       case RezeptPackage.PROJEKT_BESCHREIBUNG: return createProjektBeschreibung();
-      case RezeptPackage.QUELLE: return createQuelle();
+      case RezeptPackage.LITERATURQUELLE: return createLiteraturquelle();
       case RezeptPackage.ARBEITSSCHRITT: return createArbeitsschritt();
       case RezeptPackage.KOMMENTAR: return createKommentar();
       case RezeptPackage.PRODUKT_REF: return createProduktRef();
@@ -92,6 +92,7 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.PRODUKTLISTE: return createProduktliste();
       case RezeptPackage.LIZENZ: return createLizenz();
       case RezeptPackage.AUTOR: return createAutor();
+      case RezeptPackage.PERSONENQUELLE: return createPersonenquelle();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -208,10 +209,10 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Quelle createQuelle()
+  public Literaturquelle createLiteraturquelle()
   {
-    QuelleImpl quelle = new QuelleImpl();
-    return quelle;
+    LiteraturquelleImpl literaturquelle = new LiteraturquelleImpl();
+    return literaturquelle;
   }
 
   /**
@@ -410,6 +411,17 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     AutorImpl autor = new AutorImpl();
     return autor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Personenquelle createPersonenquelle()
+  {
+    PersonenquelleImpl personenquelle = new PersonenquelleImpl();
+    return personenquelle;
   }
 
   /**

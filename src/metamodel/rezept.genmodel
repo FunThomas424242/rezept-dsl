@@ -106,9 +106,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//ProjektBeschreibung/buch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/resourcesDir"/>
     </genClasses>
-    <genClasses ecoreClass="rezept.ecore#//Quelle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Quelle/beschreibung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Quelle/modifikationsArt"/>
+    <genClasses ecoreClass="rezept.ecore#//Literaturquelle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Literaturquelle/beschreibung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Literaturquelle/modifikationsArt"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Arbeitsschritt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Arbeitsschritt/beschreibung"/>
@@ -170,5 +170,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Autor/nachname"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Autor/organisationsName"/>
     </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//Personenquelle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Personenquelle/personenBeschreibung"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//Quelle"/>
   </genPackages>
 </genmodel:GenModel>

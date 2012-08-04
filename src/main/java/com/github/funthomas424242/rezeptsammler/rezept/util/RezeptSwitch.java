@@ -111,10 +111,11 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RezeptPackage.QUELLE:
+      case RezeptPackage.LITERATURQUELLE:
       {
-        Quelle quelle = (Quelle)theEObject;
-        T result = caseQuelle(quelle);
+        Literaturquelle literaturquelle = (Literaturquelle)theEObject;
+        T result = caseLiteraturquelle(literaturquelle);
+        if (result == null) result = caseQuelle(literaturquelle);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -266,6 +267,21 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RezeptPackage.PERSONENQUELLE:
+      {
+        Personenquelle personenquelle = (Personenquelle)theEObject;
+        T result = casePersonenquelle(personenquelle);
+        if (result == null) result = caseQuelle(personenquelle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.QUELLE:
+      {
+        Quelle quelle = (Quelle)theEObject;
+        T result = caseQuelle(quelle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -330,6 +346,22 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseProjektBeschreibung(ProjektBeschreibung object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Literaturquelle</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Literaturquelle</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLiteraturquelle(Literaturquelle object)
   {
     return null;
   }
@@ -682,6 +714,22 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAutor(Autor object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Personenquelle</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Personenquelle</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePersonenquelle(Personenquelle object)
   {
     return null;
   }
