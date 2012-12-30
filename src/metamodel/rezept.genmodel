@@ -26,6 +26,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Glas"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Flasche"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Becher"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Netz"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Stoff">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Laktose"/>
@@ -54,6 +55,8 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tasse"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Becher"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/ml"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Knolle"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Zehe"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/etwas"/>

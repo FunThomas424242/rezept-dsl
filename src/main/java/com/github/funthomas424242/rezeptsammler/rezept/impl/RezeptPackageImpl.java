@@ -1683,6 +1683,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(verpackungEEnum, Verpackung.GLAS);
     addEEnumLiteral(verpackungEEnum, Verpackung.FLASCHE);
     addEEnumLiteral(verpackungEEnum, Verpackung.BECHER);
+    addEEnumLiteral(verpackungEEnum, Verpackung.NETZ);
 
     initEEnum(stoffEEnum, Stoff.class, "Stoff");
     addEEnumLiteral(stoffEEnum, Stoff.LAKTOSE);
@@ -1711,6 +1712,8 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(masseinheitEEnum, Masseinheit.TASSE);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.BECHER);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.ML);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.KNOLLE);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.ZEHE);
 
     initEEnum(mengenAngabeEEnum, MengenAngabe.class, "MengenAngabe");
     addEEnumLiteral(mengenAngabeEEnum, MengenAngabe.ETWAS);

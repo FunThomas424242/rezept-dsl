@@ -133,7 +133,23 @@ public enum Masseinheit implements Enumerator
    * @generated
    * @ordered
    */
-  ML(11, "ml", "ml");
+  ML(11, "ml", "ml"), /**
+   * The '<em><b>Knolle</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #KNOLLE_VALUE
+   * @generated
+   * @ordered
+   */
+  KNOLLE(12, "Knolle", "Knolle"), /**
+   * The '<em><b>Zehe</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ZEHE_VALUE
+   * @generated
+   * @ordered
+   */
+  ZEHE(13, "Zehe", "Zehe");
 
   /**
    * The '<em><b>Prise</b></em>' literal value.
@@ -316,6 +332,36 @@ public enum Masseinheit implements Enumerator
   public static final int ML_VALUE = 11;
 
   /**
+   * The '<em><b>Knolle</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Knolle</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #KNOLLE
+   * @model name="Knolle"
+   * @generated
+   * @ordered
+   */
+  public static final int KNOLLE_VALUE = 12;
+
+  /**
+   * The '<em><b>Zehe</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Zehe</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ZEHE
+   * @model name="Zehe"
+   * @generated
+   * @ordered
+   */
+  public static final int ZEHE_VALUE = 13;
+
+  /**
    * An array of all the '<em><b>Masseinheit</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -336,6 +382,8 @@ public enum Masseinheit implements Enumerator
       TASSE,
       BECHER,
       ML,
+      KNOLLE,
+      ZEHE,
     };
 
   /**
@@ -406,6 +454,8 @@ public enum Masseinheit implements Enumerator
       case TASSE_VALUE: return TASSE;
       case BECHER_VALUE: return BECHER;
       case ML_VALUE: return ML;
+      case KNOLLE_VALUE: return KNOLLE;
+      case ZEHE_VALUE: return ZEHE;
     }
     return null;
   }

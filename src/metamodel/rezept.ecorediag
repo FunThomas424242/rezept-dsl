@@ -297,6 +297,10 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Beutel"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Li4oQV2WEeGqYtVkHPgHSw"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_YI5SYVK-EeKWrs_0Lx7EXA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Netz"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YI55cFK-EeKWrs_0Lx7EXA"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_P8Dn8F2WEeGqYtVkHPgHSw" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Stueck"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_P8Dn8V2WEeGqYtVkHPgHSw"/>
@@ -608,6 +612,14 @@
       <children xmi:type="notation:Node" xmi:id="_CzRNEGX3EeG6Z-1mcDLt8g" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/gehaeufterEssloeffel"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_CzRNEWX3EeG6Z-1mcDLt8g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oHcu4FLAEeKWrs_0Lx7EXA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Knolle"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oHcu4VLAEeKWrs_0Lx7EXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_pluqwFLAEeKWrs_0Lx7EXA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Zehe"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pluqwVLAEeKWrs_0Lx7EXA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_8hTfwGX2EeG6Z-1mcDLt8g"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_8hTfwWX2EeG6Z-1mcDLt8g"/>

@@ -99,7 +99,15 @@ public enum Verpackung implements Enumerator
    * @generated
    * @ordered
    */
-  BECHER(7, "Becher", "Becher");
+  BECHER(7, "Becher", "Becher"), /**
+   * The '<em><b>Netz</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #NETZ_VALUE
+   * @generated
+   * @ordered
+   */
+  NETZ(8, "Netz", "Netz");
 
   /**
    * The '<em><b>Packung</b></em>' literal value.
@@ -222,6 +230,21 @@ public enum Verpackung implements Enumerator
   public static final int BECHER_VALUE = 7;
 
   /**
+   * The '<em><b>Netz</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Netz</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #NETZ
+   * @model name="Netz"
+   * @generated
+   * @ordered
+   */
+  public static final int NETZ_VALUE = 8;
+
+  /**
    * An array of all the '<em><b>Verpackung</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -238,6 +261,7 @@ public enum Verpackung implements Enumerator
       GLAS,
       FLASCHE,
       BECHER,
+      NETZ,
     };
 
   /**
@@ -304,6 +328,7 @@ public enum Verpackung implements Enumerator
       case GLAS_VALUE: return GLAS;
       case FLASCHE_VALUE: return FLASCHE;
       case BECHER_VALUE: return BECHER;
+      case NETZ_VALUE: return NETZ;
     }
     return null;
   }

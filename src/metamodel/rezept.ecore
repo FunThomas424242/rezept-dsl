@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rezept"
-    nsURI="http://www.github.com/funthomas424242/language/rezept" nsPrefix="rezept">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rezept" nsURI="http://www.github.com/funthomas424242/language/rezept"
+    nsPrefix="rezept">
   <eClassifiers xsi:type="ecore:EClass" name="Rezept">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="1" iD="true"/>
@@ -105,6 +104,7 @@
     <eLiterals name="Glas" value="5"/>
     <eLiterals name="Flasche" value="6"/>
     <eLiterals name="Becher" value="7"/>
+    <eLiterals name="Netz" value="8"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Zutat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -168,6 +168,8 @@
     <eLiterals name="Tasse" value="9" literal="Tasse"/>
     <eLiterals name="Becher" value="10"/>
     <eLiterals name="ml" value="11"/>
+    <eLiterals name="Knolle" value="12"/>
+    <eLiterals name="Zehe" value="13"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anmerkung" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Notiz" abstract="true">
