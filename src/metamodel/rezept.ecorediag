@@ -887,6 +887,14 @@
         <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Bild/beschreibung"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_dhPwgVNVEeKM7Zd8_gL5pg"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_73fBQFN4EeKM7Zd8_gL5pg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Bild/lizenz"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_73fBQVN4EeKM7Zd8_gL5pg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BF-fYFN5EeKM7Zd8_gL5pg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Bild/urheber"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_BF-fYVN5EeKM7Zd8_gL5pg"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_VjKfolNVEeKM7Zd8_gL5pg"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_VjKfo1NVEeKM7Zd8_gL5pg"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_VjKfpFNVEeKM7Zd8_gL5pg"/>

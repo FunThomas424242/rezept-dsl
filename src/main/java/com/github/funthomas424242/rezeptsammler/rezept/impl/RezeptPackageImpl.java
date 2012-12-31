@@ -779,6 +779,26 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBild_Lizenz()
+  {
+    return (EAttribute)bildEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBild_Urheber()
+  {
+    return (EAttribute)bildEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getArbeitsschritt()
   {
     return arbeitsschrittEClass;
@@ -1545,6 +1565,8 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     bildEClass = createEClass(BILD);
     createEAttribute(bildEClass, BILD__ABLAGE_PFAD);
     createEAttribute(bildEClass, BILD__BESCHREIBUNG);
+    createEAttribute(bildEClass, BILD__LIZENZ);
+    createEAttribute(bildEClass, BILD__URHEBER);
 
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
@@ -1719,6 +1741,8 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEClass(bildEClass, Bild.class, "Bild", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBild_AblagePfad(), ecorePackage.getEString(), "ablagePfad", null, 1, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBild_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 0, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBild_Lizenz(), ecorePackage.getEString(), "lizenz", null, 0, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBild_Urheber(), ecorePackage.getEString(), "urheber", null, 0, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");

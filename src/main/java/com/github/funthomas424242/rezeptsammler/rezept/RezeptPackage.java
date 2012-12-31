@@ -1207,13 +1207,31 @@ public interface RezeptPackage extends EPackage
   int BILD__BESCHREIBUNG = 1;
 
   /**
+   * The feature id for the '<em><b>Lizenz</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BILD__LIZENZ = 2;
+
+  /**
+   * The feature id for the '<em><b>Urheber</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BILD__URHEBER = 3;
+
+  /**
    * The number of structural features of the '<em>Bild</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BILD_FEATURE_COUNT = 2;
+  int BILD_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.
@@ -1718,6 +1736,28 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EAttribute getBild_Beschreibung();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getLizenz <em>Lizenz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Lizenz</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Bild#getLizenz()
+   * @see #getBild()
+   * @generated
+   */
+  EAttribute getBild_Lizenz();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getUrheber <em>Urheber</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Urheber</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Bild#getUrheber()
+   * @see #getBild()
+   * @generated
+   */
+  EAttribute getBild_Urheber();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt <em>Arbeitsschritt</em>}'.
@@ -2719,6 +2759,22 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EAttribute BILD__BESCHREIBUNG = eINSTANCE.getBild_Beschreibung();
+
+    /**
+     * The meta object literal for the '<em><b>Lizenz</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BILD__LIZENZ = eINSTANCE.getBild_Lizenz();
+
+    /**
+     * The meta object literal for the '<em><b>Urheber</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BILD__URHEBER = eINSTANCE.getBild_Urheber();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl <em>Arbeitsschritt</em>}' class.

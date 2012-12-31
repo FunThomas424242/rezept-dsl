@@ -108,6 +108,7 @@ RULES {
 	Anmerkung ::= "Anmerkung:" text['"','"'] ;
 	Literaturquelle ::=  "übernommen" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
 	Personenquelle  ::=	 "überliefert" "von"  personenBeschreibung['"','"'] "." ;
-	Bild ::= "Bild:"  ablagePfad['"','"']  ("Text:" beschreibung['"','"'])? "." ;
+	Bild ::= "Bild:"  ablagePfad['"','"']  ("Text:" beschreibung['"','"'])? 
+			 ("Lizenz:" lizenz['"','"'])? ("Urheber:" urheber['"','"'])? "." ;
 	
 }

@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblagePfad <em>Ablage Pfad</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getLizenz <em>Lizenz</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getUrheber <em>Urheber</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,5 +76,57 @@ public interface Bild extends EObject
    * @generated
    */
   void setBeschreibung(String value);
+
+  /**
+   * Returns the value of the '<em><b>Lizenz</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Lizenz</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Lizenz</em>' attribute.
+   * @see #setLizenz(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBild_Lizenz()
+   * @model
+   * @generated
+   */
+  String getLizenz();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getLizenz <em>Lizenz</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Lizenz</em>' attribute.
+   * @see #getLizenz()
+   * @generated
+   */
+  void setLizenz(String value);
+
+  /**
+   * Returns the value of the '<em><b>Urheber</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Urheber</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Urheber</em>' attribute.
+   * @see #setUrheber(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBild_Urheber()
+   * @model
+   * @generated
+   */
+  String getUrheber();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getUrheber <em>Urheber</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Urheber</em>' attribute.
+   * @see #getUrheber()
+   * @generated
+   */
+  void setUrheber(String value);
 
 } // Bild

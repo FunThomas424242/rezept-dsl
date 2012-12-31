@@ -180,6 +180,8 @@
     <genClasses ecoreClass="rezept.ecore#//Bild">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/ablagePfad"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/beschreibung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/lizenz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/urheber"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

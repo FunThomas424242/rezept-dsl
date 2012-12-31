@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl#getAblagePfad <em>Ablage Pfad</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl#getLizenz <em>Lizenz</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl#getUrheber <em>Urheber</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,6 +69,46 @@ public class BildImpl extends EObjectImpl implements Bild
    * @ordered
    */
   protected String beschreibung = BESCHREIBUNG_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getLizenz() <em>Lizenz</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLizenz()
+   * @generated
+   * @ordered
+   */
+  protected static final String LIZENZ_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLizenz() <em>Lizenz</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLizenz()
+   * @generated
+   * @ordered
+   */
+  protected String lizenz = LIZENZ_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getUrheber() <em>Urheber</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUrheber()
+   * @generated
+   * @ordered
+   */
+  protected static final String URHEBER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getUrheber() <em>Urheber</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUrheber()
+   * @generated
+   * @ordered
+   */
+  protected String urheber = URHEBER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -140,6 +182,52 @@ public class BildImpl extends EObjectImpl implements Bild
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getLizenz()
+  {
+    return lizenz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLizenz(String newLizenz)
+  {
+    String oldLizenz = lizenz;
+    lizenz = newLizenz;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.BILD__LIZENZ, oldLizenz, lizenz));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getUrheber()
+  {
+    return urheber;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUrheber(String newUrheber)
+  {
+    String oldUrheber = urheber;
+    urheber = newUrheber;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.BILD__URHEBER, oldUrheber, urheber));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -149,6 +237,10 @@ public class BildImpl extends EObjectImpl implements Bild
         return getAblagePfad();
       case RezeptPackage.BILD__BESCHREIBUNG:
         return getBeschreibung();
+      case RezeptPackage.BILD__LIZENZ:
+        return getLizenz();
+      case RezeptPackage.BILD__URHEBER:
+        return getUrheber();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -168,6 +260,12 @@ public class BildImpl extends EObjectImpl implements Bild
         return;
       case RezeptPackage.BILD__BESCHREIBUNG:
         setBeschreibung((String)newValue);
+        return;
+      case RezeptPackage.BILD__LIZENZ:
+        setLizenz((String)newValue);
+        return;
+      case RezeptPackage.BILD__URHEBER:
+        setUrheber((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -189,6 +287,12 @@ public class BildImpl extends EObjectImpl implements Bild
       case RezeptPackage.BILD__BESCHREIBUNG:
         setBeschreibung(BESCHREIBUNG_EDEFAULT);
         return;
+      case RezeptPackage.BILD__LIZENZ:
+        setLizenz(LIZENZ_EDEFAULT);
+        return;
+      case RezeptPackage.BILD__URHEBER:
+        setUrheber(URHEBER_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -207,6 +311,10 @@ public class BildImpl extends EObjectImpl implements Bild
         return ABLAGE_PFAD_EDEFAULT == null ? ablagePfad != null : !ABLAGE_PFAD_EDEFAULT.equals(ablagePfad);
       case RezeptPackage.BILD__BESCHREIBUNG:
         return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
+      case RezeptPackage.BILD__LIZENZ:
+        return LIZENZ_EDEFAULT == null ? lizenz != null : !LIZENZ_EDEFAULT.equals(lizenz);
+      case RezeptPackage.BILD__URHEBER:
+        return URHEBER_EDEFAULT == null ? urheber != null : !URHEBER_EDEFAULT.equals(urheber);
     }
     return super.eIsSet(featureID);
   }
@@ -226,6 +334,10 @@ public class BildImpl extends EObjectImpl implements Bild
     result.append(ablagePfad);
     result.append(", beschreibung: ");
     result.append(beschreibung);
+    result.append(", lizenz: ");
+    result.append(lizenz);
+    result.append(", urheber: ");
+    result.append(urheber);
     result.append(')');
     return result.toString();
   }
