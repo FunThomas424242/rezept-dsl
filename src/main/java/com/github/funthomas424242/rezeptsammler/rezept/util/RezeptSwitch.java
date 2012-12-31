@@ -282,6 +282,13 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RezeptPackage.BILD:
+      {
+        Bild bild = (Bild)theEObject;
+        T result = caseBild(bild);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -378,6 +385,22 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseQuelle(Quelle object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bild</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bild</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBild(Bild object)
   {
     return null;
   }

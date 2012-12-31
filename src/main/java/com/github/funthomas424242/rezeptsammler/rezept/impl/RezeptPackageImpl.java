@@ -11,6 +11,7 @@ import com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt;
 import com.github.funthomas424242.rezeptsammler.rezept.Autor;
 import com.github.funthomas424242.rezeptsammler.rezept.BenutzerTag;
 import com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge;
+import com.github.funthomas424242.rezeptsammler.rezept.Bild;
 import com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung;
 import com.github.funthomas424242.rezeptsammler.rezept.DiaetArt;
 import com.github.funthomas424242.rezeptsammler.rezept.DiaetTag;
@@ -102,6 +103,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass quelleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bildEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -511,6 +519,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRezept_Bilder()
+  {
+    return (EReference)rezeptEClass.getEStructuralFeatures().get(12);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getProduktImport()
   {
     return produktImportEClass;
@@ -724,6 +742,36 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EClass getQuelle()
   {
     return quelleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBild()
+  {
+    return bildEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBild_AblagePfad()
+  {
+    return (EAttribute)bildEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBild_Beschreibung()
+  {
+    return (EAttribute)bildEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1389,6 +1437,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEReference(rezeptEClass, REZEPT__TAGS);
     createEReference(rezeptEClass, REZEPT__NOTIZEN);
     createEAttribute(rezeptEClass, REZEPT__PERSONEN);
+    createEReference(rezeptEClass, REZEPT__BILDER);
 
     produktImportEClass = createEClass(PRODUKT_IMPORT);
     createEReference(produktImportEClass, PRODUKT_IMPORT__IMPORTED_RESOURCE);
@@ -1493,6 +1542,10 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     quelleEClass = createEClass(QUELLE);
 
+    bildEClass = createEClass(BILD);
+    createEAttribute(bildEClass, BILD__ABLAGE_PFAD);
+    createEAttribute(bildEClass, BILD__BESCHREIBUNG);
+
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
     kategorieArtEEnum = createEEnum(KATEGORIE_ART);
@@ -1558,6 +1611,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEReference(getRezept_Tags(), this.getTag(), null, "tags", null, 1, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRezept_Notizen(), this.getNotiz(), null, "notizen", null, 0, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRezept_Personen(), ecorePackage.getELongObject(), "personen", "0", 0, 1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRezept_Bilder(), this.getBild(), null, "bilder", null, 0, -1, Rezept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(produktImportEClass, ProduktImport.class, "ProduktImport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getProduktImport_ImportedResource(), this.getProduktliste(), null, "importedResource", null, 1, 1, ProduktImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1661,6 +1715,10 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getPersonenquelle_PersonenBeschreibung(), ecorePackage.getEString(), "personenBeschreibung", null, 1, 1, Personenquelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(quelleEClass, Quelle.class, "Quelle", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(bildEClass, Bild.class, "Bild", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBild_AblagePfad(), ecorePackage.getEString(), "ablagePfad", null, 1, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBild_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 0, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");

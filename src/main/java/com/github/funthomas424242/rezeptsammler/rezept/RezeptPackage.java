@@ -180,13 +180,22 @@ public interface RezeptPackage extends EPackage
   int REZEPT__PERSONEN = 11;
 
   /**
+   * The feature id for the '<em><b>Bilder</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REZEPT__BILDER = 12;
+
+  /**
    * The number of structural features of the '<em>Rezept</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REZEPT_FEATURE_COUNT = 12;
+  int REZEPT_FEATURE_COUNT = 13;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImportImpl <em>Produkt Import</em>}' class.
@@ -1170,6 +1179,43 @@ public interface RezeptPackage extends EPackage
   int PERSONENQUELLE_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl <em>Bild</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBild()
+   * @generated
+   */
+  int BILD = 28;
+
+  /**
+   * The feature id for the '<em><b>Ablage Pfad</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BILD__ABLAGE_PFAD = 0;
+
+  /**
+   * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BILD__BESCHREIBUNG = 1;
+
+  /**
+   * The number of structural features of the '<em>Bild</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BILD_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1177,7 +1223,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getModifikationsArt()
    * @generated
    */
-  int MODIFIKATIONS_ART = 28;
+  int MODIFIKATIONS_ART = 29;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.KategorieArt <em>Kategorie Art</em>}' enum.
@@ -1187,7 +1233,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getKategorieArt()
    * @generated
    */
-  int KATEGORIE_ART = 29;
+  int KATEGORIE_ART = 30;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Verpackung <em>Verpackung</em>}' enum.
@@ -1197,7 +1243,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getVerpackung()
    * @generated
    */
-  int VERPACKUNG = 30;
+  int VERPACKUNG = 31;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Stoff <em>Stoff</em>}' enum.
@@ -1207,7 +1253,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getStoff()
    * @generated
    */
-  int STOFF = 31;
+  int STOFF = 32;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.DiaetArt <em>Diaet Art</em>}' enum.
@@ -1217,7 +1263,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getDiaetArt()
    * @generated
    */
-  int DIAET_ART = 32;
+  int DIAET_ART = 33;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Waehrung <em>Waehrung</em>}' enum.
@@ -1227,7 +1273,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getWaehrung()
    * @generated
    */
-  int WAEHRUNG = 33;
+  int WAEHRUNG = 34;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Masseinheit <em>Masseinheit</em>}' enum.
@@ -1237,7 +1283,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMasseinheit()
    * @generated
    */
-  int MASSEINHEIT = 34;
+  int MASSEINHEIT = 35;
 
 
   /**
@@ -1248,7 +1294,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMengenAngabe()
    * @generated
    */
-  int MENGEN_ANGABE = 35;
+  int MENGEN_ANGABE = 36;
 
 
   /**
@@ -1392,6 +1438,17 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EAttribute getRezept_Personen();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getBilder <em>Bilder</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Bilder</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Rezept#getBilder()
+   * @see #getRezept()
+   * @generated
+   */
+  EReference getRezept_Bilder();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.ProduktImport <em>Produkt Import</em>}'.
@@ -1629,6 +1686,38 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EClass getQuelle();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild <em>Bild</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bild</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Bild
+   * @generated
+   */
+  EClass getBild();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblagePfad <em>Ablage Pfad</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Ablage Pfad</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblagePfad()
+   * @see #getBild()
+   * @generated
+   */
+  EAttribute getBild_AblagePfad();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getBeschreibung <em>Beschreibung</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Beschreibung</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Bild#getBeschreibung()
+   * @see #getBild()
+   * @generated
+   */
+  EAttribute getBild_Beschreibung();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt <em>Arbeitsschritt</em>}'.
@@ -2412,6 +2501,14 @@ public interface RezeptPackage extends EPackage
     EAttribute REZEPT__PERSONEN = eINSTANCE.getRezept_Personen();
 
     /**
+     * The meta object literal for the '<em><b>Bilder</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REZEPT__BILDER = eINSTANCE.getRezept_Bilder();
+
+    /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProduktImportImpl <em>Produkt Import</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2596,6 +2693,32 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EClass QUELLE = eINSTANCE.getQuelle();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl <em>Bild</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.BildImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getBild()
+     * @generated
+     */
+    EClass BILD = eINSTANCE.getBild();
+
+    /**
+     * The meta object literal for the '<em><b>Ablage Pfad</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BILD__ABLAGE_PFAD = eINSTANCE.getBild_AblagePfad();
+
+    /**
+     * The meta object literal for the '<em><b>Beschreibung</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BILD__BESCHREIBUNG = eINSTANCE.getBild_Beschreibung();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl <em>Arbeitsschritt</em>}' class.

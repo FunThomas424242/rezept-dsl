@@ -25,6 +25,8 @@
         eType="#//Notiz" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="personen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bilder" upperBound="-1"
+        eType="#//Bild" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProduktImport">
     <eStructuralFeatures xsi:type="ecore:EReference" name="importedResource" lowerBound="1"
@@ -214,4 +216,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quelle" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bild">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ablagePfad" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

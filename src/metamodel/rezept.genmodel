@@ -78,6 +78,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/tags"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/notizen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Rezept/personen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Rezept/bilder"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//ProduktImport">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rezept.ecore#//ProduktImport/importedResource"/>
@@ -176,5 +177,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Personenquelle/personenBeschreibung"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Quelle"/>
+    <genClasses ecoreClass="rezept.ecore#//Bild">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/ablagePfad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/beschreibung"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

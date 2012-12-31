@@ -243,6 +243,15 @@ public interface RezeptFactory extends EFactory
   Personenquelle createPersonenquelle();
 
   /**
+   * Returns a new object of class '<em>Bild</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bild</em>'.
+   * @generated
+   */
+  Bild createBild();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

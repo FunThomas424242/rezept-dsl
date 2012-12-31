@@ -62,7 +62,7 @@ TOKENSTYLES {
 	"Hersteller:" COLOR #7F0055, BOLD;
 	"Quelle:", "übernommen", "überliefert", "aus"  COLOR #7F0055, BOLD;
 	"Aktion:" COLOR #7F0055, BOLD;
-	"Tipp:", "Anmerkung:", "Kommentar:" COLOR #7F0055, BOLD;
+	"Tipp:","Bild:", "Anmerkung:", "Kommentar:" COLOR #7F0055, BOLD;
 	"Zutat:", "Menge:", "mal." COLOR #7F0055, BOLD;
 }
 
@@ -93,7 +93,7 @@ RULES {
 				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
 				("Quelle:" quelle)? ("Ausreichend für" personen[NUMBER] "Personen.")?
 				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
-				produkte* zutaten+ schritte+ notizen*				    
+				produkte* zutaten+ schritte+ notizen* bilder*		    
 			    "}";
 	StoffTag ::=  "Stoff:" stoff['"','"'] "." ; 
 	BenutzerTag ::=  "Tag:" bezeichnung['"','"'] ".";
@@ -108,5 +108,6 @@ RULES {
 	Anmerkung ::= "Anmerkung:" text['"','"'] ;
 	Literaturquelle ::=  "übernommen" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
 	Personenquelle  ::=	 "überliefert" "von"  personenBeschreibung['"','"'] "." ;
+	Bild ::= "Bild:"  ablagePfad['"','"']  ("Text:" beschreibung['"','"'])? "." ;
 	
 }

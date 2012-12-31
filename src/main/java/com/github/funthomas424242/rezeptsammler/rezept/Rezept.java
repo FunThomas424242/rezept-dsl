@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getTags <em>Tags</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getNotizen <em>Notizen</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getPersonen <em>Personen</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Rezept#getBilder <em>Bilder</em>}</li>
  * </ul>
  * </p>
  *
@@ -305,5 +306,21 @@ public interface Rezept extends EObject
    * @generated
    */
   void setPersonen(Long value);
+
+  /**
+   * Returns the value of the '<em><b>Bilder</b></em>' containment reference list.
+   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.Bild}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Bilder</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Bilder</em>' containment reference list.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getRezept_Bilder()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Bild> getBilder();
 
 } // Rezept

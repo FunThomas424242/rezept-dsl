@@ -7,6 +7,7 @@
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
 import com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt;
+import com.github.funthomas424242.rezeptsammler.rezept.Bild;
 import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.Notiz;
 import com.github.funthomas424242.rezeptsammler.rezept.ProduktRef;
@@ -51,6 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getNotizen <em>Notizen</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getPersonen <em>Personen</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptImpl#getBilder <em>Bilder</em>}</li>
  * </ul>
  * </p>
  *
@@ -237,6 +239,16 @@ public class RezeptImpl extends EObjectImpl implements Rezept
    * @ordered
    */
   protected Long personen = PERSONEN_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getBilder() <em>Bilder</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBilder()
+   * @generated
+   * @ordered
+   */
+  protected EList<Bild> bilder;
 
   /**
    * <!-- begin-user-doc -->
@@ -520,6 +532,20 @@ public class RezeptImpl extends EObjectImpl implements Rezept
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Bild> getBilder()
+  {
+    if (bilder == null)
+    {
+      bilder = new EObjectContainmentEList<Bild>(Bild.class, this, RezeptPackage.REZEPT__BILDER);
+    }
+    return bilder;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -537,6 +563,8 @@ public class RezeptImpl extends EObjectImpl implements Rezept
         return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
       case RezeptPackage.REZEPT__NOTIZEN:
         return ((InternalEList<?>)getNotizen()).basicRemove(otherEnd, msgs);
+      case RezeptPackage.REZEPT__BILDER:
+        return ((InternalEList<?>)getBilder()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -575,6 +603,8 @@ public class RezeptImpl extends EObjectImpl implements Rezept
         return getNotizen();
       case RezeptPackage.REZEPT__PERSONEN:
         return getPersonen();
+      case RezeptPackage.REZEPT__BILDER:
+        return getBilder();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -631,6 +661,10 @@ public class RezeptImpl extends EObjectImpl implements Rezept
       case RezeptPackage.REZEPT__PERSONEN:
         setPersonen((Long)newValue);
         return;
+      case RezeptPackage.REZEPT__BILDER:
+        getBilder().clear();
+        getBilder().addAll((Collection<? extends Bild>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -681,6 +715,9 @@ public class RezeptImpl extends EObjectImpl implements Rezept
       case RezeptPackage.REZEPT__PERSONEN:
         setPersonen(PERSONEN_EDEFAULT);
         return;
+      case RezeptPackage.REZEPT__BILDER:
+        getBilder().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -719,6 +756,8 @@ public class RezeptImpl extends EObjectImpl implements Rezept
         return notizen != null && !notizen.isEmpty();
       case RezeptPackage.REZEPT__PERSONEN:
         return PERSONEN_EDEFAULT == null ? personen != null : !PERSONEN_EDEFAULT.equals(personen);
+      case RezeptPackage.REZEPT__BILDER:
+        return bilder != null && !bilder.isEmpty();
     }
     return super.eIsSet(featureID);
   }

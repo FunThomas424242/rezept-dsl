@@ -93,6 +93,7 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.LIZENZ: return createLizenz();
       case RezeptPackage.AUTOR: return createAutor();
       case RezeptPackage.PERSONENQUELLE: return createPersonenquelle();
+      case RezeptPackage.BILD: return createBild();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -422,6 +423,17 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     PersonenquelleImpl personenquelle = new PersonenquelleImpl();
     return personenquelle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Bild createBild()
+  {
+    BildImpl bild = new BildImpl();
+    return bild;
   }
 
   /**
