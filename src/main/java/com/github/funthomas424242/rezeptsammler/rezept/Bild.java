@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblagePfad <em>Ablage Pfad</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getLizenz <em>Lizenz</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getUrheber <em>Urheber</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblageOrt <em>Ablage Ort</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,32 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Bild extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Ablage Pfad</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Ablage Pfad</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Ablage Pfad</em>' attribute.
-   * @see #setAblagePfad(String)
-   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBild_AblagePfad()
-   * @model required="true"
-   * @generated
-   */
-  String getAblagePfad();
-
-  /**
-   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblagePfad <em>Ablage Pfad</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ablage Pfad</em>' attribute.
-   * @see #getAblagePfad()
-   * @generated
-   */
-  void setAblagePfad(String value);
-
   /**
    * Returns the value of the '<em><b>Beschreibung</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -128,5 +102,31 @@ public interface Bild extends EObject
    * @generated
    */
   void setUrheber(String value);
+
+  /**
+   * Returns the value of the '<em><b>Ablage Ort</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ablage Ort</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ablage Ort</em>' containment reference.
+   * @see #setAblageOrt(AblagePfad)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBild_AblageOrt()
+   * @model containment="true" required="true"
+   * @generated
+   */
+  AblagePfad getAblageOrt();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblageOrt <em>Ablage Ort</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ablage Ort</em>' containment reference.
+   * @see #getAblageOrt()
+   * @generated
+   */
+  void setAblageOrt(AblagePfad value);
 
 } // Bild

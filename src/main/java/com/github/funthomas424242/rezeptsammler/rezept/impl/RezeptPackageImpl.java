@@ -6,6 +6,7 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
+import com.github.funthomas424242.rezeptsammler.rezept.AblagePfad;
 import com.github.funthomas424242.rezeptsammler.rezept.Anmerkung;
 import com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt;
 import com.github.funthomas424242.rezeptsammler.rezept.Autor;
@@ -15,10 +16,12 @@ import com.github.funthomas424242.rezeptsammler.rezept.Bild;
 import com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung;
 import com.github.funthomas424242.rezeptsammler.rezept.DiaetArt;
 import com.github.funthomas424242.rezeptsammler.rezept.DiaetTag;
+import com.github.funthomas424242.rezeptsammler.rezept.InternetPfad;
 import com.github.funthomas424242.rezeptsammler.rezept.KategorieArt;
 import com.github.funthomas424242.rezeptsammler.rezept.Kommentar;
 import com.github.funthomas424242.rezeptsammler.rezept.Literaturquelle;
 import com.github.funthomas424242.rezeptsammler.rezept.Lizenz;
+import com.github.funthomas424242.rezeptsammler.rezept.LokalerPfad;
 import com.github.funthomas424242.rezeptsammler.rezept.Masseinheit;
 import com.github.funthomas424242.rezeptsammler.rezept.Menge;
 import com.github.funthomas424242.rezeptsammler.rezept.MengenAngabe;
@@ -110,6 +113,27 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass bildEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ablagePfadEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass internetPfadEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lokalerPfadEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -759,7 +783,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBild_AblagePfad()
+  public EAttribute getBild_Beschreibung()
   {
     return (EAttribute)bildEClass.getEStructuralFeatures().get(0);
   }
@@ -769,7 +793,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBild_Beschreibung()
+  public EAttribute getBild_Lizenz()
   {
     return (EAttribute)bildEClass.getEStructuralFeatures().get(1);
   }
@@ -779,7 +803,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBild_Lizenz()
+  public EAttribute getBild_Urheber()
   {
     return (EAttribute)bildEClass.getEStructuralFeatures().get(2);
   }
@@ -789,9 +813,59 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBild_Urheber()
+  public EReference getBild_AblageOrt()
   {
-    return (EAttribute)bildEClass.getEStructuralFeatures().get(3);
+    return (EReference)bildEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAblagePfad()
+  {
+    return ablagePfadEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInternetPfad()
+  {
+    return internetPfadEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInternetPfad_Url()
+  {
+    return (EAttribute)internetPfadEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLokalerPfad()
+  {
+    return lokalerPfadEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLokalerPfad_FileName()
+  {
+    return (EAttribute)lokalerPfadEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1574,10 +1648,18 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     quelleEClass = createEClass(QUELLE);
 
     bildEClass = createEClass(BILD);
-    createEAttribute(bildEClass, BILD__ABLAGE_PFAD);
     createEAttribute(bildEClass, BILD__BESCHREIBUNG);
     createEAttribute(bildEClass, BILD__LIZENZ);
     createEAttribute(bildEClass, BILD__URHEBER);
+    createEReference(bildEClass, BILD__ABLAGE_ORT);
+
+    ablagePfadEClass = createEClass(ABLAGE_PFAD);
+
+    internetPfadEClass = createEClass(INTERNET_PFAD);
+    createEAttribute(internetPfadEClass, INTERNET_PFAD__URL);
+
+    lokalerPfadEClass = createEClass(LOKALER_PFAD);
+    createEAttribute(lokalerPfadEClass, LOKALER_PFAD__FILE_NAME);
 
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
@@ -1629,6 +1711,8 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     bestimmteMengeEClass.getESuperTypes().add(this.getMenge());
     unbestimmteMengeEClass.getESuperTypes().add(this.getMenge());
     personenquelleEClass.getESuperTypes().add(this.getQuelle());
+    internetPfadEClass.getESuperTypes().add(this.getAblagePfad());
+    lokalerPfadEClass.getESuperTypes().add(this.getAblagePfad());
 
     // Initialize classes and features; add operations and parameters
     initEClass(rezeptEClass, Rezept.class, "Rezept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1751,10 +1835,18 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEClass(quelleEClass, Quelle.class, "Quelle", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(bildEClass, Bild.class, "Bild", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBild_AblagePfad(), ecorePackage.getEString(), "ablagePfad", null, 1, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBild_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 0, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBild_Lizenz(), ecorePackage.getEString(), "lizenz", null, 0, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBild_Urheber(), ecorePackage.getEString(), "urheber", null, 0, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBild_AblageOrt(), this.getAblagePfad(), null, "ablageOrt", null, 1, 1, Bild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ablagePfadEClass, AblagePfad.class, "AblagePfad", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(internetPfadEClass, InternetPfad.class, "InternetPfad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInternetPfad_Url(), ecorePackage.getEString(), "url", null, 1, 1, InternetPfad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(lokalerPfadEClass, LokalerPfad.class, "LokalerPfad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLokalerPfad_FileName(), ecorePackage.getEString(), "fileName", null, 1, 1, LokalerPfad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");

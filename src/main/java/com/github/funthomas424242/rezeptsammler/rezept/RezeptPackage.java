@@ -1198,22 +1198,13 @@ public interface RezeptPackage extends EPackage
   int BILD = 28;
 
   /**
-   * The feature id for the '<em><b>Ablage Pfad</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BILD__ABLAGE_PFAD = 0;
-
-  /**
    * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BILD__BESCHREIBUNG = 1;
+  int BILD__BESCHREIBUNG = 0;
 
   /**
    * The feature id for the '<em><b>Lizenz</b></em>' attribute.
@@ -1222,7 +1213,7 @@ public interface RezeptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILD__LIZENZ = 2;
+  int BILD__LIZENZ = 1;
 
   /**
    * The feature id for the '<em><b>Urheber</b></em>' attribute.
@@ -1231,7 +1222,16 @@ public interface RezeptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILD__URHEBER = 3;
+  int BILD__URHEBER = 2;
+
+  /**
+   * The feature id for the '<em><b>Ablage Ort</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BILD__ABLAGE_ORT = 3;
 
   /**
    * The number of structural features of the '<em>Bild</em>' class.
@@ -1243,6 +1243,81 @@ public interface RezeptPackage extends EPackage
   int BILD_FEATURE_COUNT = 4;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.LokalerPfadImpl <em>Lokaler Pfad</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.LokalerPfadImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getLokalerPfad()
+   * @generated
+   */
+  int LOKALER_PFAD = 31;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AblagePfadImpl <em>Ablage Pfad</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.AblagePfadImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getAblagePfad()
+   * @generated
+   */
+  int ABLAGE_PFAD = 29;
+
+  /**
+   * The number of structural features of the '<em>Ablage Pfad</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABLAGE_PFAD_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.InternetPfadImpl <em>Internet Pfad</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.InternetPfadImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getInternetPfad()
+   * @generated
+   */
+  int INTERNET_PFAD = 30;
+
+  /**
+   * The feature id for the '<em><b>Url</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERNET_PFAD__URL = ABLAGE_PFAD_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Internet Pfad</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERNET_PFAD_FEATURE_COUNT = ABLAGE_PFAD_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>File Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOKALER_PFAD__FILE_NAME = ABLAGE_PFAD_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Lokaler Pfad</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOKALER_PFAD_FEATURE_COUNT = ABLAGE_PFAD_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1250,7 +1325,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getModifikationsArt()
    * @generated
    */
-  int MODIFIKATIONS_ART = 29;
+  int MODIFIKATIONS_ART = 32;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.KategorieArt <em>Kategorie Art</em>}' enum.
@@ -1260,7 +1335,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getKategorieArt()
    * @generated
    */
-  int KATEGORIE_ART = 30;
+  int KATEGORIE_ART = 33;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Verpackung <em>Verpackung</em>}' enum.
@@ -1270,7 +1345,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getVerpackung()
    * @generated
    */
-  int VERPACKUNG = 31;
+  int VERPACKUNG = 34;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Stoff <em>Stoff</em>}' enum.
@@ -1280,7 +1355,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getStoff()
    * @generated
    */
-  int STOFF = 32;
+  int STOFF = 35;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.DiaetArt <em>Diaet Art</em>}' enum.
@@ -1290,7 +1365,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getDiaetArt()
    * @generated
    */
-  int DIAET_ART = 33;
+  int DIAET_ART = 36;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Waehrung <em>Waehrung</em>}' enum.
@@ -1300,7 +1375,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getWaehrung()
    * @generated
    */
-  int WAEHRUNG = 34;
+  int WAEHRUNG = 37;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Masseinheit <em>Masseinheit</em>}' enum.
@@ -1310,7 +1385,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMasseinheit()
    * @generated
    */
-  int MASSEINHEIT = 35;
+  int MASSEINHEIT = 38;
 
 
   /**
@@ -1321,7 +1396,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMengenAngabe()
    * @generated
    */
-  int MENGEN_ANGABE = 36;
+  int MENGEN_ANGABE = 39;
 
 
   /**
@@ -1725,17 +1800,6 @@ public interface RezeptPackage extends EPackage
   EClass getBild();
 
   /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblagePfad <em>Ablage Pfad</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Ablage Pfad</em>'.
-   * @see com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblagePfad()
-   * @see #getBild()
-   * @generated
-   */
-  EAttribute getBild_AblagePfad();
-
-  /**
    * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getBeschreibung <em>Beschreibung</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1767,6 +1831,69 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EAttribute getBild_Urheber();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblageOrt <em>Ablage Ort</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ablage Ort</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Bild#getAblageOrt()
+   * @see #getBild()
+   * @generated
+   */
+  EReference getBild_AblageOrt();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.AblagePfad <em>Ablage Pfad</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ablage Pfad</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.AblagePfad
+   * @generated
+   */
+  EClass getAblagePfad();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.InternetPfad <em>Internet Pfad</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Internet Pfad</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.InternetPfad
+   * @generated
+   */
+  EClass getInternetPfad();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.InternetPfad#getUrl <em>Url</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Url</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.InternetPfad#getUrl()
+   * @see #getInternetPfad()
+   * @generated
+   */
+  EAttribute getInternetPfad_Url();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.LokalerPfad <em>Lokaler Pfad</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Lokaler Pfad</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.LokalerPfad
+   * @generated
+   */
+  EClass getLokalerPfad();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.LokalerPfad#getFileName <em>File Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>File Name</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.LokalerPfad#getFileName()
+   * @see #getLokalerPfad()
+   * @generated
+   */
+  EAttribute getLokalerPfad_FileName();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt <em>Arbeitsschritt</em>}'.
@@ -2765,14 +2892,6 @@ public interface RezeptPackage extends EPackage
     EClass BILD = eINSTANCE.getBild();
 
     /**
-     * The meta object literal for the '<em><b>Ablage Pfad</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BILD__ABLAGE_PFAD = eINSTANCE.getBild_AblagePfad();
-
-    /**
      * The meta object literal for the '<em><b>Beschreibung</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2795,6 +2914,60 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EAttribute BILD__URHEBER = eINSTANCE.getBild_Urheber();
+
+    /**
+     * The meta object literal for the '<em><b>Ablage Ort</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BILD__ABLAGE_ORT = eINSTANCE.getBild_AblageOrt();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AblagePfadImpl <em>Ablage Pfad</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.AblagePfadImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getAblagePfad()
+     * @generated
+     */
+    EClass ABLAGE_PFAD = eINSTANCE.getAblagePfad();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.InternetPfadImpl <em>Internet Pfad</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.InternetPfadImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getInternetPfad()
+     * @generated
+     */
+    EClass INTERNET_PFAD = eINSTANCE.getInternetPfad();
+
+    /**
+     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INTERNET_PFAD__URL = eINSTANCE.getInternetPfad_Url();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.LokalerPfadImpl <em>Lokaler Pfad</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.LokalerPfadImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getLokalerPfad()
+     * @generated
+     */
+    EClass LOKALER_PFAD = eINSTANCE.getLokalerPfad();
+
+    /**
+     * The meta object literal for the '<em><b>File Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LOKALER_PFAD__FILE_NAME = eINSTANCE.getLokalerPfad_FileName();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl <em>Arbeitsschritt</em>}' class.

@@ -108,7 +108,10 @@ RULES {
 	Anmerkung ::= "Anmerkung:" text['"','"'] ;
 	Literaturquelle ::=  "übernommen" modifikationsArt['"','"'] "aus" beschreibung['"','"'] "." ;
 	Personenquelle  ::=	 "überliefert" "von"  personenBeschreibung['"','"'] "." ;
-	Bild ::= "Bild:"  ablagePfad['"','"']  ("Text:" beschreibung['"','"'])? 
+	Bild ::= "Bild:"  ablageOrt  ("Text:" beschreibung['"','"'])?
 			 ("Lizenz:" lizenz['"','"'])? ("Urheber:" urheber['"','"'])? "." ;
+	InternetPfad ::= "URL:" url['"','"'];
+	LokalerPfad ::= "FileName:" fileName['"','"'];
+	
 	
 }

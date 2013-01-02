@@ -224,6 +224,21 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
         return createBildAdapter();
       }
       @Override
+      public Adapter caseAblagePfad(AblagePfad object)
+      {
+        return createAblagePfadAdapter();
+      }
+      @Override
+      public Adapter caseInternetPfad(InternetPfad object)
+      {
+        return createInternetPfadAdapter();
+      }
+      @Override
+      public Adapter caseLokalerPfad(LokalerPfad object)
+      {
+        return createLokalerPfadAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -346,6 +361,51 @@ public class RezeptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBildAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.AblagePfad <em>Ablage Pfad</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.AblagePfad
+   * @generated
+   */
+  public Adapter createAblagePfadAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.InternetPfad <em>Internet Pfad</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.InternetPfad
+   * @generated
+   */
+  public Adapter createInternetPfadAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rezeptsammler.rezept.LokalerPfad <em>Lokaler Pfad</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.LokalerPfad
+   * @generated
+   */
+  public Adapter createLokalerPfadAdapter()
   {
     return null;
   }

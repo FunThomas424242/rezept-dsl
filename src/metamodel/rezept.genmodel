@@ -187,10 +187,17 @@
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Quelle"/>
     <genClasses ecoreClass="rezept.ecore#//Bild">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/ablagePfad"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/beschreibung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/lizenz"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Bild/urheber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rezept.ecore#//Bild/ablageOrt"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="rezept.ecore#//AblagePfad"/>
+    <genClasses ecoreClass="rezept.ecore#//InternetPfad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//InternetPfad/url"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//LokalerPfad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//LokalerPfad/fileName"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -94,6 +94,8 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
       case RezeptPackage.AUTOR: return createAutor();
       case RezeptPackage.PERSONENQUELLE: return createPersonenquelle();
       case RezeptPackage.BILD: return createBild();
+      case RezeptPackage.INTERNET_PFAD: return createInternetPfad();
+      case RezeptPackage.LOKALER_PFAD: return createLokalerPfad();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -434,6 +436,28 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     BildImpl bild = new BildImpl();
     return bild;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InternetPfad createInternetPfad()
+  {
+    InternetPfadImpl internetPfad = new InternetPfadImpl();
+    return internetPfad;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LokalerPfad createLokalerPfad()
+  {
+    LokalerPfadImpl lokalerPfad = new LokalerPfadImpl();
+    return lokalerPfad;
   }
 
   /**

@@ -289,6 +289,29 @@ public class RezeptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RezeptPackage.ABLAGE_PFAD:
+      {
+        AblagePfad ablagePfad = (AblagePfad)theEObject;
+        T result = caseAblagePfad(ablagePfad);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.INTERNET_PFAD:
+      {
+        InternetPfad internetPfad = (InternetPfad)theEObject;
+        T result = caseInternetPfad(internetPfad);
+        if (result == null) result = caseAblagePfad(internetPfad);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RezeptPackage.LOKALER_PFAD:
+      {
+        LokalerPfad lokalerPfad = (LokalerPfad)theEObject;
+        T result = caseLokalerPfad(lokalerPfad);
+        if (result == null) result = caseAblagePfad(lokalerPfad);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -401,6 +424,54 @@ public class RezeptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBild(Bild object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ablage Pfad</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ablage Pfad</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAblagePfad(AblagePfad object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Internet Pfad</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Internet Pfad</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInternetPfad(InternetPfad object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Lokaler Pfad</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Lokaler Pfad</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLokalerPfad(LokalerPfad object)
   {
     return null;
   }

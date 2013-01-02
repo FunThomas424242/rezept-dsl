@@ -252,6 +252,24 @@ public interface RezeptFactory extends EFactory
   Bild createBild();
 
   /**
+   * Returns a new object of class '<em>Internet Pfad</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Internet Pfad</em>'.
+   * @generated
+   */
+  InternetPfad createInternetPfad();
+
+  /**
+   * Returns a new object of class '<em>Lokaler Pfad</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Lokaler Pfad</em>'.
+   * @generated
+   */
+  LokalerPfad createLokalerPfad();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
