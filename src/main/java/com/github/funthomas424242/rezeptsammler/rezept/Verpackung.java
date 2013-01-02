@@ -107,7 +107,15 @@ public enum Verpackung implements Enumerator
    * @generated
    * @ordered
    */
-  NETZ(8, "Netz", "Netz");
+  NETZ(8, "Netz", "Netz"), /**
+   * The '<em><b>Tüte</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #TÜTE_VALUE
+   * @generated
+   * @ordered
+   */
+  TÜTE(9, "Tüte", "T\u00fcte");
 
   /**
    * The '<em><b>Packung</b></em>' literal value.
@@ -245,6 +253,21 @@ public enum Verpackung implements Enumerator
   public static final int NETZ_VALUE = 8;
 
   /**
+   * The '<em><b>Tüte</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Tüte</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #TÜTE
+   * @model name="Tüte"
+   * @generated
+   * @ordered
+   */
+  public static final int TÜTE_VALUE = 9;
+
+  /**
    * An array of all the '<em><b>Verpackung</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -262,6 +285,7 @@ public enum Verpackung implements Enumerator
       FLASCHE,
       BECHER,
       NETZ,
+      TÜTE,
     };
 
   /**
@@ -329,6 +353,7 @@ public enum Verpackung implements Enumerator
       case FLASCHE_VALUE: return FLASCHE;
       case BECHER_VALUE: return BECHER;
       case NETZ_VALUE: return NETZ;
+      case TÜTE_VALUE: return TÜTE;
     }
     return null;
   }

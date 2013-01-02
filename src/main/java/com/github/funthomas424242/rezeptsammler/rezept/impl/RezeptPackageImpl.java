@@ -1199,6 +1199,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBestimmteMenge_Details()
+  {
+    return (EAttribute)bestimmteMengeEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getUnbestimmteMenge()
   {
     return unbestimmteMengeEClass;
@@ -1540,6 +1550,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     bestimmteMengeEClass = createEClass(BESTIMMTE_MENGE);
     createEAttribute(bestimmteMengeEClass, BESTIMMTE_MENGE__BETRAG);
     createEAttribute(bestimmteMengeEClass, BESTIMMTE_MENGE__EINHEIT);
+    createEAttribute(bestimmteMengeEClass, BESTIMMTE_MENGE__DETAILS);
 
     unbestimmteMengeEClass = createEClass(UNBESTIMMTE_MENGE);
     createEAttribute(unbestimmteMengeEClass, UNBESTIMMTE_MENGE__MENGE);
@@ -1716,6 +1727,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEClass(bestimmteMengeEClass, BestimmteMenge.class, "BestimmteMenge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBestimmteMenge_Betrag(), ecorePackage.getEFloatObject(), "betrag", "1.5", 1, 1, BestimmteMenge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBestimmteMenge_Einheit(), this.getMasseinheit(), "einheit", null, 1, 1, BestimmteMenge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBestimmteMenge_Details(), ecorePackage.getEString(), "details", null, 0, 1, BestimmteMenge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(unbestimmteMengeEClass, UnbestimmteMenge.class, "UnbestimmteMenge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getUnbestimmteMenge_Menge(), this.getMengenAngabe(), "menge", null, 1, 1, UnbestimmteMenge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1766,6 +1778,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(verpackungEEnum, Verpackung.FLASCHE);
     addEEnumLiteral(verpackungEEnum, Verpackung.BECHER);
     addEEnumLiteral(verpackungEEnum, Verpackung.NETZ);
+    addEEnumLiteral(verpackungEEnum, Verpackung.TÜTE);
 
     initEEnum(stoffEEnum, Stoff.class, "Stoff");
     addEEnumLiteral(stoffEEnum, Stoff.LAKTOSE);
@@ -1796,6 +1809,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(masseinheitEEnum, Masseinheit.ML);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.KNOLLE);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.ZEHE);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.ZEHEN);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.SCHEIBE);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.SCHEIBEN);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.STANGE);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.STANGEN);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.BUND);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.BLATT);
 
     initEEnum(mengenAngabeEEnum, MengenAngabe.class, "MengenAngabe");
     addEEnumLiteral(mengenAngabeEEnum, MengenAngabe.ETWAS);

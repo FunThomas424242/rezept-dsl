@@ -317,6 +317,10 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Becher"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_QjyCoWlEEeGR4LXOBV8cYw"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_R9P3AFUEEeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Tüte"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_R9P3AVUEEeKjmbm-qCMsBA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_EFFZ8l2WEeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_EFFZ812WEeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_EFFZ9F2WEeGqYtVkHPgHSw"/>
@@ -589,6 +593,14 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Becher"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_sw4foWlGEeGR4LXOBV8cYw"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_NHNVIFUEEeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Blatt"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NHNVIVUEEeKjmbm-qCMsBA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_JCaKUFUBEeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Bund"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JCaxYFUBEeKjmbm-qCMsBA"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_dOHAMGlEEeGR4LXOBV8cYw" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tasse"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_dOHAMWlEEeGR4LXOBV8cYw"/>
@@ -620,6 +632,26 @@
       <children xmi:type="notation:Node" xmi:id="_pluqwFLAEeKWrs_0Lx7EXA" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Zehe"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_pluqwVLAEeKWrs_0Lx7EXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_0Mv8UFT7EeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Zehen"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0Mv8UVT7EeKjmbm-qCMsBA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_1x0csFT7EeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Scheibe"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1x0csVT7EeKjmbm-qCMsBA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_3tYKcFT7EeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Scheiben"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3tYKcVT7EeKjmbm-qCMsBA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_5FCusFUAEeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Stange"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5FCusVUAEeKjmbm-qCMsBA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Gl0zIFUBEeKjmbm-qCMsBA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Stangen"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Gl0zIVUBEeKjmbm-qCMsBA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_8hTfwGX2EeG6Z-1mcDLt8g"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_8hTfwWX2EeG6Z-1mcDLt8g"/>
@@ -703,6 +735,10 @@
       <children xmi:type="notation:Node" xmi:id="_Vqb_sF2ZEeGqYtVkHPgHSw" type="2001">
         <element xmi:type="ecore:EAttribute" href="rezept.ecore#//BestimmteMenge/einheit"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Vqb_sV2ZEeGqYtVkHPgHSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_sg_KgVT7EeKjmbm-qCMsBA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//BestimmteMenge/details"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_sg_xkFT7EeKjmbm-qCMsBA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_yLmt0mlEEeGR4LXOBV8cYw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_yLmt02lEEeGR4LXOBV8cYw"/>

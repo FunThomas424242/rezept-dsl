@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BestimmteMengeImpl#getBetrag <em>Betrag</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BestimmteMengeImpl#getEinheit <em>Einheit</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BestimmteMengeImpl#getDetails <em>Details</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,6 +72,26 @@ public class BestimmteMengeImpl extends MengeImpl implements BestimmteMenge
    * @ordered
    */
   protected Masseinheit einheit = EINHEIT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDetails() <em>Details</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDetails()
+   * @generated
+   * @ordered
+   */
+  protected static final String DETAILS_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDetails() <em>Details</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDetails()
+   * @generated
+   * @ordered
+   */
+  protected String details = DETAILS_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -144,6 +165,29 @@ public class BestimmteMengeImpl extends MengeImpl implements BestimmteMenge
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getDetails()
+  {
+    return details;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDetails(String newDetails)
+  {
+    String oldDetails = details;
+    details = newDetails;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.BESTIMMTE_MENGE__DETAILS, oldDetails, details));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -153,6 +197,8 @@ public class BestimmteMengeImpl extends MengeImpl implements BestimmteMenge
         return getBetrag();
       case RezeptPackage.BESTIMMTE_MENGE__EINHEIT:
         return getEinheit();
+      case RezeptPackage.BESTIMMTE_MENGE__DETAILS:
+        return getDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -172,6 +218,9 @@ public class BestimmteMengeImpl extends MengeImpl implements BestimmteMenge
         return;
       case RezeptPackage.BESTIMMTE_MENGE__EINHEIT:
         setEinheit((Masseinheit)newValue);
+        return;
+      case RezeptPackage.BESTIMMTE_MENGE__DETAILS:
+        setDetails((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -193,6 +242,9 @@ public class BestimmteMengeImpl extends MengeImpl implements BestimmteMenge
       case RezeptPackage.BESTIMMTE_MENGE__EINHEIT:
         setEinheit(EINHEIT_EDEFAULT);
         return;
+      case RezeptPackage.BESTIMMTE_MENGE__DETAILS:
+        setDetails(DETAILS_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -211,6 +263,8 @@ public class BestimmteMengeImpl extends MengeImpl implements BestimmteMenge
         return BETRAG_EDEFAULT == null ? betrag != null : !BETRAG_EDEFAULT.equals(betrag);
       case RezeptPackage.BESTIMMTE_MENGE__EINHEIT:
         return einheit != EINHEIT_EDEFAULT;
+      case RezeptPackage.BESTIMMTE_MENGE__DETAILS:
+        return DETAILS_EDEFAULT == null ? details != null : !DETAILS_EDEFAULT.equals(details);
     }
     return super.eIsSet(featureID);
   }
@@ -230,6 +284,8 @@ public class BestimmteMengeImpl extends MengeImpl implements BestimmteMenge
     result.append(betrag);
     result.append(", einheit: ");
     result.append(einheit);
+    result.append(", details: ");
+    result.append(details);
     result.append(')');
     return result.toString();
   }

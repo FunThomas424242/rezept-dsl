@@ -27,6 +27,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Flasche"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Becher"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Netz"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Tüte"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Stoff">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Laktose"/>
@@ -57,6 +58,13 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/ml"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Knolle"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Zehe"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Zehen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Scheibe"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Scheiben"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Stange"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Stangen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Bund"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Blatt"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/etwas"/>
@@ -156,6 +164,7 @@
     <genClasses ecoreClass="rezept.ecore#//BestimmteMenge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BestimmteMenge/betrag"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BestimmteMenge/einheit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//BestimmteMenge/details"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//UnbestimmteMenge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//UnbestimmteMenge/menge"/>

@@ -149,7 +149,63 @@ public enum Masseinheit implements Enumerator
    * @generated
    * @ordered
    */
-  ZEHE(13, "Zehe", "Zehe");
+  ZEHE(13, "Zehe", "Zehe"), /**
+   * The '<em><b>Zehen</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ZEHEN_VALUE
+   * @generated
+   * @ordered
+   */
+  ZEHEN(14, "Zehen", "Zehen"), /**
+   * The '<em><b>Scheibe</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #SCHEIBE_VALUE
+   * @generated
+   * @ordered
+   */
+  SCHEIBE(15, "Scheibe", "Scheibe"), /**
+   * The '<em><b>Scheiben</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #SCHEIBEN_VALUE
+   * @generated
+   * @ordered
+   */
+  SCHEIBEN(16, "Scheiben", "Scheiben"), /**
+   * The '<em><b>Stange</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #STANGE_VALUE
+   * @generated
+   * @ordered
+   */
+  STANGE(17, "Stange", "Stange"), /**
+   * The '<em><b>Stangen</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #STANGEN_VALUE
+   * @generated
+   * @ordered
+   */
+  STANGEN(18, "Stangen", "Stangen"), /**
+   * The '<em><b>Bund</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #BUND_VALUE
+   * @generated
+   * @ordered
+   */
+  BUND(19, "Bund", "Bund"), /**
+   * The '<em><b>Blatt</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #BLATT_VALUE
+   * @generated
+   * @ordered
+   */
+  BLATT(20, "Blatt", "Blatt");
 
   /**
    * The '<em><b>Prise</b></em>' literal value.
@@ -362,6 +418,111 @@ public enum Masseinheit implements Enumerator
   public static final int ZEHE_VALUE = 13;
 
   /**
+   * The '<em><b>Zehen</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Zehen</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ZEHEN
+   * @model name="Zehen"
+   * @generated
+   * @ordered
+   */
+  public static final int ZEHEN_VALUE = 14;
+
+  /**
+   * The '<em><b>Scheibe</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Scheibe</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #SCHEIBE
+   * @model name="Scheibe"
+   * @generated
+   * @ordered
+   */
+  public static final int SCHEIBE_VALUE = 15;
+
+  /**
+   * The '<em><b>Scheiben</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Scheiben</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #SCHEIBEN
+   * @model name="Scheiben"
+   * @generated
+   * @ordered
+   */
+  public static final int SCHEIBEN_VALUE = 16;
+
+  /**
+   * The '<em><b>Stange</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Stange</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #STANGE
+   * @model name="Stange"
+   * @generated
+   * @ordered
+   */
+  public static final int STANGE_VALUE = 17;
+
+  /**
+   * The '<em><b>Stangen</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Stangen</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #STANGEN
+   * @model name="Stangen"
+   * @generated
+   * @ordered
+   */
+  public static final int STANGEN_VALUE = 18;
+
+  /**
+   * The '<em><b>Bund</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Bund</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #BUND
+   * @model name="Bund"
+   * @generated
+   * @ordered
+   */
+  public static final int BUND_VALUE = 19;
+
+  /**
+   * The '<em><b>Blatt</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Blatt</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #BLATT
+   * @model name="Blatt"
+   * @generated
+   * @ordered
+   */
+  public static final int BLATT_VALUE = 20;
+
+  /**
    * An array of all the '<em><b>Masseinheit</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -384,6 +545,13 @@ public enum Masseinheit implements Enumerator
       ML,
       KNOLLE,
       ZEHE,
+      ZEHEN,
+      SCHEIBE,
+      SCHEIBEN,
+      STANGE,
+      STANGEN,
+      BUND,
+      BLATT,
     };
 
   /**
@@ -456,6 +624,13 @@ public enum Masseinheit implements Enumerator
       case ML_VALUE: return ML;
       case KNOLLE_VALUE: return KNOLLE;
       case ZEHE_VALUE: return ZEHE;
+      case ZEHEN_VALUE: return ZEHEN;
+      case SCHEIBE_VALUE: return SCHEIBE;
+      case SCHEIBEN_VALUE: return SCHEIBEN;
+      case STANGE_VALUE: return STANGE;
+      case STANGEN_VALUE: return STANGEN;
+      case BUND_VALUE: return BUND;
+      case BLATT_VALUE: return BLATT;
     }
     return null;
   }

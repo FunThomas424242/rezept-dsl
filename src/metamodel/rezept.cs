@@ -100,7 +100,7 @@ RULES {
 	DiaetTag ::= "Diät:" diaet['"','"'] "." ;
 	ProduktRef ::= "ProduktRef:" produkt['"','"'] "Menge:" menge['"','"'] "mal.";
 	Zutat ::= "Zutat:" name['"','"'] menge    ;
-	BestimmteMenge ::= "Menge:" betrag['"','"'] einheit['"','"'] ".";
+	BestimmteMenge ::= "Menge:" betrag['"','"'] details['"','"']? einheit['"','"'] ".";
 	UnbestimmteMenge ::= menge['"','"'] ".";
 	Arbeitsschritt ::= "Aktion:" beschreibung['"','"'];
 	Tipp ::= "Tipp:"  text['"','"'] ;

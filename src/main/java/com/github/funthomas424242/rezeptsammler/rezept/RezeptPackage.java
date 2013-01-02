@@ -994,13 +994,22 @@ public interface RezeptPackage extends EPackage
   int BESTIMMTE_MENGE__EINHEIT = MENGE_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Details</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BESTIMMTE_MENGE__DETAILS = MENGE_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>Bestimmte Menge</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BESTIMMTE_MENGE_FEATURE_COUNT = MENGE_FEATURE_COUNT + 2;
+  int BESTIMMTE_MENGE_FEATURE_COUNT = MENGE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.UnbestimmteMengeImpl <em>Unbestimmte Menge</em>}' class.
@@ -2183,6 +2192,17 @@ public interface RezeptPackage extends EPackage
   EAttribute getBestimmteMenge_Einheit();
 
   /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge#getDetails <em>Details</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Details</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge#getDetails()
+   * @see #getBestimmteMenge()
+   * @generated
+   */
+  EAttribute getBestimmteMenge_Details();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.UnbestimmteMenge <em>Unbestimmte Menge</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3129,6 +3149,14 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EAttribute BESTIMMTE_MENGE__EINHEIT = eINSTANCE.getBestimmteMenge_Einheit();
+
+    /**
+     * The meta object literal for the '<em><b>Details</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BESTIMMTE_MENGE__DETAILS = eINSTANCE.getBestimmteMenge_Details();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.UnbestimmteMengeImpl <em>Unbestimmte Menge</em>}' class.

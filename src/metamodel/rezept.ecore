@@ -107,6 +107,7 @@
     <eLiterals name="Flasche" value="6"/>
     <eLiterals name="Becher" value="7"/>
     <eLiterals name="Netz" value="8"/>
+    <eLiterals name="Tüte" value="9" literal="Tüte"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Zutat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -172,6 +173,13 @@
     <eLiterals name="ml" value="11"/>
     <eLiterals name="Knolle" value="12"/>
     <eLiterals name="Zehe" value="13"/>
+    <eLiterals name="Zehen" value="14"/>
+    <eLiterals name="Scheibe" value="15"/>
+    <eLiterals name="Scheiben" value="16"/>
+    <eLiterals name="Stange" value="17"/>
+    <eLiterals name="Stangen" value="18"/>
+    <eLiterals name="Bund" value="19"/>
+    <eLiterals name="Blatt" value="20"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anmerkung" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Notiz" abstract="true">
@@ -183,6 +191,7 @@
         defaultValueLiteral="1.5"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="einheit" lowerBound="1"
         eType="#//Masseinheit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="details" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnbestimmteMenge" eSuperTypes="#//Menge">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="menge" lowerBound="1" eType="#//MengenAngabe"/>

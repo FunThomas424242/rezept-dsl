@@ -17,6 +17,7 @@ package com.github.funthomas424242.rezeptsammler.rezept;
  * <ul>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge#getBetrag <em>Betrag</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge#getEinheit <em>Einheit</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge#getDetails <em>Details</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,5 +82,31 @@ public interface BestimmteMenge extends Menge
    * @generated
    */
   void setEinheit(Masseinheit value);
+
+  /**
+   * Returns the value of the '<em><b>Details</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Details</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Details</em>' attribute.
+   * @see #setDetails(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBestimmteMenge_Details()
+   * @model
+   * @generated
+   */
+  String getDetails();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.BestimmteMenge#getDetails <em>Details</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Details</em>' attribute.
+   * @see #getDetails()
+   * @generated
+   */
+  void setDetails(String value);
 
 } // BestimmteMenge
