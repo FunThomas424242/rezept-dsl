@@ -75,7 +75,7 @@ RULES {
 	BuchBeschreibung ::= "Buch" "{" imports* "Titel:" titel['"','"'] ";" autoren+ 
 	            ("Vorwort:" vorwort['"','"'])?  lizenz? ("Veröffentlicht am:" datumPublished[DATUM] ".")?  "}";
 	Autor ::= "Autor:" "{" "Vorname:" vorname['"','"'] "Nachname:" nachname['"','"'] 
-			   "Organisation:" organisationsName['"','"']? "}";
+			   "Organisation:" organisationsName['"','"']? "ModifikationsNotiz:" modifikationsNotiz['"','"']  "}";
 	Lizenz ::= "Lizenshinweis:" hinweis['"','"'] ("Lizenstext:" text[])? ;
 	RezeptImport ::=  "import rezepte"  importedResource['"','"'] ";" ;
 	Rezeptliste ::= "Rezeptliste" name['"','"']   ";" imports* rezepte+ ;	

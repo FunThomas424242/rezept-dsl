@@ -863,6 +863,10 @@
         <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Autor/organisationsName"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_2pX_AWvIEeGiaPJWkxOY-w"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_D-rMYWASEeKawZ-K577S9Q" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//Autor/modifikationsNotiz"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_D-rMYmASEeKawZ-K577S9Q"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_mSsEcmvIEeGiaPJWkxOY-w"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_mSsEc2vIEeGiaPJWkxOY-w"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_mSsEdGvIEeGiaPJWkxOY-w"/>

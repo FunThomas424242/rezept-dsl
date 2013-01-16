@@ -219,6 +219,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nachname" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="organisationsName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifikationsNotiz" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Personenquelle" eSuperTypes="#//Quelle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="personenBeschreibung" lowerBound="1"

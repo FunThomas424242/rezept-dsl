@@ -1403,6 +1403,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getAutor_ModifikationsNotiz()
+  {
+    return (EAttribute)autorEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getPersonenquelle()
   {
     return personenquelleEClass;
@@ -1641,6 +1651,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEAttribute(autorEClass, AUTOR__VORNAME);
     createEAttribute(autorEClass, AUTOR__NACHNAME);
     createEAttribute(autorEClass, AUTOR__ORGANISATIONS_NAME);
+    createEAttribute(autorEClass, AUTOR__MODIFIKATIONS_NOTIZ);
 
     personenquelleEClass = createEClass(PERSONENQUELLE);
     createEAttribute(personenquelleEClass, PERSONENQUELLE__PERSONEN_BESCHREIBUNG);
@@ -1828,6 +1839,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getAutor_Vorname(), ecorePackage.getEString(), "vorname", null, 1, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAutor_Nachname(), ecorePackage.getEString(), "nachname", null, 1, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAutor_OrganisationsName(), ecorePackage.getEString(), "organisationsName", null, 0, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAutor_ModifikationsNotiz(), ecorePackage.getEString(), "modifikationsNotiz", null, 1, 1, Autor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(personenquelleEClass, Personenquelle.class, "Personenquelle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPersonenquelle_PersonenBeschreibung(), ecorePackage.getEString(), "personenBeschreibung", null, 1, 1, Personenquelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

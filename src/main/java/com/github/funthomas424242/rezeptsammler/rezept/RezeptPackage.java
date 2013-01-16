@@ -1151,13 +1151,22 @@ public interface RezeptPackage extends EPackage
   int AUTOR__ORGANISATIONS_NAME = 2;
 
   /**
+   * The feature id for the '<em><b>Modifikations Notiz</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTOR__MODIFIKATIONS_NOTIZ = 3;
+
+  /**
    * The number of structural features of the '<em>Autor</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AUTOR_FEATURE_COUNT = 3;
+  int AUTOR_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.PersonenquelleImpl <em>Personenquelle</em>}' class.
@@ -2458,6 +2467,17 @@ public interface RezeptPackage extends EPackage
   EAttribute getAutor_OrganisationsName();
 
   /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getModifikationsNotiz <em>Modifikations Notiz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Modifikations Notiz</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Autor#getModifikationsNotiz()
+   * @see #getAutor()
+   * @generated
+   */
+  EAttribute getAutor_ModifikationsNotiz();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Personenquelle <em>Personenquelle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3434,6 +3454,14 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EAttribute AUTOR__ORGANISATIONS_NAME = eINSTANCE.getAutor_OrganisationsName();
+
+    /**
+     * The meta object literal for the '<em><b>Modifikations Notiz</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AUTOR__MODIFIKATIONS_NOTIZ = eINSTANCE.getAutor_ModifikationsNotiz();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.PersonenquelleImpl <em>Personenquelle</em>}' class.

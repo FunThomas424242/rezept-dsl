@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl#getVorname <em>Vorname</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl#getNachname <em>Nachname</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl#getOrganisationsName <em>Organisations Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AutorImpl#getModifikationsNotiz <em>Modifikations Notiz</em>}</li>
  * </ul>
  * </p>
  *
@@ -92,6 +93,26 @@ public class AutorImpl extends EObjectImpl implements Autor
    * @ordered
    */
   protected String organisationsName = ORGANISATIONS_NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getModifikationsNotiz() <em>Modifikations Notiz</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getModifikationsNotiz()
+   * @generated
+   * @ordered
+   */
+  protected static final String MODIFIKATIONS_NOTIZ_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getModifikationsNotiz() <em>Modifikations Notiz</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getModifikationsNotiz()
+   * @generated
+   * @ordered
+   */
+  protected String modifikationsNotiz = MODIFIKATIONS_NOTIZ_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -188,6 +209,29 @@ public class AutorImpl extends EObjectImpl implements Autor
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getModifikationsNotiz()
+  {
+    return modifikationsNotiz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setModifikationsNotiz(String newModifikationsNotiz)
+  {
+    String oldModifikationsNotiz = modifikationsNotiz;
+    modifikationsNotiz = newModifikationsNotiz;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.AUTOR__MODIFIKATIONS_NOTIZ, oldModifikationsNotiz, modifikationsNotiz));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -199,6 +243,8 @@ public class AutorImpl extends EObjectImpl implements Autor
         return getNachname();
       case RezeptPackage.AUTOR__ORGANISATIONS_NAME:
         return getOrganisationsName();
+      case RezeptPackage.AUTOR__MODIFIKATIONS_NOTIZ:
+        return getModifikationsNotiz();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -221,6 +267,9 @@ public class AutorImpl extends EObjectImpl implements Autor
         return;
       case RezeptPackage.AUTOR__ORGANISATIONS_NAME:
         setOrganisationsName((String)newValue);
+        return;
+      case RezeptPackage.AUTOR__MODIFIKATIONS_NOTIZ:
+        setModifikationsNotiz((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -245,6 +294,9 @@ public class AutorImpl extends EObjectImpl implements Autor
       case RezeptPackage.AUTOR__ORGANISATIONS_NAME:
         setOrganisationsName(ORGANISATIONS_NAME_EDEFAULT);
         return;
+      case RezeptPackage.AUTOR__MODIFIKATIONS_NOTIZ:
+        setModifikationsNotiz(MODIFIKATIONS_NOTIZ_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -265,6 +317,8 @@ public class AutorImpl extends EObjectImpl implements Autor
         return NACHNAME_EDEFAULT == null ? nachname != null : !NACHNAME_EDEFAULT.equals(nachname);
       case RezeptPackage.AUTOR__ORGANISATIONS_NAME:
         return ORGANISATIONS_NAME_EDEFAULT == null ? organisationsName != null : !ORGANISATIONS_NAME_EDEFAULT.equals(organisationsName);
+      case RezeptPackage.AUTOR__MODIFIKATIONS_NOTIZ:
+        return MODIFIKATIONS_NOTIZ_EDEFAULT == null ? modifikationsNotiz != null : !MODIFIKATIONS_NOTIZ_EDEFAULT.equals(modifikationsNotiz);
     }
     return super.eIsSet(featureID);
   }
@@ -286,6 +340,8 @@ public class AutorImpl extends EObjectImpl implements Autor
     result.append(nachname);
     result.append(", organisationsName: ");
     result.append(organisationsName);
+    result.append(", modifikationsNotiz: ");
+    result.append(modifikationsNotiz);
     result.append(')');
     return result.toString();
   }

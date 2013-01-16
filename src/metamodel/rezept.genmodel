@@ -181,6 +181,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Autor/vorname"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Autor/nachname"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Autor/organisationsName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Autor/modifikationsNotiz"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Personenquelle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Personenquelle/personenBeschreibung"/>

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getVorname <em>Vorname</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getNachname <em>Nachname</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getOrganisationsName <em>Organisations Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getModifikationsNotiz <em>Modifikations Notiz</em>}</li>
  * </ul>
  * </p>
  *
@@ -105,5 +106,31 @@ public interface Autor extends EObject
    * @generated
    */
   void setOrganisationsName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Modifikations Notiz</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Modifikations Notiz</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Modifikations Notiz</em>' attribute.
+   * @see #setModifikationsNotiz(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getAutor_ModifikationsNotiz()
+   * @model required="true"
+   * @generated
+   */
+  String getModifikationsNotiz();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.Autor#getModifikationsNotiz <em>Modifikations Notiz</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Modifikations Notiz</em>' attribute.
+   * @see #getModifikationsNotiz()
+   * @generated
+   */
+  void setModifikationsNotiz(String value);
 
 } // Autor
