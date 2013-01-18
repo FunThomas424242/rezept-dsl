@@ -93,7 +93,7 @@ RULES {
 				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
 				("Quelle:" quelle)? ("Ausreichend für" personen[NUMBER] "Personen.")?
 				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
-				produkte* zutaten+ schritte+ notizen* bilder*		    
+				produkte* zutaten+  schritte+  notizen* bilder*		    
 			    "}";
 	StoffTag ::=  "Stoff:" stoff['"','"'] "." ; 
 	BenutzerTag ::=  "Tag:" bezeichnung['"','"'] ".";
@@ -102,7 +102,7 @@ RULES {
 	Zutat ::= "Zutat:" name['"','"'] menge    ;
 	BestimmteMenge ::= "Menge:" betrag['"','"'] details['"','"']? einheit['"','"'] ".";
 	UnbestimmteMenge ::= menge['"','"'] ".";
-	Arbeitsschritt ::= "Aktion:" beschreibung['"','"'];
+	Arbeitsschritt ::= "Aktion:" beschreibung['"','"'] notiz?;
 	Tipp ::= "Tipp:"  text['"','"'] ;
 	Kommentar ::= "Kommentar:" text['"','"'] ;
 	Anmerkung ::= "Anmerkung:" text['"','"'] ;

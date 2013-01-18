@@ -893,6 +893,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getArbeitsschritt_Notiz()
+  {
+    return (EReference)arbeitsschrittEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getKommentar()
   {
     return kommentarEClass;
@@ -1588,6 +1598,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     arbeitsschrittEClass = createEClass(ARBEITSSCHRITT);
     createEAttribute(arbeitsschrittEClass, ARBEITSSCHRITT__BESCHREIBUNG);
+    createEReference(arbeitsschrittEClass, ARBEITSSCHRITT__NOTIZ);
 
     kommentarEClass = createEClass(KOMMENTAR);
 
@@ -1776,6 +1787,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     initEClass(arbeitsschrittEClass, Arbeitsschritt.class, "Arbeitsschritt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getArbeitsschritt_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 1, 1, Arbeitsschritt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArbeitsschritt_Notiz(), this.getNotiz(), null, "notiz", null, 0, 1, Arbeitsschritt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(kommentarEClass, Kommentar.class, "Kommentar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

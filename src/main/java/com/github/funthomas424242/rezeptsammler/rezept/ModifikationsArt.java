@@ -41,7 +41,7 @@ public enum ModifikationsArt implements Enumerator
    * @generated
    * @ordered
    */
-  VERAENDERT(1, "veraendert", "veraendert");
+  VERAENDERT(1, "veraendert", "ver\u00e4ndert");
 
   /**
    * The '<em><b>Original</b></em>' literal value.
@@ -67,7 +67,7 @@ public enum ModifikationsArt implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #VERAENDERT
-   * @model name="veraendert"
+   * @model name="veraendert" literal="ver\344ndert"
    * @generated
    * @ordered
    */

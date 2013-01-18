@@ -123,6 +123,7 @@
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Arbeitsschritt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Arbeitsschritt/beschreibung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//Arbeitsschritt/notiz"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Kommentar"/>
     <genClasses ecoreClass="rezept.ecore#//ProduktRef">

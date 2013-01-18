@@ -77,11 +77,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ModifikationsArt">
     <eLiterals name="original"/>
-    <eLiterals name="veraendert" value="1"/>
+    <eLiterals name="veraendert" value="1" literal="verändert"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Arbeitsschritt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notiz" eType="#//Notiz"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="KategorieArt">
     <eLiterals name="Salat" literal="Salat"/>

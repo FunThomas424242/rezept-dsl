@@ -668,13 +668,22 @@ public interface RezeptPackage extends EPackage
   int ARBEITSSCHRITT__BESCHREIBUNG = 0;
 
   /**
+   * The feature id for the '<em><b>Notiz</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARBEITSSCHRITT__NOTIZ = 1;
+
+  /**
    * The number of structural features of the '<em>Arbeitsschritt</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARBEITSSCHRITT_FEATURE_COUNT = 1;
+  int ARBEITSSCHRITT_FEATURE_COUNT = 2;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1926,6 +1935,17 @@ public interface RezeptPackage extends EPackage
   EAttribute getArbeitsschritt_Beschreibung();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt#getNotiz <em>Notiz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Notiz</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt#getNotiz()
+   * @see #getArbeitsschritt()
+   * @generated
+   */
+  EReference getArbeitsschritt_Notiz();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Tipp <em>Tipp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3006,6 +3026,14 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EAttribute ARBEITSSCHRITT__BESCHREIBUNG = eINSTANCE.getArbeitsschritt_Beschreibung();
+
+    /**
+     * The meta object literal for the '<em><b>Notiz</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARBEITSSCHRITT__NOTIZ = eINSTANCE.getArbeitsschritt_Notiz();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.TippImpl <em>Tipp</em>}' class.
