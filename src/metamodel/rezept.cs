@@ -76,7 +76,7 @@ RULES {
 	            ("Vorwort:" vorwort['"','"'])?  lizenz? ("Veröffentlicht am:" datumPublished[DATUM] ".")?  "}";
 	Autor ::= "Autor:" "{" "Vorname:" vorname['"','"'] "Nachname:" nachname['"','"'] 
 			   ("Organisation:" organisationsName['"','"'])? "ModifikationsNotiz:" modifikationsNotiz['"','"']  "}";
-	Lizenz ::= "Lizenshinweis:" hinweis['"','"'] ("Lizenstext:" text[])? ;
+	Lizenz ::= "Lizenzhinweis:" hinweis['"','"'] ("Lizenztext:" text[])? ;
 	RezeptImport ::=  "import rezepte"  importedResource['"','"'] ";" ;
 	Rezeptliste ::= "Rezeptliste" name['"','"']   ";" imports* rezepte+ ;	
 	ProduktImport ::=  "import produkte"  importedResource['"','"'] ";" ;
@@ -93,7 +93,7 @@ RULES {
 				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
 				("Quelle:" quelle)? ("Ausreichend für" personen[NUMBER] "Personen.")?
 				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
-				produkte* zutaten+  schritte+  notizen* bilder*		    
+				produkte* zutaten+  schritte+ "#" notizen* bilder*		    
 			    "}";
 	StoffTag ::=  "Stoff:" stoff['"','"'] "." ; 
 	BenutzerTag ::=  "Tag:" bezeichnung['"','"'] ".";
