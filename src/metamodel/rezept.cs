@@ -73,7 +73,8 @@ RULES {
 	             "version" "=" version['"','"'] ";" "Media Folder:" resourcesDir['"','"'] ";"
 	              "}" buch;
 	BuchBeschreibung ::= "Buch" "{" imports* "Titel:" titel['"','"'] ";" autoren+ 
-	            ("Vorwort:" vorwort['"','"'])?  lizenz? ("Veröffentlicht am:" datumPublished[DATUM] ".")?  "}";
+	            ("Vorwort:" vorwort['"','"']   absatz* )?  lizenz? ("Veröffentlicht am:" datumPublished[DATUM] ".")?  "}";
+	Absatz ::= "Absatz:" (titel['==','=='])?  text['"','"'] ;
 	Autor ::= "Autor:" "{" "Vorname:" vorname['"','"'] "Nachname:" nachname['"','"'] 
 			   ("Organisation:" organisationsName['"','"'])? "ModifikationsNotiz:" modifikationsNotiz['"','"']  "}";
 	Lizenz ::= "Lizenzhinweis:" hinweis['"','"'] ("Lizenztext:" text[])? ;
@@ -93,7 +94,7 @@ RULES {
 				"Titel:" titel['"','"'] "." ("Untertitel:" untertitel['"','"'] ".")? "Kategorie:" kategorie['"','"'] "."
 				("Quelle:" quelle)? ("Ausreichend für" personen[NUMBER] "Personen.")?
 				"Letzte Änderung:" letzteAenderung[DATUM] "." tags+
-				produkte* zutaten+  schritte+ "#" notizen* bilder*		    
+				produkte* zutaten+  schritte+ "--Zusatzinformationen--" notizen* bilder*		    
 			    "}";
 	StoffTag ::=  "Stoff:" stoff['"','"'] "." ; 
 	BenutzerTag ::=  "Tag:" bezeichnung['"','"'] ".";

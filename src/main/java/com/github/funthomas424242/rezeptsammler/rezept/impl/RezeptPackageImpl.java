@@ -7,6 +7,7 @@
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
 import com.github.funthomas424242.rezeptsammler.rezept.AblagePfad;
+import com.github.funthomas424242.rezeptsammler.rezept.Absatz;
 import com.github.funthomas424242.rezeptsammler.rezept.Anmerkung;
 import com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt;
 import com.github.funthomas424242.rezeptsammler.rezept.Autor;
@@ -134,6 +135,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass lokalerPfadEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass absatzEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -873,6 +881,36 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getAbsatz()
+  {
+    return absatzEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAbsatz_Titel()
+  {
+    return (EAttribute)absatzEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAbsatz_Text()
+  {
+    return (EAttribute)absatzEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getArbeitsschritt()
   {
     return arbeitsschrittEClass;
@@ -1216,6 +1254,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EReference getBuchBeschreibung_Imports()
   {
     return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Absatz()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1584,6 +1632,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEReference(buchBeschreibungEClass, BUCH_BESCHREIBUNG__LIZENZ);
     createEReference(buchBeschreibungEClass, BUCH_BESCHREIBUNG__AUTOREN);
     createEReference(buchBeschreibungEClass, BUCH_BESCHREIBUNG__IMPORTS);
+    createEReference(buchBeschreibungEClass, BUCH_BESCHREIBUNG__ABSATZ);
 
     projektBeschreibungEClass = createEClass(PROJEKT_BESCHREIBUNG);
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__GROUP_ID);
@@ -1683,6 +1732,10 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     lokalerPfadEClass = createEClass(LOKALER_PFAD);
     createEAttribute(lokalerPfadEClass, LOKALER_PFAD__FILE_NAME);
 
+    absatzEClass = createEClass(ABSATZ);
+    createEAttribute(absatzEClass, ABSATZ__TITEL);
+    createEAttribute(absatzEClass, ABSATZ__TEXT);
+
     // Create enums
     modifikationsArtEEnum = createEEnum(MODIFIKATIONS_ART);
     kategorieArtEEnum = createEEnum(KATEGORIE_ART);
@@ -1773,6 +1826,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEReference(getBuchBeschreibung_Lizenz(), this.getLizenz(), null, "lizenz", null, 0, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBuchBeschreibung_Autoren(), this.getAutor(), null, "autoren", null, 1, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBuchBeschreibung_Imports(), this.getRezeptImport(), null, "imports", null, 0, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchBeschreibung_Absatz(), this.getAbsatz(), null, "absatz", null, 0, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(projektBeschreibungEClass, ProjektBeschreibung.class, "ProjektBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProjektBeschreibung_GroupId(), ecorePackage.getEString(), "groupId", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1871,6 +1925,10 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
 
     initEClass(lokalerPfadEClass, LokalerPfad.class, "LokalerPfad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLokalerPfad_FileName(), ecorePackage.getEString(), "fileName", null, 1, 1, LokalerPfad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(absatzEClass, Absatz.class, "Absatz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAbsatz_Titel(), ecorePackage.getEString(), "titel", null, 0, 1, Absatz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAbsatz_Text(), ecorePackage.getEString(), "text", null, 1, 1, Absatz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(modifikationsArtEEnum, ModifikationsArt.class, "ModifikationsArt");

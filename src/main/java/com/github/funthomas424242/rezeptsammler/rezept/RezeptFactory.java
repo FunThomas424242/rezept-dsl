@@ -270,6 +270,15 @@ public interface RezeptFactory extends EFactory
   LokalerPfad createLokalerPfad();
 
   /**
+   * Returns a new object of class '<em>Absatz</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Absatz</em>'.
+   * @generated
+   */
+  Absatz createAbsatz();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

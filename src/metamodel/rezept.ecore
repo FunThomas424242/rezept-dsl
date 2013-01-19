@@ -56,6 +56,8 @@
         upperBound="-1" eType="#//Autor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//RezeptImport" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="absatz" upperBound="-1"
+        eType="#//Absatz" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjektBeschreibung">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupId" lowerBound="1"
@@ -243,5 +245,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="LokalerPfad" eSuperTypes="#//AblagePfad">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Absatz">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getLizenz <em>Lizenz</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getAutoren <em>Autoren</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getImports <em>Imports</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getAbsatz <em>Absatz</em>}</li>
  * </ul>
  * </p>
  *
@@ -167,5 +168,21 @@ public interface BuchBeschreibung extends EObject
    * @generated
    */
   EList<RezeptImport> getImports();
+
+  /**
+   * Returns the value of the '<em><b>Absatz</b></em>' containment reference list.
+   * The list contents are of type {@link com.github.funthomas424242.rezeptsammler.rezept.Absatz}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Absatz</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Absatz</em>' containment reference list.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBuchBeschreibung_Absatz()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Absatz> getAbsatz();
 
 } // BuchBeschreibung

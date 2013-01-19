@@ -6,6 +6,7 @@
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
+import com.github.funthomas424242.rezeptsammler.rezept.Absatz;
 import com.github.funthomas424242.rezeptsammler.rezept.Autor;
 import com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung;
 import com.github.funthomas424242.rezeptsammler.rezept.Lizenz;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl#getLizenz <em>Lizenz</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl#getAutoren <em>Autoren</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.BuchBeschreibungImpl#getAbsatz <em>Absatz</em>}</li>
  * </ul>
  * </p>
  *
@@ -134,6 +136,16 @@ public class BuchBeschreibungImpl extends EObjectImpl implements BuchBeschreibun
    * @ordered
    */
   protected EList<RezeptImport> imports;
+
+  /**
+   * The cached value of the '{@link #getAbsatz() <em>Absatz</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAbsatz()
+   * @generated
+   * @ordered
+   */
+  protected EList<Absatz> absatz;
 
   /**
    * <!-- begin-user-doc -->
@@ -306,6 +318,20 @@ public class BuchBeschreibungImpl extends EObjectImpl implements BuchBeschreibun
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Absatz> getAbsatz()
+  {
+    if (absatz == null)
+    {
+      absatz = new EObjectContainmentEList<Absatz>(Absatz.class, this, RezeptPackage.BUCH_BESCHREIBUNG__ABSATZ);
+    }
+    return absatz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -317,6 +343,8 @@ public class BuchBeschreibungImpl extends EObjectImpl implements BuchBeschreibun
         return ((InternalEList<?>)getAutoren()).basicRemove(otherEnd, msgs);
       case RezeptPackage.BUCH_BESCHREIBUNG__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+      case RezeptPackage.BUCH_BESCHREIBUNG__ABSATZ:
+        return ((InternalEList<?>)getAbsatz()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -343,6 +371,8 @@ public class BuchBeschreibungImpl extends EObjectImpl implements BuchBeschreibun
         return getAutoren();
       case RezeptPackage.BUCH_BESCHREIBUNG__IMPORTS:
         return getImports();
+      case RezeptPackage.BUCH_BESCHREIBUNG__ABSATZ:
+        return getAbsatz();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -378,6 +408,10 @@ public class BuchBeschreibungImpl extends EObjectImpl implements BuchBeschreibun
         getImports().clear();
         getImports().addAll((Collection<? extends RezeptImport>)newValue);
         return;
+      case RezeptPackage.BUCH_BESCHREIBUNG__ABSATZ:
+        getAbsatz().clear();
+        getAbsatz().addAll((Collection<? extends Absatz>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -410,6 +444,9 @@ public class BuchBeschreibungImpl extends EObjectImpl implements BuchBeschreibun
       case RezeptPackage.BUCH_BESCHREIBUNG__IMPORTS:
         getImports().clear();
         return;
+      case RezeptPackage.BUCH_BESCHREIBUNG__ABSATZ:
+        getAbsatz().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -436,6 +473,8 @@ public class BuchBeschreibungImpl extends EObjectImpl implements BuchBeschreibun
         return autoren != null && !autoren.isEmpty();
       case RezeptPackage.BUCH_BESCHREIBUNG__IMPORTS:
         return imports != null && !imports.isEmpty();
+      case RezeptPackage.BUCH_BESCHREIBUNG__ABSATZ:
+        return absatz != null && !absatz.isEmpty();
     }
     return super.eIsSet(featureID);
   }

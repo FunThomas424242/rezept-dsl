@@ -109,6 +109,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//BuchBeschreibung/lizenz"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//BuchBeschreibung/autoren"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//BuchBeschreibung/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//BuchBeschreibung/absatz"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//ProjektBeschreibung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/groupId"/>
@@ -200,6 +201,10 @@
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//LokalerPfad">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//LokalerPfad/fileName"/>
+    </genClasses>
+    <genClasses ecoreClass="rezept.ecore#//Absatz">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Absatz/titel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Absatz/text"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

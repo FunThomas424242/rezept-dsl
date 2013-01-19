@@ -550,13 +550,22 @@ public interface RezeptPackage extends EPackage
   int BUCH_BESCHREIBUNG__IMPORTS = 5;
 
   /**
+   * The feature id for the '<em><b>Absatz</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUCH_BESCHREIBUNG__ABSATZ = 6;
+
+  /**
    * The number of structural features of the '<em>Buch Beschreibung</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUCH_BESCHREIBUNG_FEATURE_COUNT = 6;
+  int BUCH_BESCHREIBUNG_FEATURE_COUNT = 7;
 
   /**
    * The feature id for the '<em><b>Group Id</b></em>' attribute.
@@ -1336,6 +1345,43 @@ public interface RezeptPackage extends EPackage
   int LOKALER_PFAD_FEATURE_COUNT = ABLAGE_PFAD_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AbsatzImpl <em>Absatz</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.AbsatzImpl
+   * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getAbsatz()
+   * @generated
+   */
+  int ABSATZ = 32;
+
+  /**
+   * The feature id for the '<em><b>Titel</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSATZ__TITEL = 0;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSATZ__TEXT = 1;
+
+  /**
+   * The number of structural features of the '<em>Absatz</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSATZ_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.ModifikationsArt <em>Modifikations Art</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1343,7 +1389,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getModifikationsArt()
    * @generated
    */
-  int MODIFIKATIONS_ART = 32;
+  int MODIFIKATIONS_ART = 33;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.KategorieArt <em>Kategorie Art</em>}' enum.
@@ -1353,7 +1399,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getKategorieArt()
    * @generated
    */
-  int KATEGORIE_ART = 33;
+  int KATEGORIE_ART = 34;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Verpackung <em>Verpackung</em>}' enum.
@@ -1363,7 +1409,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getVerpackung()
    * @generated
    */
-  int VERPACKUNG = 34;
+  int VERPACKUNG = 35;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Stoff <em>Stoff</em>}' enum.
@@ -1373,7 +1419,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getStoff()
    * @generated
    */
-  int STOFF = 35;
+  int STOFF = 36;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.DiaetArt <em>Diaet Art</em>}' enum.
@@ -1383,7 +1429,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getDiaetArt()
    * @generated
    */
-  int DIAET_ART = 36;
+  int DIAET_ART = 37;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Waehrung <em>Waehrung</em>}' enum.
@@ -1393,7 +1439,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getWaehrung()
    * @generated
    */
-  int WAEHRUNG = 37;
+  int WAEHRUNG = 38;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rezeptsammler.rezept.Masseinheit <em>Masseinheit</em>}' enum.
@@ -1403,7 +1449,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMasseinheit()
    * @generated
    */
-  int MASSEINHEIT = 38;
+  int MASSEINHEIT = 39;
 
 
   /**
@@ -1414,7 +1460,7 @@ public interface RezeptPackage extends EPackage
    * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getMengenAngabe()
    * @generated
    */
-  int MENGEN_ANGABE = 39;
+  int MENGEN_ANGABE = 40;
 
 
   /**
@@ -1914,6 +1960,38 @@ public interface RezeptPackage extends EPackage
   EAttribute getLokalerPfad_FileName();
 
   /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Absatz <em>Absatz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Absatz</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Absatz
+   * @generated
+   */
+  EClass getAbsatz();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Absatz#getTitel <em>Titel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Titel</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Absatz#getTitel()
+   * @see #getAbsatz()
+   * @generated
+   */
+  EAttribute getAbsatz_Titel();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.Absatz#getText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Text</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.Absatz#getText()
+   * @see #getAbsatz()
+   * @generated
+   */
+  EAttribute getAbsatz_Text();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Arbeitsschritt <em>Arbeitsschritt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2283,6 +2361,17 @@ public interface RezeptPackage extends EPackage
    * @generated
    */
   EReference getBuchBeschreibung_Imports();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getAbsatz <em>Absatz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Absatz</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.BuchBeschreibung#getAbsatz()
+   * @see #getBuchBeschreibung()
+   * @generated
+   */
+  EReference getBuchBeschreibung_Absatz();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Anmerkung <em>Anmerkung</em>}'.
@@ -3010,6 +3099,32 @@ public interface RezeptPackage extends EPackage
     EAttribute LOKALER_PFAD__FILE_NAME = eINSTANCE.getLokalerPfad_FileName();
 
     /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AbsatzImpl <em>Absatz</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.AbsatzImpl
+     * @see com.github.funthomas424242.rezeptsammler.rezept.impl.RezeptPackageImpl#getAbsatz()
+     * @generated
+     */
+    EClass ABSATZ = eINSTANCE.getAbsatz();
+
+    /**
+     * The meta object literal for the '<em><b>Titel</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ABSATZ__TITEL = eINSTANCE.getAbsatz_Titel();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ABSATZ__TEXT = eINSTANCE.getAbsatz_Text();
+
+    /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ArbeitsschrittImpl <em>Arbeitsschritt</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3316,6 +3431,14 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EReference BUCH_BESCHREIBUNG__IMPORTS = eINSTANCE.getBuchBeschreibung_Imports();
+
+    /**
+     * The meta object literal for the '<em><b>Absatz</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUCH_BESCHREIBUNG__ABSATZ = eINSTANCE.getBuchBeschreibung_Absatz();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.AnmerkungImpl <em>Anmerkung</em>}' class.
