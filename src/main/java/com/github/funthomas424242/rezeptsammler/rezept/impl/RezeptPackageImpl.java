@@ -1937,6 +1937,8 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.BACKEN);
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.AUFLAUF);
     addEEnumLiteral(kategorieArtEEnum, KategorieArt.PIZZA);
+    addEEnumLiteral(kategorieArtEEnum, KategorieArt.ASIATISCH);
+    addEEnumLiteral(kategorieArtEEnum, KategorieArt.NUDELN);
 
     initEEnum(verpackungEEnum, Verpackung.class, "Verpackung");
     addEEnumLiteral(verpackungEEnum, Verpackung.PACKUNG);
@@ -1994,6 +1996,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(masseinheitEEnum, Masseinheit.BUND);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.BLATT);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.TÜTE);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.PACKUNGEN);
 
     initEEnum(mengenAngabeEEnum, MengenAngabe.class, "MengenAngabe");
     addEEnumLiteral(mengenAngabeEEnum, MengenAngabe.ETWAS);

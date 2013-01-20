@@ -214,6 +214,14 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Auflauf"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_5wARQWYAEeG6Z-1mcDLt8g"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_VC-d0GMmEeKbAP8xVrPRjw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Asiatisch"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_VC-d0WMmEeKbAP8xVrPRjw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_WegnsGMmEeKbAP8xVrPRjw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Nudeln"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WegnsWMmEeKbAP8xVrPRjw"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_qXmloHUvEeGpwMtyl44Wtw" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Pizza"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_qXmloXUvEeGpwMtyl44Wtw"/>
@@ -680,6 +688,10 @@
       <children xmi:type="notation:Node" xmi:id="_Gl0zIFUBEeKjmbm-qCMsBA" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Stangen"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Gl0zIVUBEeKjmbm-qCMsBA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GXohMGMaEeKbAP8xVrPRjw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Packungen"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GXohMWMaEeKbAP8xVrPRjw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_QDPNMGMBEeK7vNdu7SiB2Q" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tüte"/>

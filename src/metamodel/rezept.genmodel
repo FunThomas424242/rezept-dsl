@@ -16,6 +16,8 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Backen"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Auflauf"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Pizza"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Asiatisch"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Nudeln"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Verpackung">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Packung"/>
@@ -73,6 +75,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Bund"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Blatt"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tüte"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Packungen"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/etwas"/>

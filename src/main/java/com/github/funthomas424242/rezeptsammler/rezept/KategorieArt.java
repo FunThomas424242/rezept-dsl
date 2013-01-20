@@ -69,7 +69,23 @@ public enum KategorieArt implements Enumerator
    * @generated
    * @ordered
    */
-  PIZZA(4, "Pizza", "Pizza");
+  PIZZA(4, "Pizza", "Pizza"), /**
+   * The '<em><b>Asiatisch</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ASIATISCH_VALUE
+   * @generated
+   * @ordered
+   */
+  ASIATISCH(5, "Asiatisch", "Asiatisch"), /**
+   * The '<em><b>Nudeln</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #NUDELN_VALUE
+   * @generated
+   * @ordered
+   */
+  NUDELN(6, "Nudeln", "Nudeln");
 
   /**
    * The '<em><b>Salat</b></em>' literal value.
@@ -147,6 +163,36 @@ public enum KategorieArt implements Enumerator
   public static final int PIZZA_VALUE = 4;
 
   /**
+   * The '<em><b>Asiatisch</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Asiatisch</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ASIATISCH
+   * @model name="Asiatisch"
+   * @generated
+   * @ordered
+   */
+  public static final int ASIATISCH_VALUE = 5;
+
+  /**
+   * The '<em><b>Nudeln</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Nudeln</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #NUDELN
+   * @model name="Nudeln"
+   * @generated
+   * @ordered
+   */
+  public static final int NUDELN_VALUE = 6;
+
+  /**
    * An array of all the '<em><b>Kategorie Art</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -160,6 +206,8 @@ public enum KategorieArt implements Enumerator
       BACKEN,
       AUFLAUF,
       PIZZA,
+      ASIATISCH,
+      NUDELN,
     };
 
   /**
@@ -223,6 +271,8 @@ public enum KategorieArt implements Enumerator
       case BACKEN_VALUE: return BACKEN;
       case AUFLAUF_VALUE: return AUFLAUF;
       case PIZZA_VALUE: return PIZZA;
+      case ASIATISCH_VALUE: return ASIATISCH;
+      case NUDELN_VALUE: return NUDELN;
     }
     return null;
   }
