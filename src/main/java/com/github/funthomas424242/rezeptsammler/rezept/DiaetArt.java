@@ -41,7 +41,23 @@ public enum DiaetArt implements Enumerator
    * @generated
    * @ordered
    */
-  FRUCHTZUCKERARM(1, "Fruchtzuckerarm", "Fruchtzuckerarm");
+  FRUCHTZUCKERARM(1, "Fruchtzuckerarm", "Fruchtzuckerarm"), /**
+   * The '<em><b>Fruchtzuckerarm Karenzphase</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FRUCHTZUCKERARM_KARENZPHASE_VALUE
+   * @generated
+   * @ordered
+   */
+  FRUCHTZUCKERARM_KARENZPHASE(2, "FruchtzuckerarmKarenzphase", "Fruchtzuckerarm-Karenzphase"), /**
+   * The '<em><b>Fruchtzuckerarm Aufbauphase</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FRUCHTZUCKERARM_AUFBAUPHASE_VALUE
+   * @generated
+   * @ordered
+   */
+  FRUCHTZUCKERARM_AUFBAUPHASE(3, "FruchtzuckerarmAufbauphase", "Fruchtzuckerarm-Aufbauphase");
 
   /**
    * The '<em><b>Laktosefrei</b></em>' literal value.
@@ -74,6 +90,36 @@ public enum DiaetArt implements Enumerator
   public static final int FRUCHTZUCKERARM_VALUE = 1;
 
   /**
+   * The '<em><b>Fruchtzuckerarm Karenzphase</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Fruchtzuckerarm Karenzphase</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FRUCHTZUCKERARM_KARENZPHASE
+   * @model name="FruchtzuckerarmKarenzphase" literal="Fruchtzuckerarm-Karenzphase"
+   * @generated
+   * @ordered
+   */
+  public static final int FRUCHTZUCKERARM_KARENZPHASE_VALUE = 2;
+
+  /**
+   * The '<em><b>Fruchtzuckerarm Aufbauphase</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Fruchtzuckerarm Aufbauphase</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FRUCHTZUCKERARM_AUFBAUPHASE
+   * @model name="FruchtzuckerarmAufbauphase" literal="Fruchtzuckerarm-Aufbauphase"
+   * @generated
+   * @ordered
+   */
+  public static final int FRUCHTZUCKERARM_AUFBAUPHASE_VALUE = 3;
+
+  /**
    * An array of all the '<em><b>Diaet Art</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -84,6 +130,8 @@ public enum DiaetArt implements Enumerator
     {
       LAKTOSEFREI,
       FRUCHTZUCKERARM,
+      FRUCHTZUCKERARM_KARENZPHASE,
+      FRUCHTZUCKERARM_AUFBAUPHASE,
     };
 
   /**
@@ -144,6 +192,8 @@ public enum DiaetArt implements Enumerator
     {
       case LAKTOSEFREI_VALUE: return LAKTOSEFREI;
       case FRUCHTZUCKERARM_VALUE: return FRUCHTZUCKERARM;
+      case FRUCHTZUCKERARM_KARENZPHASE_VALUE: return FRUCHTZUCKERARM_KARENZPHASE;
+      case FRUCHTZUCKERARM_AUFBAUPHASE_VALUE: return FRUCHTZUCKERARM_AUFBAUPHASE;
     }
     return null;
   }

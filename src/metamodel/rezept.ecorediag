@@ -361,8 +361,24 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_aMo1AV2YEeGqYtVkHPgHSw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_bS7HoF2YEeGqYtVkHPgHSw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Stoff/Nuessen"/>
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Stoff/Nuesse"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_bS7HoV2YEeGqYtVkHPgHSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_hq23EGL0EeK7vNdu7SiB2Q" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Stoff/Eiweis"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_hq23EWL0EeK7vNdu7SiB2Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_kbVaoGL0EeK7vNdu7SiB2Q" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Stoff/Fisch"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kbVaoWL0EeK7vNdu7SiB2Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_nfiLcGL0EeK7vNdu7SiB2Q" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Stoff/Pflanzen"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nfiLcWL0EeK7vNdu7SiB2Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_cl6WgWL0EeK7vNdu7SiB2Q" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Stoff/Fleisch"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cl6WgmL0EeK7vNdu7SiB2Q"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_W0lUEV2YEeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_W0lUEl2YEeGqYtVkHPgHSw"/>
@@ -495,13 +511,21 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//DiaetArt/Fruchtzuckerarm"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_6sLvoWCwEeG5QO3eMfWSSw"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_p-jgsGL2EeK7vNdu7SiB2Q" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//DiaetArt/FruchtzuckerarmKarenzphase"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_p-jgsWL2EeK7vNdu7SiB2Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_uU7EAGL2EeK7vNdu7SiB2Q" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//DiaetArt/FruchtzuckerarmAufbauphase"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uU7EAWL2EeK7vNdu7SiB2Q"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_w9GbMWCwEeG5QO3eMfWSSw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_w9GbMmCwEeG5QO3eMfWSSw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_w9GbM2CwEeG5QO3eMfWSSw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_w9D-8WCwEeG5QO3eMfWSSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="rezept.ecore#//DiaetArt"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w9D-8mCwEeG5QO3eMfWSSw" x="-530" y="380"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w9D-8mCwEeG5QO3eMfWSSw" x="-875" y="385"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_pJYeQGX1EeG6Z-1mcDLt8g" type="1001">
     <children xmi:type="notation:Node" xmi:id="_pJaTcGX1EeG6Z-1mcDLt8g" type="4001"/>

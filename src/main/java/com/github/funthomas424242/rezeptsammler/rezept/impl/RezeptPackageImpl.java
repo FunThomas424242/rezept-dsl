@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package com.github.funthomas424242.rezeptsammler.rezept.impl;
 
@@ -92,6 +88,13 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass buchBeschreibungEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass projektBeschreibungEClass = null;
 
   /**
@@ -100,48 +103,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass literaturquelleEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass quelleEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass bildEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass ablagePfadEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass internetPfadEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass lokalerPfadEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass absatzEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -239,13 +200,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass buchBeschreibungEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass anmerkungEClass = null;
 
   /**
@@ -296,6 +250,48 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * @generated
    */
   private EClass personenquelleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass quelleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bildEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ablagePfadEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass internetPfadEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lokalerPfadEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass absatzEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -681,6 +677,86 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getBuchBeschreibung()
+  {
+    return buchBeschreibungEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBuchBeschreibung_Titel()
+  {
+    return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBuchBeschreibung_Vorwort()
+  {
+    return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBuchBeschreibung_DatumPublished()
+  {
+    return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Lizenz()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Autoren()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Imports()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBuchBeschreibung_Absatz()
+  {
+    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getProjektBeschreibung()
   {
     return projektBeschreibungEClass;
@@ -764,146 +840,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EAttribute getLiteraturquelle_ModifikationsArt()
   {
     return (EAttribute)literaturquelleEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getQuelle()
-  {
-    return quelleEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBild()
-  {
-    return bildEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBild_Beschreibung()
-  {
-    return (EAttribute)bildEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBild_Lizenz()
-  {
-    return (EAttribute)bildEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBild_Urheber()
-  {
-    return (EAttribute)bildEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBild_AblageOrt()
-  {
-    return (EReference)bildEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAblagePfad()
-  {
-    return ablagePfadEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getInternetPfad()
-  {
-    return internetPfadEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getInternetPfad_Url()
-  {
-    return (EAttribute)internetPfadEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLokalerPfad()
-  {
-    return lokalerPfadEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLokalerPfad_FileName()
-  {
-    return (EAttribute)lokalerPfadEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAbsatz()
-  {
-    return absatzEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAbsatz_Titel()
-  {
-    return (EAttribute)absatzEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAbsatz_Text()
-  {
-    return (EAttribute)absatzEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1191,86 +1127,6 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getBuchBeschreibung()
-  {
-    return buchBeschreibungEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBuchBeschreibung_Titel()
-  {
-    return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBuchBeschreibung_Vorwort()
-  {
-    return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBuchBeschreibung_DatumPublished()
-  {
-    return (EAttribute)buchBeschreibungEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBuchBeschreibung_Lizenz()
-  {
-    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBuchBeschreibung_Autoren()
-  {
-    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBuchBeschreibung_Imports()
-  {
-    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBuchBeschreibung_Absatz()
-  {
-    return (EReference)buchBeschreibungEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getAnmerkung()
   {
     return anmerkungEClass;
@@ -1484,6 +1340,146 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
   public EAttribute getPersonenquelle_PersonenBeschreibung()
   {
     return (EAttribute)personenquelleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQuelle()
+  {
+    return quelleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBild()
+  {
+    return bildEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBild_Beschreibung()
+  {
+    return (EAttribute)bildEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBild_Lizenz()
+  {
+    return (EAttribute)bildEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBild_Urheber()
+  {
+    return (EAttribute)bildEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBild_AblageOrt()
+  {
+    return (EReference)bildEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAblagePfad()
+  {
+    return ablagePfadEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInternetPfad()
+  {
+    return internetPfadEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInternetPfad_Url()
+  {
+    return (EAttribute)internetPfadEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLokalerPfad()
+  {
+    return lokalerPfadEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLokalerPfad_FileName()
+  {
+    return (EAttribute)lokalerPfadEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAbsatz()
+  {
+    return absatzEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAbsatz_Titel()
+  {
+    return (EAttribute)absatzEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAbsatz_Text()
+  {
+    return (EAttribute)absatzEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1957,11 +1953,17 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEEnum(stoffEEnum, Stoff.class, "Stoff");
     addEEnumLiteral(stoffEEnum, Stoff.LAKTOSE);
     addEEnumLiteral(stoffEEnum, Stoff.FRUCHTZUCKER);
-    addEEnumLiteral(stoffEEnum, Stoff.NUESSEN);
+    addEEnumLiteral(stoffEEnum, Stoff.NUESSE);
+    addEEnumLiteral(stoffEEnum, Stoff.FLEISCH);
+    addEEnumLiteral(stoffEEnum, Stoff.EIWEIS);
+    addEEnumLiteral(stoffEEnum, Stoff.FISCH);
+    addEEnumLiteral(stoffEEnum, Stoff.PFLANZEN);
 
     initEEnum(diaetArtEEnum, DiaetArt.class, "DiaetArt");
     addEEnumLiteral(diaetArtEEnum, DiaetArt.LAKTOSEFREI);
     addEEnumLiteral(diaetArtEEnum, DiaetArt.FRUCHTZUCKERARM);
+    addEEnumLiteral(diaetArtEEnum, DiaetArt.FRUCHTZUCKERARM_KARENZPHASE);
+    addEEnumLiteral(diaetArtEEnum, DiaetArt.FRUCHTZUCKERARM_AUFBAUPHASE);
 
     initEEnum(waehrungEEnum, Waehrung.class, "Waehrung");
     addEEnumLiteral(waehrungEEnum, Waehrung.EURO);

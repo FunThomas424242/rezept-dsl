@@ -44,14 +44,46 @@ public enum Stoff implements Enumerator
   FRUCHTZUCKER(1, "Fruchtzucker", "Fruchtzucker"),
 
   /**
-   * The '<em><b>Nuessen</b></em>' literal object.
+   * The '<em><b>Nuesse</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #NUESSEN_VALUE
+   * @see #NUESSE_VALUE
    * @generated
    * @ordered
    */
-  NUESSEN(2, "Nuessen", "Nuessen");
+  NUESSE(2, "Nuesse", "Nuesse"), /**
+   * The '<em><b>Fleisch</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FLEISCH_VALUE
+   * @generated
+   * @ordered
+   */
+  FLEISCH(3, "Fleisch", "Fleisch"), /**
+   * The '<em><b>Eiweis</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #EIWEIS_VALUE
+   * @generated
+   * @ordered
+   */
+  EIWEIS(4, "Eiweis", "Eiweis"), /**
+   * The '<em><b>Fisch</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FISCH_VALUE
+   * @generated
+   * @ordered
+   */
+  FISCH(5, "Fisch", "Fisch"), /**
+   * The '<em><b>Pflanzen</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #PFLANZEN_VALUE
+   * @generated
+   * @ordered
+   */
+  PFLANZEN(6, "Pflanzen", "Planzen");
 
   /**
    * The '<em><b>Laktose</b></em>' literal value.
@@ -84,19 +116,79 @@ public enum Stoff implements Enumerator
   public static final int FRUCHTZUCKER_VALUE = 1;
 
   /**
-   * The '<em><b>Nuessen</b></em>' literal value.
+   * The '<em><b>Nuesse</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Nuessen</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Nuesse</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #NUESSEN
-   * @model name="Nuessen"
+   * @see #NUESSE
+   * @model name="Nuesse"
    * @generated
    * @ordered
    */
-  public static final int NUESSEN_VALUE = 2;
+  public static final int NUESSE_VALUE = 2;
+
+  /**
+   * The '<em><b>Fleisch</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Fleisch</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FLEISCH
+   * @model name="Fleisch"
+   * @generated
+   * @ordered
+   */
+  public static final int FLEISCH_VALUE = 3;
+
+  /**
+   * The '<em><b>Eiweis</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Eiweis</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #EIWEIS
+   * @model name="Eiweis"
+   * @generated
+   * @ordered
+   */
+  public static final int EIWEIS_VALUE = 4;
+
+  /**
+   * The '<em><b>Fisch</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Fisch</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FISCH
+   * @model name="Fisch"
+   * @generated
+   * @ordered
+   */
+  public static final int FISCH_VALUE = 5;
+
+  /**
+   * The '<em><b>Pflanzen</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Pflanzen</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #PFLANZEN
+   * @model name="Pflanzen" literal="Planzen"
+   * @generated
+   * @ordered
+   */
+  public static final int PFLANZEN_VALUE = 6;
 
   /**
    * An array of all the '<em><b>Stoff</b></em>' enumerators.
@@ -109,7 +201,11 @@ public enum Stoff implements Enumerator
     {
       LAKTOSE,
       FRUCHTZUCKER,
-      NUESSEN,
+      NUESSE,
+      FLEISCH,
+      EIWEIS,
+      FISCH,
+      PFLANZEN,
     };
 
   /**
@@ -170,7 +266,11 @@ public enum Stoff implements Enumerator
     {
       case LAKTOSE_VALUE: return LAKTOSE;
       case FRUCHTZUCKER_VALUE: return FRUCHTZUCKER;
-      case NUESSEN_VALUE: return NUESSEN;
+      case NUESSE_VALUE: return NUESSE;
+      case FLEISCH_VALUE: return FLEISCH;
+      case EIWEIS_VALUE: return EIWEIS;
+      case FISCH_VALUE: return FISCH;
+      case PFLANZEN_VALUE: return PFLANZEN;
     }
     return null;
   }

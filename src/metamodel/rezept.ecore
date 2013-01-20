@@ -122,7 +122,11 @@
   <eClassifiers xsi:type="ecore:EEnum" name="Stoff">
     <eLiterals name="Laktose"/>
     <eLiterals name="Fruchtzucker" value="1"/>
-    <eLiterals name="Nuessen" value="2"/>
+    <eLiterals name="Nuesse" value="2"/>
+    <eLiterals name="Fleisch" value="3"/>
+    <eLiterals name="Eiweis" value="4"/>
+    <eLiterals name="Fisch" value="5"/>
+    <eLiterals name="Pflanzen" value="6" literal="Planzen"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RezeptImport">
     <eStructuralFeatures xsi:type="ecore:EReference" name="importedResource" lowerBound="1"
@@ -149,6 +153,8 @@
   <eClassifiers xsi:type="ecore:EEnum" name="DiaetArt">
     <eLiterals name="Laktosefrei"/>
     <eLiterals name="Fruchtzuckerarm" value="1"/>
+    <eLiterals name="FruchtzuckerarmKarenzphase" value="2" literal="Fruchtzuckerarm-Karenzphase"/>
+    <eLiterals name="FruchtzuckerarmAufbauphase" value="3" literal="Fruchtzuckerarm-Aufbauphase"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Preis">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="betrag" lowerBound="1"

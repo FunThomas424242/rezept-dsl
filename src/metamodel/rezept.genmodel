@@ -32,11 +32,17 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Stoff">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Laktose"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Fruchtzucker"/>
-      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Nuessen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Nuesse"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Fleisch"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Eiweis"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Fisch"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Pflanzen"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//DiaetArt">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//DiaetArt/Laktosefrei"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//DiaetArt/Fruchtzuckerarm"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//DiaetArt/FruchtzuckerarmKarenzphase"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//DiaetArt/FruchtzuckerarmAufbauphase"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Waehrung">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Waehrung/Euro"/>
