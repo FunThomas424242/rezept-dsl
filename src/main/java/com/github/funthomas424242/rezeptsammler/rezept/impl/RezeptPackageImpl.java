@@ -1958,6 +1958,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(stoffEEnum, Stoff.EIWEIS);
     addEEnumLiteral(stoffEEnum, Stoff.FISCH);
     addEEnumLiteral(stoffEEnum, Stoff.PFLANZEN);
+    addEEnumLiteral(stoffEEnum, Stoff.MILCH);
 
     initEEnum(diaetArtEEnum, DiaetArt.class, "DiaetArt");
     addEEnumLiteral(diaetArtEEnum, DiaetArt.LAKTOSEFREI);
@@ -1992,6 +1993,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(masseinheitEEnum, Masseinheit.STANGEN);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.BUND);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.BLATT);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.TÜTE);
 
     initEEnum(mengenAngabeEEnum, MengenAngabe.class, "MengenAngabe");
     addEEnumLiteral(mengenAngabeEEnum, MengenAngabe.ETWAS);

@@ -83,7 +83,15 @@ public enum Stoff implements Enumerator
    * @generated
    * @ordered
    */
-  PFLANZEN(6, "Pflanzen", "Planzen");
+  PFLANZEN(6, "Pflanzen", "Planzen"), /**
+   * The '<em><b>Milch</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #MILCH_VALUE
+   * @generated
+   * @ordered
+   */
+  MILCH(7, "Milch", "Milch");
 
   /**
    * The '<em><b>Laktose</b></em>' literal value.
@@ -191,6 +199,21 @@ public enum Stoff implements Enumerator
   public static final int PFLANZEN_VALUE = 6;
 
   /**
+   * The '<em><b>Milch</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Milch</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #MILCH
+   * @model name="Milch"
+   * @generated
+   * @ordered
+   */
+  public static final int MILCH_VALUE = 7;
+
+  /**
    * An array of all the '<em><b>Stoff</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -206,6 +229,7 @@ public enum Stoff implements Enumerator
       EIWEIS,
       FISCH,
       PFLANZEN,
+      MILCH,
     };
 
   /**
@@ -271,6 +295,7 @@ public enum Stoff implements Enumerator
       case EIWEIS_VALUE: return EIWEIS;
       case FISCH_VALUE: return FISCH;
       case PFLANZEN_VALUE: return PFLANZEN;
+      case MILCH_VALUE: return MILCH;
     }
     return null;
   }

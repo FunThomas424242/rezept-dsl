@@ -37,6 +37,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Eiweis"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Fisch"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Pflanzen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Milch"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//DiaetArt">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//DiaetArt/Laktosefrei"/>
@@ -71,6 +72,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Stangen"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Bund"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Blatt"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tüte"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/etwas"/>

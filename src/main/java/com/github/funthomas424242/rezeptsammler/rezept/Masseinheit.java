@@ -205,7 +205,15 @@ public enum Masseinheit implements Enumerator
    * @generated
    * @ordered
    */
-  BLATT(20, "Blatt", "Blatt");
+  BLATT(20, "Blatt", "Blatt"), /**
+   * The '<em><b>Tüte</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #TÜTE_VALUE
+   * @generated
+   * @ordered
+   */
+  TÜTE(21, "Tüte", "T\u00fcte(n)");
 
   /**
    * The '<em><b>Prise</b></em>' literal value.
@@ -523,6 +531,21 @@ public enum Masseinheit implements Enumerator
   public static final int BLATT_VALUE = 20;
 
   /**
+   * The '<em><b>Tüte</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Tüte</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #TÜTE
+   * @model name="Tüte" literal="T\374te(n)"
+   * @generated
+   * @ordered
+   */
+  public static final int TÜTE_VALUE = 21;
+
+  /**
    * An array of all the '<em><b>Masseinheit</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -552,6 +575,7 @@ public enum Masseinheit implements Enumerator
       STANGEN,
       BUND,
       BLATT,
+      TÜTE,
     };
 
   /**
@@ -631,6 +655,7 @@ public enum Masseinheit implements Enumerator
       case STANGEN_VALUE: return STANGEN;
       case BUND_VALUE: return BUND;
       case BLATT_VALUE: return BLATT;
+      case TÜTE_VALUE: return TÜTE;
     }
     return null;
   }

@@ -127,6 +127,7 @@
     <eLiterals name="Eiweis" value="4"/>
     <eLiterals name="Fisch" value="5"/>
     <eLiterals name="Pflanzen" value="6" literal="Planzen"/>
+    <eLiterals name="Milch" value="7"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RezeptImport">
     <eStructuralFeatures xsi:type="ecore:EReference" name="importedResource" lowerBound="1"
@@ -190,6 +191,7 @@
     <eLiterals name="Stangen" value="18"/>
     <eLiterals name="Bund" value="19"/>
     <eLiterals name="Blatt" value="20"/>
+    <eLiterals name="Tüte" value="21" literal="Tüte(n)"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anmerkung" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Notiz" abstract="true">
