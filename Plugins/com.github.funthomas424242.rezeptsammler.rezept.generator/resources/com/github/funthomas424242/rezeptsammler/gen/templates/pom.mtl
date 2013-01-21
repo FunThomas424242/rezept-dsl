@@ -23,6 +23,52 @@
 	<name>[project.buch.titel/]</name>
 	<packaging>pom</packaging>
 
+	<profiles>
+		<profile>
+			<id>github</id>
+			<properties>
+				<github.global.userName>${env.gituser}</github.global.userName>
+				<github.global.password>${env.gitpassword}</github.global.password>
+				<github.site.repositoryName>rezeptbuch</github.site.repositoryName>
+				<github.site.repositoryOwner>${env.gituser}</github.site.repositoryOwner>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.github.github</groupId>
+						<artifactId>site-maven-plugin</artifactId>
+						<version>${github.maventools.version}</version>
+						<dependencies>
+							<dependency>
+								<groupId>org.apache.maven.plugins</groupId>
+								<artifactId>maven-site-plugin</artifactId>
+								<version>${mvn.siteplugin.version}</version>
+							</dependency>
+						</dependencies>
+						<configuration>
+							<message>Building site for ${project.version}</message>
+							<dryRun>${testonly}</dryRun>
+							<noJekyll>true</noJekyll>
+							<merge>true</merge>
+							<repositoryName>${github.site.repositoryName}</repositoryName>
+							<repositoryOwner>${github.site.repositoryOwner}</repositoryOwner>
+							<userName>${github.global.userName}</userName>
+							<password>${github.global.password}</password>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>site</goal>
+								</goals>
+								<phase>site</phase>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- PROPERTIES -->
@@ -31,6 +77,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<media.parent>src/</media.parent>
 		<draft.mode>no</draft.mode>
+		<testonly>false</testonly>
+		<github.maventools.version>0.7</github.maventools.version>
+		<mvn.siteplugin.version>3.0-beta-3</mvn.siteplugin.version>
 	</properties>
 
 
@@ -112,15 +161,15 @@
 						<phase>pre-site</phase>
 						<goals>
 							<goal>generate-pdf</goal>
-							<goal>generate-html</goal>
+							<goal>generate-webhelp</goal>
+							<!--goal>generate-html</goal>
 							<goal>generate-javahelp</goal>
 							<goal>generate-rtf</goal>
 							<goal>generate-epub</goal>
 							<goal>generate-html</goal>
 							<goal>generate-xhtml</goal>
 							<goal>generate-manpages</goal>
-							<goal>generate-eclipse</goal>
-							<goal>generate-webhelp</goal>
+							<goal>generate-eclipse</goal-->
 						</goals>
 						<configuration>
 							<draftMode>${draft.mode}</draftMode>
@@ -130,6 +179,7 @@
 				</executions>
 				<configuration>
 					<sourceDirectory>${basedir}/src/main/docbkx</sourceDirectory>
+					<targetDirectory>${project.build.directory}/site/${artifactId}</targetDirectory>
 					<includes>book.dbk</includes>
 					<generatedSourceDirectory>${project.build.directory}/docbkx/generated</generatedSourceDirectory>
 					<xincludeSupported>true</xincludeSupported>
@@ -160,7 +210,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.0-beta-3</version>
+				<version>${mvn.siteplugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
