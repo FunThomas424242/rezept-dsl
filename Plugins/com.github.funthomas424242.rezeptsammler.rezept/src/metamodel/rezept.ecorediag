@@ -119,6 +119,10 @@
         <element xmi:type="ecore:EAttribute" href="rezept.ecore#//ProjektBeschreibung/resourcesDir"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ndTtcWY2EeGF7tS9xcn8PQ"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_o4bTUGZdEeKiNa1g6Fc8cg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="rezept.ecore#//ProjektBeschreibung/siteURL"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_o4bTUWZdEeKiNa1g6Fc8cg"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_U8bj0l2REeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_U8bj012REeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_U8bj1F2REeGqYtVkHPgHSw"/>

@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getBuch <em>Buch</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getResourcesDir <em>Resources Dir</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.impl.ProjektBeschreibungImpl#getSiteURL <em>Site URL</em>}</li>
  * </ul>
  * </p>
  *
@@ -135,6 +136,26 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * @ordered
    */
   protected String resourcesDir = RESOURCES_DIR_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getSiteURL() <em>Site URL</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSiteURL()
+   * @generated
+   * @ordered
+   */
+  protected static final String SITE_URL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSiteURL() <em>Site URL</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSiteURL()
+   * @generated
+   * @ordered
+   */
+  protected String siteURL = SITE_URL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -302,6 +323,29 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getSiteURL()
+  {
+    return siteURL;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSiteURL(String newSiteURL)
+  {
+    String oldSiteURL = siteURL;
+    siteURL = newSiteURL;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RezeptPackage.PROJEKT_BESCHREIBUNG__SITE_URL, oldSiteURL, siteURL));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -333,6 +377,8 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
         return getBuch();
       case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
         return getResourcesDir();
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__SITE_URL:
+        return getSiteURL();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -363,6 +409,9 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
       case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
         setResourcesDir((String)newValue);
         return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__SITE_URL:
+        setSiteURL((String)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -392,6 +441,9 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
       case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
         setResourcesDir(RESOURCES_DIR_EDEFAULT);
         return;
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__SITE_URL:
+        setSiteURL(SITE_URL_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -416,6 +468,8 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
         return buch != null;
       case RezeptPackage.PROJEKT_BESCHREIBUNG__RESOURCES_DIR:
         return RESOURCES_DIR_EDEFAULT == null ? resourcesDir != null : !RESOURCES_DIR_EDEFAULT.equals(resourcesDir);
+      case RezeptPackage.PROJEKT_BESCHREIBUNG__SITE_URL:
+        return SITE_URL_EDEFAULT == null ? siteURL != null : !SITE_URL_EDEFAULT.equals(siteURL);
     }
     return super.eIsSet(featureID);
   }
@@ -439,6 +493,8 @@ public class ProjektBeschreibungImpl extends EObjectImpl implements ProjektBesch
     result.append(version);
     result.append(", resourcesDir: ");
     result.append(resourcesDir);
+    result.append(", siteURL: ");
+    result.append(siteURL);
     result.append(')');
     return result.toString();
   }

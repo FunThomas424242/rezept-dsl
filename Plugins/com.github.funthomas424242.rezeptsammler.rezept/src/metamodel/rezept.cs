@@ -71,6 +71,7 @@ RULES {
 	ProjektBeschreibung ::=  "RezeptSammlung" "{" 
 	             "groupId" "=" groupId['"','"'] ";" "artifactId" "=" artifactId['"','"'] ";"
 	             "version" "=" version['"','"'] ";" "Media Folder:" resourcesDir['"','"'] ";"
+	             ("siteURL" "=" siteURL['"','"'] ";")?
 	              "}" buch;
 	BuchBeschreibung ::= "Buch" "{" imports* "Titel:" titel['"','"'] ";" autoren+ 
 	            ("Vorwort:" vorwort['"','"']   absatz* )?  lizenz? ("Veröffentlicht am:" datumPublished[DATUM] ".")?  "}";

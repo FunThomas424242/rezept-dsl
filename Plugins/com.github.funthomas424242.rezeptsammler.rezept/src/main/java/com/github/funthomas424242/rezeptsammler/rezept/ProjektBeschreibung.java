@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getVersion <em>Version</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getBuch <em>Buch</em>}</li>
  *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getResourcesDir <em>Resources Dir</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getSiteURL <em>Site URL</em>}</li>
  * </ul>
  * </p>
  *
@@ -161,5 +162,31 @@ public interface ProjektBeschreibung extends EObject
    * @generated
    */
   void setResourcesDir(String value);
+
+  /**
+   * Returns the value of the '<em><b>Site URL</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Site URL</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Site URL</em>' attribute.
+   * @see #setSiteURL(String)
+   * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getProjektBeschreibung_SiteURL()
+   * @model
+   * @generated
+   */
+  String getSiteURL();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getSiteURL <em>Site URL</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Site URL</em>' attribute.
+   * @see #getSiteURL()
+   * @generated
+   */
+  void setSiteURL(String value);
 
 } // ProjektBeschreibung

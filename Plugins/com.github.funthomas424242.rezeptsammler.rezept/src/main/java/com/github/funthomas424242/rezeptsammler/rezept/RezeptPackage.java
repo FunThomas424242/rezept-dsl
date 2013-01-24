@@ -613,13 +613,22 @@ public interface RezeptPackage extends EPackage
   int PROJEKT_BESCHREIBUNG__RESOURCES_DIR = 4;
 
   /**
+   * The feature id for the '<em><b>Site URL</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJEKT_BESCHREIBUNG__SITE_URL = 5;
+
+  /**
    * The number of structural features of the '<em>Projekt Beschreibung</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJEKT_BESCHREIBUNG_FEATURE_COUNT = 5;
+  int PROJEKT_BESCHREIBUNG_FEATURE_COUNT = 6;
 
   /**
    * The number of structural features of the '<em>Quelle</em>' class.
@@ -1812,6 +1821,17 @@ public interface RezeptPackage extends EPackage
   EAttribute getProjektBeschreibung_ResourcesDir();
 
   /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getSiteURL <em>Site URL</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Site URL</em>'.
+   * @see com.github.funthomas424242.rezeptsammler.rezept.ProjektBeschreibung#getSiteURL()
+   * @see #getProjektBeschreibung()
+   * @generated
+   */
+  EAttribute getProjektBeschreibung_SiteURL();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rezeptsammler.rezept.Literaturquelle <em>Literaturquelle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2973,6 +2993,14 @@ public interface RezeptPackage extends EPackage
      * @generated
      */
     EAttribute PROJEKT_BESCHREIBUNG__RESOURCES_DIR = eINSTANCE.getProjektBeschreibung_ResourcesDir();
+
+    /**
+     * The meta object literal for the '<em><b>Site URL</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJEKT_BESCHREIBUNG__SITE_URL = eINSTANCE.getProjektBeschreibung_SiteURL();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rezeptsammler.rezept.impl.LiteraturquelleImpl <em>Literaturquelle</em>}' class.

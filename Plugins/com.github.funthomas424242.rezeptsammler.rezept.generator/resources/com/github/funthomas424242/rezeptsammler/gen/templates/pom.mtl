@@ -31,7 +31,7 @@
 				<github.global.password>${env.gitpassword}</github.global.password>
 				<github.site.repositoryName>rezeptbuch</github.site.repositoryName>
 				<github.site.repositoryOwner>${env.gituser}</github.site.repositoryOwner>
-				<site.img.path>http://funthomas424242.github.com/rezeptbuch/kochbuch/media/</site.img.path>
+				<site.img.path>[project.siteURL/]/[project.artifactId/]/media/</site.img.path>
 			</properties>
 			<build>
 				<plugins>
@@ -81,10 +81,7 @@
 		<testonly>false</testonly>
 		<github.maventools.version>0.7</github.maventools.version>
 		<mvn.siteplugin.version>3.0-beta-3</mvn.siteplugin.version>
-<!-- 
-		<site.img.path>${project.build.directory}/site/${project.artifactId}/media/</site.img.path>
--->
-<site.img.path>http://funthomas424242.github.com/rezeptbuch/kochbuch/media/</site.img.path>
+	    <site.img.path>${project.build.directory}/site/${project.artifactId}/media/</site.img.path>
 	</properties>
 
 

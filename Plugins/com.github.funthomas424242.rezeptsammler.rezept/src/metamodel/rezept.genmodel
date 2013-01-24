@@ -128,6 +128,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/version"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rezept.ecore#//ProjektBeschreibung/buch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/resourcesDir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//ProjektBeschreibung/siteURL"/>
     </genClasses>
     <genClasses ecoreClass="rezept.ecore#//Literaturquelle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rezept.ecore#//Literaturquelle/beschreibung"/>

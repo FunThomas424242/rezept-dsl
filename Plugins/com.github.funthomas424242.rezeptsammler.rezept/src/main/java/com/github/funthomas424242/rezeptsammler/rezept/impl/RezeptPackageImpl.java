@@ -817,6 +817,16 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getProjektBeschreibung_SiteURL()
+  {
+    return (EAttribute)projektBeschreibungEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLiteraturquelle()
   {
     return literaturquelleEClass;
@@ -1636,6 +1646,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__VERSION);
     createEReference(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__BUCH);
     createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__RESOURCES_DIR);
+    createEAttribute(projektBeschreibungEClass, PROJEKT_BESCHREIBUNG__SITE_URL);
 
     literaturquelleEClass = createEClass(LITERATURQUELLE);
     createEAttribute(literaturquelleEClass, LITERATURQUELLE__BESCHREIBUNG);
@@ -1830,6 +1841,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getProjektBeschreibung_Version(), ecorePackage.getEString(), "version", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProjektBeschreibung_Buch(), this.getBuchBeschreibung(), null, "buch", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProjektBeschreibung_ResourcesDir(), ecorePackage.getEString(), "resourcesDir", null, 1, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjektBeschreibung_SiteURL(), ecorePackage.getEString(), "siteURL", null, 0, 1, ProjektBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(literaturquelleEClass, Literaturquelle.class, "Literaturquelle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLiteraturquelle_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 1, 1, Literaturquelle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
