@@ -742,7 +742,7 @@ to permit their use in free software.
 							[/let]
 						[else]
 							[let ablage : LokalerPfad = bild.ablageOrt.oclAsType(LokalerPfad)]
-								fileref="../../../../../../../[project.resourcesDir/]/[ablage.fileName/]">
+								fileref="[ablage.fileName/]">
 							[/let]
 						[/if]
 				</imagedata>

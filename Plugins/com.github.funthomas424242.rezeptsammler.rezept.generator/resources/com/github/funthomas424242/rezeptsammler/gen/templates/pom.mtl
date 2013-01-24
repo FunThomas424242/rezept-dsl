@@ -140,7 +140,7 @@
 					<sourceDirectory>${basedir}/src/main/docbkx</sourceDirectory>
 					<targetDirectory>${project.build.directory}/site/${project.artifactId}</targetDirectory>
 					<generatedSourceDirectory>${project.build.directory}/docbkx/generated</generatedSourceDirectory>
-					<imgSrcPath>${project.build.directory}/site/${project.artifactId}/media</imgSrcPath>
+					<imgSrcPath>${project.build.directory}/site/${project.artifactId}/media/</imgSrcPath>
 					<includes>book.dbk</includes>
 					<xincludeSupported>true</xincludeSupported>
 					<highlightSource>1</highlightSource>
