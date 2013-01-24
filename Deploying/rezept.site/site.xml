@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/rezept.feature_1.0.0.201301242117.jar" id="rezept.feature" version="1.0.0.201301242117">
+      <category name="funthomas424242"/>
+   </feature>
+   <category-def name="funthomas424242" label="FunThomas424242">
+      <description>
+         All features of FunThomas424242.
+      </description>
+   </category-def>
+</site>
