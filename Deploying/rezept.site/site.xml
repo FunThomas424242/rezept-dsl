@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/rezept.feature_1.0.0.201301242117.jar" id="rezept.feature" version="1.0.0.201301242117">
+   <feature url="features/rezept.feature_1.0.0.201301242131.jar" id="rezept.feature" version="1.0.0.201301242131">
       <category name="funthomas424242"/>
    </feature>
    <category-def name="funthomas424242" label="FunThomas424242">
