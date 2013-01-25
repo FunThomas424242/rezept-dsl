@@ -10,7 +10,7 @@ Das Projekt realisiert ein  eclipse feature *Rezept DSL Feature* welches folgend
 
 Das Feature kann über den Eclipse Update Manager mit folgendem URL installiert werden:
 
-* jar:http://dl.bintray.com/v1/content/funthomas424242/eclipse-features/rezept_dsl-&lt;Version&gt;.zip!/  (Version z.B. durch 1.0.0 ersetzen)
+* jar:http://dl.bintray.com/v1/content/funthomas424242/eclipse-features/rezept_dsl-\[Version\].zip!/  (Version z.B. durch 1.0.0 ersetzen)
 * jar:http://dl.bintray.com/v1/content/funthomas424242/eclipse-features/rezept_dsl-1.0.0.zip!/   (Beispiel für Version 1.0.0)
 
 Ein Beispielprojekt findet sich unter [rezeptbuch](https://github.com/FunThomas424242/rezeptbuch).
