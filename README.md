@@ -16,3 +16,12 @@ Das Feature kann über den Eclipse Update Manager mit folgendem URL installiert 
 Ein Beispielprojekt findet sich unter [rezeptbuch](https://github.com/FunThomas424242/rezeptbuch).
 
 Der Download wird über [Bintray](https://bintray.com/pkg/show/general/funthomas424242/eclipse-features/rezept-dsl) bereitgestellt. 
+
+Installationsvorraussetzungen
+-----------------------------
+Es müssen bereits installiert sein:
+
+* Eclipse Marketplace Client
+* EMF - Eclipse Modeling Framework Core Runtime(Yoxos Marketplace)
+* EMFText SDK (Yoxos Marketplace)
+* Acceleo SDK (Yoxos Marketplace)
