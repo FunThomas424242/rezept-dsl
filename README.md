@@ -1,4 +1,4 @@
-rezept-dsl
+![logo](http://funthomas424242.github.com/rezept-dsl/Features/rezept.feature/rezeptdsl-100x100.png "Rezept DSL")rezept-dsl
 ===========
 
 Das Projekt realisiert ein  eclipse feature *Rezept DSL Feature* welches folgende Plugins bereitstellt:
