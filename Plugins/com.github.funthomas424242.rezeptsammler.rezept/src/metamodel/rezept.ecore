@@ -54,8 +54,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="autoren" lowerBound="1"
         upperBound="-1" eType="#//Autor" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//RezeptImport" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" lowerBound="1"
+        upperBound="-1" eType="#//RezeptImport" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="absatz" upperBound="-1"
         eType="#//Absatz" containment="true"/>
   </eClassifiers>
