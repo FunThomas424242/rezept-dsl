@@ -24,5 +24,5 @@ Es müssen bereits installiert sein:
 * Eclipse Marketplace Client
 * EMF - Eclipse Modeling Framework Core Runtime(Yoxos Marketplace)
 * EMFText SDK (Yoxos Marketplace)
-* EMFText Shared ANTLR 3.4.0 Runtime (Yoxos Marketplace)
+* EMFText Shared ANTLR 3.4.0 Runtime (Update Site: http://www.emftext.org/update_trunk)
 * Acceleo SDK (Yoxos Marketplace)
