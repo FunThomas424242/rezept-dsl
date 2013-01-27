@@ -632,7 +632,7 @@ to permit their use in free software.
     </variablelist>
 </para>
 
-<section>
+<formalpara>
 	<title>Zutaten</title>
 
     <para><itemizedlist>
@@ -654,9 +654,9 @@ to permit their use in free software.
         </listitem>
 	[/for]
     </itemizedlist></para>
-  </section>
+  </formalpara>
 
-  <section>
+  <formalpara>
     <title>Arbeitsschritte</title>
 
     <para><orderedlist>
@@ -688,9 +688,9 @@ to permit their use in free software.
  		  </para>
 	    </formalpara>
 	[/if]
-  </section>
+  </formalpara>
 
-  <section>
+  <formalpara>
     <title>Einkaufsempfehlung</title>
 
 	[if (rezept.produkte->isEmpty())]
@@ -718,10 +718,10 @@ to permit their use in free software.
 		[/for]
 	    </itemizedlist></para>
 	[/if]
-  </section>
+  </formalpara>
 
 [if (not rezept.bilder->isEmpty())]
-  <section>
+  <formalpara>
     <title>Bilder</title>
 
 	<para>
@@ -766,7 +766,7 @@ to permit their use in free software.
 	[/for]
 	</para>
 
-  </section>
+  </formalpara>
   [/if]
 
 </chapter>

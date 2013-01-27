@@ -147,12 +147,15 @@
 					<includes>book.dbk</includes>
 					<xincludeSupported>true</xincludeSupported>
 					<highlightSource>1</highlightSource>
-					<paperType>A5</paperType>
+					<paperType>A4</paperType>
 					<doubleSided>true</doubleSided>
 					<fop1Extensions>1</fop1Extensions>
 					<foCustomization>src/main/resources/stylesheets/fo/docbook.xsl</foCustomization>
+					<partAutolabel>0</partAutolabel>
+					<chapterAutolabel>0</chapterAutolabel>
 					<sectionAutolabel>true</sectionAutolabel>
 					<sectionAutolabelMaxDepth>3</sectionAutolabelMaxDepth>
+					<sectionLabelIncludesComponentLabel>2</sectionLabelIncludesComponentLabel>
 				</configuration>
 				<dependencies>
 					<!--dependency>
