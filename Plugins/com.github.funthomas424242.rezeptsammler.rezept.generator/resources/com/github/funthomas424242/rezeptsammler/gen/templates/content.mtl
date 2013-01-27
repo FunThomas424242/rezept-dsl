@@ -552,8 +552,9 @@ to permit their use in free software.
 	
 [/template]
 
+[comment TODO rename in createPart /]
 [template public createChapter(project:ProjektBeschreibung, liste : Rezeptliste, parentIndex : String)]
-<chapter>
+<part>
     <title>[liste.name/]</title>
 	[for (rezept : Rezept | liste.rezepte)]
 	    [let rezeptIndex : Integer = liste.rezepte->indexOf(rezept)]
@@ -563,13 +564,14 @@ to permit their use in free software.
 			[/if]
 		[/let]
 	[/for]
-</chapter>
+</part>
 [/template]
 
+[comment TODO rename in createChapter /]
 [template public createSection(project: ProjektBeschreibung, rezept : Rezept, rezeptIndex : String )]
 	[file (projectPath(project)+'/src/main/docbkx/Rezept'+rezeptIndex+'.dbk', false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
-<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:ns5="http://www.w3.org/2000/svg"
@@ -767,7 +769,7 @@ to permit their use in free software.
   </section>
   [/if]
 
-</section>
+</chapter>
 
    
 [/file]

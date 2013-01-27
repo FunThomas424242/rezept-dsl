@@ -148,6 +148,7 @@
 					<xincludeSupported>true</xincludeSupported>
 					<highlightSource>1</highlightSource>
 					<paperType>A5</paperType>
+					<doubleSided>true</doubleSided>
 					<fop1Extensions>1</fop1Extensions>
 					<foCustomization>src/main/resources/stylesheets/fo/docbook.xsl</foCustomization>
 					<sectionAutolabel>true</sectionAutolabel>
