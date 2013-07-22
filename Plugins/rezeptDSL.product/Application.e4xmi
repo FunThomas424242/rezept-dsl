@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_9sxMQPJHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.ide.application" bindingContexts="_9sxzUPJHEeK_L-JjjSt4eQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_9sxMQfJHEeK_L-JjjSt4eQ" label="rezeptDSL.product" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_9syaavJHEeK_L-JjjSt4eQ">
+      <children xsi:type="advanced:Perspective" xmi:id="_9syaa_JHEeK_L-JjjSt4eQ">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_9szBcPJHEeK_L-JjjSt4eQ" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_9szBcfJHEeK_L-JjjSt4eQ">
+            <children xsi:type="basic:Part" xmi:id="_9szBcvJHEeK_L-JjjSt4eQ" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.parts.SamplePart" label="Sample Part"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_gakoEPJIEeK_L-JjjSt4eQ" elementId="rezeptdsl.product.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_h4kQEPJIEeK_L-JjjSt4eQ" elementId="rezeptdsl.product.part.0" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.parts.RezeptEditorPart"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_9syaY_JHEeK_L-JjjSt4eQ" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_9syaZPJHEeK_L-JjjSt4eQ" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_9syaZfJHEeK_L-JjjSt4eQ" label="Open" iconURI="platform:/plugin/rezeptDSL.product/icons/sample.gif" command="_9sxzV_JHEeK_L-JjjSt4eQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_9syaZvJHEeK_L-JjjSt4eQ" label="Save" iconURI="platform:/plugin/rezeptDSL.product/icons/save_edit.gif" command="_9sxzWvJHEeK_L-JjjSt4eQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_9syaZ_JHEeK_L-JjjSt4eQ" label="Quit" command="_9sxzU_JHEeK_L-JjjSt4eQ"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_9syaaPJHEeK_L-JjjSt4eQ" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_9syaafJHEeK_L-JjjSt4eQ" label="About" command="_9syaYPJHEeK_L-JjjSt4eQ"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_9szBc_JHEeK_L-JjjSt4eQ">
+      <children xsi:type="menu:ToolBar" xmi:id="_9szBdPJHEeK_L-JjjSt4eQ" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_9szBdfJHEeK_L-JjjSt4eQ" iconURI="platform:/plugin/rezeptDSL.product/icons/sample.gif" command="_9sxzV_JHEeK_L-JjjSt4eQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_9szBdvJHEeK_L-JjjSt4eQ" iconURI="platform:/plugin/rezeptDSL.product/icons/save_edit.gif" command="_9sxzWvJHEeK_L-JjjSt4eQ"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_9sxzVPJHEeK_L-JjjSt4eQ" elementId="rezeptDSL.product.handler.quitCommand" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.handlers.QuitHandler" command="_9sxzU_JHEeK_L-JjjSt4eQ"/>
+  <handlers xmi:id="_9sxzWPJHEeK_L-JjjSt4eQ" elementId="rezeptDSL.product.handler.openCommand" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.handlers.OpenHandler" command="_9sxzV_JHEeK_L-JjjSt4eQ"/>
+  <handlers xmi:id="_9sxzW_JHEeK_L-JjjSt4eQ" elementId="rezeptDSL.product.handler.saveCommand" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.handlers.SaveHandler" command="_9sxzWvJHEeK_L-JjjSt4eQ"/>
+  <handlers xmi:id="_9syaYfJHEeK_L-JjjSt4eQ" elementId="rezeptDSL.product.handler.aboutCommand" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.handlers.AboutHandler" command="_9syaYPJHEeK_L-JjjSt4eQ"/>
+  <bindingTables xmi:id="_9sxzVfJHEeK_L-JjjSt4eQ" bindingContext="_9sxzUPJHEeK_L-JjjSt4eQ">
+    <bindings xmi:id="_9sxzVvJHEeK_L-JjjSt4eQ" keySequence="M1+Q" command="_9sxzU_JHEeK_L-JjjSt4eQ"/>
+    <bindings xmi:id="_9sxzWfJHEeK_L-JjjSt4eQ" keySequence="M1+O" command="_9sxzV_JHEeK_L-JjjSt4eQ"/>
+    <bindings xmi:id="_9sxzXPJHEeK_L-JjjSt4eQ" keySequence="M1+S" command="_9sxzWvJHEeK_L-JjjSt4eQ"/>
+    <bindings xmi:id="_9syaYvJHEeK_L-JjjSt4eQ" keySequence="M1+A" command="_9syaYPJHEeK_L-JjjSt4eQ"/>
+  </bindingTables>
+  <rootContext xmi:id="_9sxzUPJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_9sxzUfJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_9sxzUvJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_9sxzU_JHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_9sxzV_JHEeK_L-JjjSt4eQ" elementId="rezeptDSL.product.open" commandName="openCommand"/>
+  <commands xmi:id="_9sxzWvJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_9syaYPJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_9sxMQvJHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_9sxMQ_JHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_9sxMRPJHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_9sxMRfJHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_9sxMRvJHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_9sxMR_JHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_9sxMSPJHEeK_L-JjjSt4eQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
