@@ -164,7 +164,7 @@ public interface BuchBeschreibung extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Imports</em>' containment reference list.
    * @see com.github.funthomas424242.rezeptsammler.rezept.RezeptPackage#getBuchBeschreibung_Imports()
-   * @model containment="true"
+   * @model containment="true" required="true"
    * @generated
    */
   EList<RezeptImport> getImports();

@@ -11,5 +11,6 @@ Export-Package: com.github.funthomas424242.rezeptsammler.rezept,
  com.github.funthomas424242.rezeptsammler.rezept.impl,
  com.github.funthomas424242.rezeptsammler.rezept.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.junit
 Bundle-ActivationPolicy: lazy

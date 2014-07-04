@@ -35,7 +35,7 @@ public class RezeptFactoryImpl extends EFactoryImpl implements RezeptFactory
   {
     try
     {
-      RezeptFactory theRezeptFactory = (RezeptFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.github.com/funthomas424242/language/rezept"); 
+      RezeptFactory theRezeptFactory = (RezeptFactory)EPackage.Registry.INSTANCE.getEFactory(RezeptPackage.eNS_URI);
       if (theRezeptFactory != null)
       {
         return theRezeptFactory;

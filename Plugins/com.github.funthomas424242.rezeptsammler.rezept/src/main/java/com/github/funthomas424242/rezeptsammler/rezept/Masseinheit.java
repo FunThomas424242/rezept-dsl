@@ -221,7 +221,15 @@ public enum Masseinheit implements Enumerator
    * @generated
    * @ordered
    */
-  PACKUNGEN(22, "Packungen", "Packung(en)");
+  PACKUNGEN(22, "Packungen", "Packung(en)"), /**
+   * The '<em><b>Päckchen</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #PÄCKCHEN_VALUE
+   * @generated
+   * @ordered
+   */
+  PÄCKCHEN(23, "Päckchen", "P\u00e4ckchen");
 
   /**
    * The '<em><b>Prise</b></em>' literal value.
@@ -569,6 +577,21 @@ public enum Masseinheit implements Enumerator
   public static final int PACKUNGEN_VALUE = 22;
 
   /**
+   * The '<em><b>Päckchen</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Päckchen</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #PÄCKCHEN
+   * @model name="Päckchen"
+   * @generated
+   * @ordered
+   */
+  public static final int PÄCKCHEN_VALUE = 23;
+
+  /**
    * An array of all the '<em><b>Masseinheit</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -600,6 +623,7 @@ public enum Masseinheit implements Enumerator
       BLATT,
       TÜTE,
       PACKUNGEN,
+      PÄCKCHEN,
     };
 
   /**
@@ -681,6 +705,7 @@ public enum Masseinheit implements Enumerator
       case BLATT_VALUE: return BLATT;
       case TÜTE_VALUE: return TÜTE;
       case PACKUNGEN_VALUE: return PACKUNGEN;
+      case PÄCKCHEN_VALUE: return PÄCKCHEN;
     }
     return null;
   }

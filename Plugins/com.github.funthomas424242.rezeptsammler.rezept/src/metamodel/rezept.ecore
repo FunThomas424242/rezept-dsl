@@ -115,6 +115,7 @@
     <eLiterals name="Becher" value="7"/>
     <eLiterals name="Netz" value="8"/>
     <eLiterals name="Tüte" value="9" literal="Tüte"/>
+    <eLiterals name="Päckchen" value="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Zutat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -196,6 +197,7 @@
     <eLiterals name="Blatt" value="20"/>
     <eLiterals name="Tüte" value="21" literal="Tüte(n)"/>
     <eLiterals name="Packungen" value="22" literal="Packung(en)"/>
+    <eLiterals name="Päckchen" value="23"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anmerkung" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Notiz" abstract="true">

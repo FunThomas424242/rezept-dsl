@@ -333,13 +333,17 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Tüte"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_R9P3AVUEEeKjmbm-qCMsBA"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_tWDaUAOoEeSssblzRfkbPA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Päckchen"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tWDaUQOoEeSssblzRfkbPA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_EFFZ8l2WEeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_EFFZ812WEeGqYtVkHPgHSw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_EFFZ9F2WEeGqYtVkHPgHSw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_EFEy4V2WEeGqYtVkHPgHSw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="rezept.ecore#//Verpackung"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EFEy4l2WEeGqYtVkHPgHSw" x="715" y="25"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EFEy4l2WEeGqYtVkHPgHSw" x="745" y="30"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_EQZAIF2YEeGqYtVkHPgHSw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_EQaOQF2YEeGqYtVkHPgHSw" type="4001"/>
@@ -696,6 +700,10 @@
       <children xmi:type="notation:Node" xmi:id="_GXohMGMaEeKbAP8xVrPRjw" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Packungen"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_GXohMWMaEeKbAP8xVrPRjw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_SPyswAOqEeSssblzRfkbPA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Päckchen"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_SPyswQOqEeSssblzRfkbPA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_QDPNMGMBEeK7vNdu7SiB2Q" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tüte"/>

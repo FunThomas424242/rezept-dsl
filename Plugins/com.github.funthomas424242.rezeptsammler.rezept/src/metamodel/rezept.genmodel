@@ -30,6 +30,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Becher"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Netz"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Tüte"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Päckchen"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Stoff">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Laktose"/>
@@ -76,6 +77,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Blatt"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tüte"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Packungen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Päckchen"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/etwas"/>

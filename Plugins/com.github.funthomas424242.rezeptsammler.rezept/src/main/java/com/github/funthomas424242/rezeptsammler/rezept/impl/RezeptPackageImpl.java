@@ -1832,7 +1832,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     initEAttribute(getBuchBeschreibung_DatumPublished(), ecorePackage.getEString(), "datumPublished", null, 0, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBuchBeschreibung_Lizenz(), this.getLizenz(), null, "lizenz", null, 0, 1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBuchBeschreibung_Autoren(), this.getAutor(), null, "autoren", null, 1, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBuchBeschreibung_Imports(), this.getRezeptImport(), null, "imports", null, 0, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchBeschreibung_Imports(), this.getRezeptImport(), null, "imports", null, 1, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBuchBeschreibung_Absatz(), this.getAbsatz(), null, "absatz", null, 0, -1, BuchBeschreibung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(projektBeschreibungEClass, ProjektBeschreibung.class, "ProjektBeschreibung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1963,6 +1963,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(verpackungEEnum, Verpackung.BECHER);
     addEEnumLiteral(verpackungEEnum, Verpackung.NETZ);
     addEEnumLiteral(verpackungEEnum, Verpackung.TÜTE);
+    addEEnumLiteral(verpackungEEnum, Verpackung.PÄCKCHEN);
 
     initEEnum(stoffEEnum, Stoff.class, "Stoff");
     addEEnumLiteral(stoffEEnum, Stoff.LAKTOSE);
@@ -2009,6 +2010,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(masseinheitEEnum, Masseinheit.BLATT);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.TÜTE);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.PACKUNGEN);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.PÄCKCHEN);
 
     initEEnum(mengenAngabeEEnum, MengenAngabe.class, "MengenAngabe");
     addEEnumLiteral(mengenAngabeEEnum, MengenAngabe.ETWAS);

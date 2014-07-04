@@ -115,7 +115,15 @@ public enum Verpackung implements Enumerator
    * @generated
    * @ordered
    */
-  TÜTE(9, "Tüte", "T\u00fcte");
+  TÜTE(9, "Tüte", "T\u00fcte"), /**
+   * The '<em><b>Päckchen</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #PÄCKCHEN_VALUE
+   * @generated
+   * @ordered
+   */
+  PÄCKCHEN(10, "Päckchen", "P\u00e4ckchen");
 
   /**
    * The '<em><b>Packung</b></em>' literal value.
@@ -268,6 +276,21 @@ public enum Verpackung implements Enumerator
   public static final int TÜTE_VALUE = 9;
 
   /**
+   * The '<em><b>Päckchen</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Päckchen</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #PÄCKCHEN
+   * @model name="Päckchen"
+   * @generated
+   * @ordered
+   */
+  public static final int PÄCKCHEN_VALUE = 10;
+
+  /**
    * An array of all the '<em><b>Verpackung</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -286,6 +309,7 @@ public enum Verpackung implements Enumerator
       BECHER,
       NETZ,
       TÜTE,
+      PÄCKCHEN,
     };
 
   /**
@@ -354,6 +378,7 @@ public enum Verpackung implements Enumerator
       case BECHER_VALUE: return BECHER;
       case NETZ_VALUE: return NETZ;
       case TÜTE_VALUE: return TÜTE;
+      case PÄCKCHEN_VALUE: return PÄCKCHEN;
     }
     return null;
   }
