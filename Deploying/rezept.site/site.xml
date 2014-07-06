@@ -3,6 +3,9 @@
    <feature url="features/rezept.feature_1.0.0.201301242150.jar" id="rezept.feature" version="1.0.0.201301242150">
       <category name="funthomas424242"/>
    </feature>
+   <feature url="features/rezept.feature_1.0.1.201407061313.jar" id="rezept.feature" version="1.0.1.201407061313">
+      <category name="funthomas424242"/>
+   </feature>
    <category-def name="funthomas424242" label="FunThomas424242">
       <description>
          All features of FunThomas424242.

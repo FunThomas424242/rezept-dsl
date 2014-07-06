@@ -43,6 +43,9 @@
       <import plugin="org.eclipse.ui.ide"/>
       <import plugin="org.eclipse.ui.views"/>
       <import plugin="org.eclipse.ui.workbench.texteditor"/>
+      <import plugin="org.junit"/>
+      <import plugin="com.github.funthomas424242.rezeptsammler.rezept"/>
+      <import plugin="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept"/>
    </requires>
 
    <plugin
@@ -63,14 +66,14 @@
          id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept"
          download-size="0"
          install-size="0"
-         version="1.0.1.qualifier"
+         version="1.0.0"
          unpack="false"/>
 
    <plugin
          id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui"
          download-size="0"
          install-size="0"
-         version="1.0.1.qualifier"
+         version="1.0.0"
          unpack="false"/>
 
 </feature>

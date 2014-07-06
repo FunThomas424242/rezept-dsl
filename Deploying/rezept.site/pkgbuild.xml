@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="feature_export" name="build">
+	<target name="feature_export">
+		<pde.exportFeatures destination="/home/huluvu/updatesite" exportSource="false" exportType="zip" features="rezept.feature" filename="rezept_dsl-1.0.1.zip" qualifier="SNAPSHOT" useJARFormat="true"/>
+	</target>
+</project>
