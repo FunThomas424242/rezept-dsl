@@ -78,6 +78,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tüte"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Packungen"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Päckchen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Dose"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//MengenAngabe/etwas"/>

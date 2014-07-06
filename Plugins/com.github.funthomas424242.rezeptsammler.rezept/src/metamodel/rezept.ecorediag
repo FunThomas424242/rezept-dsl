@@ -709,6 +709,10 @@
         <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tüte"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_QDPNMWMBEeK7vNdu7SiB2Q"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_uFDtgATpEeSEJawGTY-SrA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Dose"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uFDtgQTpEeSEJawGTY-SrA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_8hTfwGX2EeG6Z-1mcDLt8g"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_8hTfwWX2EeG6Z-1mcDLt8g"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_8hTfwmX2EeG6Z-1mcDLt8g"/>

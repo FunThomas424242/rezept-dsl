@@ -198,6 +198,7 @@
     <eLiterals name="Tüte" value="21" literal="Tüte(n)"/>
     <eLiterals name="Packungen" value="22" literal="Packung(en)"/>
     <eLiterals name="Päckchen" value="23"/>
+    <eLiterals name="Dose" value="24"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anmerkung" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Notiz" abstract="true">

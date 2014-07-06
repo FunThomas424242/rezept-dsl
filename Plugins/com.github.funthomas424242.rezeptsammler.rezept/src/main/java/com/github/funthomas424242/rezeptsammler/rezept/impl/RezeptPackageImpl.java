@@ -2011,6 +2011,7 @@ public class RezeptPackageImpl extends EPackageImpl implements RezeptPackage
     addEEnumLiteral(masseinheitEEnum, Masseinheit.TÜTE);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.PACKUNGEN);
     addEEnumLiteral(masseinheitEEnum, Masseinheit.PÄCKCHEN);
+    addEEnumLiteral(masseinheitEEnum, Masseinheit.DOSE);
 
     initEEnum(mengenAngabeEEnum, MengenAngabe.class, "MengenAngabe");
     addEEnumLiteral(mengenAngabeEEnum, MengenAngabe.ETWAS);

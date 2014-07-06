@@ -89,6 +89,7 @@
 	<!-- BUILD -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<build>
+        <defaultGoal>site</defaultGoal>
 		<plugins>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
