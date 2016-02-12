@@ -6,7 +6,7 @@
    <feature url="features/rezept.feature_1.0.1.201407061313.jar" id="rezept.feature" version="1.0.1.201407061313">
       <category name="funthomas424242"/>
    </feature>
-   <feature url="features/rezept.feature_1.0.2.201602112155.jar" id="rezept.feature" version="1.0.2.201602112155">
+   <feature url="features/rezept.feature_1.0.2.201602112351.jar" id="rezept.feature" version="1.0.2.201602112351">
       <category name="funthomas424242"/>
    </feature>
    <category-def name="funthomas424242" label="FunThomas424242">

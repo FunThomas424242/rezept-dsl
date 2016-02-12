@@ -6,6 +6,9 @@
    <feature url="features/rezept.feature_1.0.1.qualifier.jar" id="rezept.feature" version="1.0.1.qualifier">
       <category name="funthomas424242"/>
    </feature>
+   <feature url="features/rezept.feature_1.0.2.qualifier.jar" id="rezept.feature" version="1.0.2.qualifier">
+      <category name="funthomas424242"/>
+   </feature>
    <category-def name="funthomas424242" label="FunThomas424242">
       <description>
          All features of FunThomas424242
