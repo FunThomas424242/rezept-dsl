@@ -1,7 +1,7 @@
 site/vendor = FunThomas424242
-site/uploadPath = https://api.bintray.com/content/funthomas424242/eclipse-features/rezept-dsl/1.0.0/
+site/uploadPath = https://api.bintray.com/content/funthomas424242/eclipse-features/rezept-dsl/1.0.2/
 site/usernameProperty = DEVBOOST_UPLOAD_USER
 site/passwordProperty = DEVBOOST_UPLOAD_PASS
 site/snapshot = false
 
-feature/rezept.feature/version = 1.0.0
+feature/rezept.feature/version = 1.0.2
