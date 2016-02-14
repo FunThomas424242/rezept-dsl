@@ -96,6 +96,7 @@
     <eLiterals name="Pizza" value="4"/>
     <eLiterals name="Asiatisch" value="5"/>
     <eLiterals name="Nudeln" value="6"/>
+    <eLiterals name="Frühstück" value="7" literal="Fruehstueck"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Kommentar" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="ProduktRef">
