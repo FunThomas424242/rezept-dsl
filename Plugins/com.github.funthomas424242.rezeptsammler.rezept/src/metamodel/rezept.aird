@@ -1811,9 +1811,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-ULiENMHEeWZHvZJSZ7AsQ" name="Frühstück" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Frühstück"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Frühstück"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-ULiENMHEeWZHvZJSZ7AsQ" name="Fruehstueck" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Fruehstueck"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//KategorieArt/Fruehstueck"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-ULiEdMHEeWZHvZJSZ7AsQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
@@ -1932,17 +1932,17 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-US20NMHEeWZHvZJSZ7AsQ" name="Tüte" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Tüte"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Tüte"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-US20NMHEeWZHvZJSZ7AsQ" name="Tuete" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Tuete"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Tuete"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-US20dMHEeWZHvZJSZ7AsQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-UTd4NMHEeWZHvZJSZ7AsQ" name="Päckchen" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Päckchen"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Päckchen"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-UTd4NMHEeWZHvZJSZ7AsQ" name="Paeckchen" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Paeckchen"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Verpackung/Paeckchen"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-UTd4dMHEeWZHvZJSZ7AsQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
@@ -2448,9 +2448,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-U_aYNMHEeWZHvZJSZ7AsQ" name="Tüte" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tüte"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tüte"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-U_aYNMHEeWZHvZJSZ7AsQ" name="Tuete" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tuete"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Tuete"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-U_aYdMHEeWZHvZJSZ7AsQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
@@ -2464,9 +2464,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-VAogdMHEeWZHvZJSZ7AsQ" name="Päckchen" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Päckchen"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Päckchen"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-VAogdMHEeWZHvZJSZ7AsQ" name="Paeckchen" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Paeckchen"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="rezept.ecore#//Masseinheit/Paeckchen"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-VBPkNMHEeWZHvZJSZ7AsQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
@@ -2868,6 +2868,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-VcGU9MHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-VcGVNMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-VcGVdMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -2894,6 +2895,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-VfJoNMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-VfJodMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-VfJotMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -2907,6 +2909,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-Vg-0NMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-Vg-0dMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-Vg-0tMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -2946,6 +2949,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-Vl3UNMHEeWZHvZJSZ7AsQ" description="_-VlQQNMHEeWZHvZJSZ7AsQ" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-Vl3UdMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-Vl3UtMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -2972,6 +2976,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-Vo6oNMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-Vo6odMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-Vo6otMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -2998,6 +3003,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-Vr98NMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-Vr98dMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-Vr98tMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3011,6 +3017,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-VtMENMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-VtMEdMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-VtMEtMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3037,6 +3044,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-Vw2cNMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-Vw2cdMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-Vw2ctMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3063,6 +3071,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-V0g0NMHEeWZHvZJSZ7AsQ" description="_-VlQQNMHEeWZHvZJSZ7AsQ" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-V0g0dMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-V0g0tMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3076,6 +3085,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-V2WANMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-V2WAdMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-V2WAtMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3089,6 +3099,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-V4LMNMHEeWZHvZJSZ7AsQ" description="_-VlQQNMHEeWZHvZJSZ7AsQ" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-V4LMdMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-V4LMtMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3102,6 +3113,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-V6AYNMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-V6AYdMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-V6AYtMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3128,6 +3140,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-V9DsNMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-V9DsdMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-V9DstMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -3141,6 +3154,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-V-44NMHEeWZHvZJSZ7AsQ" description="_-VcGUNMHEeWZHvZJSZ7AsQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-V-44dMHEeWZHvZJSZ7AsQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_-V-44tMHEeWZHvZJSZ7AsQ" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>

@@ -18,6 +18,7 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Pizza"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Asiatisch"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Nudeln"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//KategorieArt/Fruehstueck"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Verpackung">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Packung"/>
@@ -29,8 +30,8 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Flasche"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Becher"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Netz"/>
-      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Tüte"/>
-      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Päckchen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Tuete"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Verpackung/Paeckchen"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//Stoff">
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Stoff/Laktose"/>
@@ -75,9 +76,9 @@
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Stangen"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Bund"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Blatt"/>
-      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tüte"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Tuete"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Packungen"/>
-      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Päckchen"/>
+      <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Paeckchen"/>
       <genEnumLiterals ecoreEnumLiteral="rezept.ecore#//Masseinheit/Dose"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rezept.ecore#//MengenAngabe">

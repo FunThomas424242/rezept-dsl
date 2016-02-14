@@ -96,7 +96,7 @@
     <eLiterals name="Pizza" value="4"/>
     <eLiterals name="Asiatisch" value="5"/>
     <eLiterals name="Nudeln" value="6"/>
-    <eLiterals name="Frühstück" value="7" literal="Fruehstueck"/>
+    <eLiterals name="Fruehstueck" value="7" literal="Frühstück"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Kommentar" eSuperTypes="#//Notiz"/>
   <eClassifiers xsi:type="ecore:EClass" name="ProduktRef">
@@ -108,15 +108,15 @@
   <eClassifiers xsi:type="ecore:EEnum" name="Verpackung">
     <eLiterals name="Packung"/>
     <eLiterals name="Dose" value="1"/>
-    <eLiterals name="Buechse" value="2"/>
+    <eLiterals name="Buechse" value="2" literal="Büchse"/>
     <eLiterals name="Beutel" value="3"/>
-    <eLiterals name="Stueck" value="4"/>
+    <eLiterals name="Stueck" value="4" literal="Stück"/>
     <eLiterals name="Glas" value="5"/>
     <eLiterals name="Flasche" value="6"/>
     <eLiterals name="Becher" value="7"/>
     <eLiterals name="Netz" value="8"/>
-    <eLiterals name="Tüte" value="9" literal="Tüte"/>
-    <eLiterals name="Päckchen" value="10"/>
+    <eLiterals name="Tuete" value="9" literal="Tüte"/>
+    <eLiterals name="Paeckchen" value="10" literal="Päckchen"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Zutat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -177,9 +177,9 @@
   <eClassifiers xsi:type="ecore:EEnum" name="Masseinheit">
     <eLiterals name="Prise"/>
     <eLiterals name="Messerspitze" value="1"/>
-    <eLiterals name="Teeloeffel" value="2"/>
+    <eLiterals name="Teeloeffel" value="2" literal="Teelöffel"/>
     <eLiterals name="Essloeffel" value="8" literal="Esslöffel"/>
-    <eLiterals name="gehaeufterEssloeffel" value="3"/>
+    <eLiterals name="gehaeufterEssloeffel" value="3" literal="gehaeufterEsslöffel"/>
     <eLiterals name="L" value="4"/>
     <eLiterals name="g" value="5"/>
     <eLiterals name="kg" value="6"/>
@@ -196,9 +196,9 @@
     <eLiterals name="Stangen" value="18"/>
     <eLiterals name="Bund" value="19"/>
     <eLiterals name="Blatt" value="20"/>
-    <eLiterals name="Tüte" value="21" literal="Tüte(n)"/>
+    <eLiterals name="Tuete" value="21" literal="Tüte(n)"/>
     <eLiterals name="Packungen" value="22" literal="Packung(en)"/>
-    <eLiterals name="Päckchen" value="23"/>
+    <eLiterals name="Paeckchen" value="23" literal="Päckchen"/>
     <eLiterals name="Dose" value="24"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anmerkung" eSuperTypes="#//Notiz"/>
