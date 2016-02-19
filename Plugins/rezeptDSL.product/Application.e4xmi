@@ -5,7 +5,7 @@
       <children xsi:type="advanced:Perspective" xmi:id="_9syaa_JHEeK_L-JjjSt4eQ">
         <children xsi:type="basic:PartSashContainer" xmi:id="_9szBcPJHEeK_L-JjjSt4eQ" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_9szBcfJHEeK_L-JjjSt4eQ">
-            <children xsi:type="basic:Part" xmi:id="_9szBcvJHEeK_L-JjjSt4eQ" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.parts.SamplePart" label="Sample Part"/>
+            <children xsi:type="basic:Part" xmi:id="_9szBcvJHEeK_L-JjjSt4eQ" contributionURI="bundleclass://org.eclipse.ui.navigator.resources/org.eclipse.ui.navigator.resources.ProjectExplorer" label="Explorer"/>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_gakoEPJIEeK_L-JjjSt4eQ" elementId="rezeptdsl.product.partstack.0">
             <children xsi:type="basic:Part" xmi:id="_h4kQEPJIEeK_L-JjjSt4eQ" elementId="rezeptdsl.product.part.0" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.parts.RezeptEditorPart"/>
