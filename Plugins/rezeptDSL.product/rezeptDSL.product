@@ -29,6 +29,7 @@
 
 
    <plugins>
+      <plugin id="LocalViews"/>
       <plugin id="com.github.funthomas424242.rezeptsammler.rezept"/>
       <plugin id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept"/>
       <plugin id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui"/>

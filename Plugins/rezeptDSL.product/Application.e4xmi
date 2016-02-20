@@ -15,7 +15,12 @@
             </children>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_gakoEPJIEeK_L-JjjSt4eQ" elementId="rezeptdsl.product.partstack.0">
-            <children xsi:type="basic:Part" xmi:id="_tit88NgeEeWFQZJP-Nz9fQ" elementId="rezeptdsl.product.part.0" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.parts.RezeptEditorPart"/>
+            <children xsi:type="basic:Part" xmi:id="_qLTRANglEeWFQZJP-Nz9fQ" elementId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor" contributionURI="bundleclass://com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui/com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor" label="EMFText rezept Editor" iconURI="platform:/plugin/com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui/icons/editor_icon.gif" closeable="true">
+              <menus xmi:id="_qLTRAdglEeWFQZJP-Nz9fQ" elementId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor">
+                <tags>ViewMenu</tags>
+              </menus>
+              <toolbar xmi:id="_qLTRAtglEeWFQZJP-Nz9fQ" elementId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor"/>
+            </children>
           </children>
         </children>
       </children>
