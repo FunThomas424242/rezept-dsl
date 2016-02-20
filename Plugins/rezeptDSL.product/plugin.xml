@@ -12,10 +12,6 @@
                value="true">
          </property>
          <property
-               name="applicationCSS"
-               value="platform:/plugin/rezeptDSL.product/css/default.css">
-         </property>
-         <property
                name="appName"
                value="rezeptDSL.product">
          </property>

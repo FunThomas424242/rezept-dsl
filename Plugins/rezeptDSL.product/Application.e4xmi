@@ -5,17 +5,17 @@
       <children xsi:type="advanced:Perspective" xmi:id="_9syaa_JHEeK_L-JjjSt4eQ">
         <children xsi:type="basic:PartSashContainer" xmi:id="_9szBcPJHEeK_L-JjjSt4eQ" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_9szBcfJHEeK_L-JjjSt4eQ">
-            <children xsi:type="basic:Part" xmi:id="_DHbR0NfuEeWFQZJP-Nz9fQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.navigator.resources/org.eclipse.ui.navigator.resources.ProjectExplorer" label="%Common_Resource_Navigator" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/$nl$/icons/full/eview16/resource_persp.gif" closeable="true">
+            <children xsi:type="basic:Part" xmi:id="_GpKc8NgfEeWFQZJP-Nz9fQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.navigator.resources/org.eclipse.ui.navigator.resources.ProjectExplorer" label="%Common_Resource_Navigator" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/$nl$/icons/full/eview16/resource_persp.gif" closeable="true">
               <tags>View</tags>
               <tags>categoryTag:org.eclipse.ui</tags>
-              <menus xmi:id="_DHbR0dfuEeWFQZJP-Nz9fQ" elementId="org.eclipse.ui.navigator.ProjectExplorer">
+              <menus xmi:id="_GpKc8dgfEeWFQZJP-Nz9fQ" elementId="org.eclipse.ui.navigator.ProjectExplorer">
                 <tags>ViewMenu</tags>
               </menus>
-              <toolbar xmi:id="_DHbR0tfuEeWFQZJP-Nz9fQ" elementId="org.eclipse.ui.navigator.ProjectExplorer"/>
+              <toolbar xmi:id="_GpKc8tgfEeWFQZJP-Nz9fQ" elementId="org.eclipse.ui.navigator.ProjectExplorer"/>
             </children>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_gakoEPJIEeK_L-JjjSt4eQ" elementId="rezeptdsl.product.partstack.0">
-            <children xsi:type="basic:Part" xmi:id="_h4kQEPJIEeK_L-JjjSt4eQ" elementId="rezeptdsl.product.part.0" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.parts.RezeptEditorPart"/>
+            <children xsi:type="basic:Part" xmi:id="_tit88NgeEeWFQZJP-Nz9fQ" elementId="rezeptdsl.product.part.0" contributionURI="bundleclass://rezeptDSL.product/rezeptDSL.product.parts.RezeptEditorPart"/>
           </children>
         </children>
       </children>
@@ -51,7 +51,6 @@
     <children xmi:id="_9sxzUfJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_9sxzUvJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
-  <descriptors xmi:id="_8iGn0NfmEeWFQZJP-Nz9fQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.gif" category="org.eclipse.e4.primaryNavigationStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView"/>
   <commands xmi:id="_9sxzU_JHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
   <commands xmi:id="_9sxzV_JHEeK_L-JjjSt4eQ" elementId="rezeptDSL.product.open" commandName="openCommand"/>
   <commands xmi:id="_9sxzWvJHEeK_L-JjjSt4eQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
