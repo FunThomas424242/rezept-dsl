@@ -26,3 +26,12 @@ Es müssen bereits installiert sein:
 * EMFText SDK (Yoxos Marketplace)
 * EMFText Shared ANTLR 3.4.0 Runtime (Update Site: http://www.emftext.org/update_trunk)
 * Acceleo SDK (Yoxos Marketplace) (http://download.eclipse.org/modeling/m2t/acceleo/updates/releases/3.4) 
+
+Nützliche Quellen
+-----------------
+
+* https://jaxenter.de/migration-auf-eclipse-4-einmal-angefangen-gibt-es-kein-zuruck-2132
+* https://dirksmetric.wordpress.com/2012/08/01/tutorial-eclipse-rcp-e4-with-3-x-views-like-project-explorer-properties-etc/
+* http://modelmoo.blogspot.de/2013/04/eclipse-modeling-framework-ui-e4.html
+* http://www.vogella.com/tutorials/Eclipse4ExtendModel/article.html
+
