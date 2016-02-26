@@ -6,11 +6,11 @@
 
 	<parent>
 		<groupId>gh.funthomas424242.rezept-dsl</groupId>
-		<artifactId>rezept-dsl.plugins</artifactId>
+		<artifactId>rezept-dsl.deploy</artifactId>
 		<version>1.0.2-SNAPSHOT</version>
 	</parent>
 	
-	<artifactId>rezeptDSL.product</artifactId>
+	<artifactId>update.site</artifactId>
 
 	<packaging>eclipse-repository</packaging>
 	

@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>gh.funthomas424242.rezept-dsl</groupId>
 		<artifactId>rezept-dsl.plugins</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.2-SNAPSHOT</version>
 	</parent>
 	
 	<artifactId>com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui</artifactId>
