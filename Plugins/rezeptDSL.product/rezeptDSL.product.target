@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target includeMode="feature" name="org.fipro.eclipse.migration.target" sequenceNumber="29">
+<?pde version="3.8"?><target includeMode="feature" name="org.fipro.eclipse.migration.target" sequenceNumber="30">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.sdk.feature.group" version="2.11.1.v20150806-0404"/>
@@ -21,6 +21,10 @@
 <unit id="epp.package.java" version="4.5.1.20150917-1200"/>
 <unit id="org.eclipse.jdt.feature.group" version="3.11.1.v20150904-0015"/>
 <repository location="http://download.eclipse.org/releases/mars/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.11.1.v20150831-1342"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.5"/>
 </location>
 </locations>
 </target>
