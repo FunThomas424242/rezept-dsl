@@ -9,9 +9,9 @@
 		<artifactId>rezept-dsl.plugins</artifactId>
 		<version>1.0.2-SNAPSHOT</version>
 	</parent>
-	
-	<artifactId>com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui</artifactId>
 
+	<artifactId>com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui</artifactId>
+	<version>1.0.0</version>
 	<packaging>eclipse-plugin</packaging>
-	
+
 </project>
