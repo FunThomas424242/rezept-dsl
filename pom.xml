@@ -43,7 +43,7 @@
 					<target>
 						<artifact>
 							<groupId>${project.groupId}</groupId>
-							<artifactId>rezeptDSL.product</artifactId>
+							<artifactId>rezept.site</artifactId>
 							<version>1.0.2-SNAPSHOT</version>
 						</artifact>
 					</target>

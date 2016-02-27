@@ -20,7 +20,7 @@
 		<module>com.github.funthomas424242.rezeptsammler.rezept.generator</module>
 		<module>com.github.funthomas424242.rezeptsammler.rezept.resource.rezept</module>
 		<module>com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui</module>
-		<module>rezeptDSL.product</module>
+		<!-- <module>rezeptDSL.product</module> -->
 	</modules>
 
 	
