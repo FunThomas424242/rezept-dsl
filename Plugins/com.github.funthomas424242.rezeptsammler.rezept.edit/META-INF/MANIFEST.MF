@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.github.funthomas424242.rezeptsammler.rezept.edit;singleton:=true
+Bundle-Version: 1.0.2.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: com.github.funthomas424242.rezeptsammler.rezept.provider.rezeptEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ com.github.funthomas424242.rezeptsammler.rezept;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.github.funthomas424242.rezeptsammler.rezept.provider
