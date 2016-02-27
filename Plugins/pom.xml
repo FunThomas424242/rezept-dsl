@@ -19,8 +19,8 @@
 		<module>com.github.funthomas424242.rezeptsammler.rezept</module>
 		<module>com.github.funthomas424242.rezeptsammler.rezept.edit</module>
 		<module>com.github.funthomas424242.rezeptsammler.rezept.editor</module>
-		<module>com.github.funthomas424242.rezeptsammler.rezept.generator</module>
-		<!-- <module>rezeptDSL.product</module> -->
+		<!--<module>com.github.funthomas424242.rezeptsammler.rezept.generator</module>
+		 <module>rezeptDSL.product</module> -->
 	</modules>
 
 	
