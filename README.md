@@ -32,6 +32,7 @@ Es müssen bereits installiert sein:
 Nützliche Quellen
 -----------------
 
+* https://gist.github.com/hwellmann/6044835
 * https://www.eclipse.org/forums/index.php/t/1073522/
 * https://jaxenter.de/migration-auf-eclipse-4-einmal-angefangen-gibt-es-kein-zuruck-2132
 * https://dirksmetric.wordpress.com/2012/08/01/tutorial-eclipse-rcp-e4-with-3-x-views-like-project-explorer-properties-etc/
