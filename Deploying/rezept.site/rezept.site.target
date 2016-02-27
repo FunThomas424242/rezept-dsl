@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target includeMode="feature" name="org.fipro.eclipse.migration.target" sequenceNumber="32">
+<?pde version="3.8"?><target includeMode="feature" name="org.fipro.eclipse.migration.target" sequenceNumber="33">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.sdk.feature.group" version="2.11.1.v20150806-0404"/>
@@ -33,6 +33,10 @@
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swt.tools.feature.feature.group" version="3.104.2.v20160128-0900"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.5"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="javax.xml" version="1.3.4.v201005080400"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120119162704/repository"/>
 </location>
 </locations>
 </target>
