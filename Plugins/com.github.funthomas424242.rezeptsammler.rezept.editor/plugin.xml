@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated rezept -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.github.funthomas424242.rezeptsammler.rezept.presentation.RezeptModelWizardID"
+            name="%_UI_RezeptModelWizard_label"
+            class="com.github.funthomas424242.rezeptsammler.rezept.presentation.RezeptModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RezeptModelFile.gif">
+         <description>%_UI_RezeptModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated rezept -->
+      <editor
+            id="com.github.funthomas424242.rezeptsammler.rezept.presentation.RezeptEditorID"
+            name="%_UI_RezeptEditor_label"
+            icon="icons/full/obj16/RezeptModelFile.gif"
+            extensions="rezept"
+            class="com.github.funthomas424242.rezeptsammler.rezept.presentation.RezeptEditor"
+            contributorClass="com.github.funthomas424242.rezeptsammler.rezept.presentation.RezeptActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
