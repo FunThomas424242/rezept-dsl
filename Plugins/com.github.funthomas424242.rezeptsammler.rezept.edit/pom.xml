@@ -11,7 +11,6 @@
 	</parent>
 
 	<artifactId>com.github.funthomas424242.rezeptsammler.rezept.edit</artifactId>
-	<version>1.0.0</version>
 	<packaging>eclipse-plugin</packaging>
 
 </project>
