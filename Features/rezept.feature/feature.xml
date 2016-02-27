@@ -221,24 +221,17 @@ Library.
          unpack="false"/>
 
    <plugin
-         id="com.github.funthomas424242.rezeptsammler.rezept.generator"
+         id="com.github.funthomas424242.rezeptsammler.rezept.edit"
          download-size="0"
          install-size="0"
          version="1.0.2.qualifier"
          unpack="false"/>
 
    <plugin
-         id="com.github.funthomas424242.rezeptsammler.rezept.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="com.github.funthomas424242.rezeptsammler.rezept.editor"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.2.qualifier"
          unpack="false"/>
 
 </feature>
