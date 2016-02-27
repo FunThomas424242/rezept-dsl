@@ -1,10 +1,6 @@
-before_script:
-  - wget -N http://buildboost.org/build.xml
-  
-jdk:
-  - openjdk6
-#fail  - oraclejdk7
-#fail  - oraclejdk6
-  
 language: java
-script: "ant -DrootRepository='git:https://github.com/FunThomas424242/rezept-dsl.git'"
+ 
+jdk:
+  - openjdk8
+  
+

@@ -1,6 +1,8 @@
 ![logo](https://raw.github.com/FunThomas424242/rezept-dsl/master/Features/rezept.feature/rezeptdsl-100x100.png "Rezept DSL")rezept-dsl
 ===========
 
+[![Build Status](https://travis-ci.org/FunThomas424242/rezept-dsl.svg?branch=master)](https://travis-ci.org/FunThomas424242/rezept-dsl)
+
 Das Projekt realisiert ein  eclipse feature *Rezept DSL Feature* welches folgende Plugins bereitstellt:
 
 * rezept Model = Definition der fachspezifischen Sprache (DSL) rezept.
