@@ -228,17 +228,17 @@ Library.
          unpack="false"/>
 
    <plugin
-         id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept"
+         id="com.github.funthomas424242.rezeptsammler.rezept.edit"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui"
+         id="com.github.funthomas424242.rezeptsammler.rezept.editor"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

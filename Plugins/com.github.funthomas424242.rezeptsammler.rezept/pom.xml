@@ -14,39 +14,42 @@
 
 	<packaging>eclipse-plugin</packaging>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.eclipse.tycho.extras</groupId>
-				<artifactId>tycho-eclipserun-plugin</artifactId>
-				<configuration>
-					<repositories>
-						<repository>
-							<id>mars</id>
-							<url>${mars-repo.url}</url>
-							<layout>p2</layout>
-						</repository>
-					</repositories>
-					<dependencies>
+<build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.eclipse.tycho.extras</groupId>
+                <artifactId>tycho-eclipserun-plugin</artifactId>
+                <configuration>
+                    <repositories>
+                        <repository>
+                            <id>mars</id>
+                            <url>${mars-repo.url}</url>
+                            <layout>p2</layout>
+                        </repository>
+                    </repositories>
+                    <dependencies>
                         <dependency>
                             <artifactId>org.eclipse.emf.codegen.ecore</artifactId>
                             <type>eclipse-plugin</type>
                         </dependency>
                     </dependencies>
-					<appArgLine>-data target/workspace -application org.eclipse.emf.codegen.ecore.Generator -projects ${project.basedir} -model ${project.basedir}/src/metamodel/rezept.genmodel target/generated/emf
-					</appArgLine>
-				</configuration>
-				<executions>
-					<execution>
-						<id>emfbuild</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>eclipse-run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+                    <appArgLine>-data .. -application org.eclipse.emf.codegen.ecore.Generator -projects ${project.basedir} -model -edit -editor ${project.basedir}/src/metamodel/rezept.genmodel ${project.basedir} </appArgLine>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>emfbuild</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>eclipse-run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
+
+	
 
 </project>
