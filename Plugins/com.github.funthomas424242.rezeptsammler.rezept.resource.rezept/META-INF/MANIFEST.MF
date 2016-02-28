@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EMFText Parser Plugin: rezept
+Bundle-SymbolicName: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Software Technology Group - TU Dresden Germany
+Require-Bundle: org.eclipse.core.runtime;resolution:=optional,
+  org.eclipse.emf.ecore,
+  org.eclipse.emf.ecore.change,
+  org.eclipse.emf.validation;resolution:=optional,
+  org.emftext.access;resolution:=optional,
+  org.eclipse.debug.core;resolution:=optional,
+  org.emftext.commons.antlr3_4_0,
+  com.github.funthomas424242.rezeptsammler.rezept
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept,
+  com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.analysis,
+  com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.mopp,
+  com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug,
+  com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.launch,
+  com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.grammar,
+  com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.util
+Bundle-Activator: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.mopp.RezeptPlugin

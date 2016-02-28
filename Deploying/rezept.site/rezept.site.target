@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target includeMode="feature" name="org.fipro.eclipse.migration.target" sequenceNumber="41">
+<?pde version="3.8"?><target includeMode="feature" name="org.fipro.eclipse.migration.target" sequenceNumber="44">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swt.tools.feature.feature.group" version="3.104.2.v20160128-0900"/>
@@ -34,13 +34,9 @@
 <repository location="http://download.eclipse.org/releases/mars/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.emftext.commons.layout.feature.group" version="1.4.2.v201602261613"/>
-<unit id="de.devboost.codecomposers.feature.group" version="1.0.4.v201602261613"/>
-<unit id="org.emftext.access.feature.group" version="1.4.2.v201602261613"/>
-<unit id="org.emftext.commons.antlr3_4_0.feature.group" version="3.4.0.v201602261613"/>
-<unit id="org.emftext.commons.jdt.feature.group" version="1.4.8.v201602261613"/>
-<unit id="org.emftext.sdk.feature.group" version="1.4.2.v201602261613"/>
-<repository location="http://update.emftext.org/trunk/"/>
+<unit id="org.emftext.access.feature.group" version="1.4.1.v201207310007"/>
+<unit id="org.emftext.commons.antlr3_4_0.feature.group" version="3.4.0.v201207310007"/>
+<repository location="http://update.emftext.org/release"/>
 </location>
 </locations>
 </target>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+	<extension point="org.emftext.access.syntax">
+		<metaInformationProvider class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.mopp.RezeptMetaInformation" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.mopp.RezeptMetaInformation">
+		</metaInformationProvider>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+		<persistent value="true">
+		</persistent>
+		<super type="org.eclipse.core.resources.problemmarker">
+		</super>
+		<super type="org.eclipse.core.resources.textmarker">
+		</super>
+		<super type="org.eclipse.emf.ecore.diagnostic">
+		</super>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem.syntax_error" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+		<persistent value="true">
+		</persistent>
+		<super type="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem">
+		</super>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem.print_problem" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+		<persistent value="true">
+		</persistent>
+		<super type="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem">
+		</super>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem.unresolved_reference" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+		<persistent value="true">
+		</persistent>
+		<super type="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem">
+		</super>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem.analysis_problem" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+		<persistent value="true">
+		</persistent>
+		<super type="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem">
+		</super>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem.builder_error" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+		<persistent value="true">
+		</persistent>
+		<super type="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem">
+		</super>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.nature" name="rezept nature" point="org.eclipse.core.resources.natures">
+		<runtime>
+			<run class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.mopp.RezeptNature">
+			</run>
+		</runtime>
+		<builder id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.builder">
+		</builder>
+	</extension>
+	
+	<extension point="org.eclipse.core.resources.builders" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.builder" name="rezept Builder">
+		<builder hasNature="true">
+			<run class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.mopp.RezeptBuilderAdapter">
+			</run>
+		</builder>
+	</extension>
+	
+	<extension-point id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.default_load_options" name="Default Load Options" schema="schema/default_load_options.exsd">
+	</extension-point>
+	
+	<extension point="org.eclipse.emf.ecore.extension_parser">
+		<parser class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.mopp.RezeptResourceFactoryDelegator" type="rezept">
+		</parser>
+	</extension>
+	
+	<extension-point id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.additional_extension_parser" name="Additional Extension Parser" schema="schema/additional_extension_parser.exsd">
+	</extension-point>
+	
+	<extension point="org.eclipse.debug.core.breakpoints">
+		<breakpoint class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.RezeptLineBreakpoint" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.breakpoint" markerType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.lineBreakpoint.marker" name="rezept Breakpoint">
+		</breakpoint>
+	</extension>
+	
+	<extension id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.lineBreakpoint.marker" point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.debug.core.lineBreakpointMarker">
+		</super>
+		<super type="org.eclipse.core.resources.textmarker">
+		</super>
+		<persistent value="true">
+		</persistent>
+	</extension>
+	
+	<extension point="org.eclipse.debug.core.launchConfigurationTypes">
+		<launchConfigurationType id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.launchConfigurationType" delegate="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.launch.RezeptLaunchConfigurationDelegate" modes="run,debug" name="rezept Application" sourceLocatorId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.sourceLocator" sourcePathComputerId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.sourcePathComputer" delegateName="rezept Launch Tooling" delegateDescription="This will run or debug .rezept files.">
+		</launchConfigurationType>
+	</extension>
+	
+	<extension point="org.eclipse.debug.core.sourcePathComputers">
+		<sourcePathComputer class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.RezeptSourcePathComputerDelegate" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.sourcePathComputer">
+		</sourcePathComputer>
+	</extension>
+	
+	<extension point="org.eclipse.debug.core.sourceLocators">
+		<sourceLocator id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.sourceLocator" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.RezeptSourceLocator" name="rezept Source Locator">
+		</sourceLocator>
+	</extension>
+	
+</plugin>

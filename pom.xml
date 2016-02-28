@@ -23,7 +23,7 @@
 			<layout>p2</layout>
 		</repository>
 		<repository>
-			<id>emftext-m2</id>
+			<id>emftext-trunk-maven</id>
 			<url>http://update.emftext.org/maven-repository-snapshot/</url>
 			<layout>default</layout>
 		</repository>

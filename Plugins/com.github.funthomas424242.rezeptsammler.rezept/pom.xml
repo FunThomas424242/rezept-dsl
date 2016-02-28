@@ -33,17 +33,54 @@
 							<artifactId>org.eclipse.emf.codegen.ecore</artifactId>
 							<type>eclipse-plugin</type>
 						</dependency>
+						<dependency>
+							<artifactId>org.apache.ant</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
+						<dependency>
+							<artifactId>org.eclipse.ant.core</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
 					</dependencies>
 				</configuration>
 				<executions>
 					<execution>
-						<id>emfbuild</id>
+						<id>emf-generate</id>
 						<phase>generate-sources</phase>
 						<goals>
 							<goal>eclipse-run</goal>
 						</goals>
 						<configuration>
-                            <appArgLine>-data .. -application org.eclipse.emf.codegen.ecore.Generator -projects ${project.basedir} -model -edit -editor ${project.basedir}/src/metamodel/rezept.genmodel ${project.basedir} </appArgLine>
+							<applicationsArgs>
+								<applicationsArg>-data ..</applicationsArg>
+								<applicationsArg>-application</applicationsArg>
+								<applicationsArg>org.eclipse.emf.codegen.ecore.Generator</applicationsArg>
+								<applicationsArg>-projects ${project.basedir}</applicationsArg>
+								<applicationsArg>-model -edit -editor</applicationsArg>
+								<applicationsArg>${project.basedir}/src/metamodel/rezept.genmodel</applicationsArg>
+								<applicationsArg>${project.basedir}</applicationsArg>
+							</applicationsArgs>
+						</configuration>
+					</execution>
+					<execution>
+						<id>ant-generate</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>eclipse-run</goal>
+						</goals>
+						<configuration>
+							<skip>true</skip>
+							<dependencies>
+								<dependency>
+									<artifactId>org.emftext.sdk.ant</artifactId>
+									<type>eclipse-plugin</type>
+								</dependency>
+							</dependencies>
+							<applicationsArgs>
+								<applicationsArg>-data .. </applicationsArg>
+								<applicationsArg>-application org.eclipse.ant.core.antRunner</applicationsArg>
+								<applicationsArg>-buildfile build.xml</applicationsArg>
+							</applicationsArgs>
 						</configuration>
 					</execution>
 				</executions>
