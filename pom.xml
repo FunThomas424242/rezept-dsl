@@ -22,6 +22,11 @@
 			<url>${mars-repo.url}</url>
 			<layout>p2</layout>
 		</repository>
+		<repository>
+			<id>emftext-m2</id>
+			<url>http://update.emftext.org/maven-repository-snapshot/</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
 
 	<modules>
@@ -32,6 +37,29 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-p2-extras-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>mirror</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<source>
+						<!-- source repositories to mirror from -->
+						<repository>
+							<url>http://update.emftext.org/trunk/</url>
+							<layout>p2</layout>
+							<!-- supported layouts are "p2-metadata", "p2-artifacts", and "p2" 
+								(for joint repositories; default) -->
+						</repository>
+					</source>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
@@ -81,6 +109,11 @@
 
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho.extras</groupId>
+					<artifactId>tycho-p2-extras-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-maven-plugin</artifactId>
