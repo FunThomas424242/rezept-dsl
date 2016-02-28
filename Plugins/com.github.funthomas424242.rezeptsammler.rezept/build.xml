@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="generate_text_resources" name="build">
+    <target name="generate_text_resources">
+        <emftext.GenerateTextResource syntax="src/metamodel/rezept.cs" 
+            rootFolder=".." syntaxProjectName="com.github.funthomas424242.rezeptsammler.rezept" />
+    </target>
+</project>
+
