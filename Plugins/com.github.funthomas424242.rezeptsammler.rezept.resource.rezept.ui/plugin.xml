@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+	<extension point="org.emftext.access.syntax.ui">
+		<metaInformationProvider class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptUIMetaInformation" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptUIMetaInformation">
+		</metaInformationProvider>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editors">
+		<editor class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor" contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor" extensions="rezept" icon="icons/editor_icon.gif" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor" name="EMFText rezept Editor">
+			<contentTypeBinding contentTypeId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept">
+			</contentTypeBinding>
+		</editor>
+	</extension>
+	
+	<extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptPreferenceInitializer">
+		</initializer>
+	</extension>
+	
+	<extension point="org.eclipse.ui.preferencePages">
+		<page name="Rezept Text Editor" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptPreferencePage" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptPreferencePage" category="org.eclipse.ui.preferencePages.GeneralTextEditor">
+		</page>
+		<page name="Syntax Coloring" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptSyntaxColoringPreferencePage" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptSyntaxColoringPreferencePage" category="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptPreferencePage">
+		</page>
+		<page name="Brackets" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptBracketPreferencePage" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptBracketPreferencePage" category="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptPreferencePage">
+		</page>
+		<page name="Content Assist" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptContentAssistPreferencePage" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptContentAssistPreferencePage" category="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptPreferencePage">
+		</page>
+	</extension>
+	
+	<extension point="org.eclipse.ui.newWizards">
+		<category id="org.emftext.runtime.ui.EMFTextFileCategory" name="EMFText File">
+		</category>
+		<wizard category="org.emftext.runtime.ui.EMFTextFileCategory" icon="/icons/default_new_icon.gif" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptNewFileWizard" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptNewFileWizard" name="EMFText .rezept file">
+		</wizard>
+		<category id="org.emftext.runtime.ui.EMFTextProjectCategory" name="EMFText Project">
+		</category>
+		<wizard category="org.emftext.runtime.ui.EMFTextProjectCategory" icon="/icons/default_new_icon.gif" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptNewProjectWizard" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptNewProjectWizard" name="EMFText rezept project" project="true">
+		</wizard>
+	</extension>
+	
+	<extension point="org.eclipse.ui.ide.markerResolution">
+		<markerResolutionGenerator class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptMarkerResolutionGenerator" markerType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.problem">
+		</markerResolutionGenerator>
+	</extension>
+	
+	<extension point="org.eclipse.core.filebuffers.annotationModelCreation">
+		<factory class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptAnnotationModelFactory" extensions="rezept">
+		</factory>
+	</extension>
+	
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+		<content-type id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept" name=".rezept File" base-type="org.eclipse.core.runtime.text" file-extensions="rezept">
+		</content-type>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editors.documentProviders">
+		<provider class="org.eclipse.ui.editors.text.TextFileDocumentProvider" extensions="rezept" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.provider">
+		</provider>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editors.annotationTypes">
+		<type name="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.occurences">
+		</type>
+		<type name="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.occurences.declaration" super="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.occurences">
+		</type>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+		<specification annotationType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.occurences" label="Occurrences (in .rezept files)" icon="/icons/occurrence_icon.gif" textPreferenceKey="rezept.occurrenceIndication" textPreferenceValue="false" highlightPreferenceKey="rezept.occurrenceHighlighting" highlightPreferenceValue="true" contributesToHeader="false" overviewRulerPreferenceKey="rezept.occurrenceIndicationInOverviewRuler" overviewRulerPreferenceValue="true" verticalRulerPreferenceKey="rezept.occurrenceIndicationInVerticalRuler" verticalRulerPreferenceValue="false" colorPreferenceKey="rezept.occurrenceIndicationColor" colorPreferenceValue="212,212,212" presentationLayer="4" showInNextPrevDropdownToolbarActionKey="rezept.showOccurrenceInNextPrevDropdownToolbarAction" showInNextPrevDropdownToolbarAction="true" isGoToNextNavigationTargetKey="rezept.isOccurrenceGoToNextNavigationTarget" isGoToNextNavigationTarget="false" isGoToPreviousNavigationTargetKey="rezept.isOccurrenceGoToPreviousNavigationTarget" isGoToPreviousNavigationTarget="false" textStylePreferenceKey="rezept.occurrenceTextStyle" textStylePreferenceValue="NONE">
+		</specification>
+		<specification annotationType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.occurences.declaration" label="Declarations (in .rezept files)" textPreferenceKey="rezept.declarationIndication" textPreferenceValue="false" highlightPreferenceKey="rezept.declarationHighlighting" highlightPreferenceValue="true" overviewRulerPreferenceKey="rezept.declarationIndicationInOverviewRuler" overviewRulerPreferenceValue="true" verticalRulerPreferenceKey="rezept.declarationIndicationInVerticalRuler" verticalRulerPreferenceValue="false" colorPreferenceKey="rezept.declarationIndicationColor" colorPreferenceValue="240,216,168" presentationLayer="4" textStylePreferenceKey="rezept.declarationTextStyle" textStylePreferenceValue="NONE">
+		</specification>
+	</extension>
+	
+	<extension point="org.eclipse.ui.commands">
+		<category description="All commands belonging to Rezept" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.command.category" name="Rezept">
+		</category>
+		<command categoryId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.command.category" description="Toggle comment of the selected lines" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.command.togglecomment" name="Toggle Comment">
+		</command>
+	</extension>
+	
+	<extension point="org.eclipse.ui.handlers">
+		<handler class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptToggleCommentHandler" commandId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.command.togglecomment">
+		</handler>
+	</extension>
+	
+	<extension point="org.eclipse.ui.contexts">
+		<context name="Editing Rezept Files" description="Editing Rezept Files Context" parentId="org.eclipse.ui.textEditorScope" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.EditorScope">
+		</context>
+	</extension>
+	
+	<extension point="org.eclipse.ui.bindings">
+		<key sequence="M1+7" commandId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.command.togglecomment" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" contextId="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.EditorScope">
+		</key>
+	</extension>
+	
+	<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+		<launchConfigurationTypeImage icon="/icons/launch_type_icon.gif" configTypeID="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.launchConfigurationType" id="com.github.funthomas424242.rezeptsammler.rezept.launchImage">
+		</launchConfigurationTypeImage>
+	</extension>
+	
+	<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+		<launchConfigurationTabGroup type="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.launchConfigurationType" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.launch.RezeptLaunchConfigurationTabGroup" id="com.github.funthomas424242.rezeptsammler.rezept.launchConfigurationTabGroup" helpContextId="com.github.funthomas424242.rezeptsammler.rezept.launchConfigHelpContext">
+			<launchMode mode="debug" perspective="org.eclipse.debug.ui.DebugPerspective" description="Debug rezept model.">
+			</launchMode>
+			<launchMode mode="run" description="Run rezept model.">
+			</launchMode>
+		</launchConfigurationTabGroup>
+	</extension>
+	
+	<extension point="org.eclipse.debug.ui.launchShortcuts">
+		<shortcut label="rezept Application" icon="/icons/launch_shortcut_icon.gif" helpContextId="com.github.funthomas424242.rezeptsammler.rezept.launch" modes="run,debug" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.launch.RezeptLaunchShortcut" description="Launch a rezept model" id="com.github.funthomas424242.rezeptsammler.rezept.launchShortcut">
+			<description description="Run rezept model" mode="run">
+			</description>
+			<description description="Debug rezept model" mode="debug">
+			</description>
+			<contextualLaunch>
+				<enablement>
+					<with variable="selection">
+						<count value="1">
+						</count>
+						<iterate>
+							<test property="com.github.funthomas424242.rezeptsammler.rezept.isLaunchable">
+							</test>
+						</iterate>
+					</with>
+				</enablement>
+			</contextualLaunch>
+			<configurationType id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.launchConfigurationType">
+			</configurationType>
+		</shortcut>
+	</extension>
+	
+	<extension point="org.eclipse.core.expressions.propertyTesters">
+		<propertyTester id="com.github.funthomas424242.rezeptsammler.rezept.PropertyTester" type="java.lang.Object" namespace="com.github.funthomas424242.rezeptsammler.rezept" properties="isLaunchable" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptPropertyTester">
+		</propertyTester>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editors.annotationTypes">
+		<type name="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.debug.lineBreakpoint" markerType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.lineBreakpoint.marker" super="org.eclipse.debug.core.breakpoint">
+		</type>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+		<specification annotationType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.debug.lineBreakpoint" label="Breakpoints (in .rezept files)" icon="/icons/breakpoint_icon.gif" textPreferenceKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.lineBreakpoint" textPreferenceValue="false" highlightPreferenceKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.lineBreakpointHighlighting" highlightPreferenceValue="true" contributesToHeader="false" overviewRulerPreferenceKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.lineBreakpointIndicationInOverviewRuler" overviewRulerPreferenceValue="true" verticalRulerPreferenceKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.lineBreakpointIndicationInVerticalRuler" verticalRulerPreferenceValue="false" colorPreferenceKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.lineBreakpointColor" colorPreferenceValue="212,212,212" presentationLayer="4" showInNextPrevDropdownToolbarActionKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.showLineBreakpointInNextPrevDropdownToolbarAction" showInNextPrevDropdownToolbarAction="true" isGoToNextNavigationTargetKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.isLineBreakpointGoToNextNavigationTarget" isGoToNextNavigationTarget="false" isGoToPreviousNavigationTargetKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.isLineBreakpointGoToPreviousNavigationTarget" isGoToPreviousNavigationTarget="false" textStylePreferenceKey="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.lineBreakpointTextStyle" textStylePreferenceValue="NONE">
+		</specification>
+	</extension>
+	
+	<extension point="org.eclipse.core.runtime.adapters">
+		<factory adaptableType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.debug.RezeptAdapterFactory">
+			<adapter type="org.eclipse.debug.ui.actions.IToggleBreakpointsTarget">
+			</adapter>
+		</factory>
+		<factory adaptableType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.RezeptDebugVariable" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.debug.RezeptAdapterFactory">
+			<adapter type="org.eclipse.debug.internal.ui.viewers.model.provisional.IElementLabelProvider">
+			</adapter>
+		</factory>
+		<factory adaptableType="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debug.RezeptDebugVariable" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.debug.RezeptAdapterFactory">
+			<adapter type="org.eclipse.debug.internal.ui.viewers.model.provisional.IElementContentProvider">
+			</adapter>
+		</factory>
+	</extension>
+	
+	<extension point="org.eclipse.ui.popupMenus">
+		<viewerContribution id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RulerPopupActions" targetID="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.EditorRuler">
+			<action id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.toggleBreakpointAction" icon="icons/breakpoint_icon.gif" label="Toggle Breakpoint" class="org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate" menubarPath="debug">
+			</action>
+		</viewerContribution>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editorActions">
+		<editorContribution targetID="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptEditor" id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.BreakpointRulerActions">
+			<action id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.debug.RulerToggleBreakpointAction" label="Add breakpoint" class="org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate" actionID="RulerDoubleClick">
+			</action>
+		</editorContribution>
+	</extension>
+	
+	<extension point="org.eclipse.debug.ui.debugModelPresentations">
+		<debugModelPresentation id="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.debugModel" class="com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.debug.RezeptDebugModelPresentation">
+		</debugModelPresentation>
+	</extension>
+	
+</plugin>

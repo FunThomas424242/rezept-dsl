@@ -5,3 +5,10 @@ language:
 
 jdk:
     - oraclejdk8
+
+before_script:
+    - mvn package -Pmirror
+
+script:
+    - mvn clean install -Pbuild
+

@@ -27,6 +27,11 @@
 							<url>${mars-repo.url}</url>
 							<layout>p2</layout>
 						</repository>
+						<repository>
+							<id>cloudbees-mirror</id>
+							<url>jar:http://repository-funthomas424242.forge.cloudbees.com/snapshot/gh/funthomas424242/eclipse/p2.mirror/1.0.0-SNAPSHOT/p2.mirror-1.0.0-20160303.231112-2-bin.zip!/</url>
+							<layout>p2</layout>
+						</repository>
 					</repositories>
 					<dependencies>
 						<dependency>

@@ -29,9 +29,18 @@ Es müssen bereits installiert sein:
 * EMFText Shared ANTLR 3.4.0 Runtime (Update Site: http://www.emftext.org/update_trunk)
 * Acceleo SDK (Yoxos Marketplace) (http://download.eclipse.org/modeling/m2t/acceleo/updates/releases/3.4) 
 
+Plugin aus Quellen bauen
+------------------------
+9. mvn clean im Projektwurzelverzeichnis ausführen
+9. Alle Projekte in Eclipse importieren und Refresh ausführen
+9. In Eclipse im Projekt com.github.funthomas424242.rezeptsammler.rezept "Generate All Text Resources" auf rezept.cs ausführen (rechte Maus Kontextmenü)
+9. mvn install im Projektwurzelverzeichnis ausführen
+Die Update Site für den Import befindet sich unter: <projectroot>/Deploying/rezept.site/target/rezept.site-x.x.x-SNAPSHOT.zip
+
 Nützliche Quellen
 -----------------
 
+* http://tonnymadsen.blogspot.de/2013/05/tycho-and-pre-p2-update-sites.html
 * https://wiki.eclipse.org/Tycho/Additional_Tools
 * https://gist.github.com/hwellmann/6044835
 * https://www.eclipse.org/forums/index.php/t/1073522/
