@@ -9,9 +9,17 @@
 		<artifactId>rezept-dsl.deploy</artifactId>
 		<version>1.0.2-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>rezept.site</artifactId>
 
 	<packaging>eclipse-repository</packaging>
-	
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>mirror.site</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
 </project>

@@ -32,6 +32,7 @@ Es müssen bereits installiert sein:
 Nützliche Quellen
 -----------------
 
+* http://tonnymadsen.blogspot.de/2013/05/tycho-and-pre-p2-update-sites.html
 * https://wiki.eclipse.org/Tycho/Additional_Tools
 * https://gist.github.com/hwellmann/6044835
 * https://www.eclipse.org/forums/index.php/t/1073522/

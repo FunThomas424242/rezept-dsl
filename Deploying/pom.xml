@@ -9,7 +9,7 @@
 		<artifactId>rezept-dsl.parent</artifactId>
 		<version>1.0.2-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>rezept-dsl.deploy</artifactId>
 
 	<packaging>pom</packaging>
@@ -19,6 +19,6 @@
 		<module>rezept.site</module>
 	</modules>
 
-	
+
 
 </project>
