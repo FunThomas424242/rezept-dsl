@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMFText Parser Plugin: rezept
 Bundle-SymbolicName: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept;singleton:=true
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.2.qualifier
 Bundle-Vendor: Software Technology Group - TU Dresden Germany
 Require-Bundle: org.eclipse.core.runtime;resolution:=optional,
   org.eclipse.core.resources;resolution:=optional,

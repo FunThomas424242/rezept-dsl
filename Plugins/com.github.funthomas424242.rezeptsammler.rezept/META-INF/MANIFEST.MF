@@ -6,7 +6,7 @@ Bundle-Version: 1.0.2.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: com.github.funthomas424242.rezeptsammler.rezept,
  com.github.funthomas424242.rezeptsammler.rezept.impl,
  com.github.funthomas424242.rezeptsammler.rezept.util

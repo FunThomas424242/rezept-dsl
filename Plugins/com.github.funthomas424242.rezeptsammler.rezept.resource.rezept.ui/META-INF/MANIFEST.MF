@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMFText UI Plugin: rezept
 Bundle-SymbolicName: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui;singleton:=true
-Bundle-Version: 1.0.2.artifact
+Bundle-Version: 1.0.2.qualifier
 Bundle-Vendor: Software Technology Group - TU Dresden Germany
 Require-Bundle: org.eclipse.core.runtime,
   org.eclipse.core.resources,
@@ -25,7 +25,7 @@ Require-Bundle: org.eclipse.core.runtime,
   org.emftext.commons.antlr3_4_0,
   com.github.funthomas424242.rezeptsammler.rezept
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: 1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui
 Bundle-Activator: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptUIPlugin
 Import-Package: org.eclipse.ui.texteditor.spelling

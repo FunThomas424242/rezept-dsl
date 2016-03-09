@@ -1,5 +1,6 @@
-
 target
 .settings*
 bin
 /src/main
+.project
+.classpath

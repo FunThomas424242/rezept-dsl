@@ -16,8 +16,8 @@
 
 	<modules>
 		<module>com.github.funthomas424242.rezeptsammler.rezept</module>
-		<module>com.github.funthomas424242.rezeptsammler.rezept.edit</module>
-		<module>com.github.funthomas424242.rezeptsammler.rezept.editor</module>
+		<!-- <module>com.github.funthomas424242.rezeptsammler.rezept.edit</module>
+		<module>com.github.funthomas424242.rezeptsammler.rezept.editor</module> -->
 		<module>com.github.funthomas424242.rezeptsammler.rezept.generator</module>
 		<module>com.github.funthomas424242.rezeptsammler.rezept.resource.rezept</module>
 		<module>com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui</module>
