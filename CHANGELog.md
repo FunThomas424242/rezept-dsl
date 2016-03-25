@@ -1,7 +1,7 @@
 ![logo](https://raw.github.com/FunThomas424242/rezept-dsl/master/Features/rezept.feature/rezeptdsl-100x100.png "Rezept DSL")rezept-dsl
 ===========
 
-Version 1.02.
+Version 1.0.2
 -------------
 
 * Generator: Versions Upgrade der Github Maven Tools auf 0.12
@@ -9,6 +9,7 @@ Version 1.02.
 * Ecore: Neue Kategorie Frühstück
 * Ecore: ecorediag konvertiert in aird Diagram (Sirius Editor)
 * Ecore: Umlaute in Literalen korrigiert
+* Maven: Buildprozess automatisiert für Generierung aus ecore Modell
 
 
 
