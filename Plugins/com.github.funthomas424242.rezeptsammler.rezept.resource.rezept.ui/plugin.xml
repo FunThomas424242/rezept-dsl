@@ -122,8 +122,10 @@
 						<count value="1">
 						</count>
 						<iterate>
-							<test property="com.github.funthomas424242.rezeptsammler.rezept.isLaunchable">
-							</test>
+							<adapt type="org.eclipse.core.resources.IResource">
+								<test property="org.eclipse.core.resources.extension" value="rezept">
+								</test>
+							</adapt>
 						</iterate>
 					</with>
 				</enablement>

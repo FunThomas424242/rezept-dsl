@@ -14,12 +14,5 @@
 
 	<packaging>eclipse-repository</packaging>
 
-	<dependencies>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>mirror.site</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-	</dependencies>
 
 </project>
