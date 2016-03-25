@@ -25,7 +25,7 @@ Require-Bundle: org.eclipse.core.runtime,
   org.emftext.commons.antlr3_4_0,
   com.github.funthomas424242.rezeptsammler.rezept
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui
 Bundle-Activator: com.github.funthomas424242.rezeptsammler.rezept.resource.rezept.ui.RezeptUIPlugin
 Import-Package: org.eclipse.ui.texteditor.spelling
