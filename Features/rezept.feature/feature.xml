@@ -190,8 +190,8 @@ Library.
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
       <import plugin="org.eclipse.ui.ide"/>
-      <import plugin="com.github.funthomas424242.rezeptsammler.rezept"/>
-      <import plugin="com.github.funthomas424242.rezeptsammler.rezept.edit"/>
+      <import plugin="com.github.funthomas424242.rezeptsammler.rezept" version="1.0.2.qualifier" match="greaterOrEqual"/>
+      <import plugin="com.github.funthomas424242.rezeptsammler.rezept.edit" version="1.0.2.qualifier" match="greaterOrEqual"/>
    </requires>
 
    <plugin
