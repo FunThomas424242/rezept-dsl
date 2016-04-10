@@ -36,7 +36,7 @@
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.emftext.sdk.feature.group" version="1.4.2.v201602261613"/>
 <unit id="org.emftext.access.feature.group" version="1.4.2.v201602261613"/>
-<repository location="jar:http://repository-funthomas424242.forge.cloudbees.com/snapshot/gh/funthomas424242/eclipse/p2.mirror/1.0.0-SNAPSHOT/p2.mirror-1.0.0-20160303.231112-2-bin.zip!/"/>
+<repository location="jar:http://repository-funthomas424242.forge.cloudbees.com/snapshot/gh/funthomas424242/eclipse/p2.mirror/1.0.0-SNAPSHOT/p2.mirror-1.0.0-20160328.035427-3-bin.zip!/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.emftext.commons.antlr3_4_0.feature.group" version="3.4.0.v201207310007"/>
