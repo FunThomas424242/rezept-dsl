@@ -10,14 +10,8 @@ Das Projekt realisiert ein  eclipse feature *Rezept DSL Feature* welches folgend
 * EMFText Parser Plugin: rezept = Rezept DSL Parser
 * EMFText UI Plugin: rezept = Rezept DSL Editor
 
-Das Feature kann über den Eclipse Update Manager mit folgendem URL installiert werden:
-
-* jar:http://dl.bintray.com/v1/content/funthomas424242/eclipse-features/rezept_dsl-[Version].zip!/  (Version z.B. durch 1.0.0 ersetzen)
-* jar:http://dl.bintray.com/v1/content/funthomas424242/eclipse-features/rezept_dsl-1.0.0.zip!/   (Beispiel für Version 1.0.0)
-
-Ein Beispielprojekt findet sich unter [rezeptbuch](https://github.com/FunThomas424242/rezeptbuch).
-
-Der Download wird über [Bintray](https://bintray.com/pkg/show/general/funthomas424242/eclipse-features/rezept-dsl) bereitgestellt. 
+Das Feature konnte eine zeitlang von bintray installiert werden. Da es aber mit emftext und der Build Automatisierung durch maven ständig zu Problemen kam wurde das Projekt eingestellt.
+Zur Fortsetzung mit einer anderen Technologie (Xtext/Xtend) wurde ein neues Projekt in Leben gerufen: [rezept-dsl.xtext](https://github.com/FunThomas424242/rezept-dsl.xtext).
 
 Installationsvorraussetzungen
 -----------------------------
